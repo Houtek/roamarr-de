@@ -19,7 +19,7 @@ Every script asserts that each exact upstream snippet it rewrites is still prese
 | 0001 nav labels | none yet: the diff is small (import + 5 render sites + `src/lib/navDe.ts`); edit by hand |
 | 0002 scope descriptions | `0002-scope-descriptions.py src/lib/oauthScopes.ts` (takes the file path) |
 | 0003 derived labels | none yet: 3 one-line edits in `src/routes/trips/[id]/+page.svelte` |
-| 0004 grid pagination | none yet: 8 one-line edits in `src/lib/components/GridTable.svelte` |
+| 0004 grid pagination | `0004-grid-pagination.py` |
 | 0005 plurals | `0005-plurals.py` |
 | 0006 currency defaults | `0006-currency-defaults.py` |
 | 0007 country names | `0007-country-names.py` |

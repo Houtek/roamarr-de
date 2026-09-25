@@ -26,7 +26,7 @@ Every push runs the upstream test suite twice, unpatched (baseline) and patched,
 ## Translation style
 
 - Informal "du", modern German software style. Buttons use the infinitive ("Speichern").
-- Glossary: Trip = Reise, Segment = Reiseabschnitt (short: Abschnitt), Stay = Unterkunft, Share = Freigabe/teilen, Notes = Notizen.
+- Glossary: Trip = Reise, Segment = Reiseabschnitt (short: Abschnitt), Stay = Unterkunft, Share = Freigabe/teilen, Notes = Notizen, Scopes (OAuth) = Berechtigungen.
 - HTML entities (`&nbsp;`, `&middot;` ...) and product names stay as they are.
 
 ## Known limits

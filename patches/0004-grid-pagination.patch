@@ -1,5 +1,5 @@
 diff --git a/src/lib/components/GridTable.svelte b/src/lib/components/GridTable.svelte
-index 6f25eaa..0999a53 100644
+index 6f25eaa..891b0ac 100644
 --- a/src/lib/components/GridTable.svelte
 +++ b/src/lib/components/GridTable.svelte
 @@ -240,7 +240,7 @@
@@ -28,9 +28,10 @@ index 6f25eaa..0999a53 100644
  	function formatPaginationSummary(pagination: Element) {
  		const summary = pagination.querySelector('.gridjs-summary');
  		const text = summary?.textContent?.replace(/\s+/g, ' ').trim() ?? '';
-+		// roamarr-de: this parses grid.js's ENGLISH summary, so the grid's own language stays English;
-+		// only the rebuilt output below is German.
- 		const match = text.match(/^Showing\s+(\d+)(?:\s+to\s+|\s*-\s*)(\d+)\s+of\s+(\d+)/i);
+-		const match = text.match(/^Showing\s+(\d+)(?:\s+to\s+|\s*-\s*)(\d+)\s+of\s+(\d+)/i);
++		// roamarr-de: accept grid.js's English summary AND our own German output. grid.js re-renders and appends
++		// its English text again; matching our German prefix lets this cleanup run again (as upstream's does).
++		const match = text.match(/^(?:Showing|Zeige)\s+(\d+)(?:\s+to\s+|\s*-\s*)(\d+)\s+(?:of|von)\s+(\d+)/i);
  		if (!summary || !match) return;
  		const [, from, to, total] = match;
  		summary.replaceChildren(

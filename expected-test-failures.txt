@@ -12,3 +12,61 @@ src/lib/components/segments/SegmentEditForm.test.ts > SegmentEditForm shows Atta
 src/routes/profile/security/security.test.ts > backup-code UI requires an explicit saved acknowledgment
 # asserts "Country" / "City" labels
 src/routes/trips/[id]/new-segment.test.ts > new flight segment page highlights invalid fields
+
+# Script strings (de.script.json), 2026-09-25: each failure checked against its CI assertion message.
+# All compare German error/label/seed text with English; status codes and data assertions pass.
+# Notable: seedDatabase finds the demo trip by the English name "Spring break"; api/mobile/admin-backup
+# reuses the backup page action, so its "Upload a file" message is German too (shown to a person).
+src/lib/components/GridTable.test.ts > GridTable returns an html object from the action column formatter
+src/lib/server/fareproviders/fareproviders.test.ts > runFareChecks notifies the provider owner when the summary changes
+src/lib/server/oidc.test.ts > does not auto-provision when registration is closed
+src/lib/server/oidc.test.ts > rejects disabled users
+src/lib/server/oidc.test.ts > rejects missing email claims without a linked sub
+src/lib/server/oidc.test.ts > rejects unverified email claims
+src/lib/server/passkeys.test.ts > passkeys verifyAuth rejects disabled user
+src/lib/server/passkeys.test.ts > passkeys verifyAuth rejects unknown credential
+src/lib/server/placeSearch.test.ts > google 403 is reported as an API key problem, not a generic failure
+src/lib/server/seedDatabase.test.ts > DatabaseSeeder seeds a complete account
+src/lib/server/seedDates.test.ts > SeedDateBuilder futureTrips all have startDate < endDate in the next calendar year
+src/lib/server/tripCompanions.test.ts > guide and driver categories work but reject invitations
+src/routes/api/mobile/admin-backup/server.test.ts > mobile restore rejects requests without a backup file
+src/routes/backup/backup.test.ts > saveAutoBackup validates interval and retention bounds
+src/routes/cards/[id]/edit/cards-edit.test.ts > addBenefit action rate limits repeated requests
+src/routes/cards/[id]/edit/cards-edit.test.ts > addBenefit action returns 404 for an invalid templateId
+src/routes/cards/[id]/edit/cards-edit.test.ts > deleteBenefit action rate limits repeated requests
+src/routes/cards/[id]/edit/cards-edit.test.ts > updateBenefit action rate limits repeated requests
+src/routes/cards/[id]/edit/cards-edit.test.ts > updateCard action rate limits repeated requests
+src/routes/cards/new/cards-new.test.ts > create action rate limits repeated requests
+src/routes/fare-providers/[id]/edit/fare-providers-edit.test.ts > update action is rate limited
+src/routes/fare-providers/new/fare-providers-new.test.ts > create action is rate limited
+src/routes/forgot-password/forgot-password.test.ts > action returns 429 when rate limited
+src/routes/general/general.test.ts > map download actions return 429 when rate limited
+src/routes/general/general.test.ts > save action rejects invalid sessionCookieSameSite
+src/routes/general/general.test.ts > saveOidc requires discovery URL and client ID when enabling
+src/routes/general/general.test.ts > testEmail action returns 429 when rate limited
+src/routes/groups/[id]/edit/groups-edit.test.ts > addMember action fails when email is invalid and preserves values
+src/routes/groups/[id]/edit/groups-edit.test.ts > addMember action fails when email is not found and preserves values
+src/routes/groups/[id]/edit/groups-edit.test.ts > addMember action fails when user is already a member and does not log audit
+src/routes/groups/[id]/edit/groups-edit.test.ts > addMember action rate limits repeated requests
+src/routes/groups/[id]/edit/groups-edit.test.ts > removeMember action fails when member is not in group and scopes error to members section
+src/routes/groups/[id]/edit/groups-edit.test.ts > removeMember action rate limits repeated requests
+src/routes/groups/[id]/edit/groups-edit.test.ts > update action rate limits repeated requests
+src/routes/groups/new/groups-new.test.ts > create action rate limits repeated requests
+src/routes/insurance/[id]/edit/insurance-edit.test.ts > update action rate limits repeated requests
+src/routes/insurance/new/insurance-new.test.ts > create action rate limits repeated requests
+src/routes/job-history/job-history.test.ts > runNow action is rate limited
+src/routes/login/login.test.ts > login action returns 429 when rate limited
+src/routes/login/verify/verify.test.ts > verify action returns 401 for an invalid code
+src/routes/login/verify/verify.test.ts > verify action returns 429 when rate limited
+src/routes/places/import/import.test.ts > preview is rate limited
+src/routes/places/import/import.test.ts > preview rejects requests without a file or links
+src/routes/profile/security/security.test.ts > enable action rejects an invalid TOTP
+src/routes/register/register.test.ts > register action returns 429 when rate limited
+src/routes/reset-password/[token]/reset-password.test.ts > action is rate limited
+src/routes/reset-password/[token]/reset-password.test.ts > action rejects short or mismatched passwords
+src/routes/setup/setup.test.ts > setup action returns 429 when rate limited
+src/routes/trips/[id]/fare-watch/fare-watch.test.ts > check action returns 429 when rate limited
+src/routes/trips/import/import.test.ts > rate limits imports before parsing the upload
+src/routes/trips/import/import.test.ts > rejects invalid format parameter
+src/routes/trips/import/import.test.ts > rejects missing file
+src/routes/users/new/users-new.test.ts > create rejects invalid role

@@ -203,6 +203,12 @@
  "routes/profile/theme/+page.server.ts": {
   "Update failed": "Aktualisierung fehlgeschlagen"
  },
+ "routes/profile/visited/VisitedPlacePage.svelte": {
+  "Country": "Land",
+  "State": "Bundesstaat",
+  "Remove": "Entfernen",
+  "Update": "Aktualisieren"
+ },
  "routes/profile/visited/shared.server.ts": {
   "Invalid visit dates.": "Ungültige Besuchsdaten.",
   "Update failed.": "Aktualisierung fehlgeschlagen.",

@@ -1,0 +1,364 @@
+diff --git a/src/lib/pluralDe.ts b/src/lib/pluralDe.ts
+new file mode 100644
+index 0000000..dd502cf
+--- /dev/null
++++ b/src/lib/pluralDe.ts
+@@ -0,0 +1,5 @@
++// roamarr-de: German count + noun ("1 Reise", "3 Reisen"). Upstream builds English plurals
++// with `word{n === 1 ? '' : 's'}`, which can't express German plural forms.
++export function pl(n: number, one: string, other: string): string {
++	return `${n} ${n === 1 ? one : other}`;
++}
+diff --git a/src/lib/server/tripMetaActions.ts b/src/lib/server/tripMetaActions.ts
+index 37fc112..1eaca79 100644
+--- a/src/lib/server/tripMetaActions.ts
++++ b/src/lib/server/tripMetaActions.ts
+@@ -1,3 +1,4 @@
++import { pl } from '$lib/pluralDe';
+ import { error, redirect, type RequestEvent } from '@sveltejs/kit';
+ import type { SegmentStatus } from './db/mongrelSchema';
+ import * as tripsRepo from './repositories/tripsRepo';
+@@ -132,8 +133,8 @@ export async function optimizeTripDayAction(event: RequestEvent) {
+ 	setFlash(
+ 		event.cookies,
+ 		result.applied
+-			? `Optimized ${result.orderedSegmentIds.length} stop${result.orderedSegmentIds.length === 1 ? '' : 's'} (${(result.totalDistanceMeters / 1000).toFixed(1)} km).`
+-			: 'Nothing to optimize for this day.'
++			? `${pl(result.orderedSegmentIds.length, 'Stopp', 'Stopps')} optimiert (${(result.totalDistanceMeters / 1000).toFixed(1)} km).`
++			: 'Für diesen Tag gibt es nichts zu optimieren.'
+ 	);
+ 	throw redirect(303, `/trips/${tripId}`);
+ }
+@@ -221,16 +222,16 @@ export async function markVisitedPlacesAction(event: RequestEvent) {
+ 	const added = autoMarkFromTrip(user.id, tripId);
+ 	const parts: string[] = [];
+ 	if (added.countries.length > 0) {
+-		parts.push(`${added.countries.length} countr${added.countries.length === 1 ? 'y' : 'ies'}`);
++		parts.push(pl(added.countries.length, 'Land', 'Länder'));
+ 	}
+ 	if (added.states.length > 0) {
+-		parts.push(`${added.states.length} U.S. state${added.states.length === 1 ? '' : 's'}`);
++		parts.push(pl(added.states.length, 'US-Bundesstaat', 'US-Bundesstaaten'));
+ 	}
+ 	setFlash(
+ 		event.cookies,
+ 		parts.length > 0
+-			? `Marked ${parts.join(' and ')} visited from this trip.`
+-			: 'No new places to mark from this trip.'
++			? `${parts.join(' und ')} aus dieser Reise als besucht markiert.`
++			: 'Keine neuen Orte aus dieser Reise zu markieren.'
+ 	);
+ 	throw redirect(303, `/trips/${tripId}`);
+ }
+diff --git a/src/routes/+page.svelte b/src/routes/+page.svelte
+index 62981b9..bd89c1a 100644
+--- a/src/routes/+page.svelte
++++ b/src/routes/+page.svelte
+@@ -1,4 +1,5 @@
+ <script lang="ts">
++	import { pl } from '$lib/pluralDe';
+ 	import Icon from '$lib/components/Icon.svelte';
+ 	import TripCard from '$lib/components/TripCard.svelte';
+ 	import { SEG } from '$lib/segmentLabels';
+@@ -24,7 +25,7 @@
+ 		<h1 class="page-title">Welcome back, {firstName}</h1>
+ 		<p class="page-subtitle">
+ 			{#if data.stats.unread > 0}
+-				You have <a href="/notifications" class="link">{data.stats.unread} unread alert{data.stats.unread === 1 ? '' : 's'}</a>.
++				Du hast <a href="/notifications" class="link">{pl(data.stats.unread, 'ungelesene Benachrichtigung', 'ungelesene Benachrichtigungen')}</a>.
+ 			{:else}
+ 				You're all caught up. Safe travels.
+ 			{/if}
+diff --git a/src/routes/cards/+page.svelte b/src/routes/cards/+page.svelte
+index 90b04e7..5cd75db 100644
+--- a/src/routes/cards/+page.svelte
++++ b/src/routes/cards/+page.svelte
+@@ -1,4 +1,5 @@
+ <script lang="ts">
++	import { pl } from '$lib/pluralDe';
+ 	import { html } from 'gridjs';
+ 	import { goto } from '$app/navigation';
+ 	import GridTable, { type FetchOpts } from '$lib/components/GridTable.svelte';
+@@ -45,7 +46,7 @@
+ 			sort: false,
+ 			formatter: (_cell: unknown, row: Record<string, unknown>) => {
+ 				const count = Number(row.benefitCount ?? 0);
+-				return count === 0 ? 'No benefits' : `${count} benefit${count === 1 ? '' : 's'}`;
++				return count === 0 ? 'Keine Leistungen' : pl(count, 'Leistung', 'Leistungen');
+ 			}
+ 		}
+ 	];
+diff --git a/src/routes/groups/+page.svelte b/src/routes/groups/+page.svelte
+index 49f6207..89c0eb1 100644
+--- a/src/routes/groups/+page.svelte
++++ b/src/routes/groups/+page.svelte
+@@ -1,4 +1,5 @@
+ <script lang="ts">
++	import { pl } from '$lib/pluralDe';
+ 	import { goto } from '$app/navigation';
+ 	import GridTable, { type FetchOpts } from '$lib/components/GridTable.svelte';
+ 	import { buildTableQuery } from '$lib/tableParams';
+@@ -22,7 +23,7 @@
+ 			sort: false,
+ 			formatter: (_cell: unknown, row: Record<string, unknown>) => {
+ 				const count = Number(row.memberCount ?? 0);
+-				return `${count} member${count === 1 ? '' : 's'}`;
++				return pl(count, 'Mitglied', 'Mitglieder');
+ 			}
+ 		},
+ 		{
+diff --git a/src/routes/notifications/+page.svelte b/src/routes/notifications/+page.svelte
+index c9eb094..b5d8939 100644
+--- a/src/routes/notifications/+page.svelte
++++ b/src/routes/notifications/+page.svelte
+@@ -1,4 +1,5 @@
+ <script lang="ts">
++	import { pl } from '$lib/pluralDe';
+ 	import EmptyState from '$lib/components/EmptyState.svelte';
+ 	import Icon from '$lib/components/Icon.svelte';
+ 	import { useDateFormat } from '$lib/dateFormatContext.svelte';
+@@ -14,7 +15,7 @@
+ 		<h1 class="page-title">Notifications</h1>
+ 		<p class="page-subtitle">
+ 			{#if unread > 0}
+-				{unread} unread alert{unread === 1 ? '' : 's'}
++				{pl(unread, 'ungelesene Benachrichtigung', 'ungelesene Benachrichtigungen')}
+ 			{:else}
+ 				You're all caught up.
+ 			{/if}
+diff --git a/src/routes/places/import/+page.svelte b/src/routes/places/import/+page.svelte
+index 445cb0b..70b1f95 100644
+--- a/src/routes/places/import/+page.svelte
++++ b/src/routes/places/import/+page.svelte
+@@ -1,4 +1,5 @@
+ <script lang="ts">
++	import { pl } from '$lib/pluralDe';
+ 	import Icon from '$lib/components/Icon.svelte';
+ 	import type { PageData, ActionData } from './$types';
+ 
+@@ -114,11 +115,10 @@
+ {#if preview}
+ 	<section class="card mt-6 p-5 sm:p-6">
+ 		<h2 class="text-base font-semibold">
+-			Preview — {preview.length} row{preview.length === 1 ? '' : 's'} from {form?.sourceName}
++			Vorschau — {pl(preview.length, 'Zeile', 'Zeilen')} aus {form?.sourceName}
+ 		</h2>
+ 		<p class="mt-1 text-sm opacity-75">
+-			{duplicateCount} possible duplicate{duplicateCount === 1 ? '' : 's'} detected
+-			(exact name or within 50 m of an existing place).
++			{pl(duplicateCount, 'mögliches Duplikat', 'mögliche Duplikate')} erkannt (gleicher Name oder höchstens 50 m von einem vorhandenen Ort entfernt).
+ 		</p>
+ 
+ 		{#if form?.parseWarnings?.length}
+@@ -205,7 +205,7 @@
+ 				Skip duplicates
+ 			</label>
+ 			<button type="submit" class="btn btn-primary" disabled={selectedRows.length === 0}>
+-				Import {selectedRows.length} place{selectedRows.length === 1 ? '' : 's'}
++				{pl(selectedRows.length, 'Ort', 'Orte')} importieren
+ 			</button>
+ 			<a href="/places/import" class="btn btn-ghost">Start over</a>
+ 		</form>
+@@ -216,9 +216,9 @@
+ 	<section class="card mt-6 p-5 sm:p-6">
+ 		<div class="notice {form.imported.errors.length ? 'notice-info' : 'notice-success'}">
+ 			<p>
+-				Imported {form.imported.created} place{form.imported.created === 1 ? '' : 's'}
++				{pl(form.imported.created, 'Ort', 'Orte')} importiert
+ 				{#if form.imported.skippedDuplicates > 0}
+-					— skipped {form.imported.skippedDuplicates} duplicate{form.imported.skippedDuplicates === 1 ? '' : 's'}
++					— {pl(form.imported.skippedDuplicates, 'Duplikat', 'Duplikate')} übersprungen
+ 				{/if}.
+ 			</p>
+ 			{#if form.imported.errors.length}
+diff --git a/src/routes/profile/email_processing/+page.server.ts b/src/routes/profile/email_processing/+page.server.ts
+index 3e78290..29548d5 100644
+--- a/src/routes/profile/email_processing/+page.server.ts
++++ b/src/routes/profile/email_processing/+page.server.ts
+@@ -1,3 +1,4 @@
++import { pl } from '$lib/pluralDe';
+ import { fail, redirect, type Actions } from '@sveltejs/kit';
+ import { requireUser } from '$lib/server/auth';
+ import { setFlash } from '$lib/server/flash';
+@@ -87,7 +88,7 @@ export const actions: Actions = {
+ 		if (!limit.allowed) return fail(429, { error: 'Too many attempts. Try again later.' });
+ 		try {
+ 			const result = await pollUserInbox(user.id);
+-			setFlash(cookies, `Inbox checked. ${result.imported} itinerary item${result.imported === 1 ? '' : 's'} imported.`);
++			setFlash(cookies, `Posteingang geprüft. ${pl(result.imported, 'Reiseeintrag', 'Reiseeinträge')} importiert.`);
+ 		} catch (error) { return fail(400, { error: error instanceof Error ? error.message : 'Inbox check failed' }); }
+ 		throw redirect(303, '/profile/email_processing');
+ 	},
+diff --git a/src/routes/profile/security/+page.svelte b/src/routes/profile/security/+page.svelte
+index 71aa4ba..de1717f 100644
+--- a/src/routes/profile/security/+page.svelte
++++ b/src/routes/profile/security/+page.svelte
+@@ -1,4 +1,5 @@
+ <script lang="ts">
++	import { pl } from '$lib/pluralDe';
+ 	import { enhance } from '$app/forms';
+ 	import { page } from '$app/state';
+ 	import ConfirmButton from '$lib/components/ConfirmButton.svelte';
+@@ -131,7 +132,7 @@
+ 				<span class="inline-block h-2 w-2 rounded-full bg-brand"></span>
+ 				Enabled{#if tfa.enabledAt} since {formatDate(tfa.enabledAt)}{/if}
+ 			</div>
+-			<p class="meta mt-1">{tfa.backupCodesRemaining} backup code{tfa.backupCodesRemaining === 1 ? '' : 's'} remaining.</p>
++			<p class="meta mt-1">Noch {pl(tfa.backupCodesRemaining, 'Backup-Code', 'Backup-Codes')} übrig.</p>
+ 
+ 			{#if backupCodes}
+ 				<div class="notice notice-warning mt-4 p-4">
+diff --git a/src/routes/profile/visited/shared.server.ts b/src/routes/profile/visited/shared.server.ts
+index e645eef..c6932f3 100644
+--- a/src/routes/profile/visited/shared.server.ts
++++ b/src/routes/profile/visited/shared.server.ts
+@@ -1,3 +1,4 @@
++import { pl } from '$lib/pluralDe';
+ import { fail, redirect, type Actions } from '@sveltejs/kit';
+ import { requireUser } from '$lib/server/auth';
+ import { setFlash } from '$lib/server/flash';
+@@ -160,12 +161,12 @@ export function makeVisitedActions(kind: PlaceKind, fallback: string): Actions {
+ 			const added = autoMarkFromAllTrips(u.id);
+ 			const parts: string[] = [];
+ 			if (added.countries.length > 0) {
+-				parts.push(`${added.countries.length} countr${added.countries.length === 1 ? 'y' : 'ies'}`);
++				parts.push(pl(added.countries.length, 'Land', 'Länder'));
+ 			}
+ 			if (added.states.length > 0) {
+-				parts.push(`${added.states.length} U.S. state${added.states.length === 1 ? '' : 's'}`);
++				parts.push(pl(added.states.length, 'US-Bundesstaat', 'US-Bundesstaaten'));
+ 			}
+-			setFlash(cookies, parts.length > 0 ? `Marked ${parts.join(' and ')} from past trips.` : 'No new places found from past trips.');
++			setFlash(cookies, parts.length > 0 ? `${parts.join(' und ')} aus vergangenen Reisen als besucht markiert.` : 'Keine neuen Orte aus vergangenen Reisen gefunden.');
+ 			throw redirect(303, returnTo(f, fallback));
+ 		},
+ 		toggleAutoMark: async ({ request, locals, cookies }) => {
+diff --git a/src/routes/search/+page.svelte b/src/routes/search/+page.svelte
+index 1873ac3..2e8c3de 100644
+--- a/src/routes/search/+page.svelte
++++ b/src/routes/search/+page.svelte
+@@ -1,4 +1,5 @@
+ <script lang="ts">
++	import { pl } from '$lib/pluralDe';
+ 	import EmptyState from '$lib/components/EmptyState.svelte';
+ 	import Icon from '$lib/components/Icon.svelte';
+ 	import TripCard from '$lib/components/TripCard.svelte';
+@@ -41,7 +42,7 @@
+ 		<h1 class="page-title">Search Results</h1>
+ 		{#if data.q}
+ 			<p class="page-subtitle">
+-				{data.trips.length} trip{data.trips.length === 1 ? '' : 's'} found
++				{pl(data.trips.length, 'Reise', 'Reisen')} gefunden
+ 				{#if data.semantic}
+ 					<span class="badge badge-brand ml-2">Semantic</span>
+ 				{/if}
+diff --git a/src/routes/trips/+page.svelte b/src/routes/trips/+page.svelte
+index 3c3afa6..6e808ea 100644
+--- a/src/routes/trips/+page.svelte
++++ b/src/routes/trips/+page.svelte
+@@ -1,4 +1,5 @@
+ <script lang="ts">
++	import { pl } from '$lib/pluralDe';
+ 	import EmptyState from '$lib/components/EmptyState.svelte';
+ 	import Icon from '$lib/components/Icon.svelte';
+ 	import TripCard from '$lib/components/TripCard.svelte';
+@@ -45,7 +46,7 @@
+ 	<div>
+ 		<h1 class="page-title">Trips</h1>
+ 		<p class="page-subtitle">
+-			{data.trips.length} trip{data.trips.length === 1 ? '' : 's'} planned
++			{pl(data.trips.length, 'Reise', 'Reisen')} geplant
+ 		</p>
+ 	</div>
+ 	<div class="flex flex-wrap gap-2">
+diff --git a/src/routes/trips/[id]/+page.svelte b/src/routes/trips/[id]/+page.svelte
+index 46e62ec..f340fbb 100644
+--- a/src/routes/trips/[id]/+page.svelte
++++ b/src/routes/trips/[id]/+page.svelte
+@@ -1,4 +1,5 @@
+ <script lang="ts">
++	import { pl } from '$lib/pluralDe';
+ 	import './trip-detail-modern.css';
+ 	import './trip-detail-modern-fixes.css';
+ 	import { applyAction, enhance } from '$app/forms';
+@@ -852,9 +853,9 @@
+ 					<div class="mt-3 flex flex-wrap gap-2">
+ 						{#if destinationLabel}<span class="badge badge-brand"><Icon name="location" class="h-3.5 w-3.5" />{destinationLabel}</span>{/if}
+ 						{#if trip.startDate || trip.endDate}<span class="badge badge-brand"><span class="font-mono leading-none">{trip.startDate || '—'}</span><Icon name="arrow-right" class="h-3.5 w-3.5" /><span class="font-mono leading-none">{trip.endDate || '—'}</span></span>{/if}
+-						{#if days}<span class="badge badge-brand">{days} day{days === 1 ? '' : 's'}</span>{/if}
+-						{#if daysUntil != null}<span class="badge badge-brand">Starts in {daysUntil} day{daysUntil === 1 ? '' : 's'}</span>{/if}
+-						<span class="badge badge-brand">{segmentList.length} segment{segmentList.length === 1 ? '' : 's'}</span>
++						{#if days}<span class="badge badge-brand">{pl(days, 'Tag', 'Tage')}</span>{/if}
++						{#if daysUntil != null}<span class="badge badge-brand">Beginnt in {pl(daysUntil, 'Tag', 'Tagen')}</span>{/if}
++						<span class="badge badge-brand">{pl(segmentList.length, 'Abschnitt', 'Abschnitte')}</span>
+ 					</div>
+ 				</div>
+ 				<div class="flex justify-end sm:self-end">
+@@ -915,7 +916,7 @@
+ 							{@const connectsBefore = viewMode === 'timeline' && groupIndex > 0 && sameFlightBooking(dayGroups[groupIndex - 1]?.segments.at(-1), group.segments[0])}
+ 							{@const connectsAfter = viewMode === 'timeline' && groupIndex < dayGroups.length - 1 && sameFlightBooking(group.segments.at(-1), dayGroups[groupIndex + 1]?.segments[0])}
+ 							<section class="trip-modern-day-card {connectsBefore ? 'trip-modern-day-card-connects-before' : ''} {connectsAfter ? 'trip-modern-day-card-connects-after' : ''} {dragOverDate === group.key ? 'trip-modern-drop-target' : ''}" aria-label={`${group.label} itinerary plans`} ondragover={(e) => allowDayDrop(e, group.key)} ondragenter={(e) => allowDayDrop(e, group.key)} ondragleave={(e) => leaveDayDrop(e, group.key)} ondrop={(e) => dropSegmentOnDay(e, group.key)}>
+-								<header class="trip-modern-day-head"><div class="trip-modern-day-title"><Icon name="calendar" class="h-5 w-5" /><div><h2 class="trip-modern-day-date">{group.label}</h2>{#if groupWeekday(group.key)}<p class="trip-modern-day-weekday">{groupWeekday(group.key)}</p>{/if}</div></div><div class="flex items-center gap-3">{#if isEditor && dayCanOptimize(group)}<form method="POST" action="?/optimizeTripDay" use:enhance={preserveScrollOnMove}><input type="hidden" name="date" value={group.key} /><button type="submit" class="trip-modern-day-plus" title="Optimize order" aria-label={`Optimize stop order for ${group.label}`}><Icon name="trips" class="h-4 w-4" /></button></form>{/if}{#if dayDirectionsUrl(group)}<a href={dayDirectionsUrl(group)!} target="_blank" rel="noopener noreferrer" class="trip-modern-day-plus" title="Open in Google Maps" aria-label={`Open ${group.label} in Google Maps`}><Icon name="location" class="h-4 w-4" /></a>{/if}<span class="trip-modern-day-count">{group.segments.length} segment{group.segments.length === 1 ? '' : 's'}</span>{#if isEditor}<a href={`/trips/${trip.id}/segments/new`} class="trip-modern-day-plus" aria-label="Add segment"><Icon name="plus" class="h-4 w-4" /></a>{/if}</div></header>
++								<header class="trip-modern-day-head"><div class="trip-modern-day-title"><Icon name="calendar" class="h-5 w-5" /><div><h2 class="trip-modern-day-date">{group.label}</h2>{#if groupWeekday(group.key)}<p class="trip-modern-day-weekday">{groupWeekday(group.key)}</p>{/if}</div></div><div class="flex items-center gap-3">{#if isEditor && dayCanOptimize(group)}<form method="POST" action="?/optimizeTripDay" use:enhance={preserveScrollOnMove}><input type="hidden" name="date" value={group.key} /><button type="submit" class="trip-modern-day-plus" title="Optimize order" aria-label={`Optimize stop order for ${group.label}`}><Icon name="trips" class="h-4 w-4" /></button></form>{/if}{#if dayDirectionsUrl(group)}<a href={dayDirectionsUrl(group)!} target="_blank" rel="noopener noreferrer" class="trip-modern-day-plus" title="Open in Google Maps" aria-label={`Open ${group.label} in Google Maps`}><Icon name="location" class="h-4 w-4" /></a>{/if}<span class="trip-modern-day-count">{pl(group.segments.length, 'Abschnitt', 'Abschnitte')}</span>{#if isEditor}<a href={`/trips/${trip.id}/segments/new`} class="trip-modern-day-plus" aria-label="Add segment"><Icon name="plus" class="h-4 w-4" /></a>{/if}</div></header>
+ 								{#if group.key !== 'unscheduled' && showDayNotes}
+ 									{@const note = dayNotesByDate.get(group.key)}
+ 									{#if isEditor && editingDayNoteDate === group.key}
+@@ -1004,7 +1005,7 @@
+ 				</aside>
+ 			</div>
+ 		{:else if activeTab === 'prep'}
+-			<section class="trip-modern-panel"><div class="trip-modern-panel-head"><h2 class="trip-modern-panel-title">Prep</h2><span class="badge badge-slate badge-compact">{prepItemCount} item{prepItemCount === 1 ? '' : 's'}</span></div>{#if data.checklist?.items?.length}<div class="trip-modern-list">{#each data.checklist.items as item (item.id)}<div class="trip-modern-list-row"><form method="POST" action="?/toggleChecklistItem" class="flex min-w-0 items-center gap-3"><input type="hidden" name="itemId" value={item.id} /><button class="check-toggle" type="submit"><span class="check-marker {item.packed ? 'check-marker-active' : ''}"><Icon name="check" class="h-3.5 w-3.5" /></span><span class="check-label {item.packed ? 'check-label-done' : ''}">{item.text}</span></button></form>{#if item.assignedToName}<span class="badge badge-slate badge-compact">{item.assignedToName}</span>{/if}</div>{/each}</div>{:else}<p class="trip-modern-empty">No prep items yet.</p>{/if}{#if isEditor}<form method="POST" action="?/addChecklistItem" class="trip-modern-form-inline"><input name="text" class="input flex-1 text-sm" placeholder="Add checklist item" required /><select name="assignedToCompanionId" class="input w-auto text-sm"><option value="">Unassigned</option>{#each data.companions ?? [] as c (c.id)}<option value={c.id}>{c.name}</option>{/each}</select><button class="btn btn-primary btn-sm">Add item</button></form>{/if}</section>
++			<section class="trip-modern-panel"><div class="trip-modern-panel-head"><h2 class="trip-modern-panel-title">Prep</h2><span class="badge badge-slate badge-compact">{pl(prepItemCount, 'Eintrag', 'Einträge')}</span></div>{#if data.checklist?.items?.length}<div class="trip-modern-list">{#each data.checklist.items as item (item.id)}<div class="trip-modern-list-row"><form method="POST" action="?/toggleChecklistItem" class="flex min-w-0 items-center gap-3"><input type="hidden" name="itemId" value={item.id} /><button class="check-toggle" type="submit"><span class="check-marker {item.packed ? 'check-marker-active' : ''}"><Icon name="check" class="h-3.5 w-3.5" /></span><span class="check-label {item.packed ? 'check-label-done' : ''}">{item.text}</span></button></form>{#if item.assignedToName}<span class="badge badge-slate badge-compact">{item.assignedToName}</span>{/if}</div>{/each}</div>{:else}<p class="trip-modern-empty">No prep items yet.</p>{/if}{#if isEditor}<form method="POST" action="?/addChecklistItem" class="trip-modern-form-inline"><input name="text" class="input flex-1 text-sm" placeholder="Add checklist item" required /><select name="assignedToCompanionId" class="input w-auto text-sm"><option value="">Unassigned</option>{#each data.companions ?? [] as c (c.id)}<option value={c.id}>{c.name}</option>{/each}</select><button class="btn btn-primary btn-sm">Add item</button></form>{/if}</section>
+ 		{:else if activeTab === 'money'}
+ 			<section class="trip-modern-panel">
+ 				<div class="trip-modern-panel-head"><h2 class="trip-modern-panel-title">Budget & expenses</h2>{#if data.expenses?.length}<button type="button" class="btn btn-secondary btn-sm" onclick={exportExpensesCsv}>Export CSV</button>{/if}</div>
+diff --git a/src/routes/trips/[id]/print/+page.svelte b/src/routes/trips/[id]/print/+page.svelte
+index 1e80c03..0dfe013 100644
+--- a/src/routes/trips/[id]/print/+page.svelte
++++ b/src/routes/trips/[id]/print/+page.svelte
+@@ -1,4 +1,5 @@
+ <script lang="ts">
++	import { pl } from '$lib/pluralDe';
+ 	import { DateTime } from 'luxon';
+ 	import { SEG } from '$lib/segmentLabels';
+ 	import Icon from '$lib/components/Icon.svelte';
+@@ -104,9 +105,9 @@
+ 				</span>
+ 			{/if}
+ 			{#if days}
+-				<span class="print-meta-item inline-flex items-center gap-1.5">{days} day{days === 1 ? '' : 's'}</span>
++				<span class="print-meta-item inline-flex items-center gap-1.5">{pl(days, 'Tag', 'Tage')}</span>
+ 			{/if}
+-			<span class="print-meta-item inline-flex items-center gap-1.5">{segmentList.length} segment{segmentList.length === 1 ? '' : 's'}</span>
++			<span class="print-meta-item inline-flex items-center gap-1.5">{pl(segmentList.length, 'Abschnitt', 'Abschnitte')}</span>
+ 		</div>
+ 	</header>
+ 
+diff --git a/src/routes/trips/import/+page.svelte b/src/routes/trips/import/+page.svelte
+index 6802e32..3e66071 100644
+--- a/src/routes/trips/import/+page.svelte
++++ b/src/routes/trips/import/+page.svelte
+@@ -1,4 +1,5 @@
+ <script lang="ts">
++	import { pl } from '$lib/pluralDe';
+ 	import { enhance } from '$app/forms';
+ 
+ 	let { form } = $props();
+@@ -40,15 +41,14 @@
+ 	{#if form?.success && form?.result}
+ 		<div class="notice mt-4 {form.dryRun ? 'notice-info' : 'notice-success'}">
+ 			<p>
+-				{form.dryRun ? 'Would import' : 'Imported'} {form.result.imported} trip{form.result.imported === 1 ? '' : 's'} with
+-				{form.result.segmentCount} segment{form.result.segmentCount === 1 ? '' : 's'}.
++				{pl(form.result.imported, 'Reise', 'Reisen')} mit {pl(form.result.segmentCount, 'Reiseabschnitt', 'Reiseabschnitten')} {form.dryRun ? 'würden importiert' : 'importiert'}.
+ 			</p>
+ 			{#if form.result.preview?.length}
+ 				<ul class="mt-3 list-inside list-disc text-sm">
+ 					{#each form.result.preview as p}
+ 						<li>
+ 							<strong>{p.name}</strong>{#if p.startDate} ({p.startDate}){/if}
+-							{#if p.segments.length} — {p.segments.length} segment{p.segments.length === 1 ? '' : 's'}{/if}
++							{#if p.segments.length} — {pl(p.segments.length, 'Abschnitt', 'Abschnitte')}{/if}
+ 						</li>
+ 					{/each}
+ 				</ul>

@@ -1,0 +1,44 @@
+diff --git a/src/lib/components/GridTable.svelte b/src/lib/components/GridTable.svelte
+index 6f25eaa..0999a53 100644
+--- a/src/lib/components/GridTable.svelte
++++ b/src/lib/components/GridTable.svelte
+@@ -240,7 +240,7 @@
+ 			control = document.createElement('label');
+ 			control.className = 'grid-table-page-size';
+ 			const label = document.createElement('span');
+-			label.textContent = 'Rows';
++			label.textContent = 'Zeilen';
+ 			const select = document.createElement('select');
+ 			select.className = 'select select-compact grid-table-page-size-select';
+ 			select.dataset.gridPageSize = 'true';
+@@ -262,22 +262,24 @@
+ 
+ 		const prev = pagination.querySelector('.gridjs-pages-button-prev');
+ 		const next = pagination.querySelector('.gridjs-pages-button-next');
+-		prev?.setAttribute('aria-label', 'Previous page');
+-		prev?.setAttribute('title', 'Previous page');
+-		next?.setAttribute('aria-label', 'Next page');
+-		next?.setAttribute('title', 'Next page');
++		prev?.setAttribute('aria-label', 'Vorherige Seite');
++		prev?.setAttribute('title', 'Vorherige Seite');
++		next?.setAttribute('aria-label', 'Nächste Seite');
++		next?.setAttribute('title', 'Nächste Seite');
+ 	}
+ 
+ 	function formatPaginationSummary(pagination: Element) {
+ 		const summary = pagination.querySelector('.gridjs-summary');
+ 		const text = summary?.textContent?.replace(/\s+/g, ' ').trim() ?? '';
++		// roamarr-de: this parses grid.js's ENGLISH summary, so the grid's own language stays English;
++		// only the rebuilt output below is German.
+ 		const match = text.match(/^Showing\s+(\d+)(?:\s+to\s+|\s*-\s*)(\d+)\s+of\s+(\d+)/i);
+ 		if (!summary || !match) return;
+ 		const [, from, to, total] = match;
+ 		summary.replaceChildren(
+-			document.createTextNode('Showing '),
++			document.createTextNode('Zeige '),
+ 			Object.assign(document.createElement('b'), { textContent: `${from}-${to}` }),
+-			document.createTextNode(' of '),
++			document.createTextNode(' von '),
+ 			Object.assign(document.createElement('b'), { textContent: total })
+ 		);
+ 	}

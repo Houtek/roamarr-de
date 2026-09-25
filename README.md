@@ -18,6 +18,7 @@ Some text can't be translated by the table because it lives in script code or is
 - `0001-nav-labels.patch`: the sidebar and profile tabs. Navigation labels are also the data keys (expand state, `{#each}` keys, `section.label === 'Plan'`), so the data stays English and only the five render sites look up a German display name in `src/lib/navDe.ts`. `scripts/check-nav.mjs` fails the build if upstream adds a label without a German name.
 - `0002-scope-descriptions.patch`: German descriptions for the 69 OAuth/API-key scopes in `src/lib/oauthScopes.ts` (API keys page, security page, OAuth consent). Scope names like `segments:read` stay English; only the descriptions are display text.
 
+- `0004-grid-pagination.patch`: table footer ("Zeilen", "Zeige 1-10 von 23", page-button tooltips). `GridTable` parses grid.js's own English summary with a regex, so grid.js's language config deliberately stays English and only the rebuilt output is German.
 - `0003-derived-labels.patch`: expense categories and payment statuses on the trip page, whose labels upstream computes by capitalizing the stored key (`lodging` → "Lodging"). The keys stay; a German map is consulted first.
 
 ## Script strings (`de.script.json`)

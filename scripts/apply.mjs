@@ -7,7 +7,10 @@ import { parse } from 'svelte/compiler';
 import { readFileSync, writeFileSync, readdirSync, statSync } from 'node:fs';
 import { join, relative } from 'node:path';
 
-const ATTRS = new Set(['placeholder', 'title', 'aria-label', 'alt', 'label', 'aria-description']);
+const ATTRS = new Set(['placeholder', 'title', 'aria-label', 'alt', 'label', 'aria-description',
+	// display-only component props (verified: never compared, keyed or transformed in the receiving components)
+	'message', 'emptyMessage', 'addLabel', 'confirmLabel', 'hint', 'copiedLabel', 'actionLabel']);
+const isTextAttr = (name) => ATTRS.has(name) || /^[a-z]+(Label|Placeholder)$/.test(name);
 const [root, tablePath] = process.argv.slice(2);
 const table = JSON.parse(readFileSync(tablePath, 'utf8'));
 
@@ -29,7 +32,7 @@ function targets(node, out = []) {
 	}
 	if (node.type === 'Attribute') {
 		const v = node.value;
-		if (ATTRS.has(node.name) && Array.isArray(v) && v.length === 1 && v[0].type === 'Text') out.push(v[0]);
+		if (isTextAttr(node.name) && Array.isArray(v) && v.length === 1 && v[0].type === 'Text') out.push(v[0]);
 		return out;
 	}
 	if (node.type === 'Text') {

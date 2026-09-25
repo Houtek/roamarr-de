@@ -28,6 +28,8 @@ Patches form a **series**: each one is generated on top of the previous ones, so
 - `0009-german-dates.patch`: German month/weekday names via Luxon's default locale (set in a small module imported by `dateFormat.ts`, the root layout and `hooks.server.ts`); `Intl` `en-US` → `de-DE`; German order on the trip page ("29. Juli 2026", 24-hour time); the usual German formats (`dd.MM.yyyy`, `d. MMMM yyyy`) added as selectable options with their real rendered samples. Nothing parses dates with Luxon, so the locale is display-only.
 - `0010-grid-status-labels.patch`: status labels inside HTML string literals of grid cell formatters (`html('<span …>Active</span>')`), e.g. users, job history, reminders.
 
+- `0011-trip-base-currency.patch`: **behaviour fix, not translation.** Upstream stores every new trip with base currency USD (`createTrip`: `?? 'USD'`, and the new-trip form has no currency field). The fallback is now the owner's default currency, then USD, for every creation path (form, import, e-mail, templates, copy, MCP). Existing trips are unchanged; their base currency is editable on the trip edit page.
+
 ## Value-position strings (`de.expr.json`)
 
 Literals that aren't object properties but still end up on screen: conditional branches (`mcpPage ? 'MCP Clients' : 'Security'`), fallbacks (`name ?? 'Unnamed passkey'`), `return 'X'` and `{'X'}` in markup. Reviewed per file the same way (display only). Stays English on purpose: "Imported trip" / "Imported itinerary" (stored as trip/segment names and fuzzy-matched on later imports), "Trip owner" (stored), "You" (a data name in expense settlements). Applied by `apply-script.mjs … expr`.

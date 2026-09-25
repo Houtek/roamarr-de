@@ -16,6 +16,7 @@ A German UI for [Roamarr](https://github.com/visorcraft/Roamarr), applied at bui
 Some text can't be translated by the table because it lives in script code or is also used as data. These get small, explicit patches in `patches/`, applied with `git apply` to the **pristine** upstream tree before the table runs. If upstream moves the patched lines, `git apply` fails and the build stops, instead of patching the wrong place.
 
 - `0001-nav-labels.patch`: the sidebar and profile tabs. Navigation labels are also the data keys (expand state, `{#each}` keys, `section.label === 'Plan'`), so the data stays English and only the five render sites look up a German display name in `src/lib/navDe.ts`. `scripts/check-nav.mjs` fails the build if upstream adds a label without a German name.
+- `0002-scope-descriptions.patch`: German descriptions for the 69 OAuth/API-key scopes in `src/lib/oauthScopes.ts` (API keys page, security page, OAuth consent). Scope names like `segments:read` stay English; only the descriptions are display text.
 
 ## Usage
 

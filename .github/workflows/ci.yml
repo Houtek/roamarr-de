@@ -1,0 +1,85 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  # upstream test suite on the UNPATCHED source, so patched failures can be diffed against it
+  baseline:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check out upstream at the pinned ref
+        run: |
+          git clone --filter=blob:none https://github.com/visorcraft/Roamarr.git upstream
+          git -C upstream checkout --detach "$(cat UPSTREAM_REF)"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: upstream/package-lock.json
+      - name: Install upstream deps
+        working-directory: upstream
+        run: npm ci --no-audit --no-fund
+      - name: Test (baseline)
+        working-directory: upstream
+        run: npx vitest run --reporter=json --outputFile=../baseline.json || true
+      - uses: actions/upload-artifact@v4
+        with:
+          name: baseline
+          path: baseline.json
+
+  patched:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check out upstream at the pinned ref
+        run: |
+          git clone --filter=blob:none https://github.com/visorcraft/Roamarr.git upstream
+          git -C upstream checkout --detach "$(cat UPSTREAM_REF)"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: upstream/package-lock.json
+      - name: Install kit deps
+        run: npm ci --no-audit --no-fund
+      - name: strings.en.json is current for the pinned ref
+        run: |
+          node scripts/extract.mjs upstream/src > /tmp/strings.en.json
+          diff -q strings.en.json /tmp/strings.en.json || { echo "::error::strings.en.json is stale; regenerate with npm run extract"; exit 1; }
+      - name: Apply de.json (aborts on any structural change)
+        run: I18N_REPORT=untranslated.json node scripts/apply.mjs upstream/src de.json
+      - name: Install upstream deps
+        working-directory: upstream
+        run: npm ci --no-audit --no-fund
+      - name: Build
+        working-directory: upstream
+        run: npm run build
+      - name: svelte-check
+        working-directory: upstream
+        run: npm run check
+      - name: Test (patched)
+        working-directory: upstream
+        run: npx vitest run --reporter=json --outputFile=../patched.json || true
+      - uses: actions/upload-artifact@v4
+        with:
+          name: patched
+          path: |
+            patched.json
+            untranslated.json
+
+  compare:
+    needs: [baseline, patched]
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+      - name: Fail on tests that fail only after patching
+        run: node scripts/compare-tests.mjs baseline/baseline.json patched/patched.json

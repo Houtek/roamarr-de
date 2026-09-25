@@ -1,0 +1,9985 @@
+[
+ {
+  "en": "Cancel",
+  "kind": "text",
+  "count": 31,
+  "files": [
+   "lib/components/ConfirmButton.svelte",
+   "lib/components/segments/AddSegmentFormShell.svelte",
+   "lib/components/segments/SegmentEditForm.svelte"
+  ]
+ },
+ {
+  "en": "Notes",
+  "kind": "attr:label",
+  "count": 22,
+  "files": [
+   "lib/components/segments/forms/DirectionsForm.svelte",
+   "lib/components/segments/forms/EventForm.svelte",
+   "lib/components/segments/forms/FlightForm.svelte"
+  ]
+ },
+ {
+  "en": "Name",
+  "kind": "text",
+  "count": 14,
+  "files": [
+   "routes/about/+page.svelte",
+   "routes/places/+page.svelte",
+   "routes/places/import/+page.svelte"
+  ]
+ },
+ {
+  "en": "Optional notes",
+  "kind": "attr:placeholder",
+  "count": 12,
+  "files": [
+   "lib/components/segments/forms/ParkingForm.svelte",
+   "lib/components/segments/forms/StandardPlanForm.svelte",
+   "routes/cards/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Email",
+  "kind": "attr:label",
+  "count": 11,
+  "files": [
+   "lib/components/segments/forms/EventForm.svelte",
+   "lib/components/segments/forms/RentalCarForm.svelte",
+   "routes/forgot-password/+page.svelte"
+  ]
+ },
+ {
+  "en": "Password",
+  "kind": "text",
+  "count": 11,
+  "files": [
+   "routes/general/+page.svelte",
+   "routes/invite/[token]/+page.svelte",
+   "routes/login/+page.svelte"
+  ]
+ },
+ {
+  "en": "Save",
+  "kind": "text",
+  "count": 11,
+  "files": [
+   "lib/components/segments/AddSegmentFormShell.svelte",
+   "lib/components/segments/SegmentEditForm.svelte",
+   "routes/profile/api-keys/+page.svelte"
+  ]
+ },
+ {
+  "en": "Timezone",
+  "kind": "text",
+  "count": 9,
+  "files": [
+   "lib/components/segments/DateTimeRangeFields.svelte",
+   "lib/components/segments/SegmentEditForm.svelte",
+   "lib/components/segments/forms/FlightForm.svelte"
+  ]
+ },
+ {
+  "en": "Back",
+  "kind": "text",
+  "count": 7,
+  "files": [
+   "lib/components/segments/AddSegmentFormShell.svelte",
+   "routes/places/import/+page.svelte",
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "API key",
+  "kind": "attr:label",
+  "count": 6,
+  "files": [
+   "routes/fare-providers/[id]/edit/+page.svelte",
+   "routes/fare-providers/new/+page.svelte",
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Delete",
+  "kind": "text",
+  "count": 6,
+  "files": [
+   "routes/cards/[id]/edit/+page.svelte",
+   "routes/profile/security/+page.svelte",
+   "routes/trips/+page.svelte"
+  ]
+ },
+ {
+  "en": "Phone",
+  "kind": "attr:label",
+  "count": 6,
+  "files": [
+   "lib/components/segments/forms/EventForm.svelte",
+   "lib/components/segments/forms/HotelForm.svelte",
+   "lib/components/segments/forms/RentalCarForm.svelte"
+  ]
+ },
+ {
+  "en": "Select country",
+  "kind": "text",
+  "count": 6,
+  "files": [
+   "lib/components/segments/SegmentEditForm.svelte",
+   "lib/components/segments/forms/EventForm.svelte",
+   "lib/components/segments/forms/FlightForm.svelte"
+  ]
+ },
+ {
+  "en": "Start date",
+  "kind": "attr:label",
+  "count": 6,
+  "files": [
+   "lib/components/segments/forms/ParkingForm.svelte",
+   "routes/insurance/[id]/edit/+page.svelte",
+   "routes/insurance/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "USD",
+  "kind": "attr:placeholder",
+  "count": 6,
+  "files": [
+   "routes/cards/[id]/edit/+page.svelte",
+   "routes/insurance/[id]/edit/+page.svelte",
+   "routes/insurance/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Confirmation",
+  "kind": "text",
+  "count": 5,
+  "files": [
+   "lib/components/segments/BookedRow.svelte",
+   "lib/components/segments/forms/FlightForm.svelte",
+   "lib/components/segments/forms/ParkingForm.svelte"
+  ]
+ },
+ {
+  "en": "Edit",
+  "kind": "text",
+  "count": 5,
+  "files": [
+   "routes/cards/[id]/edit/+page.svelte",
+   "routes/places/+page.svelte",
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Enabled",
+  "kind": "text",
+  "count": 5,
+  "files": [
+   "routes/fare-providers/[id]/edit/+page.svelte",
+   "routes/fare-providers/new/+page.svelte",
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "End date",
+  "kind": "attr:label",
+  "count": 5,
+  "files": [
+   "lib/components/segments/forms/ParkingForm.svelte",
+   "routes/insurance/[id]/edit/+page.svelte",
+   "routes/insurance/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Groups",
+  "kind": "text",
+  "count": 5,
+  "files": [
+   "routes/about/+page.svelte",
+   "routes/general/+page.svelte",
+   "routes/groups/+page.svelte"
+  ]
+ },
+ {
+  "en": "None",
+  "kind": "text",
+  "count": 5,
+  "files": [
+   "routes/general/+page.svelte",
+   "routes/places/+page.svelte",
+   "routes/profile/email_processing/+page.svelte"
+  ]
+ },
+ {
+  "en": "Provider",
+  "kind": "attr:label",
+  "count": 5,
+  "files": [
+   "routes/fare-providers/new/+page.svelte",
+   "routes/general/+page.svelte",
+   "routes/insurance/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Search",
+  "kind": "text",
+  "count": 5,
+  "files": [
+   "lib/components/GridTable.svelte",
+   "routes/+layout.svelte",
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "segment",
+  "kind": "text",
+  "count": 5,
+  "files": [
+   "routes/trips/[id]/+page.svelte",
+   "routes/trips/[id]/print/+page.svelte",
+   "routes/trips/import/+page.svelte"
+  ]
+ },
+ {
+  "en": "Sign in",
+  "kind": "text",
+  "count": 5,
+  "files": [
+   "error.svelte",
+   "routes/forgot-password/+page.svelte",
+   "routes/login/+page.svelte"
+  ]
+ },
+ {
+  "en": "API/Subscription Key",
+  "kind": "text",
+  "count": 4,
+  "files": [
+   "routes/general/+page.svelte",
+   "routes/profile/email_parsing/+page.svelte"
+  ]
+ },
+ {
+  "en": "Country",
+  "kind": "text",
+  "count": 4,
+  "files": [
+   "lib/components/segments/SegmentEditForm.svelte",
+   "lib/components/segments/forms/EventForm.svelte",
+   "lib/components/segments/forms/FlightForm.svelte"
+  ]
+ },
+ {
+  "en": "Created",
+  "kind": "text",
+  "count": 4,
+  "files": [
+   "routes/profile/api-keys/+page.svelte",
+   "routes/profile/security/+page.svelte",
+   "routes/profile/sessions/+page.svelte"
+  ]
+ },
+ {
+  "en": "Currency",
+  "kind": "attr:label",
+  "count": 4,
+  "files": [
+   "routes/cards/[id]/edit/+page.svelte",
+   "routes/insurance/[id]/edit/+page.svelte",
+   "routes/insurance/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Document number",
+  "kind": "attr:label",
+  "count": 4,
+  "files": [
+   "routes/profile/documents/[id]/edit/+page.svelte",
+   "routes/profile/documents/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Enter confirmation",
+  "kind": "attr:placeholder",
+  "count": 4,
+  "files": [
+   "lib/components/segments/BookedRow.svelte",
+   "lib/components/segments/forms/FlightForm.svelte",
+   "lib/components/segments/forms/ParkingForm.svelte"
+  ]
+ },
+ {
+  "en": "Enter total cost",
+  "kind": "attr:placeholder",
+  "count": 4,
+  "files": [
+   "lib/components/segments/forms/EventForm.svelte",
+   "lib/components/segments/forms/FlightForm.svelte",
+   "lib/components/segments/forms/ParkingForm.svelte"
+  ]
+ },
+ {
+  "en": "Expires (optional)",
+  "kind": "text",
+  "count": 4,
+  "files": [
+   "routes/profile/api-keys/+page.svelte",
+   "routes/profile/calendar/+page.svelte",
+   "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
+  "en": "Import",
+  "kind": "text",
+  "count": 4,
+  "files": [
+   "routes/places/+page.svelte",
+   "routes/places/import/+page.svelte",
+   "routes/trips/+page.svelte"
+  ]
+ },
+ {
+  "en": "Label",
+  "kind": "attr:label",
+  "count": 4,
+  "files": [
+   "routes/fare-providers/[id]/edit/+page.svelte",
+   "routes/fare-providers/new/+page.svelte",
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "Meeting / rally point",
+  "kind": "attr:label",
+  "count": 4,
+  "files": [
+   "lib/components/segments/SegmentEditForm.svelte",
+   "lib/components/segments/forms/FlightForm.svelte",
+   "lib/components/segments/forms/RentalCarForm.svelte"
+  ]
+ },
+ {
+  "en": "Membership number",
+  "kind": "attr:label",
+  "count": 4,
+  "files": [
+   "routes/profile/loyalty/[id]/edit/+page.svelte",
+   "routes/profile/loyalty/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "New password",
+  "kind": "text",
+  "count": 4,
+  "files": [
+   "routes/profile/change-password/+page.svelte",
+   "routes/profile/security/+page.svelte",
+   "routes/reset-password/[token]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Policy number",
+  "kind": "attr:label",
+  "count": 4,
+  "files": [
+   "routes/insurance/[id]/edit/+page.svelte",
+   "routes/insurance/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Rally time",
+  "kind": "attr:label",
+  "count": 4,
+  "files": [
+   "lib/components/segments/SegmentEditForm.svelte",
+   "lib/components/segments/forms/FlightForm.svelte",
+   "lib/components/segments/forms/RentalCarForm.svelte"
+  ]
+ },
+ {
+  "en": "Revoke",
+  "kind": "text",
+  "count": 4,
+  "files": [
+   "routes/profile/api-keys/+page.svelte",
+   "routes/profile/security/+page.svelte",
+   "routes/profile/sessions/+page.svelte"
+  ]
+ },
+ {
+  "en": "Save email settings",
+  "kind": "text",
+  "count": 4,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Status",
+  "kind": "text",
+  "count": 4,
+  "files": [
+   "routes/places/+page.svelte",
+   "routes/profile/reminders/[id]/edit/+page.svelte",
+   "routes/trips/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Total cost",
+  "kind": "attr:label",
+  "count": 4,
+  "files": [
+   "lib/components/segments/forms/EventForm.svelte",
+   "lib/components/segments/forms/FlightForm.svelte",
+   "lib/components/segments/forms/ParkingForm.svelte"
+  ]
+ },
+ {
+  "en": "Username",
+  "kind": "text",
+  "count": 4,
+  "files": [
+   "routes/general/+page.svelte",
+   "routes/profile/email_processing/+page.svelte",
+   "routes/profile/email_sender/+page.svelte"
+  ]
+ },
+ {
+  "en": "· Last used",
+  "kind": "text",
+  "count": 3,
+  "files": [
+   "routes/profile/api-keys/+page.svelte",
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Add reminder",
+  "kind": "text",
+  "count": 3,
+  "files": [
+   "routes/profile/reminders/new/+page.svelte",
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Add segment",
+  "kind": "text",
+  "count": 3,
+  "files": [
+   "routes/trips/[id]/+page.svelte",
+   "routes/trips/[id]/segments/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Address",
+  "kind": "attr:label",
+  "count": 3,
+  "files": [
+   "lib/components/segments/forms/RentalCarForm.svelte",
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "All trips",
+  "kind": "text",
+  "count": 3,
+  "files": [
+   "routes/+page.svelte"
+  ]
+ },
+ {
+  "en": "Confirm new password",
+  "kind": "text",
+  "count": 3,
+  "files": [
+   "routes/profile/change-password/+page.svelte",
+   "routes/profile/security/+page.svelte",
+   "routes/users/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Confirm password",
+  "kind": "text",
+  "count": 3,
+  "files": [
+   "routes/invite/[token]/+page.svelte",
+   "routes/reset-password/[token]/+page.svelte",
+   "routes/setup/+page.svelte"
+  ]
+ },
+ {
+  "en": "Credits",
+  "kind": "text",
+  "count": 3,
+  "files": [
+   "routes/about/+page.svelte",
+   "routes/about/credits/+page.svelte",
+   "routes/about/licenses/+page.svelte"
+  ]
+ },
+ {
+  "en": "day",
+  "kind": "text",
+  "count": 3,
+  "files": [
+   "routes/trips/[id]/+page.svelte",
+   "routes/trips/[id]/print/+page.svelte"
+  ]
+ },
+ {
+  "en": "Description",
+  "kind": "attr:label",
+  "count": 3,
+  "files": [
+   "routes/profile/reminders/[id]/edit/+page.svelte",
+   "routes/profile/reminders/new/+page.svelte",
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Display name",
+  "kind": "text",
+  "count": 3,
+  "files": [
+   "routes/profile/+page.svelte",
+   "routes/users/[id]/edit/+page.svelte",
+   "routes/users/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Done",
+  "kind": "text",
+  "count": 3,
+  "files": [
+   "routes/profile/security/+page.svelte",
+   "routes/trips/+page.svelte"
+  ]
+ },
+ {
+  "en": "Drop-off",
+  "kind": "text",
+  "count": 3,
+  "files": [
+   "lib/components/segments/forms/RentalCarForm.svelte",
+   "lib/components/segments/forms/RideshareForm.svelte",
+   "lib/components/segments/forms/ShuttleForm.svelte"
+  ]
+ },
+ {
+  "en": "Duplicate",
+  "kind": "text",
+  "count": 3,
+  "files": [
+   "routes/places/import/+page.svelte",
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Email Settings",
+  "kind": "text",
+  "count": 3,
+  "files": [
+   "routes/profile/email_parsing/+page.svelte",
+   "routes/profile/email_processing/+page.svelte",
+   "routes/profile/email_sender/+page.svelte"
+  ]
+ },
+ {
+  "en": "Enter note e.g. Don't forget your charger!",
+  "kind": "attr:placeholder",
+  "count": 3,
+  "files": [
+   "lib/components/segments/forms/EventForm.svelte",
+   "lib/components/segments/forms/FlightForm.svelte",
+   "lib/components/segments/forms/RentalCarForm.svelte"
+  ]
+ },
+ {
+  "en": "Enter phone",
+  "kind": "attr:placeholder",
+  "count": 3,
+  "files": [
+   "lib/components/segments/forms/EventForm.svelte",
+   "lib/components/segments/forms/RentalCarForm.svelte"
+  ]
+ },
+ {
+  "en": "Favorite",
+  "kind": "attr:title",
+  "count": 3,
+  "files": [
+   "lib/components/TripCard.svelte",
+   "routes/places/+page.svelte",
+   "routes/trips/+page.svelte"
+  ]
+ },
+ {
+  "en": "Import travel confirmations and control notification delivery.",
+  "kind": "text",
+  "count": 3,
+  "files": [
+   "routes/profile/email_parsing/+page.svelte",
+   "routes/profile/email_processing/+page.svelte",
+   "routes/profile/email_sender/+page.svelte"
+  ]
+ },
+ {
+  "en": "Instance name",
+  "kind": "text",
+  "count": 3,
+  "files": [
+   "routes/about/+page.svelte",
+   "routes/general/+page.svelte",
+   "routes/setup/+page.svelte"
+  ]
+ },
+ {
+  "en": "Label (optional)",
+  "kind": "attr:placeholder",
+  "count": 3,
+  "files": [
+   "lib/components/segments/SegmentEditForm.svelte",
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Licenses",
+  "kind": "text",
+  "count": 3,
+  "files": [
+   "routes/about/+page.svelte",
+   "routes/about/credits/+page.svelte",
+   "routes/about/licenses/+page.svelte"
+  ]
+ },
+ {
+  "en": "Markdown supported",
+  "kind": "text",
+  "count": 3,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "More details",
+  "kind": "attr:title",
+  "count": 3,
+  "files": [
+   "lib/components/segments/forms/EventForm.svelte",
+   "lib/components/segments/forms/FlightForm.svelte",
+   "lib/components/segments/forms/RentalCarForm.svelte"
+  ]
+ },
+ {
+  "en": "New trip",
+  "kind": "text",
+  "count": 3,
+  "files": [
+   "routes/+page.svelte",
+   "routes/trips/+page.svelte",
+   "routes/trips/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Notifications",
+  "kind": "text",
+  "count": 3,
+  "files": [
+   "routes/about/+page.svelte",
+   "routes/general/+page.svelte",
+   "routes/notifications/+page.svelte"
+  ]
+ },
+ {
+  "en": "Other",
+  "kind": "text",
+  "count": 3,
+  "files": [
+   "routes/profile/security/+page.svelte",
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Permission",
+  "kind": "text",
+  "count": 3,
+  "files": [
+   "routes/trips/[id]/+page.svelte",
+   "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
+  "en": "Remove",
+  "kind": "text",
+  "count": 3,
+  "files": [
+   "routes/groups/[id]/edit/+page.svelte",
+   "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
+  "en": "Role",
+  "kind": "text",
+  "count": 3,
+  "files": [
+   "routes/trips/[id]/+page.svelte",
+   "routes/users/[id]/edit/+page.svelte",
+   "routes/users/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Scopes:",
+  "kind": "text",
+  "count": 3,
+  "files": [
+   "routes/profile/api-keys/+page.svelte",
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Security",
+  "kind": "text",
+  "count": 3,
+  "files": [
+   "routes/general/+page.svelte",
+   "routes/profile/email_processing/+page.svelte",
+   "routes/profile/email_sender/+page.svelte"
+  ]
+ },
+ {
+  "en": "SSL/TLS",
+  "kind": "text",
+  "count": 3,
+  "files": [
+   "routes/general/+page.svelte",
+   "routes/profile/email_processing/+page.svelte",
+   "routes/profile/email_sender/+page.svelte"
+  ]
+ },
+ {
+  "en": "STARTTLS",
+  "kind": "text",
+  "count": 3,
+  "files": [
+   "routes/general/+page.svelte",
+   "routes/profile/email_processing/+page.svelte",
+   "routes/profile/email_sender/+page.svelte"
+  ]
+ },
+ {
+  "en": "trip",
+  "kind": "text",
+  "count": 3,
+  "files": [
+   "routes/search/+page.svelte",
+   "routes/trips/+page.svelte",
+   "routes/trips/import/+page.svelte"
+  ]
+ },
+ {
+  "en": "Trip",
+  "kind": "text",
+  "count": 3,
+  "files": [
+   "routes/+page.svelte",
+   "routes/insurance/[id]/edit/+page.svelte",
+   "routes/insurance/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Trips",
+  "kind": "text",
+  "count": 3,
+  "files": [
+   "routes/about/+page.svelte",
+   "routes/general/+page.svelte",
+   "routes/trips/+page.svelte"
+  ]
+ },
+ {
+  "en": "Type",
+  "kind": "attr:label",
+  "count": 3,
+  "files": [
+   "routes/profile/documents/[id]/edit/+page.svelte",
+   "routes/profile/documents/new/+page.svelte",
+   "routes/profile/reminders/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Upload file",
+  "kind": "text",
+  "count": 3,
+  "files": [
+   "lib/components/segments/SegmentEditForm.svelte",
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "User",
+  "kind": "text",
+  "count": 3,
+  "files": [
+   "routes/audit-logs/[id]/+page.svelte",
+   "routes/users/[id]/edit/+page.svelte",
+   "routes/users/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Users",
+  "kind": "text",
+  "count": 3,
+  "files": [
+   "routes/about/+page.svelte",
+   "routes/general/+page.svelte",
+   "routes/users/+page.svelte"
+  ]
+ },
+ {
+  "en": "you@example.com",
+  "kind": "attr:placeholder",
+  "count": 3,
+  "files": [
+   "routes/forgot-password/+page.svelte",
+   "routes/login/+page.svelte",
+   "routes/register/+page.svelte"
+  ]
+ },
+ {
+  "en": "Your name",
+  "kind": "text",
+  "count": 3,
+  "files": [
+   "routes/invite/[token]/+page.svelte",
+   "routes/register/+page.svelte",
+   "routes/setup/+page.svelte"
+  ]
+ },
+ {
+  "en": "· Expires",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/profile/api-keys/+page.svelte",
+   "routes/profile/sessions/+page.svelte"
+  ]
+ },
+ {
+  "en": "/chat/completions",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/general/+page.svelte",
+   "routes/profile/email_parsing/+page.svelte"
+  ]
+ },
+ {
+  "en": "Add",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "lib/components/segments/AddSegmentFormShell.svelte",
+   "routes/groups/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Add card",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/cards/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Add policy",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/insurance/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Admin",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/users/[id]/edit/+page.svelte",
+   "routes/users/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Amount",
+  "kind": "attr:placeholder",
+  "count": 2,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "and",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/profile/api-keys/+page.svelte",
+   "routes/setup/+page.svelte"
+  ]
+ },
+ {
+  "en": "Anything worth remembering…",
+  "kind": "attr:placeholder",
+  "count": 2,
+  "files": [
+   "routes/trips/[id]/edit/+page.svelte",
+   "routes/trips/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "API base URL",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/general/+page.svelte",
+   "routes/profile/email_parsing/+page.svelte"
+  ]
+ },
+ {
+  "en": "API key or subscription key issued by the provider.",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/general/+page.svelte",
+   "routes/profile/email_parsing/+page.svelte"
+  ]
+ },
+ {
+  "en": "Application",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/about/+page.svelte"
+  ]
+ },
+ {
+  "en": "At least 8 characters",
+  "kind": "attr:placeholder",
+  "count": 2,
+  "files": [
+   "routes/register/+page.svelte",
+   "routes/reset-password/[token]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Attendees",
+  "kind": "attr:title",
+  "count": 2,
+  "files": [
+   "lib/components/segments/forms/EventForm.svelte"
+  ]
+ },
+ {
+  "en": "Authentication",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/general/+page.svelte",
+   "routes/profile/email_parsing/+page.svelte"
+  ]
+ },
+ {
+  "en": "Authorize",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/oauth/authorize/+page.svelte"
+  ]
+ },
+ {
+  "en": "Back to",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "lib/components/segments/AddSegmentFormShell.svelte",
+   "routes/trips/[id]/segments/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Back to trip",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/trips/[id]/print/+page.svelte",
+   "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
+  "en": "Balance",
+  "kind": "attr:label",
+  "count": 2,
+  "files": [
+   "routes/profile/loyalty/[id]/edit/+page.svelte",
+   "routes/profile/loyalty/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Benefit",
+  "kind": "attr:label",
+  "count": 2,
+  "files": [
+   "routes/cards/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Booking date",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "lib/components/segments/BookingInfoSection.svelte",
+   "lib/components/segments/forms/EventForm.svelte"
+  ]
+ },
+ {
+  "en": "Booking info",
+  "kind": "attr:title",
+  "count": 2,
+  "files": [
+   "lib/components/segments/BookingInfoSection.svelte",
+   "lib/components/segments/forms/EventForm.svelte"
+  ]
+ },
+ {
+  "en": "Booking phone",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "lib/components/segments/BookingInfoSection.svelte",
+   "lib/components/segments/forms/EventForm.svelte"
+  ]
+ },
+ {
+  "en": "Booking rate",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "lib/components/segments/BookingInfoSection.svelte",
+   "lib/components/segments/forms/EventForm.svelte"
+  ]
+ },
+ {
+  "en": "Booking reference",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "lib/components/segments/BookingInfoSection.svelte",
+   "lib/components/segments/forms/EventForm.svelte"
+  ]
+ },
+ {
+  "en": "Booking site",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "lib/components/segments/BookingInfoSection.svelte",
+   "lib/components/segments/forms/EventForm.svelte"
+  ]
+ },
+ {
+  "en": "Booking website",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "lib/components/segments/BookingInfoSection.svelte",
+   "lib/components/segments/forms/EventForm.svelte"
+  ]
+ },
+ {
+  "en": "Calendar feed",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/profile/calendar/+page.svelte",
+   "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
+  "en": "Category",
+  "kind": "attr:label",
+  "count": 2,
+  "files": [
+   "lib/components/segments/forms/EventForm.svelte",
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "Choose",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/profile/security/+page.svelte",
+   "routes/profile/visited/VisitedPlacePage.svelte"
+  ]
+ },
+ {
+  "en": "Choose the credential type issued by your provider.",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/general/+page.svelte",
+   "routes/profile/email_parsing/+page.svelte"
+  ]
+ },
+ {
+  "en": "cities",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "cities1000.zip",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Clear stored client secret",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/general/+page.svelte",
+   "routes/profile/email_parsing/+page.svelte"
+  ]
+ },
+ {
+  "en": "Clear stored key",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/general/+page.svelte",
+   "routes/profile/email_parsing/+page.svelte"
+  ]
+ },
+ {
+  "en": "Client ID",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/general/+page.svelte",
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Client secret",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Close viewer",
+  "kind": "attr:aria-label",
+  "count": 2,
+  "files": [
+   "lib/components/Gallery.svelte"
+  ]
+ },
+ {
+  "en": "Copy",
+  "kind": "attr:label",
+  "count": 2,
+  "files": [
+   "routes/about/licenses/+page.svelte",
+   "routes/profile/calendar/+page.svelte"
+  ]
+ },
+ {
+  "en": "Coverage",
+  "kind": "attr:label",
+  "count": 2,
+  "files": [
+   "routes/cards/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Coverage amount (cents)",
+  "kind": "attr:label",
+  "count": 2,
+  "files": [
+   "routes/insurance/[id]/edit/+page.svelte",
+   "routes/insurance/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Coverage summary",
+  "kind": "attr:label",
+  "count": 2,
+  "files": [
+   "routes/insurance/[id]/edit/+page.svelte",
+   "routes/insurance/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Create group",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/groups/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Created account for",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/users/+page.svelte",
+   "routes/users/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Current password",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/profile/email/+page.svelte",
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Default currency",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/general/+page.svelte",
+   "routes/profile/+page.svelte"
+  ]
+ },
+ {
+  "en": "Default visibility",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/trips/[id]/edit/+page.svelte",
+   "routes/trips/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Destination country",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/trips/[id]/edit/+page.svelte",
+   "routes/trips/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Disable 2FA",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Document (optional)",
+  "kind": "attr:label",
+  "count": 2,
+  "files": [
+   "routes/profile/reminders/[id]/edit/+page.svelte",
+   "routes/profile/reminders/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Download backup",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/backup/+page.svelte"
+  ]
+ },
+ {
+  "en": "Drivers",
+  "kind": "attr:title",
+  "count": 2,
+  "files": [
+   "lib/components/segments/forms/RentalCarForm.svelte"
+  ]
+ },
+ {
+  "en": "Drop-off location",
+  "kind": "attr:label",
+  "count": 2,
+  "files": [
+   "lib/components/segments/forms/RentalCarForm.svelte",
+   "lib/components/segments/forms/ShuttleForm.svelte"
+  ]
+ },
+ {
+  "en": "e.g. Allianz",
+  "kind": "attr:placeholder",
+  "count": 2,
+  "files": [
+   "routes/insurance/[id]/edit/+page.svelte",
+   "routes/insurance/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "e.g. Hotel lobby, gate A12",
+  "kind": "attr:placeholder",
+  "count": 2,
+  "files": [
+   "lib/components/segments/forms/FlightForm.svelte",
+   "lib/components/segments/forms/StandardPlanForm.svelte"
+  ]
+ },
+ {
+  "en": "e.g. Personal API key",
+  "kind": "attr:placeholder",
+  "count": 2,
+  "files": [
+   "routes/fare-providers/[id]/edit/+page.svelte",
+   "routes/fare-providers/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "e.g. Sapphire Reserve",
+  "kind": "attr:placeholder",
+  "count": 2,
+  "files": [
+   "routes/cards/[id]/edit/+page.svelte",
+   "routes/cards/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "e.g. U.S. Department of State",
+  "kind": "attr:placeholder",
+  "count": 2,
+  "files": [
+   "routes/profile/documents/[id]/edit/+page.svelte",
+   "routes/profile/documents/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "e.g. United MileagePlus",
+  "kind": "attr:placeholder",
+  "count": 2,
+  "files": [
+   "routes/profile/loyalty/[id]/edit/+page.svelte",
+   "routes/profile/loyalty/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Each can be used once if you lose access to your authenticator. They won't be shown again.",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Email address",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/trips/[id]/+page.svelte",
+   "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
+  "en": "Enter address",
+  "kind": "attr:placeholder",
+  "count": 2,
+  "files": [
+   "lib/components/segments/forms/RentalCarForm.svelte"
+  ]
+ },
+ {
+  "en": "Enter booking phone",
+  "kind": "attr:placeholder",
+  "count": 2,
+  "files": [
+   "lib/components/segments/BookingInfoSection.svelte",
+   "lib/components/segments/forms/EventForm.svelte"
+  ]
+ },
+ {
+  "en": "Enter booking rate",
+  "kind": "attr:placeholder",
+  "count": 2,
+  "files": [
+   "lib/components/segments/BookingInfoSection.svelte",
+   "lib/components/segments/forms/EventForm.svelte"
+  ]
+ },
+ {
+  "en": "Enter booking reference",
+  "kind": "attr:placeholder",
+  "count": 2,
+  "files": [
+   "lib/components/segments/BookingInfoSection.svelte",
+   "lib/components/segments/forms/EventForm.svelte"
+  ]
+ },
+ {
+  "en": "Enter booking site",
+  "kind": "attr:placeholder",
+  "count": 2,
+  "files": [
+   "lib/components/segments/BookingInfoSection.svelte",
+   "lib/components/segments/forms/EventForm.svelte"
+  ]
+ },
+ {
+  "en": "Enter booking website",
+  "kind": "attr:placeholder",
+  "count": 2,
+  "files": [
+   "lib/components/segments/BookingInfoSection.svelte",
+   "lib/components/segments/forms/EventForm.svelte"
+  ]
+ },
+ {
+  "en": "Enter email",
+  "kind": "attr:placeholder",
+  "count": 2,
+  "files": [
+   "lib/components/segments/forms/EventForm.svelte",
+   "lib/components/segments/forms/RentalCarForm.svelte"
+  ]
+ },
+ {
+  "en": "Enter restrictions",
+  "kind": "attr:placeholder",
+  "count": 2,
+  "files": [
+   "lib/components/segments/BookingInfoSection.svelte",
+   "lib/components/segments/forms/EventForm.svelte"
+  ]
+ },
+ {
+  "en": "Enter website",
+  "kind": "attr:placeholder",
+  "count": 2,
+  "files": [
+   "lib/components/segments/forms/EventForm.svelte",
+   "lib/components/segments/forms/RentalCarForm.svelte"
+  ]
+ },
+ {
+  "en": "Expand all",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "lib/components/segments/forms/FlightForm.svelte",
+   "lib/components/segments/forms/RentalCarForm.svelte"
+  ]
+ },
+ {
+  "en": "Expires on",
+  "kind": "attr:label",
+  "count": 2,
+  "files": [
+   "routes/profile/documents/[id]/edit/+page.svelte",
+   "routes/profile/documents/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Export CSV",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/audit-logs/+page.svelte",
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Family, Coworkers…",
+  "kind": "attr:placeholder",
+  "count": 2,
+  "files": [
+   "routes/groups/[id]/edit/+page.svelte",
+   "routes/groups/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "File",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/places/import/+page.svelte",
+   "routes/trips/import/+page.svelte"
+  ]
+ },
+ {
+  "en": "First visited",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/profile/visited/VisitedPlacePage.svelte"
+  ]
+ },
+ {
+  "en": "From address",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/general/+page.svelte",
+   "routes/profile/email_sender/+page.svelte"
+  ]
+ },
+ {
+  "en": "Generate feed URL",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/profile/calendar/+page.svelte",
+   "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
+  "en": "GPX tracks",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "lib/components/PlacesMap.svelte",
+   "lib/components/TripMap.svelte"
+  ]
+ },
+ {
+  "en": "Group name",
+  "kind": "attr:label",
+  "count": 2,
+  "files": [
+   "routes/groups/[id]/edit/+page.svelte",
+   "routes/groups/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "http://localhost:3000/callback",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "https://…",
+  "kind": "attr:placeholder",
+  "count": 2,
+  "files": [
+   "routes/places/+page.svelte",
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "I saved these backup codes",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "IMAP host",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/general/+page.svelte",
+   "routes/profile/email_processing/+page.svelte"
+  ]
+ },
+ {
+  "en": "IMAP port",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/general/+page.svelte",
+   "routes/profile/email_processing/+page.svelte"
+  ]
+ },
+ {
+  "en": "Issuing authority",
+  "kind": "attr:label",
+  "count": 2,
+  "files": [
+   "routes/profile/documents/[id]/edit/+page.svelte",
+   "routes/profile/documents/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Itinerary",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/share/[token]/+page.svelte",
+   "routes/trips/[id]/print/+page.svelte"
+  ]
+ },
+ {
+  "en": "Last 4",
+  "kind": "attr:label",
+  "count": 2,
+  "files": [
+   "routes/cards/[id]/edit/+page.svelte",
+   "routes/cards/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Last checked:",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/general/+page.svelte",
+   "routes/profile/email_processing/+page.svelte"
+  ]
+ },
+ {
+  "en": "Last visited",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/profile/visited/VisitedPlacePage.svelte"
+  ]
+ },
+ {
+  "en": "Mailbox",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/general/+page.svelte",
+   "routes/profile/email_processing/+page.svelte"
+  ]
+ },
+ {
+  "en": "MCP Clients",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/general/+page.svelte",
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Me",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/profile/documents/[id]/edit/+page.svelte",
+   "routes/profile/documents/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Merge trips",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/trips/merge/+page.svelte"
+  ]
+ },
+ {
+  "en": "Model",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/general/+page.svelte",
+   "routes/profile/email_parsing/+page.svelte"
+  ]
+ },
+ {
+  "en": "Network",
+  "kind": "attr:label",
+  "count": 2,
+  "files": [
+   "routes/cards/[id]/edit/+page.svelte",
+   "routes/cards/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "New URL expires (optional)",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/profile/calendar/+page.svelte",
+   "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
+  "en": "Nickname",
+  "kind": "attr:label",
+  "count": 2,
+  "files": [
+   "routes/cards/[id]/edit/+page.svelte",
+   "routes/cards/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "No trip",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/insurance/[id]/edit/+page.svelte",
+   "routes/insurance/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Notes (optional)",
+  "kind": "attr:placeholder",
+  "count": 2,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "ntfy",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "OAuth client ID",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/general/+page.svelte",
+   "routes/profile/email_parsing/+page.svelte"
+  ]
+ },
+ {
+  "en": "OAuth client secret",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/general/+page.svelte",
+   "routes/profile/email_parsing/+page.svelte"
+  ]
+ },
+ {
+  "en": "OAuth Credentials",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/general/+page.svelte",
+   "routes/profile/email_parsing/+page.svelte"
+  ]
+ },
+ {
+  "en": "OAuth scope",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/general/+page.svelte",
+   "routes/profile/email_parsing/+page.svelte"
+  ]
+ },
+ {
+  "en": "OAuth token URL",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/general/+page.svelte",
+   "routes/profile/email_parsing/+page.svelte"
+  ]
+ },
+ {
+  "en": "of",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/profile/visited/VisitedPlacePage.svelte"
+  ]
+ },
+ {
+  "en": "on",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/profile/api-keys/+page.svelte",
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Optional",
+  "kind": "attr:placeholder",
+  "count": 2,
+  "files": [
+   "routes/cards/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "or",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/profile/api-keys/+page.svelte",
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Owner",
+  "kind": "attr:label",
+  "count": 2,
+  "files": [
+   "routes/profile/documents/[id]/edit/+page.svelte",
+   "routes/profile/documents/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Passengers",
+  "kind": "attr:title",
+  "count": 2,
+  "files": [
+   "lib/components/segments/forms/FlightForm.svelte"
+  ]
+ },
+ {
+  "en": "Photos",
+  "kind": "attr:title",
+  "count": 2,
+  "files": [
+   "routes/places/+page.svelte",
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "place",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/places/import/+page.svelte"
+  ]
+ },
+ {
+  "en": "Planned",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "Primary contact",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/profile/contacts/+page.svelte"
+  ]
+ },
+ {
+  "en": "Print",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/trips/[id]/+page.svelte",
+   "routes/trips/[id]/print/+page.svelte"
+  ]
+ },
+ {
+  "en": "Private",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/trips/[id]/edit/+page.svelte",
+   "routes/trips/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Program name",
+  "kind": "attr:label",
+  "count": 2,
+  "files": [
+   "routes/profile/loyalty/[id]/edit/+page.svelte",
+   "routes/profile/loyalty/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Project",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/about/credits/+page.svelte"
+  ]
+ },
+ {
+  "en": "Provider root ending before",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/general/+page.svelte",
+   "routes/profile/email_parsing/+page.svelte"
+  ]
+ },
+ {
+  "en": "Public",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/trips/[id]/edit/+page.svelte",
+   "routes/trips/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Read",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
+  "en": "Regenerate feed URL",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/profile/calendar/+page.svelte",
+   "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
+  "en": "Relationship",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/profile/contacts/+page.svelte"
+  ]
+ },
+ {
+  "en": "Rename",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/profile/api-keys/+page.svelte",
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Restrictions",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "lib/components/segments/BookingInfoSection.svelte",
+   "lib/components/segments/forms/EventForm.svelte"
+  ]
+ },
+ {
+  "en": "ROAMARR_SECRET",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/boot-error/+page.svelte",
+   "routes/setup/+page.svelte"
+  ]
+ },
+ {
+  "en": "Row",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/places/import/+page.svelte",
+   "routes/trips/import/+page.svelte"
+  ]
+ },
+ {
+  "en": "Save changes",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/trips/[id]/edit/+page.svelte",
+   "routes/users/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Save reminder",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/profile/reminders/[id]/edit/+page.svelte",
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Save these backup codes",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Scopes",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/profile/api-keys/+page.svelte",
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Search documents by type",
+  "kind": "attr:placeholder",
+  "count": 2,
+  "files": [
+   "routes/profile/reminders/[id]/edit/+page.svelte",
+   "routes/profile/reminders/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Search trips by name or destination",
+  "kind": "attr:placeholder",
+  "count": 2,
+  "files": [
+   "routes/profile/reminders/[id]/edit/+page.svelte",
+   "routes/profile/reminders/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Seed Demo Data",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/seed/+page.svelte"
+  ]
+ },
+ {
+  "en": "Segments",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/about/+page.svelte",
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Send test email",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/general/+page.svelte",
+   "routes/profile/email_sender/+page.svelte"
+  ]
+ },
+ {
+  "en": "Share",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/trips/[id]/+page.svelte",
+   "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
+  "en": "Shared",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "lib/components/TripCard.svelte",
+   "routes/+page.svelte"
+  ]
+ },
+ {
+  "en": "Subscribe to all your trips with one calendar URL.",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/profile/calendar/+page.svelte"
+  ]
+ },
+ {
+  "en": "Tags",
+  "kind": "attr:label",
+  "count": 2,
+  "files": [
+   "routes/trips/[id]/edit/+page.svelte",
+   "routes/trips/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Temporary password:",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/users/+page.svelte",
+   "routes/users/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "The user must change this password on first sign-in.",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/users/+page.svelte",
+   "routes/users/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Theme",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/profile/theme/+page.svelte"
+  ]
+ },
+ {
+  "en": "Title",
+  "kind": "attr:label",
+  "count": 2,
+  "files": [
+   "lib/components/segments/SegmentEditForm.svelte",
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Trip (optional)",
+  "kind": "attr:label",
+  "count": 2,
+  "files": [
+   "routes/profile/reminders/[id]/edit/+page.svelte",
+   "routes/profile/reminders/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Trip name",
+  "kind": "attr:label",
+  "count": 2,
+  "files": [
+   "routes/trips/[id]/edit/+page.svelte",
+   "routes/trips/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "unread alert",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/+page.svelte",
+   "routes/notifications/+page.svelte"
+  ]
+ },
+ {
+  "en": "Update password",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/profile/security/+page.svelte",
+   "routes/reset-password/[token]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Use an OpenAI-compatible API",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/general/+page.svelte",
+   "routes/profile/email_parsing/+page.svelte"
+  ]
+ },
+ {
+  "en": "user@example.com",
+  "kind": "attr:placeholder",
+  "count": 2,
+  "files": [
+   "routes/trips/[id]/+page.svelte",
+   "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
+  "en": "Version",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/about/+page.svelte",
+   "routes/about/credits/+page.svelte"
+  ]
+ },
+ {
+  "en": "Visited",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "Website",
+  "kind": "attr:label",
+  "count": 2,
+  "files": [
+   "lib/components/segments/forms/EventForm.svelte",
+   "lib/components/segments/forms/RentalCarForm.svelte"
+  ]
+ },
+ {
+  "en": "What's covered",
+  "kind": "attr:placeholder",
+  "count": 2,
+  "files": [
+   "routes/insurance/[id]/edit/+page.svelte",
+   "routes/insurance/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "When",
+  "kind": "attr:label",
+  "count": 2,
+  "files": [
+   "routes/profile/reminders/[id]/edit/+page.svelte",
+   "routes/profile/reminders/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "work, summer, family",
+  "kind": "attr:placeholder",
+  "count": 2,
+  "files": [
+   "routes/trips/[id]/edit/+page.svelte",
+   "routes/trips/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "— Printable Itinerary",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/print/+page.svelte"
+  ]
+ },
+ {
+  "en": "— skipped",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/places/import/+page.svelte"
+  ]
+ },
+ {
+  "en": "— uses PKCE only, no secret (for apps that can't store one)",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": ", and",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": ", CC-BY 4.0. Tile provider attribution is shown on each map.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": ", field",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/import/+page.svelte"
+  ]
+ },
+ {
+  "en": ", hostname, port, path, and trailing slash.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": ", next due",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/backup/+page.svelte"
+  ]
+ },
+ {
+  "en": ", texture ready",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": ", then approve access in Roamarr.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": ". Editing it",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/reminders/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": ". Example:",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "…and",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/places/import/+page.svelte"
+  ]
+ },
+ {
+  "en": "…or paste Google Maps links",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/places/import/+page.svelte"
+  ]
+ },
+ {
+  "en": ".env",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/setup/+page.svelte"
+  ]
+ },
+ {
+  "en": ".mongreldb.tar.gz",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/backup/+page.svelte"
+  ]
+ },
+ {
+  "en": "· expires",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
+  "en": "· paid by",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "· revoked",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/api-keys/+page.svelte"
+  ]
+ },
+ {
+  "en": "(downloaded",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "(imported",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "(ONNX) from Hugging Face Hub and indexes trips and segments for contextual search with MongrelDB ANN. Disabled by default.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "(unnamed)",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/reminders/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": ") and restart the app:",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/setup/+page.svelte"
+  ]
+ },
+ {
+  "en": "). Cannot be re-pointed.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/reminders/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "). Re-enabling re-checks and fetches anything missing.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "/api/*",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/api-keys/+page.svelte"
+  ]
+ },
+ {
+  "en": "/data/maps",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/backup/+page.svelte"
+  ]
+ },
+ {
+  "en": "/mcp",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/api-keys/+page.svelte"
+  ]
+ },
+ {
+  "en": "/share/",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
+  "en": "&copy; Map data contributors",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "⚠ Needs re-authorization: Roamarr's OAuth scopes changed. Have the client re-run the consent flow to refresh its granted scopes, then tokens will work again.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "🌐 Globe view",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "lib/components/TripMap.svelte"
+  ]
+ },
+ {
+  "en": "12-hour (1:30 PM)",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/+page.svelte"
+  ]
+ },
+ {
+  "en": "123456 or abcd-ef12",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "24-hour (13:30)",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/+page.svelte"
+  ]
+ },
+ {
+  "en": "About",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/about/+page.svelte"
+  ]
+ },
+ {
+  "en": "Accept invitation",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/invite/[token]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Access",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/users/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Access token",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Account",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/users/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Account enabled",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/users/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Actions",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Active",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/+page.svelte"
+  ]
+ },
+ {
+  "en": "Active sessions",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/sessions/+page.svelte"
+  ]
+ },
+ {
+  "en": "Active tokens",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Activities",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Ada Lovelace",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "routes/register/+page.svelte"
+  ]
+ },
+ {
+  "en": "Add a flight",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/FlightForm.svelte"
+  ]
+ },
+ {
+  "en": "Add a new account and share the temporary password securely.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/users/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Add a note for this day…",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Add a server and select",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Add account",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/fare-providers/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Add benefit",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/cards/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Add category",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "Add checklist item",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Add contact",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/contacts/+page.svelte"
+  ]
+ },
+ {
+  "en": "Add custom connector",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Add day note",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Add document",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/documents/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Add emergency contact",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/contacts/+page.svelte"
+  ]
+ },
+ {
+  "en": "Add expense",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Add fare provider account",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/fare-providers/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Add item",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Add journal entry",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Add link",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Add loyalty program",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/loyalty/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Add member",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "routes/groups/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Add person",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Add photos",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "lib/components/Gallery.svelte"
+  ]
+ },
+ {
+  "en": "Add place",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "Add program",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/loyalty/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Add the connector, select",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Add travel document",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/documents/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Add your first place to build a reusable library.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "Additional details",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "lib/components/segments/SegmentEditForm.svelte"
+  ]
+ },
+ {
+  "en": "Additional details (optional)",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/TodoForm.svelte"
+  ]
+ },
+ {
+  "en": "Admin Settings → External Tools",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Adult",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Aircraft",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/FlightForm.svelte"
+  ]
+ },
+ {
+  "en": "Aircraft and service info",
+  "kind": "attr:title",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/FlightForm.svelte"
+  ]
+ },
+ {
+  "en": "Airline",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/FlightForm.svelte"
+  ]
+ },
+ {
+  "en": "Airport or terminal",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/FlightForm.svelte"
+  ]
+ },
+ {
+  "en": "All",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "All categories",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "All statuses",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/+page.svelte"
+  ]
+ },
+ {
+  "en": "Allow Per-User IMAP",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Allow Per-User Parsing Providers",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Allow Per-User SMTP",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Allow private travel details through MCP",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Allow self-registration",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Allow users to set up MCP Clients",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Allowed client IDs",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Already have an account?",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/register/+page.svelte"
+  ]
+ },
+ {
+  "en": "and paste the MCP URL above.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "and upload it below.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Anyone with this link can view the trip.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
+  "en": "API base URL, model, and one authentication method are required when enabled.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/email_parsing/+page.svelte"
+  ]
+ },
+ {
+  "en": "API Keys",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/api-keys/+page.svelte"
+  ]
+ },
+ {
+  "en": "apikey",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Application details and instance metadata.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/about/+page.svelte"
+  ]
+ },
+ {
+  "en": "Apply",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/+page.svelte"
+  ]
+ },
+ {
+  "en": "Archive",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/+page.svelte"
+  ]
+ },
+ {
+  "en": "Archived",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/+page.svelte"
+  ]
+ },
+ {
+  "en": "archives to",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/backup/+page.svelte"
+  ]
+ },
+ {
+  "en": "are not included. Size is dominated by the engine write-ahead log (WAL), not trip row count — run",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/backup/+page.svelte"
+  ]
+ },
+ {
+  "en": "Arrival airport",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/FlightForm.svelte"
+  ]
+ },
+ {
+  "en": "Arrival date",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/FlightForm.svelte"
+  ]
+ },
+ {
+  "en": "Arrival time",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/FlightForm.svelte"
+  ]
+ },
+ {
+  "en": "Arrival timezone",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/FlightForm.svelte"
+  ]
+ },
+ {
+  "en": "Ascending",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/+page.svelte"
+  ]
+ },
+ {
+  "en": "Assign category",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/places/import/+page.svelte"
+  ]
+ },
+ {
+  "en": "Attach GPX track",
+  "kind": "attr:title",
+  "count": 1,
+  "files": [
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "Attach PDFs or images such as QR codes, vouchers, or booking confirmations (JPEG, PNG, WebP, or PDF, max 10&nbsp;MB each).",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "lib/components/segments/AddSegmentFormShell.svelte"
+  ]
+ },
+ {
+  "en": "Attached files",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "lib/components/segments/SegmentEditForm.svelte"
+  ]
+ },
+ {
+  "en": "Attribution",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Attribution HTML shown on the map.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Audit log entry",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/audit-logs/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Audit Logs",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/audit-logs/+page.svelte"
+  ]
+ },
+ {
+  "en": "Authentication code",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/login/verify/+page.svelte"
+  ]
+ },
+ {
+  "en": "Authorization: Bearer",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/api-keys/+page.svelte"
+  ]
+ },
+ {
+  "en": "auto-",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/backup/+page.svelte"
+  ]
+ },
+ {
+  "en": "auto-*.mongreldb.tar.gz",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/backup/+page.svelte"
+  ]
+ },
+ {
+  "en": "Auto-mark:",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/visited/VisitedPlacePage.svelte"
+  ]
+ },
+ {
+  "en": "Automatic backups",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/backup/+page.svelte"
+  ]
+ },
+ {
+  "en": "Automatic download not working? Download",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Automatic OAuth 2.1 registration.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Automatic OAuth setup using Connectors.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Back to audit log",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/audit-logs/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Back to home",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "error.svelte"
+  ]
+ },
+ {
+  "en": "Back to login",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/login/verify/+page.svelte"
+  ]
+ },
+ {
+  "en": "Back to trips",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Back to users",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/users/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Backup & Restore",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/backup/+page.svelte"
+  ]
+ },
+ {
+  "en": "backup code",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Backup file",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/backup/+page.svelte"
+  ]
+ },
+ {
+  "en": "Balance last updated",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/loyalty/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Base currency",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Benefits",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/cards/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Boeing 787",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/FlightForm.svelte"
+  ]
+ },
+ {
+  "en": "Boot error:",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/boot-error/+page.svelte"
+  ]
+ },
+ {
+  "en": "Budget & expenses",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Budget cap",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Bulk actions",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/+page.svelte"
+  ]
+ },
+ {
+  "en": "Bundled attribution records for Roamarr, third-party npm packages, acknowledgements, and runtime components.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/about/+page.svelte"
+  ]
+ },
+ {
+  "en": "Bundled license and attribution documents for Roamarr.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/about/licenses/+page.svelte"
+  ]
+ },
+ {
+  "en": "Button label",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "by",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/+page.svelte"
+  ]
+ },
+ {
+  "en": "Cabin / class",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/FlightForm.svelte"
+  ]
+ },
+ {
+  "en": "Calendar",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Can edit",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "cannot start",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/boot-error/+page.svelte"
+  ]
+ },
+ {
+  "en": "Caption",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "lib/components/Gallery.svelte"
+  ]
+ },
+ {
+  "en": "Car 7, Seat 42",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/TrainForm.svelte"
+  ]
+ },
+ {
+  "en": "Car details",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/RentalCarForm.svelte"
+  ]
+ },
+ {
+  "en": "Car type",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/RentalCarForm.svelte"
+  ]
+ },
+ {
+  "en": "Cards",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/cards/+page.svelte"
+  ]
+ },
+ {
+  "en": "Categories",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "Category name",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "Celsius (°C)",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/+page.svelte"
+  ]
+ },
+ {
+  "en": "Change email",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/email/+page.svelte"
+  ]
+ },
+ {
+  "en": "Change password",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Check inbox now",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/email_processing/+page.svelte"
+  ]
+ },
+ {
+  "en": "Child",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Choose a new password",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/change-password/+page.svelte"
+  ]
+ },
+ {
+  "en": "Choose a new password for your account.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/reset-password/[token]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Choose a saved place…",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/segments/new/poi/+page.svelte"
+  ]
+ },
+ {
+  "en": "Choose donor",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/merge/+page.svelte"
+  ]
+ },
+ {
+  "en": "Choose recipient",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/merge/+page.svelte"
+  ]
+ },
+ {
+  "en": "Choose what you are adding to this trip.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/segments/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "City",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "lib/components/segments/CityAutocomplete.svelte"
+  ]
+ },
+ {
+  "en": "City database:",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "City suggestions",
+  "kind": "attr:aria-label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/CityAutocomplete.svelte"
+  ]
+ },
+ {
+  "en": "Claude Desktop",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "claude_desktop_config.json",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Clear",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/about/licenses/+page.svelte"
+  ]
+ },
+ {
+  "en": "Clear all",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/visited/VisitedPlacePage.svelte"
+  ]
+ },
+ {
+  "en": "Clear API key",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Clear filters",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Clear selection",
+  "kind": "attr:aria-label",
+  "count": 1,
+  "files": [
+   "lib/components/Autocomplete.svelte"
+  ]
+ },
+ {
+  "en": "Clear the stored password",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Clear the stored secret",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Clear token",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Client ID issued by the provider.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Client name",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Client Secret",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Close globe",
+  "kind": "attr:aria-label",
+  "count": 1,
+  "files": [
+   "lib/components/GlobeModal.svelte"
+  ]
+ },
+ {
+  "en": "Close menu",
+  "kind": "attr:aria-label",
+  "count": 1,
+  "files": [
+   "routes/+layout.svelte"
+  ]
+ },
+ {
+  "en": "Close selected segment",
+  "kind": "attr:aria-label",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Close setup",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Color",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "completed successfully.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/database-maintenance/+page.svelte"
+  ]
+ },
+ {
+  "en": "Components used by common Roamarr source builds and deployments. Host providers may add their own notices.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/about/credits/+page.svelte"
+  ]
+ },
+ {
+  "en": "Concert, conference, etc.",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/EventForm.svelte"
+  ]
+ },
+ {
+  "en": "Confirm new email",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/email/+page.svelte"
+  ]
+ },
+ {
+  "en": "Confirmation #",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/SegmentEditForm.svelte"
+  ]
+ },
+ {
+  "en": "Connect",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Connect a provider account to power fare watching.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/fare-providers/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Connect Claude Desktop, Open WebUI, or another OAuth-capable MCP application to Roamarr.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Connect named provider accounts to power fare watching on your trips.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/fare-providers/+page.svelte"
+  ]
+ },
+ {
+  "en": "Connected clients",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Continue",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/setup/+page.svelte"
+  ]
+ },
+ {
+  "en": "Control who can see",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
+  "en": "Controls which OAuth clients may connect to Roamarr's MCP server. When the allow-list is empty, users can register and authorize any OAuth client. When it contains one or more client IDs, only those clients may be authorized.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Coordinates",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/places/import/+page.svelte"
+  ]
+ },
+ {
+  "en": "Copy feed URL",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
+  "en": "Copy it now — this token won't be shown again. Roamarr stores only its hash.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/api-keys/+page.svelte"
+  ]
+ },
+ {
+  "en": "Copy link",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
+  "en": "Copy public link",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Copy these now — the client secret won't be shown again.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "countries &middot;",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/visited/VisitedPlacePage.svelte"
+  ]
+ },
+ {
+  "en": "Country (for city lookup)",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "Country borders: bundled (Natural Earth, public domain)",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Create a new key",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/api-keys/+page.svelte"
+  ]
+ },
+ {
+  "en": "Create account",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/users/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Create account and accept",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/invite/[token]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Create admin",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/setup/+page.svelte"
+  ]
+ },
+ {
+  "en": "Create an account",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/register/+page.svelte"
+  ]
+ },
+ {
+  "en": "Create another MCP client",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Create client",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Create credentials for another MCP client.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Create key",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/api-keys/+page.svelte"
+  ]
+ },
+ {
+  "en": "Create one",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/login/+page.svelte"
+  ]
+ },
+ {
+  "en": "Create public link",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
+  "en": "Create trip",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Create user",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/users/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Create your admin account to get started.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/setup/+page.svelte"
+  ]
+ },
+ {
+  "en": "Created by",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "CSV",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/import/+page.svelte"
+  ]
+ },
+ {
+  "en": "Current",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/sessions/+page.svelte"
+  ]
+ },
+ {
+  "en": "Current address:",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/email/+page.svelte"
+  ]
+ },
+ {
+  "en": "Current code",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Current install",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/about/+page.svelte"
+  ]
+ },
+ {
+  "en": "Custom",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/cards/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Danger zone",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Database",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/setup/+page.svelte"
+  ]
+ },
+ {
+  "en": "Database encryption",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/setup/+page.svelte"
+  ]
+ },
+ {
+  "en": "Database file permissions and disk space on the host.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/boot-error/+page.svelte"
+  ]
+ },
+ {
+  "en": "Database Maintenance",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/database-maintenance/+page.svelte"
+  ]
+ },
+ {
+  "en": "Database path",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/about/+page.svelte"
+  ]
+ },
+ {
+  "en": "DATABASE_PASS",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/setup/+page.svelte"
+  ]
+ },
+ {
+  "en": "DATABASE_USER",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/setup/+page.svelte"
+  ]
+ },
+ {
+  "en": "Date",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/NoteForm.svelte"
+  ]
+ },
+ {
+  "en": "Day note icon",
+  "kind": "attr:aria-label",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Day notes",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Default currency for expenses and budgets.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Default date format",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Default date/time format",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Default document expiry lead (days)",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Default flight check-in lead (hours)",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Default is MiniLM-L6-v2. Runtime uses the ONNX/ORT conversion from Hugging Face Hub.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Default notice period for flight check-in reminders.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Default notice period for travel-document expiry reminders.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Default timezone",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Defaults to https://ntfy.sh. Self-hosted servers must use https.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Delete category",
+  "kind": "attr:title",
+  "count": 1,
+  "files": [
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "Delete expense",
+  "kind": "attr:aria-label",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Delete link",
+  "kind": "attr:title",
+  "count": 1,
+  "files": [
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "Delete note",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Delete photo",
+  "kind": "attr:title",
+  "count": 1,
+  "files": [
+   "lib/components/Gallery.svelte"
+  ]
+ },
+ {
+  "en": "Delete place",
+  "kind": "attr:title",
+  "count": 1,
+  "files": [
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "Delete segment",
+  "kind": "attr:title",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Delete this day note?",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Delete trip",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Deleting this trip cannot be undone.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Deny",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/oauth/authorize/+page.svelte"
+  ]
+ },
+ {
+  "en": "Departure airport",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/FlightForm.svelte"
+  ]
+ },
+ {
+  "en": "Departure date",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/FlightForm.svelte"
+  ]
+ },
+ {
+  "en": "Departure time",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/FlightForm.svelte"
+  ]
+ },
+ {
+  "en": "Deposit paid",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "lib/components/segments/SegmentEditForm.svelte"
+  ]
+ },
+ {
+  "en": "Descending",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/+page.svelte"
+  ]
+ },
+ {
+  "en": "Destination",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/DirectionsForm.svelte"
+  ]
+ },
+ {
+  "en": "Details",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/audit-logs/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "detected (exact name or within 50 m of an existing place).",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/places/import/+page.svelte"
+  ]
+ },
+ {
+  "en": "Devices and browsers currently signed in to your account.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/sessions/+page.svelte"
+  ]
+ },
+ {
+  "en": "DFW Airport parking",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/ParkingForm.svelte"
+  ]
+ },
+ {
+  "en": "Directions title",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/DirectionsForm.svelte"
+  ]
+ },
+ {
+  "en": "Disable Maps",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Disable user 2FA (admin reset)",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/users/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "disabled.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/backup/+page.svelte"
+  ]
+ },
+ {
+  "en": "Discovery URL",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Dismiss",
+  "kind": "attr:aria-label",
+  "count": 1,
+  "files": [
+   "lib/components/Toast.svelte"
+  ]
+ },
+ {
+  "en": "Document expiry lead (days)",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/+page.svelte"
+  ]
+ },
+ {
+  "en": "Document reminder",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/reminders/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Documents (optional)",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "lib/components/segments/AddSegmentFormShell.svelte"
+  ]
+ },
+ {
+  "en": "Documents expiring soon",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/+page.svelte"
+  ]
+ },
+ {
+  "en": "Donor trip",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/merge/+page.svelte"
+  ]
+ },
+ {
+  "en": "Download a snapshot of the database or restore from a previous backup.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/backup/+page.svelte"
+  ]
+ },
+ {
+  "en": "Download GPX track",
+  "kind": "attr:title",
+  "count": 1,
+  "files": [
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "Dress code",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/EventForm.svelte"
+  ]
+ },
+ {
+  "en": "Drive to hotel",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/DirectionsForm.svelte"
+  ]
+ },
+ {
+  "en": "Driver",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Driver names",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/RentalCarForm.svelte"
+  ]
+ },
+ {
+  "en": "Drop-off address",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/RideshareForm.svelte"
+  ]
+ },
+ {
+  "en": "Drop-off date",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/RentalCarForm.svelte"
+  ]
+ },
+ {
+  "en": "Drop-off time",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/RentalCarForm.svelte"
+  ]
+ },
+ {
+  "en": "Drop-off timezone",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/RentalCarForm.svelte"
+  ]
+ },
+ {
+  "en": "Due date",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/TodoForm.svelte"
+  ]
+ },
+ {
+  "en": "Due time",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/TodoForm.svelte"
+  ]
+ },
+ {
+  "en": "duplicate",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/places/import/+page.svelte"
+  ]
+ },
+ {
+  "en": "e.g. CI script, Claude",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "routes/profile/api-keys/+page.svelte"
+  ]
+ },
+ {
+  "en": "e.g. Claude Desktop",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "e.g. Eiffel Tower",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "e.g. iPhone, YubiKey",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "e.g. Rental counter, hotel lobby",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/RentalCarForm.svelte"
+  ]
+ },
+ {
+  "en": "e.g. work",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "routes/trips/+page.svelte"
+  ]
+ },
+ {
+  "en": "Earth texture:",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Economy, business, etc.",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/FlightForm.svelte"
+  ]
+ },
+ {
+  "en": "Edit card",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/cards/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Edit day note",
+  "kind": "attr:aria-label",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Edit fare provider account",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/fare-providers/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Edit group",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/groups/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Edit link",
+  "kind": "attr:title",
+  "count": 1,
+  "files": [
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "Edit loyalty program",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/loyalty/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Edit note",
+  "kind": "attr:aria-label",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Edit policy",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/insurance/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Edit reminder",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/reminders/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Edit travel document",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/documents/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Edit trip",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Edit Trip",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Edit user",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/users/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Eiffel Tower",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "Email configuration",
+  "kind": "attr:aria-label",
+  "count": 1,
+  "files": [
+   "lib/components/AdminEmailTabs.svelte"
+  ]
+ },
+ {
+  "en": "Email notifications",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/+page.svelte"
+  ]
+ },
+ {
+  "en": "Email polling interval (minutes)",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Email settings",
+  "kind": "attr:aria-label",
+  "count": 1,
+  "files": [
+   "lib/components/EmailProcessingTabs.svelte"
+  ]
+ },
+ {
+  "en": "Embedding model",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Emergency Contacts",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/contacts/+page.svelte"
+  ]
+ },
+ {
+  "en": "Enable 2FA",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Enable automatic backups",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/backup/+page.svelte"
+  ]
+ },
+ {
+  "en": "Enable global inbox processing",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Enable Maps",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Enable processing",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/email_processing/+page.svelte"
+  ]
+ },
+ {
+  "en": "Enable semantic search",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Enable SSO sign-in",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "enabled —",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/backup/+page.svelte"
+  ]
+ },
+ {
+  "en": "End time",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/ParkingForm.svelte"
+  ]
+ },
+ {
+  "en": "engine",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/about/+page.svelte"
+  ]
+ },
+ {
+  "en": "Engine build",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/about/+page.svelte"
+  ]
+ },
+ {
+  "en": "Enter a name such as",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Enter airline",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/FlightForm.svelte"
+  ]
+ },
+ {
+  "en": "Enter car details",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/RentalCarForm.svelte"
+  ]
+ },
+ {
+  "en": "Enter car type",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/RentalCarForm.svelte"
+  ]
+ },
+ {
+  "en": "Enter drop-off location",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/RentalCarForm.svelte"
+  ]
+ },
+ {
+  "en": "Enter event name",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/EventForm.svelte"
+  ]
+ },
+ {
+  "en": "Enter flight number",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/FlightForm.svelte"
+  ]
+ },
+ {
+  "en": "Enter mileage charges",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/RentalCarForm.svelte"
+  ]
+ },
+ {
+  "en": "Enter note",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/NoteForm.svelte"
+  ]
+ },
+ {
+  "en": "Enter note title",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/NoteForm.svelte"
+  ]
+ },
+ {
+  "en": "Enter pickup location",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/RentalCarForm.svelte"
+  ]
+ },
+ {
+  "en": "Enter rental agency",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/RentalCarForm.svelte"
+  ]
+ },
+ {
+  "en": "Enter seats",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/FlightForm.svelte"
+  ]
+ },
+ {
+  "en": "Enter the 6-digit code",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Enter the 6-digit code from your authenticator app, or a backup code.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/login/verify/+page.svelte"
+  ]
+ },
+ {
+  "en": "Enter the callback URL provided by your MCP client. Roamarr sends your browser there after you approve or deny access. This is NOT the URL to Roamarr.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Enter venue",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/EventForm.svelte"
+  ]
+ },
+ {
+  "en": "Enter your email and we’ll send you a reset link.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/forgot-password/+page.svelte"
+  ]
+ },
+ {
+  "en": "Entity",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/audit-logs/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "environment variable — a different secret cannot decrypt your data.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/boot-error/+page.svelte"
+  ]
+ },
+ {
+  "en": "Event name",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/EventForm.svelte"
+  ]
+ },
+ {
+  "en": "Exact model ID documented by the provider.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/email_parsing/+page.svelte"
+  ]
+ },
+ {
+  "en": "Exact provider model ID, such as",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Expenses",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Expires",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/calendar/+page.svelte"
+  ]
+ },
+ {
+  "en": "Explicitly select STARTTLS (587) or implicit TLS (465) to match your server.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Export",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/+page.svelte"
+  ]
+ },
+ {
+  "en": "External links",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Fahrenheit (°F)",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/+page.svelte"
+  ]
+ },
+ {
+  "en": "Fare-watch providers",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/fare-providers/+page.svelte"
+  ]
+ },
+ {
+  "en": "Favorites",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/+page.svelte"
+  ]
+ },
+ {
+  "en": "Favorites only",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "file. The current database directory will be replaced and the app must be restarted.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/backup/+page.svelte"
+  ]
+ },
+ {
+  "en": "Files",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Fill in the details below.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "lib/components/segments/AddSegmentFormShell.svelte"
+  ]
+ },
+ {
+  "en": "Filter",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "Filter by package name or license...",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "routes/about/credits/+page.svelte"
+  ]
+ },
+ {
+  "en": "Filter plans by type",
+  "kind": "attr:aria-label",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Filterable package and runtime component attribution table.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/about/+page.svelte"
+  ]
+ },
+ {
+  "en": "Filters",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Find by package, license, component, or phrase...",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "routes/about/licenses/+page.svelte"
+  ]
+ },
+ {
+  "en": "Find on OpenStreetMap (optional prefill)",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "First enable downloads the model (~90&nbsp;MB) and reindexes existing data. Status:",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Flight",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/FlightForm.svelte"
+  ]
+ },
+ {
+  "en": "Flight check-in lead (hours)",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/+page.svelte"
+  ]
+ },
+ {
+  "en": "Flight number",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/FlightForm.svelte"
+  ]
+ },
+ {
+  "en": "Flush",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/backup/+page.svelte"
+  ]
+ },
+ {
+  "en": "Food",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Forgot password?",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/login/+page.svelte"
+  ]
+ },
+ {
+  "en": "Format",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/import/+page.svelte"
+  ]
+ },
+ {
+  "en": "found",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/search/+page.svelte"
+  ]
+ },
+ {
+  "en": "Frequent flyer #",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/FlightForm.svelte"
+  ]
+ },
+ {
+  "en": "Frequent-flyer and rewards balances. Update the balance to track when you last checked.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/loyalty/+page.svelte"
+  ]
+ },
+ {
+  "en": "from",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/places/import/+page.svelte"
+  ]
+ },
+ {
+  "en": "From",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/DirectionsForm.svelte"
+  ]
+ },
+ {
+  "en": "From booking details (not linked as trip people).",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "From places (optional)",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/segments/new/poi/+page.svelte"
+  ]
+ },
+ {
+  "en": "Fully paid",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "lib/components/segments/SegmentEditForm.svelte"
+  ]
+ },
+ {
+  "en": "Garbage collect",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/backup/+page.svelte"
+  ]
+ },
+ {
+  "en": "General",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Generate a link that lets anyone view this trip without an account. You can optionally set an expiry.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
+  "en": "Generate a single .ics feed URL for all your trips.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/calendar/+page.svelte"
+  ]
+ },
+ {
+  "en": "Generated from package-lock.json. Filter by package name, version, scope, or license.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/about/credits/+page.svelte"
+  ]
+ },
+ {
+  "en": "GeoNames.org",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Global Email Inbox (IMAP)",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Global Email Parsing",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Global Outbound Emails (SMTP)",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Go to places",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/places/import/+page.svelte"
+  ]
+ },
+ {
+  "en": "Google Places API key",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Google Takeout “Saved” CSV, KML/KMZ, or a GeoJSON FeatureCollection. Up to 20 MB and 10,000 rows.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/places/import/+page.svelte"
+  ]
+ },
+ {
+  "en": "Group",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
+  "en": "Guide",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Has this plan been booked?",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "lib/components/segments/BookedCheckbox.svelte"
+  ]
+ },
+ {
+  "en": "Host",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Hosted application:",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Hotel phone",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/HotelForm.svelte"
+  ]
+ },
+ {
+  "en": "How often enabled user inboxes are checked.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "How short dates (no time) appear across Roamarr.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "How timestamps appear across Roamarr. Includes 24-hour options.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "http",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "http://127.0.0.1:33389/mcp-oauth-callback",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "https",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "https://api.example.com/v1",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "routes/profile/email_parsing/+page.svelte"
+  ]
+ },
+ {
+  "en": "https://api.minimax.io/v1",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "https://app.example.com/oauth/callback",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "https://auth.example.com/application/o/roamarr",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "https://example.com/webhook",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "https://ntfy.sh",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "https://www.google.com/maps/place/… (one per line)",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "routes/places/import/+page.svelte"
+  ]
+ },
+ {
+  "en": "I saved it",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/api-keys/+page.svelte"
+  ]
+ },
+ {
+  "en": "I saved them",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "I understand this will overwrite the current database and requires a restart.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/backup/+page.svelte"
+  ]
+ },
+ {
+  "en": "I understand this will remove existing trips, segments, cards, insurance, and loyalty data owned by other users.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/seed/+page.svelte"
+  ]
+ },
+ {
+  "en": "If a database migration failed: inspect the failing migration, restore from a backup if needed, then restart.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/boot-error/+page.svelte"
+  ]
+ },
+ {
+  "en": "If an account exists, a reset link has been sent.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/forgot-password/+page.svelte"
+  ]
+ },
+ {
+  "en": "If the secret was lost: the data is unrecoverable. A fresh database + new secret + re-running setup is the only path.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/boot-error/+page.svelte"
+  ]
+ },
+ {
+  "en": "IMAP settings for trip processing",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/email_processing/+page.svelte"
+  ]
+ },
+ {
+  "en": "imap.example.com",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "routes/profile/email_processing/+page.svelte"
+  ]
+ },
+ {
+  "en": "Import from file",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Import places",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/places/import/+page.svelte"
+  ]
+ },
+ {
+  "en": "Import saved places from Google Takeout (CSV), KML/KMZ, GeoJSON, or pasted Google Maps links.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/places/import/+page.svelte"
+  ]
+ },
+ {
+  "en": "Import trips",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/import/+page.svelte"
+  ]
+ },
+ {
+  "en": "Imported",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/places/import/+page.svelte"
+  ]
+ },
+ {
+  "en": "In Claude Desktop, open",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "In Open WebUI, open",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Include",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/places/import/+page.svelte"
+  ]
+ },
+ {
+  "en": "Installed package and native engine version for this process.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/about/+page.svelte"
+  ]
+ },
+ {
+  "en": "Installed schema/query-builder package version.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/about/+page.svelte"
+  ]
+ },
+ {
+  "en": "Installed version",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/about/+page.svelte"
+  ]
+ },
+ {
+  "en": "Instance",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/about/+page.svelte"
+  ]
+ },
+ {
+  "en": "Instance details are only available to administrators.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/about/+page.svelte"
+  ]
+ },
+ {
+  "en": "instance has already been completed, so the first-run setup wizard is intentionally disabled. The server encountered a problem during boot and cannot serve requests right now.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/boot-error/+page.svelte"
+  ]
+ },
+ {
+  "en": "Insurance policies",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/insurance/+page.svelte"
+  ]
+ },
+ {
+  "en": "Integrity check failed —",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/database-maintenance/+page.svelte"
+  ]
+ },
+ {
+  "en": "Integrity OK — scanned database has",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/database-maintenance/+page.svelte"
+  ]
+ },
+ {
+  "en": "Integrity reported OK with",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/database-maintenance/+page.svelte"
+  ]
+ },
+ {
+  "en": "Interval (hours)",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/backup/+page.svelte"
+  ]
+ },
+ {
+  "en": "Invitation for",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/invite/[token]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Invite to Roamarr",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "is requesting access to your Roamarr account (",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/oauth/authorize/+page.svelte"
+  ]
+ },
+ {
+  "en": "Issued by the provider.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/email_parsing/+page.svelte"
+  ]
+ },
+ {
+  "en": "Issued by the provider. Required only for OAuth authentication.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Issued with the client ID.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/email_parsing/+page.svelte"
+  ]
+ },
+ {
+  "en": "Issued with the client ID. Required only for OAuth authentication.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Issuer base URL or full .well-known/openid-configuration URL.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "item",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Itinerary view",
+  "kind": "attr:aria-label",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "JFK",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/FlightForm.svelte"
+  ]
+ },
+ {
+  "en": "JFK → LHR",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/FlightForm.svelte"
+  ]
+ },
+ {
+  "en": "Job History",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/job-history/+page.svelte"
+  ]
+ },
+ {
+  "en": "Join this trip",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/invite/[token]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Join your travel HQ.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/register/+page.svelte"
+  ]
+ },
+ {
+  "en": "JPEG, PNG, or WebP. Up to 10 MB each, 50 photos per gallery.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "lib/components/Gallery.svelte"
+  ]
+ },
+ {
+  "en": "JSON",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/import/+page.svelte"
+  ]
+ },
+ {
+  "en": "Keep",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Keep as parsed",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/places/import/+page.svelte"
+  ]
+ },
+ {
+  "en": "Keep Open WebUI's",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Last successful load / reindex time.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Latitude",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "Lax",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Leave empty for a key that never expires.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/api-keys/+page.svelte"
+  ]
+ },
+ {
+  "en": "Leave the masked value to keep the stored secret.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Leave the masked value to keep the stored secret. Encrypted at rest.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Let new users create their own accounts.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Let users sign in with an external OpenID Connect provider (Authentik, Keycloak, Google, …). Register this redirect URI with the provider:",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Letters, digits, dashes and underscores, up to 64 characters. Treat the topic as a secret — anyone who knows it can subscribe.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "LHR",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/FlightForm.svelte"
+  ]
+ },
+ {
+  "en": "License documents",
+  "kind": "attr:aria-label",
+  "count": 1,
+  "files": [
+   "routes/about/licenses/+page.svelte"
+  ]
+ },
+ {
+  "en": "License expression",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/about/credits/+page.svelte"
+  ]
+ },
+ {
+  "en": "Licenses & Credits",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/about/+page.svelte"
+  ]
+ },
+ {
+  "en": "Links",
+  "kind": "attr:title",
+  "count": 1,
+  "files": [
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "listed",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "LM Studio:",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Loading globe…",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "lib/components/GlobeModal.svelte"
+  ]
+ },
+ {
+  "en": "Local application:",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Lodging",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Long-lived credentials for scripts and AI agents calling the REST API or MCP.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/api-keys/+page.svelte"
+  ]
+ },
+ {
+  "en": "Longitude",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "Lot / garage",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/ParkingForm.svelte"
+  ]
+ },
+ {
+  "en": "Loyalty programs",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/loyalty/+page.svelte"
+  ]
+ },
+ {
+  "en": "make it fire again — only future-scheduled reminders fire. To fire again, delete this one and create a new reminder.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/reminders/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Manage",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/+page.svelte"
+  ]
+ },
+ {
+  "en": "Manage accounts, roles, and access.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/users/+page.svelte"
+  ]
+ },
+ {
+  "en": "Manually edit flight",
+  "kind": "attr:title",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/FlightForm.svelte"
+  ]
+ },
+ {
+  "en": "Map data ©",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Map of saved places",
+  "kind": "attr:aria-label",
+  "count": 1,
+  "files": [
+   "lib/components/PlacesMap.svelte"
+  ]
+ },
+ {
+  "en": "Map tiles",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Maps",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Maps are disabled. Some data is already downloaded (",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Maps are enabled.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Maps are not set up yet. Enabling downloads the city database and Earth texture.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Mark all read",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/notifications/+page.svelte"
+  ]
+ },
+ {
+  "en": "Mark from past trips",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/visited/VisitedPlacePage.svelte"
+  ]
+ },
+ {
+  "en": "Mark Places Visited",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Mark read",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/notifications/+page.svelte"
+  ]
+ },
+ {
+  "en": "Mark unread",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/notifications/+page.svelte"
+  ]
+ },
+ {
+  "en": "Matching items",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/search/+page.svelte"
+  ]
+ },
+ {
+  "en": "MCP (Streamable HTTP)",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Meet at:",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/print/+page.svelte"
+  ]
+ },
+ {
+  "en": "member@example.com",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "routes/groups/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Members",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/groups/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Merge",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/+page.svelte"
+  ]
+ },
+ {
+  "en": "Mileage charges",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/RentalCarForm.svelte"
+  ]
+ },
+ {
+  "en": "MiniMax-M2.7",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Model ready",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "MongrelDB engine",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/about/+page.svelte"
+  ]
+ },
+ {
+  "en": "MongrelDB Kit",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/about/+page.svelte"
+  ]
+ },
+ {
+  "en": "MongrelDB Kit data path used by the server.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/about/+page.svelte"
+  ]
+ },
+ {
+  "en": "Monitors one shared inbox. Mail is assigned only when its sender exactly matches an enabled Roamarr user.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "more",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/places/import/+page.svelte"
+  ]
+ },
+ {
+  "en": "Move earlier",
+  "kind": "attr:title",
+  "count": 1,
+  "files": [
+   "lib/components/Gallery.svelte"
+  ]
+ },
+ {
+  "en": "Move everything from one trip into another, then delete the donor.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/merge/+page.svelte"
+  ]
+ },
+ {
+  "en": "Move later",
+  "kind": "attr:title",
+  "count": 1,
+  "files": [
+   "lib/components/Gallery.svelte"
+  ]
+ },
+ {
+  "en": "Name (optional)",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Name, address, or notes",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "Names or group",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/MeetupForm.svelte"
+  ]
+ },
+ {
+  "en": "Native artifact version and source git SHA.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/about/+page.svelte"
+  ]
+ },
+ {
+  "en": "Need an account?",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/login/+page.svelte"
+  ]
+ },
+ {
+  "en": "New",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/notifications/+page.svelte"
+  ]
+ },
+ {
+  "en": "New accounts are created via SSO only while self-registration is allowed. Users with two-factor authentication still complete their 2FA challenge after SSO.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "New category",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "New email",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/email/+page.svelte"
+  ]
+ },
+ {
+  "en": "Next photo",
+  "kind": "attr:aria-label",
+  "count": 1,
+  "files": [
+   "lib/components/Gallery.svelte"
+  ]
+ },
+ {
+  "en": "No active sessions.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/sessions/+page.svelte"
+  ]
+ },
+ {
+  "en": "No additional details.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/audit-logs/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "No API keys yet.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/api-keys/+page.svelte"
+  ]
+ },
+ {
+  "en": "No benefits added yet.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/cards/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "No card",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "lib/components/CardSelect.svelte"
+  ]
+ },
+ {
+  "en": "No emergency contacts saved yet.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/contacts/+page.svelte"
+  ]
+ },
+ {
+  "en": "No expenses recorded yet.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "No external links yet.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "No extra notes for this segment.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "No icon",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "No itinerary segments match your filters.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "No itinerary shared.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/share/[token]/+page.svelte"
+  ]
+ },
+ {
+  "en": "No links yet.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "No MCP clients connected yet.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "No members yet.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/groups/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "No notes yet.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "No packages match this filter.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/about/credits/+page.svelte"
+  ]
+ },
+ {
+  "en": "No payments due soon.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/+page.svelte"
+  ]
+ },
+ {
+  "en": "No people yet.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "No prep items yet.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "No recent activity.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/+page.svelte"
+  ]
+ },
+ {
+  "en": "No reminders for this segment yet.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "No saved places yet.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "No segments yet.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/print/+page.svelte"
+  ]
+ },
+ {
+  "en": "No travelers assigned to this segment.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "No upcoming trips yet.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/+page.svelte"
+  ]
+ },
+ {
+  "en": "No URL",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/about/credits/+page.svelte"
+  ]
+ },
+ {
+  "en": "Node environment reported by the running process.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/about/+page.svelte"
+  ]
+ },
+ {
+  "en": "None (plaintext)",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "not downloaded — use “Re-import textures”",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Not shared with any groups yet.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
+  "en": "Not shared with anyone yet.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
+  "en": "Note",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/NoteForm.svelte"
+  ]
+ },
+ {
+  "en": "Note title",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/NoteForm.svelte"
+  ]
+ },
+ {
+  "en": "Notes & activity",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Nothing expiring in the next few months.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/+page.svelte"
+  ]
+ },
+ {
+  "en": "Nothing on the agenda today.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/+page.svelte"
+  ]
+ },
+ {
+  "en": "NPM packages",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/about/credits/+page.svelte"
+  ]
+ },
+ {
+  "en": "npm packages -",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/about/credits/+page.svelte"
+  ]
+ },
+ {
+  "en": "ntfy notifications",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/+page.svelte"
+  ]
+ },
+ {
+  "en": "OAuth 2.1",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "OAuth alternative to a bearer token. Required with client ID and client secret.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Official site",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "on Database Maintenance to reclaim old WAL segments before downloading if the file is large.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/backup/+page.svelte"
+  ]
+ },
+ {
+  "en": "on the configured interval and keeps the newest archives up to the retention count. Files without the",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/backup/+page.svelte"
+  ]
+ },
+ {
+  "en": "One client ID per line. Leave empty to allow all clients.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Open",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/about/credits/+page.svelte"
+  ]
+ },
+ {
+  "en": "Open in Google Maps",
+  "kind": "attr:title",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Open menu",
+  "kind": "attr:aria-label",
+  "count": 1,
+  "files": [
+   "routes/+layout.svelte"
+  ]
+ },
+ {
+  "en": "Open WebUI",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Opening hours, tips, booking links…",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "openssl rand -base64 32",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/setup/+page.svelte"
+  ]
+ },
+ {
+  "en": "Optimize order",
+  "kind": "attr:title",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Optional AI parsing for all inboxes. API base URL, model, and one authentication method are required when enabled.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Optional Bearer token for protected topics. Stored encrypted.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Optional dress code",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/EventForm.svelte"
+  ]
+ },
+ {
+  "en": "Optional local MiniLM embeddings via ONNX Runtime. When enabled, Roamarr downloads",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Optional loyalty number",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/FlightForm.svelte"
+  ]
+ },
+ {
+  "en": "Optional MongrelDB authentication must be configured before first creation by setting both",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/setup/+page.svelte"
+  ]
+ },
+ {
+  "en": "Optional. Leave blank unless required by the provider.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/email_parsing/+page.svelte"
+  ]
+ },
+ {
+  "en": "Optional. Leave blank unless the provider documents a required scope.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Order",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/+page.svelte"
+  ]
+ },
+ {
+  "en": "Overview",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Package",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/about/credits/+page.svelte"
+  ]
+ },
+ {
+  "en": "Paid segments",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Parking location",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/ParkingForm.svelte"
+  ]
+ },
+ {
+  "en": "parse warning(s):",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/places/import/+page.svelte"
+  ]
+ },
+ {
+  "en": "Parsing",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/email_parsing/+page.svelte"
+  ]
+ },
+ {
+  "en": "Party size",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/FoodForm.svelte"
+  ]
+ },
+ {
+  "en": "Passenger names",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/FlightForm.svelte"
+  ]
+ },
+ {
+  "en": "Passkeys require the ORIGIN environment variable to be set.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Passports, licenses, visas, and trusted-traveler cards. Expiry highlighted when within 30 days.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/documents/+page.svelte"
+  ]
+ },
+ {
+  "en": "Passwords do not match.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/setup/+page.svelte"
+  ]
+ },
+ {
+  "en": "Paste the MCP URL above and select",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Payment cards and their travel benefits.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/cards/+page.svelte"
+  ]
+ },
+ {
+  "en": "Payment due",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/SegmentEditForm.svelte"
+  ]
+ },
+ {
+  "en": "Payment status",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/SegmentEditForm.svelte"
+  ]
+ },
+ {
+  "en": "Payments due soon",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/+page.svelte"
+  ]
+ },
+ {
+  "en": "PDFs or images (JPEG, PNG, WebP) such as QR codes and vouchers, max 10&nbsp;MB each.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "lib/components/segments/SegmentEditForm.svelte"
+  ]
+ },
+ {
+  "en": "Pending invitations",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
+  "en": "People",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "People to reach in case of an emergency.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/contacts/+page.svelte"
+  ]
+ },
+ {
+  "en": "Per-user email settings",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Per-user IMAP is disabled. The administrator may provide a global monitored inbox.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/email_processing/+page.svelte"
+  ]
+ },
+ {
+  "en": "Per-user parsing providers are disabled. Global or default parsing will be used.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/email_parsing/+page.svelte"
+  ]
+ },
+ {
+  "en": "Per-user SMTP is disabled. Global outbound email settings will be used.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/email_sender/+page.svelte"
+  ]
+ },
+ {
+  "en": "Pick a look for the app. Changes preview live.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/theme/+page.svelte"
+  ]
+ },
+ {
+  "en": "Pick-up date",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/RentalCarForm.svelte"
+  ]
+ },
+ {
+  "en": "Pick-up time",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/RentalCarForm.svelte"
+  ]
+ },
+ {
+  "en": "Pickup",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/RentalCarForm.svelte"
+  ]
+ },
+ {
+  "en": "Pickup location",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/RentalCarForm.svelte"
+  ]
+ },
+ {
+  "en": "Place search",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "placeholders.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Places",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "Plan a new journey and set who can see it.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "planned",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/+page.svelte"
+  ]
+ },
+ {
+  "en": "Please sign in to continue.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "error.svelte"
+  ]
+ },
+ {
+  "en": "Point-in-time archive of the MongrelDB database directory and attachments. The GeoNames city catalog is omitted (re-import under Database settings if needed). Maps under",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/backup/+page.svelte"
+  ]
+ },
+ {
+  "en": "Poll this inbox using the administrator schedule.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/email_processing/+page.svelte"
+  ]
+ },
+ {
+  "en": "Port",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "possible duplicate",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/places/import/+page.svelte"
+  ]
+ },
+ {
+  "en": "Post note",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "POSTs JSON",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Prefilled from “",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/segments/new/poi/+page.svelte"
+  ]
+ },
+ {
+  "en": "prefix are never pruned.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/backup/+page.svelte"
+  ]
+ },
+ {
+  "en": "Prep",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Preview",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/import/+page.svelte"
+  ]
+ },
+ {
+  "en": "Preview —",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/places/import/+page.svelte"
+  ]
+ },
+ {
+  "en": "Preview import",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/places/import/+page.svelte"
+  ]
+ },
+ {
+  "en": "Previous photo",
+  "kind": "attr:aria-label",
+  "count": 1,
+  "files": [
+   "lib/components/Gallery.svelte"
+  ]
+ },
+ {
+  "en": "Price (e.g. 12.50)",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "Primary",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/contacts/+page.svelte"
+  ]
+ },
+ {
+  "en": "Profile",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/+layout.svelte"
+  ]
+ },
+ {
+  "en": "Project, third-party, acknowledgements, and runtime text.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/about/+page.svelte"
+  ]
+ },
+ {
+  "en": "Public client",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Public client — authenticates with PKCE, no secret.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Public link",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
+  "en": "Publish notifications to an",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "QR code",
+  "kind": "attr:alt",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Quoted",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "lib/components/segments/SegmentEditForm.svelte"
+  ]
+ },
+ {
+  "en": "Rally point:",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/print/+page.svelte"
+  ]
+ },
+ {
+  "en": "Re-check",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/setup/+page.svelte"
+  ]
+ },
+ {
+  "en": "Re-import city database",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Re-import textures",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Read only",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "ready",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Recent activity",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/+page.svelte"
+  ]
+ },
+ {
+  "en": "Recent scheduler ticks for reminders, fare checks and session cleanup.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/job-history/+page.svelte"
+  ]
+ },
+ {
+  "en": "Recipient trip",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/merge/+page.svelte"
+  ]
+ },
+ {
+  "en": "Record a passport, license, visa, or trusted-traveler card. Document numbers are encrypted at rest.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/documents/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Redirect URIs (one per line)",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Refunded",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "lib/components/segments/SegmentEditForm.svelte"
+  ]
+ },
+ {
+  "en": "Regenerate",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Regenerate backup codes",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Register a new passkey",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Register and save the client. Enable it from a chat, then approve access in Roamarr.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Reindex now",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "remaining",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "remaining.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Remember your password?",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/forgot-password/+page.svelte"
+  ]
+ },
+ {
+  "en": "Remind me before this segment",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Reminder name",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "routes/profile/reminders/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Reminders",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/reminders/+page.svelte"
+  ]
+ },
+ {
+  "en": "Remote connectors require a Claude Pro, Max, Team, or Enterprise plan. Do not add this remote server through",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Remove GPX track",
+  "kind": "attr:title",
+  "count": 1,
+  "files": [
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "Remove group share",
+  "kind": "attr:aria-label",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
+  "en": "Remove share",
+  "kind": "attr:aria-label",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
+  "en": "Remove the stored access token.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Remove the stored Google Places API key.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Rental agency",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/RentalCarForm.svelte"
+  ]
+ },
+ {
+  "en": "Rental info",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/RentalCarForm.svelte"
+  ]
+ },
+ {
+  "en": "Repeat password",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "routes/reset-password/[token]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Replace",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Require password change on next login",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/users/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Required by this provider for map tiles.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Required for Google Places. Stored encrypted; leave the masked value unchanged to keep the saved key.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Required with client ID and client secret.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/email_parsing/+page.svelte"
+  ]
+ },
+ {
+  "en": "Requires your account password and a valid TOTP code or backup code.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Requires your current 6-digit code. Old codes are invalidated.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Reset password",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/forgot-password/+page.svelte"
+  ]
+ },
+ {
+  "en": "Restore backup",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/backup/+page.svelte"
+  ]
+ },
+ {
+  "en": "Restore from backup",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/backup/+page.svelte"
+  ]
+ },
+ {
+  "en": "Result",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/database-maintenance/+page.svelte"
+  ]
+ },
+ {
+  "en": "Retention (keep newest)",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/backup/+page.svelte"
+  ]
+ },
+ {
+  "en": "Revoke feed URL",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
+  "en": "Revoke public link",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
+  "en": "Roamarr",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Roamarr encrypts sensitive data at rest with this key. Generate one with:",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/setup/+page.svelte"
+  ]
+ },
+ {
+  "en": "Roamarr keeps booking-specific fields here. Usually no changes are needed.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "lib/components/segments/SegmentEditForm.svelte"
+  ]
+ },
+ {
+  "en": "ROAMARR_SECRET is missing or invalid.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/boot-error/+page.svelte"
+  ]
+ },
+ {
+  "en": "ROAMARR_SECRET is required before setup.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/setup/+page.svelte"
+  ]
+ },
+ {
+  "en": "ROAMARR_SECRET=&lt;output-from-openssl&gt;",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/setup/+page.svelte"
+  ]
+ },
+ {
+  "en": "roamarr-alerts",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "roamarr@example.com",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Route label",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/FlightForm.svelte"
+  ]
+ },
+ {
+  "en": "row",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/places/import/+page.svelte"
+  ]
+ },
+ {
+  "en": "row(s) failed:",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/places/import/+page.svelte"
+  ]
+ },
+ {
+  "en": "row(s) had errors:",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/import/+page.svelte"
+  ]
+ },
+ {
+  "en": "Run integrity checks and operational tasks on the database.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/database-maintenance/+page.svelte"
+  ]
+ },
+ {
+  "en": "Run scheduler now",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/job-history/+page.svelte"
+  ]
+ },
+ {
+  "en": "runtime components",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/about/credits/+page.svelte"
+  ]
+ },
+ {
+  "en": "Runtime components",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/about/credits/+page.svelte"
+  ]
+ },
+ {
+  "en": "Runtime environment",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/about/+page.svelte"
+  ]
+ },
+ {
+  "en": "Runtime licenses",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/about/credits/+page.svelte"
+  ]
+ },
+ {
+  "en": "Same as pickup location",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/RentalCarForm.svelte"
+  ]
+ },
+ {
+  "en": "Save a payment card and track its travel benefits.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/cards/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Save a travel insurance policy and link it to a trip.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/insurance/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Save account",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/fare-providers/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Save auto-backup settings",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/backup/+page.svelte"
+  ]
+ },
+ {
+  "en": "Save caption",
+  "kind": "attr:title",
+  "count": 1,
+  "files": [
+   "lib/components/Gallery.svelte"
+  ]
+ },
+ {
+  "en": "Save card",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/cards/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Save document",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/documents/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Save general settings",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Save group",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/groups/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Save map settings",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Save note",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Save password",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/change-password/+page.svelte"
+  ]
+ },
+ {
+  "en": "Save policy",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/insurance/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Save profile",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/+page.svelte"
+  ]
+ },
+ {
+  "en": "Save program",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/loyalty/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Save semantic search",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Save settings",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Save SSO settings",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Save theme",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/theme/+page.svelte"
+  ]
+ },
+ {
+  "en": "Save to places",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Save visit",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/visited/VisitedPlacePage.svelte"
+  ]
+ },
+ {
+  "en": "Save webhook settings",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Save your API key",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/api-keys/+page.svelte"
+  ]
+ },
+ {
+  "en": "Save your credentials",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Saving with a changed balance stamps this timestamp. Use it to remember when you last checked.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/loyalty/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Scan this QR code with your authenticator app (Google Authenticator, Authy, etc.), or enter the secret manually.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Schedule an alert for a trip or an expiring document.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/reminders/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Scheduled alerts for trips, flights, and travel documents.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/reminders/+page.svelte"
+  ]
+ },
+ {
+  "en": "Scope",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/about/credits/+page.svelte"
+  ]
+ },
+ {
+  "en": "Search backend used to prefill the saved-place form.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Search itinerary",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Search itinerary…",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Search Results",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/search/+page.svelte"
+  ]
+ },
+ {
+  "en": "Search table",
+  "kind": "attr:aria-label",
+  "count": 1,
+  "files": [
+   "lib/components/GridTable.svelte"
+  ]
+ },
+ {
+  "en": "Search trips, plans, documents",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "routes/+layout.svelte"
+  ]
+ },
+ {
+  "en": "Seat / car",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/TrainForm.svelte"
+  ]
+ },
+ {
+  "en": "Seats",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/FlightForm.svelte"
+  ]
+ },
+ {
+  "en": "Security-relevant events across the instance.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/audit-logs/+page.svelte"
+  ]
+ },
+ {
+  "en": "Select",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "lib/components/Admin1Select.svelte"
+  ]
+ },
+ {
+  "en": "Select a segment to see its details.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Selected segment",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Selected segment details",
+  "kind": "attr:aria-label",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Selected segment sections",
+  "kind": "attr:aria-label",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Semantic",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/search/+page.svelte"
+  ]
+ },
+ {
+  "en": "Semantic search (ANN)",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Send a one-hour password reset link to",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/users/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Send invitation",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
+  "en": "Send password reset email",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/users/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Send reset link",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/forgot-password/+page.svelte"
+  ]
+ },
+ {
+  "en": "Send test notification",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Sends system notifications. This connection is not used for inbound trip processing.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "sentence-transformers/all-MiniLM-L6-v2",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Server logs for the full stack trace.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/boot-error/+page.svelte"
+  ]
+ },
+ {
+  "en": "Server URL",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Session cookie SameSite",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Set a new password directly, or send a reset link instead. Leave the fields blank to keep the current password.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/users/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Set cap",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Set new password",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/reset-password/[token]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Settings → Connectors",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Setup for this",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/boot-error/+page.svelte"
+  ]
+ },
+ {
+  "en": "Setup MCP Client",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Share private travel details",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/oauth/authorize/+page.svelte"
+  ]
+ },
+ {
+  "en": "Share trip",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
+  "en": "Share trips with friends, family, or coworkers.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/groups/+page.svelte"
+  ]
+ },
+ {
+  "en": "Shared via",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/share/[token]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Shared view",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Shared with groups",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
+  "en": "Shared with people",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
+  "en": "Show a 2D map of the next upcoming city on each trip page, plus a 3D globe you can open from it. City data comes from GeoNames; the Earth texture from NASA; borders from Natural Earth.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Show confirmation numbers and details",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
+  "en": "Shown on the login page as \"Sign in with …\". Defaults to SSO.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Sign in and accept",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/invite/[token]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Sign in with",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/login/+page.svelte"
+  ]
+ },
+ {
+  "en": "Sign in with this email to accept the invitation.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/invite/[token]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Sign Out",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/+layout.svelte"
+  ]
+ },
+ {
+  "en": "Sign up",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/register/+page.svelte"
+  ]
+ },
+ {
+  "en": "since",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Single Sign-On (OIDC)",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Skip duplicates",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/places/import/+page.svelte"
+  ]
+ },
+ {
+  "en": "Skip to content",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/+layout.svelte"
+  ]
+ },
+ {
+  "en": "SMTP authentication username.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "SMTP host",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/email_sender/+page.svelte"
+  ]
+ },
+ {
+  "en": "SMTP port",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/email_sender/+page.svelte"
+  ]
+ },
+ {
+  "en": "SMTP server hostname.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "SMTP settings for email notifications",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/email_sender/+page.svelte"
+  ]
+ },
+ {
+  "en": "smtp.example.com",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Something went wrong on the server. Please try again in a moment.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "error.svelte"
+  ]
+ },
+ {
+  "en": "Sort",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Sort by",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/+page.svelte"
+  ]
+ },
+ {
+  "en": "Source link",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/places/import/+page.svelte"
+  ]
+ },
+ {
+  "en": "SSL/TLS (implicit, port 465)",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "SSO",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "stable so it can decrypt stored OAuth credentials after restarts.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "stale",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Standard protection allows the session cookie on top-level cross-site navigation (e.g., OAuth redirects, email links). Strict forces re-login when arriving from external links, including OAuth authorization prompts and email links. The change only applies to sessions created after saving; existing sessions keep their previous attribute until the user signs in again.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Start a group to share trips with others.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/groups/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Start from template",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Start over",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/places/import/+page.svelte"
+  ]
+ },
+ {
+  "en": "Start time",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/ParkingForm.svelte"
+  ]
+ },
+ {
+  "en": "Starting point",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/DirectionsForm.svelte"
+  ]
+ },
+ {
+  "en": "Starts in",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "STARTTLS (recommended)",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Status is set by the scheduler. Edits never re-arm a fired reminder.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/reminders/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Status:",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/backup/+page.svelte"
+  ]
+ },
+ {
+  "en": "Stored data",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "lib/components/segments/SegmentEditForm.svelte"
+  ]
+ },
+ {
+  "en": "Stored in-app notifications.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/about/+page.svelte"
+  ]
+ },
+ {
+  "en": "stored, last run",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/backup/+page.svelte"
+  ]
+ },
+ {
+  "en": "Stored. Leave unchanged to keep it.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/email_processing/+page.svelte"
+  ]
+ },
+ {
+  "en": "Street, area, or landmark",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "Strict",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Subscribe to this trip from a calendar app using a private feed URL.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
+  "en": "Summer in Lisbon",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "routes/trips/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "System check",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/setup/+page.svelte"
+  ]
+ },
+ {
+  "en": "System-managed link (from a",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/reminders/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "table(s) listed under issues (of",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/database-maintenance/+page.svelte"
+  ]
+ },
+ {
+  "en": "table(s) with issues of",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/database-maintenance/+page.svelte"
+  ]
+ },
+ {
+  "en": "tables and no integrity issues.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/database-maintenance/+page.svelte"
+  ]
+ },
+ {
+  "en": "Tag",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/+page.svelte"
+  ]
+ },
+ {
+  "en": "TBD",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Temperature unit",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/+page.svelte"
+  ]
+ },
+ {
+  "en": "Template",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/cards/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Terminal garage, level 3",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/ParkingForm.svelte"
+  ]
+ },
+ {
+  "en": "That page doesn't exist.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "error.svelte"
+  ]
+ },
+ {
+  "en": "The application name from package metadata.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/about/+page.svelte"
+  ]
+ },
+ {
+  "en": "The display name configured for this server.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/about/+page.svelte"
+  ]
+ },
+ {
+  "en": "The display name for this Roamarr instance.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "The encryption secret required to read the existing database is not available. Restore the original",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/boot-error/+page.svelte"
+  ]
+ },
+ {
+  "en": "The key can only do what the selected scopes allow. Admin capabilities can never be granted to API keys.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/api-keys/+page.svelte"
+  ]
+ },
+ {
+  "en": "The sender address used for outgoing email.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "The user will be prompted to choose a new password after signing in.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/users/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "The value must match the client's callback exactly, including",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "The version currently running on this instance.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/about/+page.svelte"
+  ]
+ },
+ {
+  "en": "then",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/backup/+page.svelte"
+  ]
+ },
+ {
+  "en": "Then set it as the environment variable (or paste it into",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/setup/+page.svelte"
+  ]
+ },
+ {
+  "en": "This client can view trip notes, confirmation numbers, and itinerary details. Payment card numbers and travel document numbers stay protected.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/oauth/authorize/+page.svelte"
+  ]
+ },
+ {
+  "en": "This instance is configured but failed to boot.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/boot-error/+page.svelte"
+  ]
+ },
+ {
+  "en": "This reminder already fired on",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/reminders/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "This replaces all non-admin sample data with a small demo dataset: trips, segments, cards, insurance, and loyalty programs. It is useful for first-time evaluation and screenshots.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/seed/+page.svelte"
+  ]
+ },
+ {
+  "en": "This trip is deleted after its contents move.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/merge/+page.svelte"
+  ]
+ },
+ {
+  "en": "This trip remains.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/merge/+page.svelte"
+  ]
+ },
+ {
+  "en": "This will allow the application to:",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/oauth/authorize/+page.svelte"
+  ]
+ },
+ {
+  "en": "Tile provider used for maps on trip pages.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Tile URL template",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Tile URL template with",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Time",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/NoteForm.svelte"
+  ]
+ },
+ {
+  "en": "Time format",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/+page.svelte"
+  ]
+ },
+ {
+  "en": "To",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/DirectionsForm.svelte"
+  ]
+ },
+ {
+  "en": "Today",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/+page.svelte"
+  ]
+ },
+ {
+  "en": "Todo item",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/TodoForm.svelte"
+  ]
+ },
+ {
+  "en": "Toggle",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/visited/VisitedPlacePage.svelte"
+  ]
+ },
+ {
+  "en": "Topic",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "topic. Leave the topic empty to disable this channel.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Total sharing groups.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/about/+page.svelte"
+  ]
+ },
+ {
+  "en": "Total user accounts.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/about/+page.svelte"
+  ]
+ },
+ {
+  "en": "total.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/database-maintenance/+page.svelte"
+  ]
+ },
+ {
+  "en": "total).",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/database-maintenance/+page.svelte"
+  ]
+ },
+ {
+  "en": "TOTP code or backup code",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Track a frequent-flyer or rewards program and its current balance.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/loyalty/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Transport",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Transport security",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Travel documents",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/documents/+page.svelte"
+  ]
+ },
+ {
+  "en": "Travel insurance providers, coverage, and linked trips.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/insurance/+page.svelte"
+  ]
+ },
+ {
+  "en": "Travelers",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/print/+page.svelte"
+  ]
+ },
+ {
+  "en": "Travelers and trip support.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Trip actions",
+  "kind": "attr:aria-label",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Trip date range",
+  "kind": "attr:aria-label",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Trip reminder",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/reminders/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Trip sections",
+  "kind": "attr:aria-label",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Trip weather",
+  "kind": "attr:aria-label",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Trip, destination, or segment",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "routes/trips/+page.svelte"
+  ]
+ },
+ {
+  "en": "Turn-by-turn notes",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/DirectionsForm.svelte"
+  ]
+ },
+ {
+  "en": "Two-factor authentication",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Two-factor authentication is enabled for this user.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/users/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Two-factor verification — Roamarr",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/login/verify/+page.svelte"
+  ]
+ },
+ {
+  "en": "Type a name or choose a user",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "typical",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Typical visit (minutes)",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "Typically 587 (STARTTLS) or 465 (TLS).",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "U.S. states",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/visited/VisitedPlacePage.svelte"
+  ]
+ },
+ {
+  "en": "Unarchive",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/+page.svelte"
+  ]
+ },
+ {
+  "en": "Unassigned",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Uncategorized",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "Unfavorite",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/+page.svelte"
+  ]
+ },
+ {
+  "en": "Unknown boot failure.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/boot-error/+page.svelte"
+  ]
+ },
+ {
+  "en": "Until",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/print/+page.svelte"
+  ]
+ },
+ {
+  "en": "Upcoming trips",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/+page.svelte"
+  ]
+ },
+ {
+  "en": "Update",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/cards/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Update the details for",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Updated",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Upload",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Upload a JSON or CSV file to create trips in bulk.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/import/+page.svelte"
+  ]
+ },
+ {
+  "en": "Upload a previously downloaded",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/backup/+page.svelte"
+  ]
+ },
+ {
+  "en": "Upload PDF or image",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "URL",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "Use it as",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/api-keys/+page.svelte"
+  ]
+ },
+ {
+  "en": "Use the same server credentials as Inbound Emails",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/email_sender/+page.svelte"
+  ]
+ },
+ {
+  "en": "Used when a trip or segment has no timezone set.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "User menu",
+  "kind": "attr:aria-label",
+  "count": 1,
+  "files": [
+   "routes/+layout.svelte"
+  ]
+ },
+ {
+  "en": "Users may configure their own inbox monitoring connection.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Users may configure their own server for notifications sent to themselves.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Users may override the global parsing provider.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Users must also approve this access for each MCP client. This includes trip notes, confirmation numbers, and itinerary details. Payment card numbers and travel document numbers stay protected.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Using",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/cards/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Venue",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/FlightForm.svelte"
+  ]
+ },
+ {
+  "en": "Verification required",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/login/verify/+page.svelte"
+  ]
+ },
+ {
+  "en": "Verify",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/login/verify/+page.svelte"
+  ]
+ },
+ {
+  "en": "View",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/audit-logs/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Visits",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/visited/VisitedPlacePage.svelte"
+  ]
+ },
+ {
+  "en": "Weather",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Webhook",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Webhook notifications",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/+page.svelte"
+  ]
+ },
+ {
+  "en": "Webhook URL",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "WEBUI_SECRET_KEY",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Welcome back to your travel HQ.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/login/+page.svelte"
+  ]
+ },
+ {
+  "en": "Welcome back,",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/+page.svelte"
+  ]
+ },
+ {
+  "en": "Welcome to Roamarr",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/setup/+page.svelte"
+  ]
+ },
+ {
+  "en": "What needs to be done?",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/TodoForm.svelte"
+  ]
+ },
+ {
+  "en": "What to check",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/boot-error/+page.svelte"
+  ]
+ },
+ {
+  "en": "When enabled, the scheduler writes",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/backup/+page.svelte"
+  ]
+ },
+ {
+  "en": "Who",
+  "kind": "attr:label",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/MeetupForm.svelte"
+  ]
+ },
+ {
+  "en": "Who is attending?",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/EventForm.svelte"
+  ]
+ },
+ {
+  "en": "Whole trip",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "will not",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/reminders/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "with",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/import/+page.svelte"
+  ]
+ },
+ {
+  "en": "with X-Roamarr-Signature (HMAC-SHA256) and X-Roamarr-Timestamp headers.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Without AI, parsing matches are best effort but may fall short on accuracy.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/email_parsing/+page.svelte"
+  ]
+ },
+ {
+  "en": "Wrap",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/about/licenses/+page.svelte"
+  ]
+ },
+ {
+  "en": "Write a note…",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Write about your day...",
+  "kind": "attr:placeholder",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "X-Api-Token:",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/api-keys/+page.svelte"
+  ]
+ },
+ {
+  "en": "You don't have permission to do that.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "error.svelte"
+  ]
+ },
+ {
+  "en": "You have",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/+page.svelte"
+  ]
+ },
+ {
+  "en": "you have visited.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/visited/VisitedPlacePage.svelte"
+  ]
+ },
+ {
+  "en": "You're all caught up.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/notifications/+page.svelte"
+  ]
+ },
+ {
+  "en": "You're all caught up. Safe travels.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/+page.svelte"
+  ]
+ },
+ {
+  "en": "Your account must set a new password before you can continue. Signed in as",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/change-password/+page.svelte"
+  ]
+ },
+ {
+  "en": "Your keys",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/api-keys/+page.svelte"
+  ]
+ },
+ {
+  "en": "Your passkeys",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Your profile",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/+page.svelte"
+  ]
+ },
+ {
+  "en": "Your request couldn't be processed. Please check your input and try again.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "error.svelte"
+  ]
+ },
+ {
+  "en": "Your saved places library — reuse them on trips later.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/places/+page.svelte"
+  ]
+ }
+]

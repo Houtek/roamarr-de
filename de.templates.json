@@ -1,0 +1,140 @@
+{
+ "lib/components/Gallery.svelte": {
+  "View photo ${0}": "Foto ${0} ansehen",
+  "Move ${0} earlier": "${0} nach vorne verschieben",
+  "Move ${0} later": "${0} nach hinten verschieben",
+  "Delete ${0}? This cannot be undone.": "${0} löschen? Das kann nicht rückgängig gemacht werden.",
+  "Caption for ${0}": "Bildunterschrift für ${0}",
+  "Save caption for ${0}": "Bildunterschrift für ${0} speichern"
+ },
+ "lib/components/GridTable.svelte": {
+  "<select class=\"select select-compact grid-table-action-select\" aria-label=\"Actions\" data-grid-action-select=\"true\" data-row-id=\"${0}\"><option value=\"\" selected>Actions</option>${1}</select>": "<select class=\"select select-compact grid-table-action-select\" aria-label=\"Aktionen\" data-grid-action-select=\"true\" data-row-id=\"${0}\"><option value=\"\" selected>Aktionen</option>${1}</select>"
+ },
+ "lib/components/TripDocumentsTable.svelte": {
+  "Delete “${0}”? This cannot be undone.": "„${0}“ löschen? Das kann nicht rückgängig gemacht werden."
+ },
+ "lib/components/TripMap.svelte": {
+  "Map centered on ${0}": "Karte zentriert auf ${0}",
+  "Open 3D globe centered on ${0}": "3D-Globus zentriert auf ${0} öffnen"
+ },
+ "lib/server/emailProcessing.ts": {
+  "Roamarr did not find a matching trip. Roamarr created \"${0}\" and added the travel item.": "Roamarr hat keine passende Reise gefunden. Roamarr hat „${0}“ erstellt und den Reiseeintrag hinzugefügt.",
+  "Roamarr added the travel item to \"${0}\".": "Roamarr hat den Reiseeintrag zu „${0}“ hinzugefügt."
+ },
+ "lib/server/emergencyContacts.ts": {
+  "Itinerary shared: ${0}": "Reiseplan geteilt: ${0}",
+  "You have been sent an itinerary for \"${0}\". Open the link below to view the trip details.": "Dir wurde ein Reiseplan für „${0}“ gesendet. Öffne den Link unten, um die Reisedetails anzuzeigen."
+ },
+ "lib/server/geoImport.ts": {
+  "Row ${0}: skipped — no title": "Zeile ${0}: übersprungen — kein Titel",
+  "KMZ archives may contain at most ${0} entries": "KMZ-Archive dürfen höchstens ${0} Einträge enthalten",
+  "Feature ${0}: skipped — only Point geometries are importable": "Feature ${0}: übersprungen — nur Point-Geometrien sind importierbar",
+  "Feature ${0}: skipped — invalid coordinates": "Feature ${0}: übersprungen — ungültige Koordinaten",
+  "Feature ${0}: skipped — no name/title property": "Feature ${0}: übersprungen — keine Name-/Titel-Eigenschaft",
+  "Line ${0}: skipped — not an http(s) URL": "Zeile ${0}: übersprungen — keine http(s)-URL",
+  "Line ${0}: skipped — could not derive a name from the URL": "Zeile ${0}: übersprungen — Name konnte nicht aus der URL abgeleitet werden",
+  "Dropped pin (${0}, ${1})": "Abgesetzter Pin (${0}, ${1})",
+  "Imports are limited to ${0} rows per file": "Importe sind auf ${0} Zeilen pro Datei begrenzt",
+  "Matches existing place \"${0}\"": "Entspricht vorhandenem Ort „${0}“",
+  "Within ${0} m of existing place \"${1}\"": "Innerhalb von ${0} m von vorhandenem Ort „${1}“",
+  "Duplicates row ${0} (\"${1}\") in this import": "Dupliziert Zeile ${0} („${1}“) in diesem Import"
+ },
+ "lib/server/mapTiles.ts": {
+  "${0} | City data © <a href=\"https://www.geonames.org/\">GeoNames.org</a>, CC-BY 4.0": "${0} | Städtedaten © <a href=\"https://www.geonames.org/\">GeoNames.org</a>, CC-BY 4.0"
+ },
+ "lib/server/seedDatabase.ts": {
+  "Looking forward to ${0}!": "Freue mich auf ${0}!"
+ },
+ "lib/server/segmentAdd.ts": {
+  "Segment saved, but a document failed to upload: ${0}": "Segment gespeichert, aber ein Dokument konnte nicht hochgeladen werden: ${0}"
+ },
+ "lib/server/tripExpenses/actions.ts": {
+  "${0} is required": "${0} ist erforderlich",
+  "${0} must be a positive amount with up to 2 decimals": "${0} muss ein positiver Betrag mit bis zu 2 Nachkommastellen sein",
+  "${0} must be a positive amount": "${0} muss ein positiver Betrag sein"
+ },
+ "lib/server/tripPolls.ts": {
+  "Option ${0} must be at most 200 characters": "Option ${0} darf höchstens 200 Zeichen lang sein"
+ },
+ "lib/server/tripSharing.ts": {
+  "${0} invited you to ${1}": "${0} hat dich zu ${1} eingeladen"
+ },
+ "lib/server/weather.ts": {
+  "High wind (${0}) on ${1}": "Starker Wind (${0}) am ${1}",
+  "Heavy precipitation on ${0}": "Starker Niederschlag am ${0}",
+  "Freezing temperatures on ${0}": "Frost am ${0}"
+ },
+ "routes/about/licenses/+page.svelte": {
+  "No matches for \"${0}\".": "Keine Treffer für „${0}“.",
+  "${0} matching lines": "${0} passende Zeilen"
+ },
+ "routes/audit-logs/+page.server.ts": {
+  "Rate limited. Try again in ${0} seconds.": "Rate-Limit erreicht. Versuch es in ${0} Sekunden erneut."
+ },
+ "routes/backup/+page.server.ts": {
+  "Backup file must be ${0} bytes or smaller": "Backup-Datei darf höchstens ${0} Byte groß sein"
+ },
+ "routes/cards/+page.svelte": {
+  "Delete ${0}? This will also remove all its benefits.": "${0} löschen? Damit werden auch alle zugehörigen Leistungen entfernt."
+ },
+ "routes/general/+page.server.ts": {
+  "${0} cities imported": "${0} Städte importiert",
+  "${0} cities already present": "${0} Städte bereits vorhanden",
+  "Maps enabled (${0}).": "Karten aktiviert (${0}).",
+  "GeoNames cities re-imported (${0} cities).": "GeoNames-Städte erneut importiert (${0} Städte).",
+  "GeoNames cities imported (${0} cities).": "GeoNames-Städte importiert (${0} Städte)."
+ },
+ "routes/groups/+page.svelte": {
+  "Delete ${0}? This cannot be undone.": "${0} löschen? Das kann nicht rückgängig gemacht werden."
+ },
+ "routes/insurance/+page.svelte": {
+  "Delete ${0}? This cannot be undone.": "${0} löschen? Das kann nicht rückgängig gemacht werden."
+ },
+ "routes/job-history/+page.svelte": {
+  "Fare checks ${0}": "Fare-Checks ${0}"
+ },
+ "routes/places/+page.svelte": {
+  "Remove the GPX track from ${0}?": "GPX-Track von ${0} entfernen?",
+  "Delete ${0}? This cannot be undone.": "${0} löschen? Das kann nicht rückgängig gemacht werden.",
+  "Delete link ${0}?": "Link ${0} löschen?",
+  "Delete category ${0}? Places in it are kept but unlinked.": "Kategorie ${0} löschen? Orte darin bleiben erhalten, werden aber nicht mehr verknüpft."
+ },
+ "routes/places/import/+page.server.ts": {
+  "Imports are limited to ${0} rows": "Importe sind auf ${0} Zeilen begrenzt"
+ },
+ "routes/profile/documents/+page.svelte": {
+  "Delete this ${0}? This cannot be undone.": "„${0}“ löschen? Das kann nicht rückgängig gemacht werden."
+ },
+ "routes/profile/loyalty/+page.svelte": {
+  "${0}mo ago": "vor ${0} Mon.",
+  "Delete ${0}? This cannot be undone.": "${0} löschen? Das kann nicht rückgängig gemacht werden."
+ },
+ "routes/profile/security/+page.server.ts": {
+  "Client created. Save the secret — it won't be shown again.": "Client erstellt. Speichere das Secret — es wird nicht erneut angezeigt."
+ },
+ "routes/profile/visited/VisitedPlacePage.svelte": {
+  "Remove visited ${0}": "${0} als besucht entfernen",
+  "No visited ${0} found.": "Keine besuchten ${0} gefunden.",
+  "Clear all visited ${0}?": "Alle besuchten ${0} löschen?"
+ },
+ "routes/profile/visited/shared.server.ts": {
+  "${0} must be a valid date.": "${0} muss ein gültiges Datum sein.",
+  "Marked ${0} as visited.": "${0} als besucht markiert.",
+  "${0} was already marked.": "${0} war bereits markiert."
+ },
+ "routes/search/+page.svelte": {
+  "No trips found for \"${0}\".": "Keine Reisen gefunden für „${0}“."
+ },
+ "routes/trips/[id]/+page.svelte": {
+  "today at ${0}": "heute um ${0}",
+  "${0} itinerary plans": "Reiseplan für ${0}",
+  "Optimize stop order for ${0}": "Reihenfolge der Stopps für ${0} optimieren",
+  "Open ${0} in Google Maps": "${0} in Google Maps öffnen"
+ },
+ "routes/trips/shared.ts": {
+  "Copy of ${0}": "Kopie von ${0}"
+ },
+ "routes/users/+page.svelte": {
+  "Delete ${0} (${1})? This cannot be undone.": "${0} (${1}) löschen? Das kann nicht rückgängig gemacht werden."
+ }
+}

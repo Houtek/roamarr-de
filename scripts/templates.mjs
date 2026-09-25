@@ -53,6 +53,7 @@ function keyOf(src, t) {
 const prose = (key) => /[A-Za-z]{2,}[^$]*\s+[A-Za-z]{2,}/.test(key.replace(/\$\{\d+\}/g, ' '));
 
 function shape(node) {
+	if (typeof node === 'bigint') return `${node}n`; // JSON.stringify can't serialize BigInt literals (e.g. 0n)
 	if (Array.isArray(node)) return node.map(shape);
 	if (!node || typeof node !== 'object') return node;
 	const o = {};

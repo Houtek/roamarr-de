@@ -23,6 +23,9 @@ reps = [
      '<option value="" disabled selected>{noun} auswählen …</option>'),
     ('<p class="meta">Toggle {plural} you have visited.</p>',
      '<p class="meta">Markiere die {plural}, die du besucht hast.</p>'),
+    # source is a stored value ('manual' | 'trip') rendered raw; map it for display only (search still uses the raw value)
+    ("html(`<span style=\"color: var(--theme-readable)\">${escapeHtml(row.source)}</span>`)",
+     "html(`<span style=\"color: var(--theme-readable)\">${escapeHtml(({ manual: 'manuell', trip: 'aus Reise' } as Record<string, string>)[String(row.source)] ?? String(row.source ?? ''))}</span>`)"),
     # continent names are object/sort keys (countryContinents.ts): translate only the heading
     ('<h2 class="mb-2 text-sm font-semibold uppercase tracking-wide text-muted">{continent}</h2>',
      '<h2 class="mb-2 text-sm font-semibold uppercase tracking-wide text-muted">{CONTINENT_DE[continent] ?? continent}</h2>'),

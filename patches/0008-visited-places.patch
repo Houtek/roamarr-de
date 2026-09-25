@@ -1,5 +1,5 @@
 diff --git a/src/routes/profile/visited/VisitedPlacePage.svelte b/src/routes/profile/visited/VisitedPlacePage.svelte
-index b6820e4..079a249 100644
+index b6820e4..05c6f5c 100644
 --- a/src/routes/profile/visited/VisitedPlacePage.svelte
 +++ b/src/routes/profile/visited/VisitedPlacePage.svelte
 @@ -16,10 +16,11 @@
@@ -18,6 +18,15 @@ index b6820e4..079a249 100644
  	const visitedCodes = $derived(new Set<string>(data.visitedCodes));
  	const tableRows = $derived((data.tableRows ?? data.rows) as Record<string, unknown>[]);
  	const editingRow = $derived(tableRows.find((row) => row.code === editingCode));
+@@ -64,7 +65,7 @@
+ 			name: 'Source',
+ 			sort: true,
+ 			formatter: (_cell: unknown, row: Record<string, unknown>) =>
+-				html(`<span style="color: var(--theme-readable)">${escapeHtml(row.source)}</span>`)
++				html(`<span style="color: var(--theme-readable)">${escapeHtml(({ manual: 'manuell', trip: 'aus Reise' } as Record<string, string>)[String(row.source)] ?? String(row.source ?? ''))}</span>`)
+ 		}
+ 	]);
+ 
 @@ -176,14 +177,14 @@
  	<div>
  		<h1 class="page-title">{title}</h1>

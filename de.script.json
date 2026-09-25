@@ -304,7 +304,8 @@
   "From": "Von",
   "Time": "Zeit",
   "User": "Benutzer",
-  "View": "Anzeigen"
+  "View": "Anzeigen",
+  "To": "Bis"
  },
  "routes/backup/+page.server.ts": {
   "Backup interval must be an integer between 1 and 720 hours": "Backup-Intervall muss eine Ganzzahl zwischen 1 und 720 Stunden sein",
@@ -456,7 +457,8 @@
   "Edit": "Bearbeiten",
   "Delete": "Löschen",
   "Delete failed.": "Löschen fehlgeschlagen.",
-  "Delete policy": "Police löschen"
+  "Delete policy": "Police löschen",
+  "To": "Bis"
  },
  "routes/insurance/[id]/edit/+page.server.ts": {
   "Too many attempts. Try again later.": "Zu viele Versuche. Bitte später erneut versuchen."
@@ -478,7 +480,8 @@
   "Summary": "Zusammenfassung",
   "Duration": "Dauer",
   "Status": "Status",
-  "Error": "Fehler"
+  "Error": "Fehler",
+  "To": "Bis"
  },
  "routes/login/+page.server.ts": {
   "Too many attempts. Try again later.": "Zu viele Versuche. Bitte versuche es später erneut.",
@@ -531,7 +534,8 @@
   "Driver’s license": "Führerschein",
   "Global Entry": "Global Entry",
   "Visa": "Visum",
-  "Delete document": "Dokument löschen"
+  "Delete document": "Dokument löschen",
+  "To": "Bis"
  },
  "routes/profile/documents/[id]/edit/+page.server.ts": {
   "Too many attempts. Try again later.": "Zu viele Versuche. Bitte später erneut versuchen."
@@ -589,7 +593,8 @@
   "Trip": "Reise",
   "Segment": "Abschnitt",
   "Document": "Dokument",
-  "Delete reminder": "Erinnerung löschen"
+  "Delete reminder": "Erinnerung löschen",
+  "To": "Bis"
  },
  "routes/profile/reminders/[id]/edit/+page.server.ts": {
   "Too many attempts. Try again later.": "Zu viele Versuche. Bitte später erneut versuchen."
@@ -621,7 +626,8 @@
   "Last visited": "Zuletzt besucht",
   "Source": "Quelle",
   "Edit": "Bearbeiten",
-  "Remove": "Entfernen"
+  "Remove": "Entfernen",
+  "To": "Bis"
  },
  "routes/register/+page.server.ts": {
   "Too many attempts. Try again later.": "Zu viele Versuche. Bitte versuche es später erneut.",
@@ -712,7 +718,8 @@
   "Edit": "Bearbeiten",
   "Delete": "Löschen",
   "Delete failed.": "Löschen fehlgeschlagen.",
-  "Delete user": "Benutzer löschen"
+  "Delete user": "Benutzer löschen",
+  "To": "Bis"
  },
  "routes/users/[id]/edit/+page.server.ts": {
   "Invalid role.": "Ungültige Rolle.",

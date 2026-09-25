@@ -21,6 +21,8 @@ Patches form a **series**: each one is generated on top of the previous ones, so
 - `0004-grid-pagination.patch`: table footer ("Zeilen", "Zeige 1-10 von 23", page-button tooltips). `GridTable` parses grid.js's own English summary with a regex, so grid.js's language config deliberately stays English and only the rebuilt output is German.
 - `0005-plurals.patch`: the 31 English suffix plurals (`{n} trip{n === 1 ? '' : 's'}`, `countr{y|ies}`, `' and '` joins) rewritten as complete German sentences with a `pl(n, singular, plural)` helper and correct case ("in 3 Tagen", "mit 5 Reiseabschnitten") and word order ("3 Orte importieren"). The fragments these sentences used to consist of are removed from `de.json`.
 - `0006-currency-defaults.patch`: **behaviour fix, not translation.** Upstream prefills currency inputs (add expense, new insurance, card benefit, trip base-currency fallback) with a hardcoded `USD`, ignoring the user's default currency. The patch prefills the profile's default currency instead (fallback USD).
+- `0007-country-names.patch`: country names from the ISO code via `Intl.DisplayNames('de')` ("Vereinigtes Königreich"), sorted German-alphabetically. Lookups use the code; the name is display and search, so search works in German too.
+- `0008-visited-places.patch`: the shared visited countries / U.S. states page, which inserts English nouns into sentences at runtime. Nouns and the sentences around them become German (case and gender: "26 von 249 Ländern").
 - `0003-derived-labels.patch`: expense categories and payment statuses on the trip page, whose labels upstream computes by capitalizing the stored key (`lodging` → "Lodging"). The keys stay; a German map is consulted first.
 
 ## Script strings (`de.script.json`)

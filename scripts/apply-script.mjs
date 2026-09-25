@@ -1,8 +1,11 @@
 // Translate reviewed string literals in SCRIPT code (Svelte <script> blocks and .ts modules), in place.
-// Usage: node apply-script.mjs <src-dir> <de.script.json>
+// Usage: node apply-script.mjs <src-dir> <de.script.json> [property|expr]
 // de.script.json: { "<file relative to src>": { "<English literal>": "<German>", ... }, ... }
 // Only string literals that are the VALUE of an object property are touched (`label: 'Trips'`,
 // `fail(400, { error: '...' })`). Every entry was reviewed as display-only for that file.
+// Mode `expr` (table de.expr.json) instead matches literals in value positions that aren't properties:
+// conditional branches (a ? 'X' : 'Y'), fallbacks (x ?? 'X', x || 'X'), `return 'X'` and markup {'X'},
+// in <script> AND in Svelte markup expressions. Separate table, so each mode's entries keep their meaning.
 // After patching, the file is re-parsed and its AST (minus literal values and positions) must be
 // unchanged, every entry must have matched at least once, or we exit 1.
 import { parse } from 'svelte/compiler';
@@ -11,7 +14,8 @@ import { tsPlugin } from '@sveltejs/acorn-typescript';
 import { readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-const [root, tablePath] = process.argv.slice(2);
+const [root, tablePath, mode = 'property'] = process.argv.slice(2);
+if (!['property', 'expr'].includes(mode)) throw new Error(`unknown mode ${mode}`);
 const table = JSON.parse(readFileSync(tablePath, 'utf8'));
 const TS = Parser.extend(tsPlugin());
 
@@ -23,13 +27,23 @@ function programs(file, src) {
 	return { progs: [TS.parse(src, { sourceType: 'module', ecmaVersion: 'latest' })], markup: null };
 }
 
+function matches(node, parent) {
+	if (mode === 'property') return parent.type === 'Property' && parent.value === node;
+	return (
+		(parent.type === 'ConditionalExpression' && (parent.consequent === node || parent.alternate === node)) ||
+		(parent.type === 'LogicalExpression' && parent.right === node && ['??', '||'].includes(parent.operator)) ||
+		parent.type === 'ReturnStatement' ||
+		parent.type === 'ExpressionTag'
+	);
+}
+
 function propertyStringLiterals(node, out = [], parent = null) {
 	if (!node || typeof node !== 'object') return out;
 	if (Array.isArray(node)) {
 		for (const n of node) propertyStringLiterals(n, out, parent);
 		return out;
 	}
-	if (node.type === 'Literal' && typeof node.value === 'string' && parent?.type === 'Property' && parent.value === node) {
+	if (node.type === 'Literal' && typeof node.value === 'string' && parent && matches(node, parent)) {
 		out.push(node);
 	}
 	for (const [k, v] of Object.entries(node)) {
@@ -63,7 +77,7 @@ for (const [file, map] of Object.entries(table)) {
 	const before = programs(file, src);
 	const edits = [];
 	const hits = new Set();
-	for (const prog of before.progs) {
+	for (const prog of mode === 'expr' && before.markup ? [...before.progs, before.markup] : before.progs) {
 		for (const lit of propertyStringLiterals(prog)) {
 			if (!(lit.value in map)) continue;
 			const q = src[lit.start];
@@ -89,7 +103,7 @@ for (const [file, map] of Object.entries(table)) {
 	files++;
 	replaced += edits.length;
 }
-console.error(`script: patched files=${files} replacements=${replaced} unmatched-entries=${unmatched.length}`);
+console.error(`script(${mode}): patched files=${files} replacements=${replaced} unmatched-entries=${unmatched.length}`);
 if (unmatched.length) {
 	for (const u of unmatched) console.error(`  unmatched (not a property-value literal in source): ${u}`);
 	console.error('nothing written');

@@ -1,6 +1,6 @@
 // Apply a de.json translation table to Svelte components IN PLACE, via compiler AST offsets.
 // Usage: node apply.mjs <src-dir> <de.json>
-// de.json: { "<normalized English>": "<German>", ... }
+// de.json: { "<normalized English>": "<German>", "<file relative to src>::<normalized English>": "<German>", ... }
 // Only visible text nodes and whitelisted display attributes are replaced. After patching,
 // every file is re-parsed and its AST (minus text content) must equal the original, or we exit 1.
 import { parse } from 'svelte/compiler';
@@ -66,9 +66,12 @@ for (const f of walkFiles(root)) {
 		const raw = src.slice(t.start, t.end);
 		const key = norm(raw);
 		if (!/[A-Za-z]{2,}/.test(key)) continue;
-		const de = table[key];
-		if (de === undefined) { untranslated.add(key); continue; }
-		used.add(key);
+		// a per-component override "<file relative to src>::<text>" wins over the plain key
+		const scoped = `${relative(root, f)}::${key}`;
+		const hit = scoped in table ? scoped : key in table ? key : undefined;
+		if (hit === undefined) { untranslated.add(key); continue; }
+		const de = table[hit];
+		used.add(hit);
 		const lead = raw.match(/^\s*/)[0], trail = raw.match(/\s*$/)[0];
 		edits.push([t.start, t.end, lead + de + trail]);
 	}

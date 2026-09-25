@@ -1,0 +1,6 @@
+# Upstream tests that assert English UI wording and therefore fail once that text is translated.
+# One test per line, in the format compare-tests.mjs prints: <file> > <full test name>
+# Only add a test here after the full-coverage CI job shows it failing on wording alone.
+
+# asserts aria-label="Dismiss"
+src/lib/components/Toast.test.ts > renders a dismiss button by default

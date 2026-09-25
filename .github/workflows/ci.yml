@@ -119,4 +119,4 @@ jobs:
       - name: Tests that assert English wording (informational)
         run: node scripts/compare-tests.mjs baseline/baseline.json marker/marker.json || true
       - name: Fail on tests that fail only after patching
-        run: node scripts/compare-tests.mjs baseline/baseline.json patched/patched.json
+        run: node scripts/compare-tests.mjs baseline/baseline.json patched/patched.json expected-test-failures.txt

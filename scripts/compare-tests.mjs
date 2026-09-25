@@ -14,9 +14,18 @@ const failing = (path) => {
 	return { out, total: r.numTotalTests };
 };
 
-const [bPath, pPath] = process.argv.slice(2);
+const [bPath, pPath, expectedPath] = process.argv.slice(2);
 const b = failing(bPath), p = failing(pPath);
-const introduced = [...p.out].filter((t) => !b.out.has(t)).sort();
+// tests that assert English wording and are EXPECTED to fail once translated; one per line, # comments
+const expected = new Set(
+	expectedPath
+		? readFileSync(expectedPath, 'utf8').split('\n').map((l) => l.replace(/#.*/, '').trim()).filter(Boolean)
+		: []
+);
+const all = [...p.out].filter((t) => !b.out.has(t)).sort();
+const introduced = all.filter((t) => !expected.has(t));
+const allowed = all.filter((t) => expected.has(t));
+if (allowed.length) console.log(`expected (asserts English wording): \n  ${allowed.join('\n  ')}`);
 const fixed = [...b.out].filter((t) => !p.out.has(t)).sort();
 
 console.log(`baseline: ${b.out.size} failing of ${b.total}`);

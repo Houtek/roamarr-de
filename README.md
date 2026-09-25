@@ -25,6 +25,10 @@ Patches form a **series**: each one is generated on top of the previous ones, so
 - `0008-visited-places.patch`: the shared visited countries / U.S. states page, which inserts English nouns into sentences at runtime. Nouns and the sentences around them become German (case and gender: "26 von 249 Ländern").
 - `0003-derived-labels.patch`: expense categories and payment statuses on the trip page, whose labels upstream computes by capitalizing the stored key (`lodging` → "Lodging"). The keys stay; a German map is consulted first.
 
+## Value-position strings (`de.expr.json`)
+
+Literals that aren't object properties but still end up on screen: conditional branches (`mcpPage ? 'MCP Clients' : 'Security'`), fallbacks (`name ?? 'Unnamed passkey'`), `return 'X'` and `{'X'}` in markup. Reviewed per file the same way (display only). Stays English on purpose: "Imported trip" / "Imported itinerary" (stored as trip/segment names and fuzzy-matched on later imports), "Trip owner" (stored), "You" (a data name in expense settlements). Applied by `apply-script.mjs … expr`.
+
 ## Script strings (`de.script.json`)
 
 String literals in script code (`label: 'Notes'`, `fail(400, { error: '…' })`, default place categories) are translated by `scripts/apply-script.mjs`. Every entry was reviewed per file as **display-only**: shown to a human, and never compared, used as a key, persisted as identity or returned to a programmatic client. Kept English on purpose: MCP tool descriptions and errors (for AI clients), JSON API errors, brand names (map providers, themed theme names), and seed data inside database migrations. The applier only touches literals that are property values, re-parses each file and refuses to write anything if the structure changed or if any entry didn't match.

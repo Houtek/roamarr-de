@@ -1,0 +1,269 @@
+{
+ "error.svelte": {
+  "An unexpected error occurred.": "Ein unerwarteter Fehler ist aufgetreten."
+ },
+ "lib/components/GlobeModal.svelte": {
+  "Drag to rotate · scroll to zoom · click a city or anywhere on Earth": "Ziehen zum Drehen · Scrollen zum Zoomen · Stadt oder eine Stelle auf der Erde anklicken"
+ },
+ "lib/components/GridTable.svelte": {
+  "Confirm": "Bestätigen",
+  "Are you sure?": "Bist du sicher?"
+ },
+ "lib/components/TripDocumentsTable.svelte": {
+  "Whole trip": "Ganze Reise",
+  "File": "Datei"
+ },
+ "lib/components/segments/CollapseSection.svelte": {
+  "Show less": "Weniger anzeigen",
+  "Show more": "Mehr anzeigen"
+ },
+ "lib/components/segments/SegmentEditForm.svelte": {
+  "Check-in": "Check-in",
+  "Departure": "Abflug",
+  "Pick-up": "Abholung",
+  "Starts": "Beginnt",
+  "Check-out": "Check-out",
+  "Arrival": "Ankunft",
+  "Drop-off": "Rückgabe",
+  "Ends": "Endet",
+  "Check-out timezone": "Check-out-Zeitzone",
+  "Arrival timezone": "Ankunftszeitzone",
+  "Drop-off timezone": "Rückgabezeitzone",
+  "End timezone": "Endzeitzone",
+  "Address": "Adresse",
+  "Venue": "Veranstaltungsort"
+ },
+ "lib/segmentDetailsDisplay.ts": {
+  "Yes": "Ja"
+ },
+ "lib/server/cities.ts": {
+  "Selected city was not found in the GeoNames database for that state/province": "Die ausgewählte Stadt wurde in der GeoNames-Datenbank für dieses Bundesland/diese Provinz nicht gefunden",
+  "Selected city was not found in the GeoNames database": "Die ausgewählte Stadt wurde in der GeoNames-Datenbank nicht gefunden"
+ },
+ "lib/server/emailProcessing.ts": {
+  "Roamarr could not add this email because an error occurred.\n\nCheck the email. Send it again with the travel dates, destination, and reservation details.": "Roamarr konnte diese E-Mail nicht hinzufügen, da ein Fehler aufgetreten ist.\n\nPrüfe die E-Mail. Sende sie erneut mit Reisedaten, Ziel und Buchungsdetails.",
+  "Roamarr could not find travel details in this email.\n\nCheck the email. Send it again with the travel dates, destination, and reservation details.": "Roamarr konnte in dieser E-Mail keine Reisedetails finden.\n\nPrüfe die E-Mail. Sende sie erneut mit Reisedaten, Ziel und Buchungsdetails.",
+  "View Trip": "Reise ansehen"
+ },
+ "lib/server/geoImport.ts": {
+  "Unknown error": "Unbekannter Fehler"
+ },
+ "lib/server/segmentAdd.ts": {
+  "Segment saved, but one or more documents failed to upload.": "Reiseabschnitt gespeichert, aber mindestens ein Dokument konnte nicht hochgeladen werden."
+ },
+ "lib/server/tripCompanions.ts": {
+  "Person added and invitation sent.": "Person hinzugefügt und Einladung gesendet."
+ },
+ "lib/server/tripExpenses/summaries.ts": {
+  "Unknown": "Unbekannt"
+ },
+ "lib/server/tripSharing.ts": {
+  "Someone": "Jemand"
+ },
+ "lib/server/validation.ts": {
+  "Please fix the highlighted fields.": "Bitte korrigiere die markierten Felder."
+ },
+ "lib/server/weather.ts": {
+  "Unavailable": "Nicht verfügbar",
+  "Typical weather shown (outside the forecast window).": "Typisches Wetter angezeigt (außerhalb des Vorhersagezeitraums)."
+ },
+ "lib/weatherCodes.ts": {
+  "Unknown": "Unbekannt"
+ },
+ "routes/+layout.svelte": {
+  "Navigation": "Navigation"
+ },
+ "routes/+page.svelte": {
+  "Start": "Start",
+  "End": "Ende",
+  "Comment": "Kommentar",
+  "Unknown": "Unbekannt"
+ },
+ "routes/cards/+page.svelte": {
+  "Delete failed.": "Löschen fehlgeschlagen."
+ },
+ "routes/database-maintenance/+page.server.ts": {
+  "Unknown serialization error": "Unbekannter Serialisierungsfehler",
+  "Check failed": "Prüfung fehlgeschlagen",
+  "Garbage collection failed": "Garbage Collection fehlgeschlagen",
+  "Flush failed": "Flush fehlgeschlagen",
+  "Doctor failed": "Doctor fehlgeschlagen"
+ },
+ "routes/fare-providers/[id]/edit/+page.svelte": {
+  "API key set — leave blank to keep": "API-Schlüssel gesetzt — leer lassen, um ihn zu behalten",
+  "API key": "API-Schlüssel"
+ },
+ "routes/general/+page.server.ts": {
+  "Failed to load embedding model.": "Laden des Embedding-Modells fehlgeschlagen.",
+  "Embeddings are not ready.": "Embeddings sind nicht bereit.",
+  "Test email sent.": "Test-E-Mail gesendet.",
+  "SMTP is not configured.": "SMTP ist nicht konfiguriert.",
+  "Earth texture ready": "Erdtextur bereit"
+ },
+ "routes/general/+page.svelte": {
+  "No error.": "Kein Fehler."
+ },
+ "routes/groups/+page.svelte": {
+  "Delete failed.": "Löschen fehlgeschlagen."
+ },
+ "routes/insurance/+page.svelte": {
+  "Delete failed.": "Löschen fehlgeschlagen."
+ },
+ "routes/invite/[token]/+page.server.ts": {
+  "Could not create account.": "Konto konnte nicht erstellt werden."
+ },
+ "routes/login/+page.svelte": {
+  "Passkey sign-in failed": "Anmeldung per Passkey fehlgeschlagen",
+  "Sign in with a passkey": "Mit Passkey anmelden"
+ },
+ "routes/login/verify/+page.svelte": {
+  "Invalid code.": "Ungültiger Code."
+ },
+ "routes/places/+page.svelte": {
+  "Uncategorized": "Ohne Kategorie",
+  "Remove from favorites": "Aus Favoriten entfernen",
+  "Add to favorites": "Zu Favoriten hinzufügen",
+  "Mark as planned": "Als geplant markieren",
+  "Mark as visited": "Als besucht markieren",
+  "Save link": "Link speichern",
+  "Add link": "Link hinzufügen",
+  "Edit place": "Ort bearbeiten",
+  "Add place": "Ort hinzufügen",
+  "Search": "Suchen",
+  "Save changes": "Änderungen speichern"
+ },
+ "routes/places/import/+page.server.ts": {
+  "Could not parse the import.": "Der Import konnte nicht verarbeitet werden."
+ },
+ "routes/profile/+page.server.ts": {
+  "Update failed": "Aktualisierung fehlgeschlagen"
+ },
+ "routes/profile/api-keys/+page.server.ts": {
+  "Failed to create API key": "API-Schlüssel konnte nicht erstellt werden"
+ },
+ "routes/profile/change-password/+page.server.ts": {
+  "Password update failed.": "Passwort konnte nicht aktualisiert werden."
+ },
+ "routes/profile/contacts/+page.server.ts": {
+  "Failed to add contact": "Kontakt konnte nicht hinzugefügt werden",
+  "Failed to update contact": "Kontakt konnte nicht aktualisiert werden",
+  "Failed to delete contact": "Kontakt konnte nicht gelöscht werden"
+ },
+ "routes/profile/documents/+page.svelte": {
+  "Delete failed.": "Löschen fehlgeschlagen."
+ },
+ "routes/profile/email/+page.server.ts": {
+  "Email change failed": "E-Mail-Änderung fehlgeschlagen"
+ },
+ "routes/profile/email_processing/+page.server.ts": {
+  "Invalid settings": "Ungültige Einstellungen",
+  "Inbox check failed": "Posteingangsprüfung fehlgeschlagen",
+  "Test email sent.": "Test-E-Mail gesendet.",
+  "Notification email is not configured.": "Benachrichtigungs-E-Mail ist nicht konfiguriert.",
+  "Test email failed": "Test-E-Mail fehlgeschlagen"
+ },
+ "routes/profile/email_processing/+page.svelte": {
+  "No error.": "Kein Fehler."
+ },
+ "routes/profile/loyalty/+page.svelte": {
+  "Delete failed.": "Löschen fehlgeschlagen."
+ },
+ "routes/profile/loyalty/[id]/edit/+page.svelte": {
+  "Never": "Nie"
+ },
+ "routes/profile/reminders/+page.svelte": {
+  "Custom": "Benutzerdefiniert",
+  "Delete failed.": "Löschen fehlgeschlagen."
+ },
+ "routes/profile/reminders/[id]/edit/+page.svelte": {
+  "Flight check-in": "Flug-Check-in",
+  "Document expiry": "Ablauf eines Dokuments",
+  "Custom": "Benutzerdefiniert"
+ },
+ "routes/profile/security/+page.server.ts": {
+  "Password update failed": "Passwort konnte nicht aktualisiert werden",
+  "Failed to create client": "Client konnte nicht erstellt werden"
+ },
+ "routes/profile/security/+page.svelte": {
+  "Passkey": "Passkey",
+  "Registration failed": "Registrierung fehlgeschlagen",
+  "MCP Clients": "MCP-Clients",
+  "Security": "Sicherheit",
+  "Connect and manage applications that access Roamarr through MCP.": "Verwalte Anwendungen, die über MCP auf Roamarr zugreifen.",
+  "Manage your password, two-factor authentication, and passkeys.": "Verwalte dein Passwort, die Zwei-Faktor-Authentifizierung und deine Passkeys.",
+  "Add passkey": "Passkey hinzufügen",
+  "Unnamed passkey": "Unbenannter Passkey",
+  "Unknown device": "Unbekanntes Gerät",
+  "Connect Claude Desktop": "Claude Desktop verbinden",
+  "Connect Open WebUI": "Open WebUI verbinden"
+ },
+ "routes/profile/sessions/+page.svelte": {
+  "This session": "Diese Sitzung"
+ },
+ "routes/profile/theme/+page.server.ts": {
+  "Update failed": "Aktualisierung fehlgeschlagen"
+ },
+ "routes/profile/visited/shared.server.ts": {
+  "Invalid visit dates.": "Ungültige Besuchsdaten.",
+  "Update failed.": "Aktualisierung fehlgeschlagen.",
+  "Auto-mark enabled.": "Automatisches Markieren aktiviert.",
+  "Auto-mark disabled.": "Automatisches Markieren deaktiviert."
+ },
+ "routes/trips/[id]/+page.svelte": {
+  "You": "Du",
+  "Unknown": "Unbekannt",
+  "Flexible dates": "Flexible Termine",
+  "Confirmed": "Bestätigt",
+  "Location not set": "Kein Ort angegeben",
+  "Check-in": "Check-in",
+  "Departure": "Abflug",
+  "Pick-up": "Abholung",
+  "Date & time": "Datum & Uhrzeit",
+  "Check-out": "Check-out",
+  "Arrival": "Ankunft",
+  "Drop-off": "Rückgabe",
+  "Flight check-in": "Flug-Check-in",
+  "Document expiry": "Dokumentablauf",
+  "Custom reminder": "Individuelle Erinnerung",
+  "Replace trip poster image": "Reiseposterbild ersetzen",
+  "Upload trip poster image": "Reiseposterbild hochladen",
+  "Trip poster": "Reiseposter",
+  "Upload": "Hochladen",
+  "Favorited": "Favorisiert",
+  "Favorite": "Favorisieren",
+  "Unarchive": "Archivierung aufheben",
+  "Archive": "Archivieren"
+ },
+ "routes/trips/[id]/fare-watch/+page.server.ts": {
+  "Check failed": "Prüfung fehlgeschlagen"
+ },
+ "routes/trips/[id]/share/+page.server.ts": {
+  "Invitation sent.": "Einladung gesendet.",
+  "Trip shared and email sent.": "Reise geteilt und E-Mail gesendet.",
+  "Invitation created, but SMTP is not configured or delivery failed.": "Einladung erstellt, aber SMTP ist nicht konfiguriert oder der Versand ist fehlgeschlagen.",
+  "Trip shared, but SMTP is not configured or delivery failed.": "Reise geteilt, aber SMTP ist nicht konfiguriert oder der Versand ist fehlgeschlagen."
+ },
+ "routes/trips/[id]/share/+page.svelte": {
+  "Hide details": "Details ausblenden",
+  "Show details": "Details anzeigen",
+  "Hide details on public link": "Details im öffentlichen Link ausblenden",
+  "Show details on public link": "Details im öffentlichen Link anzeigen"
+ },
+ "routes/trips/import/+page.server.ts": {
+  "Invalid file.": "Ungültige Datei."
+ },
+ "routes/trips/merge/+page.server.ts": {
+  "Merge failed": "Zusammenführen fehlgeschlagen"
+ },
+ "routes/users/+page.svelte": {
+  "Delete failed.": "Löschen fehlgeschlagen."
+ },
+ "routes/users/[id]/edit/+page.server.ts": {
+  "Update failed.": "Aktualisierung fehlgeschlagen.",
+  "Could not send reset link.": "Reset-Link konnte nicht gesendet werden.",
+  "Could not disable 2FA.": "2FA konnte nicht deaktiviert werden."
+ },
+ "routes/users/new/+page.server.ts": {
+  "Could not create user.": "Benutzer konnte nicht erstellt werden."
+ }
+}

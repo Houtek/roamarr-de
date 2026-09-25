@@ -1,6 +1,14 @@
 # Upstream tests that assert English UI wording and therefore fail once that text is translated.
 # One test per line, in the format compare-tests.mjs prints: <file> > <full test name>
-# Only add a test here after the full-coverage CI job shows it failing on wording alone.
+# Only add a test here after CI shows it failing AND reading its assertions confirms it checks wording, not behaviour.
 
 # asserts aria-label="Dismiss"
 src/lib/components/Toast.test.ts > renders a dismiss button by default
+
+# assert "Additional details" / "Attached files" / "Upload file" / "Departure" / "Arrival"
+src/lib/components/segments/SegmentEditForm.test.ts > SegmentEditForm renders all expected fields with per-segment ids
+src/lib/components/segments/SegmentEditForm.test.ts > SegmentEditForm shows Attached files accordion above Additional details
+# reads the component source and asserts "I saved these backup codes"
+src/routes/profile/security/security.test.ts > backup-code UI requires an explicit saved acknowledgment
+# asserts "Country" / "City" labels
+src/routes/trips/[id]/new-segment.test.ts > new flight segment page highlights invalid fields

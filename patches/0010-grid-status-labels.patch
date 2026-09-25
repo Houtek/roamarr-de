@@ -1,0 +1,107 @@
+diff --git a/src/routes/fare-providers/+page.svelte b/src/routes/fare-providers/+page.svelte
+index 7331af4..7672740 100644
+--- a/src/routes/fare-providers/+page.svelte
++++ b/src/routes/fare-providers/+page.svelte
+@@ -38,8 +38,8 @@
+ 			sort: true,
+ 			formatter: (_cell: unknown, row: Record<string, unknown>) =>
+ 				row.enabled
+-					? html('<span style="color: var(--theme-readable)">Enabled</span>')
+-					: html('<span style="color: var(--theme-readable-faint)">Disabled</span>')
++					? html('<span style="color: var(--theme-readable)">Aktiviert</span>')
++					: html('<span style="color: var(--theme-readable-faint)">Deaktiviert</span>')
+ 		}
+ 	];
+ 
+diff --git a/src/routes/job-history/+page.svelte b/src/routes/job-history/+page.svelte
+index 6037b22..e0f8acb 100644
+--- a/src/routes/job-history/+page.svelte
++++ b/src/routes/job-history/+page.svelte
+@@ -93,9 +93,9 @@
+ 					if (row.success) {
+ 						return html('<span class="whitespace-nowrap" style="color: var(--theme-success, #15803d)">OK</span>');
+ 					}
+-					return html('<span class="whitespace-nowrap" style="color: var(--theme-danger, #b91c1c)">Failed</span>');
++					return html('<span class="whitespace-nowrap" style="color: var(--theme-danger, #b91c1c)">Fehlgeschlagen</span>');
+ 				}
+-				return html('<span class="whitespace-nowrap" style="color: var(--theme-warn, #b45309)">Running</span>');
++				return html('<span class="whitespace-nowrap" style="color: var(--theme-warn, #b45309)">Läuft</span>');
+ 			}
+ 		},
+ 		{
+diff --git a/src/routes/profile/documents/+page.svelte b/src/routes/profile/documents/+page.svelte
+index d964189..3f3f98d 100644
+--- a/src/routes/profile/documents/+page.svelte
++++ b/src/routes/profile/documents/+page.svelte
+@@ -87,7 +87,7 @@
+ 			formatter: (_cell: unknown, row: Record<string, unknown>) =>
+ 				row.companionName
+ 					? html(`<span style="color: var(--theme-readable-muted)">${escapeHtml(row.companionName)}</span>`)
+-					: html('<span style="color: var(--theme-readable-faint)">Me</span>')
++					: html('<span style="color: var(--theme-readable-faint)">Ich</span>')
+ 		},
+ 		{
+ 			id: 'expiresOn',
+diff --git a/src/routes/profile/loyalty/+page.svelte b/src/routes/profile/loyalty/+page.svelte
+index cbe374b..09d74dc 100644
+--- a/src/routes/profile/loyalty/+page.svelte
++++ b/src/routes/profile/loyalty/+page.svelte
+@@ -50,7 +50,7 @@
+ 							`<div style="color: var(--theme-readable-muted)">${escapeHtml(formatDateTime(String(row.balanceUpdatedAt)))}</div>` +
+ 								`<div class="text-xs" style="color: var(--theme-readable-faint)">${escapeHtml(timeAgo(String(row.balanceUpdatedAt)))}</div>`
+ 						)
+-					: html('<span style="color: var(--theme-readable-faint)">Never</span>')
++					: html('<span style="color: var(--theme-readable-faint)">Nie</span>')
+ 		},
+ 		{
+ 			id: 'notes',
+diff --git a/src/routes/profile/reminders/+page.svelte b/src/routes/profile/reminders/+page.svelte
+index 58fbf9f..1b0d6bb 100644
+--- a/src/routes/profile/reminders/+page.svelte
++++ b/src/routes/profile/reminders/+page.svelte
+@@ -28,9 +28,9 @@
+ 	};
+ 
+ 	function statusText(status: string): string {
+-		if (status === 'sent') return '<span style="color: var(--theme-readable)">Sent</span>';
+-		if (status === 'sending') return '<span style="color: var(--theme-warn, #b45309)">Sending</span>';
+-		return '<span style="color: var(--theme-readable-muted)">Pending</span>';
++		if (status === 'sent') return '<span style="color: var(--theme-readable)">Gesendet</span>';
++		if (status === 'sending') return '<span style="color: var(--theme-warn, #b45309)">Wird gesendet</span>';
++		return '<span style="color: var(--theme-readable-muted)">Ausstehend</span>';
+ 	}
+ 
+ 	const columns = [
+diff --git a/src/routes/users/+page.svelte b/src/routes/users/+page.svelte
+index 94cc54c..fe5a1e9 100644
+--- a/src/routes/users/+page.svelte
++++ b/src/routes/users/+page.svelte
+@@ -34,7 +34,7 @@
+ 			formatter: (_cell: unknown, row: Record<string, unknown>) =>
+ 				row.role === 'admin'
+ 					? html('<span style="color: var(--theme-readable)">Admin</span>')
+-					: html('<span style="color: var(--theme-readable-muted)">User</span>')
++					: html('<span style="color: var(--theme-readable-muted)">Benutzer</span>')
+ 		},
+ 		{
+ 			id: 'status',
+@@ -43,15 +43,15 @@
+ 			formatter: (_cell: unknown, row: Record<string, unknown>) => {
+ 				const parts: string[] = [];
+ 				if (row.disabled) {
+-					parts.push('<span style="color: var(--theme-danger, #b91c1c)">Disabled</span>');
++					parts.push('<span style="color: var(--theme-danger, #b91c1c)">Deaktiviert</span>');
+ 				} else {
+-					parts.push('<span style="color: var(--theme-readable)">Active</span>');
++					parts.push('<span style="color: var(--theme-readable)">Aktiv</span>');
+ 				}
+ 				if (row.mustResetPassword) {
+-					parts.push('<span style="color: var(--theme-warn, #b45309)">Password reset required</span>');
++					parts.push('<span style="color: var(--theme-warn, #b45309)">Passwortänderung erforderlich</span>');
+ 				}
+ 				if (row.twoFactorEnabled) {
+-					parts.push('<span style="color: var(--theme-readable)">2FA enabled</span>');
++					parts.push('<span style="color: var(--theme-readable)">2FA aktiviert</span>');
+ 				}
+ 				return html(parts.join(', '));
+ 			}

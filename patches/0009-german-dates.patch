@@ -1,0 +1,140 @@
+diff --git a/src/hooks.server.ts b/src/hooks.server.ts
+index 0f9c5d1..a76c5ec 100644
+--- a/src/hooks.server.ts
++++ b/src/hooks.server.ts
+@@ -1,3 +1,4 @@
++import '$lib/luxonDe';
+ import { redirect, error, type Handle, type HandleServerError, isRedirect, type Redirect } from '@sveltejs/kit';
+ import { dev } from '$app/environment';
+ import { validateOAuthUser, validateSession, updateSessionMetadata } from '$lib/server/auth';
+diff --git a/src/lib/dateFormat.ts b/src/lib/dateFormat.ts
+index 136351e..3fb14f9 100644
+--- a/src/lib/dateFormat.ts
++++ b/src/lib/dateFormat.ts
+@@ -1,4 +1,5 @@
+ import { DateTime } from 'luxon';
++import './luxonDe';
+ 
+ export const DEFAULT_DATE_FORMAT = 'yyyy-MM-dd';
+ export const DEFAULT_DATETIME_FORMAT = 'yyyy-MM-dd h:mm a';
+@@ -11,9 +12,13 @@ export const DATE_FORMAT_OPTIONS: Array<{ value: string; label: string }> = [
+ 	{ value: 'yyyy-MM-dd', label: '2026-07-29' },
+ 	{ value: 'MM/dd/yyyy', label: '07/29/2026' },
+ 	{ value: 'dd/MM/yyyy', label: '29/07/2026' },
+-	{ value: 'MMM d, yyyy', label: 'Jul 29, 2026' },
+-	{ value: 'd MMM yyyy', label: '29 Jul 2026' },
+-	{ value: 'EEEE, MMM d, yyyy', label: 'Tuesday, July 29, 2026' }
++	{ value: 'MMM d, yyyy', label: 'Juli 29, 2026' },
++	{ value: 'd MMM yyyy', label: '29 Juli 2026' },
++	{ value: 'EEEE, MMM d, yyyy', label: 'Mittwoch, Juli 29, 2026' },
++	// roamarr-de: the usual German formats
++	{ value: 'dd.MM.yyyy', label: '29.07.2026' },
++	{ value: 'd. MMMM yyyy', label: '29. Juli 2026' },
++	{ value: 'EEEE, d. MMMM yyyy', label: 'Mittwoch, 29. Juli 2026' }
+ ];
+ 
+ export const DATETIME_FORMAT_OPTIONS: Array<{ value: string; label: string }> = [
+@@ -23,10 +28,13 @@ export const DATETIME_FORMAT_OPTIONS: Array<{ value: string; label: string }> =
+ 	{ value: 'MM/dd/yyyy HH:mm', label: '07/29/2026 12:34' },
+ 	{ value: 'dd/MM/yyyy h:mm a', label: '29/07/2026 12:34 PM' },
+ 	{ value: 'dd/MM/yyyy HH:mm', label: '29/07/2026 12:34' },
+-	{ value: 'MMM d, yyyy h:mm a', label: 'Jul 29, 2026 12:34 PM' },
+-	{ value: 'MMM d, yyyy HH:mm', label: 'Jul 29, 2026 12:34' },
+-	{ value: 'd MMM yyyy HH:mm', label: '29 Jul 2026 12:34' },
+-	{ value: 'd MMM yyyy HH:mm:ss', label: '29 Jul 2026 12:34:56' }
++	{ value: 'MMM d, yyyy h:mm a', label: 'Juli 29, 2026 12:34 PM' },
++	{ value: 'MMM d, yyyy HH:mm', label: 'Juli 29, 2026 12:34' },
++	{ value: 'd MMM yyyy HH:mm', label: '29 Juli 2026 12:34' },
++	{ value: 'd MMM yyyy HH:mm:ss', label: '29 Juli 2026 12:34:56' },
++	// roamarr-de: the usual German formats
++	{ value: 'dd.MM.yyyy HH:mm', label: '29.07.2026 12:34' },
++	{ value: 'd. MMMM yyyy, HH:mm', label: '29. Juli 2026, 12:34' }
+ ];
+ 
+ interface FormatOptions {
+@@ -48,7 +56,7 @@ export function formatDateTime(iso: string | null | undefined, opts: FormatOptio
+ 			return dt.toFormat(opts.format);
+ 		}
+ 		if (opts.dateStyle || opts.timeStyle) {
+-			return new Intl.DateTimeFormat('en-US', {
++			return new Intl.DateTimeFormat('de-DE', {
+ 				dateStyle: opts.dateStyle ?? 'medium',
+ 				timeStyle: opts.timeStyle ?? 'short',
+ 				...(opts.timeZone ? { timeZone: opts.timeZone } : {})
+@@ -74,7 +82,7 @@ export function formatDate(
+ 			return dt.toFormat(opts.format);
+ 		}
+ 		if (opts.dateStyle) {
+-			return new Intl.DateTimeFormat('en-US', { dateStyle: opts.dateStyle }).format(
++			return new Intl.DateTimeFormat('de-DE', { dateStyle: opts.dateStyle }).format(
+ 				new Date(`${iso}T12:00:00`)
+ 			);
+ 		}
+diff --git a/src/lib/luxonDe.ts b/src/lib/luxonDe.ts
+new file mode 100644
+index 0000000..a92a230
+--- /dev/null
++++ b/src/lib/luxonDe.ts
+@@ -0,0 +1,4 @@
++// roamarr-de: German month/weekday names for every Luxon DateTime (server and client).
++import { Settings } from 'luxon';
++
++Settings.defaultLocale = 'de';
+diff --git a/src/routes/+layout.svelte b/src/routes/+layout.svelte
+index a28b601..1178d82 100644
+--- a/src/routes/+layout.svelte
++++ b/src/routes/+layout.svelte
+@@ -1,4 +1,5 @@
+ <script lang="ts">
++	import '$lib/luxonDe';
+ 	import '../app.css';
+ 	import { navLabel } from '$lib/navDe';
+ 	import { onMount, onDestroy, untrack } from 'svelte';
+diff --git a/src/routes/trips/[id]/+page.svelte b/src/routes/trips/[id]/+page.svelte
+index ce4505e..dfecad4 100644
+--- a/src/routes/trips/[id]/+page.svelte
++++ b/src/routes/trips/[id]/+page.svelte
+@@ -303,7 +303,7 @@
+ 			const dt = segmentLocalDateTime(s);
+ 			if (dt) {
+ 				key = dt.toISODate()!;
+-				label = dt.toFormat('LLLL d, yyyy');
++				label = dt.toFormat('d. MMMM yyyy');
+ 			}
+ 			const existing = index.get(key);
+ 			if (existing != null) groups[existing].segments.push(s);
+@@ -634,13 +634,13 @@
+ 		const s = start ? DateTime.fromISO(start) : null;
+ 		const e = end ? DateTime.fromISO(end) : null;
+ 		if (s?.isValid && e?.isValid) {
+-			if (s.hasSame(e, 'day')) return s.toFormat('LLL d, yyyy');
+-			if (s.year === e.year && s.month === e.month) return `${s.toFormat('LLL d')} – ${e.toFormat('LLL d, yyyy')}`;
+-			if (s.year === e.year) return `${s.toFormat('LLL d')} – ${e.toFormat('LLL d, yyyy')}`;
+-			return `${s.toFormat('LLL d, yyyy')} – ${e.toFormat('LLL d, yyyy')}`;
++			if (s.hasSame(e, 'day')) return s.toFormat('d. MMM yyyy');
++			if (s.year === e.year && s.month === e.month) return `${s.toFormat('d. MMM')} – ${e.toFormat('d. MMM yyyy')}`;
++			if (s.year === e.year) return `${s.toFormat('d. MMM')} – ${e.toFormat('d. MMM yyyy')}`;
++			return `${s.toFormat('d. MMM yyyy')} – ${e.toFormat('d. MMM yyyy')}`;
+ 		}
+ 		const only = s?.isValid ? s : e?.isValid ? e : null;
+-		return only ? only.toFormat('LLL d, yyyy') : start || end || 'Flexible dates';
++		return only ? only.toFormat('d. MMM yyyy') : start || end || 'Flexible dates';
+ 	}
+ 
+ 	function groupWeekday(key: string) {
+@@ -803,13 +803,13 @@
+ 
+ 	function weatherDayChip(date: string) {
+ 		const dt = DateTime.fromISO(date);
+-		return dt.isValid ? dt.toFormat('EEE, MMM d') : date;
++		return dt.isValid ? dt.toFormat('EEE, d. MMM') : date;
+ 	}
+ 
+ 	function formatUpdatedDate(value: string) {
+ 		const dt = DateTime.fromISO(value);
+ 		if (!dt.isValid) return value;
+-		if (dt.hasSame(DateTime.now(), 'day')) return `today at ${dt.toFormat('h:mm a')}`;
++		if (dt.hasSame(DateTime.now(), 'day')) return `today at ${dt.toFormat('HH:mm')}`;
+ 		return formatDateTime(value);
+ 	}
+ 

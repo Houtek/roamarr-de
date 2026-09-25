@@ -1,0 +1,568 @@
+{
+ "hooks.server.ts": {
+  "Something went wrong. Please try again.": "Etwas ist schiefgelaufen. Bitte versuche es erneut."
+ },
+ "lib/components/AdminEmailTabs.svelte": {
+  "User Access": "Benutzerzugriff",
+  "Inbound Emails": "Eingehende E-Mails",
+  "AI Parsing": "KI-Analyse",
+  "Outbound Emails": "Ausgehende E-Mails"
+ },
+ "lib/components/EmailProcessingTabs.svelte": {
+  "Inbound Emails": "Eingehende E-Mails",
+  "AI Parsing": "KI-Analyse",
+  "Outbound Emails": "Ausgehende E-Mails"
+ },
+ "lib/components/GridTable.svelte": {
+  "Actions": "Aktionen"
+ },
+ "lib/components/ProfileTabs.svelte": {
+  "Profile": "Profil",
+  "Email": "E-Mail",
+  "Sessions": "Sitzungen",
+  "Calendar": "Kalender",
+  "Theme": "Design"
+ },
+ "lib/components/SecurityTabs.svelte": {
+  "Password": "Passwort",
+  "Passkeys": "Passkeys"
+ },
+ "lib/components/TripDocumentsTable.svelte": {
+  "Name": "Name",
+  "Scope": "Geltungsbereich",
+  "Type": "Typ",
+  "Size": "Größe",
+  "Open": "Öffnen",
+  "Delete": "Löschen"
+ },
+ "lib/dateFormat.ts": {
+  "Jul 29, 2026": "29. Jul. 2026",
+  "Tuesday, July 29, 2026": "Dienstag, 29. Juli 2026",
+  "Jul 29, 2026 12:34 PM": "29. Jul. 2026 12:34 PM",
+  "Jul 29, 2026 12:34": "29. Jul. 2026 12:34"
+ },
+ "lib/segmentLabels.ts": {
+  "Flight": "Flug",
+  "Event": "Veranstaltung",
+  "Hotel": "Hotel",
+  "Rental car": "Mietwagen",
+  "Note": "Notiz",
+  "Todo item": "Aufgabe",
+  "Parking": "Parken",
+  "Boat": "Boot",
+  "Train": "Zug",
+  "Directions": "Wegbeschreibung",
+  "Food": "Essen",
+  "Point of interest": "Sehenswürdigkeit",
+  "Meet Up": "Treffen",
+  "Rideshare": "Mitfahrt",
+  "Shuttle": "Shuttle"
+ },
+ "lib/segmentStatus.ts": {
+  "Planned": "Geplant",
+  "Checked in": "Eingecheckt",
+  "Boarded": "An Bord",
+  "Arrived": "Angekommen",
+  "Completed": "Abgeschlossen"
+ },
+ "lib/server/emailProcessing.ts": {
+  "Roamarr could not add your travel email": "Roamarr konnte deine Reise-E-Mail nicht hinzufügen",
+  "Roamarr added your travel email": "Roamarr hat deine Reise-E-Mail hinzugefügt"
+ },
+ "lib/server/fareproviders/index.ts": {
+  "Fare watch update": "Update zur Preisüberwachung"
+ },
+ "lib/server/fareproviders/stub.ts": {
+  "Stub (demo)": "Stub (Demo)"
+ },
+ "lib/server/geoImport.ts": {
+  "Source link": "Quelllink"
+ },
+ "lib/server/licenseAttribution.ts": {
+  "Third-party licenses": "Lizenzen von Drittanbietern",
+  "Bundled npm package license text generated from package-lock.json and installed package metadata.": "Lizenztexte der gebündelten npm-Pakete, generiert aus package-lock.json und den Metadaten der installierten Pakete.",
+  "Acknowledgements": "Danksagungen",
+  "Attribution summary for Roamarr, npm packages, and runtime components.": "Zusammenfassung der Namensnennungen für Roamarr, npm-Pakete und Laufzeitkomponenten.",
+  "Runtime components": "Laufzeitkomponenten",
+  "Runtime and deployment components used by common Roamarr installations.": "Laufzeit- und Deployment-Komponenten, die in gängigen Roamarr-Installationen verwendet werden."
+ },
+ "lib/server/oidc.ts": {
+  "This account is disabled.": "Dieses Konto ist deaktiviert.",
+  "The identity provider did not verify this email address.": "Der Identitätsanbieter hat diese E-Mail-Adresse nicht verifiziert.",
+  "The identity provider did not return an email address.": "Der Identitätsanbieter hat keine E-Mail-Adresse zurückgegeben.",
+  "No account exists for this email and self-registration is disabled.": "Für diese E-Mail-Adresse existiert kein Konto, und die Selbstregistrierung ist deaktiviert."
+ },
+ "lib/server/passkeys.ts": {
+  "Registration verification failed": "Registrierungsprüfung fehlgeschlagen",
+  "Missing credential ID": "Fehlende Anmeldedaten-ID",
+  "Unknown credential": "Unbekannte Anmeldedaten",
+  "Authentication failed": "Authentifizierung fehlgeschlagen",
+  "Account is disabled": "Konto ist deaktiviert"
+ },
+ "lib/server/placeSearch.ts": {
+  "Google Places rejected the API key (HTTP 403)": "Google Places hat den API-Schlüssel abgelehnt (HTTP 403)"
+ },
+ "lib/server/places.ts": {
+  "Nature & Outdoor": "Natur & Draußen",
+  "Entertainment & Leisure": "Unterhaltung & Freizeit",
+  "Culture": "Kultur",
+  "Food & Drink": "Essen & Trinken",
+  "Adventure & Sports": "Abenteuer & Sport",
+  "Festival & Event": "Festival & Veranstaltung",
+  "Wellness": "Wellness",
+  "Accommodation": "Unterkunft"
+ },
+ "lib/server/reminders.ts": {
+  "Check-in reminder": "Check-in-Erinnerung",
+  "Document expiring": "Dokument läuft ab",
+  "Reminder": "Erinnerung"
+ },
+ "lib/server/seed.ts": {
+  "Demo Trip to Tokyo": "Demo-Reise nach Tokio",
+  "JL outbound": "JL Hinflug",
+  "Shinjuku Hotel": "Hotel Shinjuku",
+  "Tsukiji lunch": "Mittagessen in Tsukiji",
+  "Shared demo trip": "Geteilte Demo-Reise"
+ },
+ "lib/server/seedDatabase.ts": {
+  "Sam Carter": "Sam Carter",
+  "The Globetrotters": "Die Weltenbummler",
+  "Past trip earlier this year": "Vergangene Reise Anfang dieses Jahres",
+  "Past trip last year": "Vergangene Reise letztes Jahr",
+  "Payment due soon": "Zahlung bald fällig",
+  "Alex": "Alex",
+  "Jordan": "Jordan",
+  "Outbound flight": "Hinflug",
+  "Hotel": "Hotel",
+  "Flights": "Flüge",
+  "Activities": "Aktivitäten",
+  "Document expiring": "Dokument läuft ab"
+ },
+ "lib/server/seedDates.ts": {
+  "Spring break": "Frühjahrsferien",
+  "Summer road trip": "Sommer-Roadtrip",
+  "Holiday markets": "Weihnachtsmärkte"
+ },
+ "lib/server/setupValidation.ts": {
+  "ROAMARR_SECRET is not set.": "ROAMARR_SECRET ist nicht gesetzt."
+ },
+ "lib/server/tripCompanions.ts": {
+  "Please fix the highlighted fields.": "Bitte korrigiere die markierten Felder.",
+  "Choose an active Roamarr user.": "Wähle einen aktiven Roamarr-Benutzer aus.",
+  "Guides and drivers cannot be invited to a trip.": "Guides und Fahrer können nicht zu einer Reise eingeladen werden.",
+  "Invalid permission": "Ungültige Berechtigung",
+  "Enter a valid email address.": "Gib eine gültige E-Mail-Adresse ein.",
+  "That Roamarr user is disabled.": "Dieser Roamarr-Benutzer ist deaktiviert.",
+  "The email does not match the selected Roamarr user.": "Die E-Mail-Adresse stimmt nicht mit dem ausgewählten Roamarr-Benutzer überein.",
+  "Person added and access created, but SMTP is not configured or delivery failed.": "Person hinzugefügt und Zugriff angelegt, aber SMTP ist nicht konfiguriert oder der Versand ist fehlgeschlagen."
+ },
+ "lib/server/twoFactor.ts": {
+  "Invalid verification code.": "Ungültiger Bestätigungscode.",
+  "Two-factor is not enabled.": "Zwei-Faktor-Authentifizierung ist nicht aktiviert."
+ },
+ "lib/server/users.ts": {
+  "Reset your Roamarr password": "Setze dein Roamarr-Passwort zurück"
+ },
+ "lib/themes.ts": {
+  "Roamarr classic": "Der Roamarr-Klassiker",
+  "Follow system": "Systemeinstellung folgen",
+  "Browser light/dark preference": "Bevorzugt Hell/Dunkel des Browsers",
+  "Light": "Hell",
+  "Bright neutral": "Helles Neutral",
+  "High Contrast": "Hoher Kontrast",
+  "Maximum accessibility": "Maximale Barrierefreiheit",
+  "Dark": "Dunkel",
+  "Neutral dark": "Neutrales Dunkel",
+  "Pure black": "Reines Schwarz",
+  "Black and green": "Schwarz und Grün",
+  "Black and blue": "Schwarz und Blau",
+  "Cool teal": "Kühles Türkis",
+  "Violet and magenta": "Violett und Magenta",
+  "Indigo haze": "Indigo-Dunst",
+  "Deep crimson": "Tiefes Karmesinrot",
+  "Muted purple": "Gedämpftes Violett",
+  "Purple and gold": "Violett und Gold",
+  "Neon cyan": "Neon-Cyan"
+ },
+ "lib/tripStatus.ts": {
+  "Planning": "Planung",
+  "Booked": "Gebucht",
+  "Active": "Aktiv",
+  "Completed": "Abgeschlossen"
+ },
+ "routes/+page.svelte": {
+  "Upcoming trips": "Bevorstehende Reisen",
+  "Unread alerts": "Ungelesene Benachrichtigungen",
+  "Docs expiring": "Ablaufende Dokumente",
+  "Fare watches": "Preisüberwachungen"
+ },
+ "routes/about/+page.svelte": {
+  "Application": "Anwendung",
+  "Instance": "Instanz",
+  "Licenses": "Lizenzen"
+ },
+ "routes/api/mobile/email-processing/+server.ts": {
+  "Roamarr email test": "Roamarr-E-Mail-Test"
+ },
+ "routes/audit-logs/+page.svelte": {
+  "Action": "Aktion",
+  "Entity type": "Objekttyp",
+  "From": "Von",
+  "Time": "Zeit",
+  "User": "Benutzer",
+  "View": "Anzeigen"
+ },
+ "routes/backup/+page.server.ts": {
+  "Backup interval must be an integer between 1 and 720 hours": "Backup-Intervall muss eine Ganzzahl zwischen 1 und 720 Stunden sein",
+  "Retention must be an integer between 1 and 100 backups": "Aufbewahrung muss eine Ganzzahl zwischen 1 und 100 Backups sein",
+  "Too many attempts. Try again later.": "Zu viele Versuche. Bitte versuche es später erneut.",
+  "Upload a file": "Lade eine Datei hoch",
+  "Upload a Roamarr MongrelDB backup (.mongreldb.tar.gz)": "Lade ein Roamarr-MongrelDB-Backup hoch (.mongreldb.tar.gz)",
+  "Backup does not contain a MongrelDB database directory": "Backup enthält kein MongrelDB-Datenbankverzeichnis"
+ },
+ "routes/cards/+page.svelte": {
+  "Nickname": "Spitzname",
+  "Network": "Netzwerk",
+  "Last 4": "Letzte 4",
+  "Benefits": "Leistungen",
+  "Edit": "Bearbeiten",
+  "Delete": "Löschen",
+  "Delete failed.": "Löschen fehlgeschlagen."
+ },
+ "routes/cards/[id]/edit/+page.server.ts": {
+  "Too many attempts. Try again later.": "Zu viele Versuche. Bitte später erneut versuchen.",
+  "Template not found": "Vorlage nicht gefunden"
+ },
+ "routes/cards/[id]/edit/+page.svelte": {
+  "Visa": "Visa",
+  "Mastercard": "Mastercard",
+  "Amex": "Amex",
+  "Discover": "Discover",
+  "Other": "Sonstige",
+  "Trip delay": "Reiseverzögerung",
+  "Baggage delay": "Gepäckverzögerung",
+  "Trip cancellation": "Reisestornierung"
+ },
+ "routes/cards/new/+page.server.ts": {
+  "Too many attempts. Try again later.": "Zu viele Versuche. Bitte später erneut versuchen."
+ },
+ "routes/cards/new/+page.svelte": {
+  "Visa": "Visa",
+  "Mastercard": "Mastercard",
+  "Amex": "Amex",
+  "Discover": "Discover",
+  "Other": "Sonstige"
+ },
+ "routes/database-maintenance/+page.server.ts": {
+  "Too many attempts. Try again later.": "Zu viele Versuche. Bitte versuche es später erneut.",
+  "Confirm garbage collection before running.": "Bestätige die Garbage Collection, bevor du sie ausführst.",
+  "Confirm flush before running.": "Bestätige den Flush, bevor du ihn ausführst.",
+  "Confirm doctor before running.": "Bestätige „Doctor“, bevor du es ausführst."
+ },
+ "routes/database-maintenance/+page.svelte": {
+  "Check integrity": "Integrität prüfen",
+  "Garbage collect": "Garbage Collection",
+  "Flush memtables": "Memtables leeren",
+  "Doctor": "Doctor",
+  "Drop or quarantine corrupt runs. Only run this after confirming a recent backup.": "Löscht oder isoliert beschädigte Runs. Führe dies nur nach einem bestätigten aktuellen Backup aus."
+ },
+ "routes/fare-providers/+page.svelte": {
+  "Label": "Bezeichnung",
+  "Provider": "Anbieter",
+  "Status": "Status",
+  "Test": "Testen",
+  "Edit": "Bearbeiten",
+  "Delete": "Löschen",
+  "Test request failed": "Testanfrage fehlgeschlagen",
+  "Delete failed": "Löschen fehlgeschlagen"
+ },
+ "routes/fare-providers/[id]/edit/+page.server.ts": {
+  "Too many attempts. Try again later.": "Zu viele Versuche. Bitte versuche es später erneut."
+ },
+ "routes/fare-providers/new/+page.server.ts": {
+  "Too many attempts. Try again later.": "Zu viele Versuche. Bitte versuche es später erneut."
+ },
+ "routes/forgot-password/+page.server.ts": {
+  "Reset your Roamarr password": "Setze dein Roamarr-Passwort zurück",
+  "Too many attempts. Try again later.": "Zu viele Versuche. Bitte versuche es später erneut.",
+  "Email is required.": "E-Mail-Adresse ist erforderlich."
+ },
+ "routes/general/+page.server.ts": {
+  "Too many attempts. Try again later.": "Zu viele Versuche. Bitte versuche es später erneut.",
+  "Invalid SameSite value": "Ungültiger SameSite-Wert",
+  "Invalid tile provider": "Ungültiger Kachelanbieter",
+  "Invalid place search provider": "Ungültiger Ortssuche-Anbieter",
+  "Invalid email settings section.": "Ungültiger E-Mail-Einstellungsabschnitt.",
+  "Invalid global parsing authentication method.": "Ungültige globale Authentifizierungsmethode für die Verarbeitung.",
+  "Global parsing requires API base URL and model.": "Globale Verarbeitung erfordert API-Basis-URL und Modell.",
+  "API/subscription key is required.": "API-/Abonnementschlüssel ist erforderlich.",
+  "OAuth requires token URL, client ID, and client secret.": "OAuth erfordert Token-URL, Client-ID und Client-Secret.",
+  "Discovery URL must be an http(s) URL.": "Discovery-URL muss eine http(s)-URL sein.",
+  "Discovery URL and client ID are required to enable SSO.": "Discovery-URL und Client-ID sind erforderlich, um SSO zu aktivieren.",
+  "Test notification": "Testbenachrichtigung",
+  "Roamarr SMTP test": "Roamarr-SMTP-Test"
+ },
+ "routes/general/+page.svelte": {
+  "Custom": "Benutzerdefiniert"
+ },
+ "routes/groups/+page.svelte": {
+  "Name": "Name",
+  "Members": "Mitglieder",
+  "Created": "Erstellt",
+  "Edit": "Bearbeiten",
+  "Delete": "Löschen",
+  "Delete failed.": "Löschen fehlgeschlagen."
+ },
+ "routes/groups/[id]/edit/+page.server.ts": {
+  "Too many attempts. Try again later.": "Zu viele Versuche. Bitte später erneut versuchen.",
+  "A valid email is required": "Eine gültige E-Mail-Adresse ist erforderlich",
+  "Could not add member": "Mitglied konnte nicht hinzugefügt werden",
+  "Invalid member": "Ungültiges Mitglied",
+  "Member not found": "Mitglied nicht gefunden"
+ },
+ "routes/groups/new/+page.server.ts": {
+  "Too many attempts. Try again later.": "Zu viele Versuche. Bitte später erneut versuchen."
+ },
+ "routes/insurance/+page.svelte": {
+  "From": "Von",
+  "Provider": "Anbieter",
+  "Coverage": "Deckung",
+  "Trip": "Reise",
+  "Start": "Beginn",
+  "End": "Ende",
+  "Edit": "Bearbeiten",
+  "Delete": "Löschen",
+  "Delete failed.": "Löschen fehlgeschlagen."
+ },
+ "routes/insurance/[id]/edit/+page.server.ts": {
+  "Too many attempts. Try again later.": "Zu viele Versuche. Bitte später erneut versuchen."
+ },
+ "routes/insurance/new/+page.server.ts": {
+  "Too many attempts. Try again later.": "Zu viele Versuche. Bitte später erneut versuchen."
+ },
+ "routes/invite/[token]/+page.server.ts": {
+  "Invitation not found or expired.": "Einladung nicht gefunden oder abgelaufen.",
+  "Too many attempts. Try again later.": "Zu viele Versuche. Bitte versuche es später erneut.",
+  "Passwords do not match.": "Die Passwörter stimmen nicht überein."
+ },
+ "routes/job-history/+page.server.ts": {
+  "Too many attempts. Try again later.": "Zu viele Versuche. Bitte versuche es später erneut."
+ },
+ "routes/job-history/+page.svelte": {
+  "From": "Von",
+  "Started": "Gestartet",
+  "Summary": "Zusammenfassung",
+  "Duration": "Dauer",
+  "Status": "Status",
+  "Error": "Fehler"
+ },
+ "routes/login/+page.server.ts": {
+  "Too many attempts. Try again later.": "Zu viele Versuche. Bitte versuche es später erneut.",
+  "Invalid email or password.": "Ungültige E-Mail-Adresse oder ungültiges Passwort."
+ },
+ "routes/login/verify/+page.server.ts": {
+  "Too many attempts. Try again later.": "Zu viele Versuche. Bitte versuche es später erneut.",
+  "Enter your 6-digit code or a backup code.": "Gib deinen 6-stelligen Code oder einen Backup-Code ein.",
+  "Invalid code. Try again.": "Ungültiger Code. Versuche es erneut.",
+  "Account disabled.": "Konto deaktiviert."
+ },
+ "routes/oauth/authorize/+page.server.ts": {
+  "Too many requests": "Zu viele Anfragen"
+ },
+ "routes/places/+page.server.ts": {
+  "Too many attempts. Try again later.": "Zu viele Versuche. Bitte später erneut versuchen.",
+  "Not found": "Nicht gefunden",
+  "A GPX file is required": "Eine GPX-Datei ist erforderlich",
+  "At least one image file is required": "Mindestens eine Bilddatei ist erforderlich"
+ },
+ "routes/places/import/+page.server.ts": {
+  "Too many attempts. Try again later.": "Zu viele Versuche. Bitte später erneut versuchen.",
+  "Import file must be 20 MB or smaller.": "Die Importdatei darf höchstens 20 MB groß sein.",
+  "Choose a file or paste Google Maps links.": "Wähle eine Datei oder füge Google-Maps-Links ein."
+ },
+ "routes/profile/api-keys/+page.server.ts": {
+  "Key name is required.": "Schlüsselname ist erforderlich.",
+  "Key name is too long.": "Schlüsselname ist zu lang.",
+  "Select at least one scope.": "Wähle mindestens eine Berechtigung aus.",
+  "Invalid API key.": "Ungültiger API-Schlüssel.",
+  "Invalid name.": "Ungültiger Name.",
+  "API key not found.": "API-Schlüssel nicht gefunden.",
+  "API key not found or already revoked.": "API-Schlüssel nicht gefunden oder bereits widerrufen."
+ },
+ "routes/profile/contacts/+page.server.ts": {
+  "Invalid contact": "Ungültiger Kontakt"
+ },
+ "routes/profile/documents/+page.svelte": {
+  "From": "Von",
+  "Type": "Typ",
+  "Number": "Nummer",
+  "Issuing authority": "Ausstellende Behörde",
+  "Owner": "Besitzer",
+  "Expires": "Läuft ab",
+  "Edit": "Bearbeiten",
+  "Delete": "Löschen",
+  "Delete failed.": "Löschen fehlgeschlagen."
+ },
+ "routes/profile/documents/[id]/edit/+page.server.ts": {
+  "Too many attempts. Try again later.": "Zu viele Versuche. Bitte später erneut versuchen."
+ },
+ "routes/profile/documents/[id]/edit/+page.svelte": {
+  "Passport": "Reisepass",
+  "Global Entry": "Global Entry",
+  "Visa": "Visum"
+ },
+ "routes/profile/documents/new/+page.server.ts": {
+  "Too many attempts. Try again later.": "Zu viele Versuche. Bitte später erneut versuchen."
+ },
+ "routes/profile/documents/new/+page.svelte": {
+  "Passport": "Reisepass",
+  "Global Entry": "Global Entry",
+  "Visa": "Visum"
+ },
+ "routes/profile/email_processing/+page.server.ts": {
+  "Per-user IMAP is disabled by the administrator.": "Persönliches IMAP ist vom Administrator deaktiviert.",
+  "Too many attempts. Try again later.": "Zu viele Versuche. Bitte später erneut versuchen.",
+  "Roamarr email test": "Roamarr E-Mail-Test"
+ },
+ "routes/profile/loyalty/+page.svelte": {
+  "Program": "Programm",
+  "Balance": "Punktestand",
+  "Last Updated": "Zuletzt aktualisiert",
+  "Notes": "Notizen",
+  "Edit": "Bearbeiten",
+  "Delete": "Löschen",
+  "Delete failed.": "Löschen fehlgeschlagen."
+ },
+ "routes/profile/loyalty/[id]/edit/+page.server.ts": {
+  "Too many attempts. Try again later.": "Zu viele Versuche. Bitte später erneut versuchen."
+ },
+ "routes/profile/loyalty/new/+page.server.ts": {
+  "Too many attempts. Try again later.": "Zu viele Versuche. Bitte später erneut versuchen."
+ },
+ "routes/profile/reminders/+page.svelte": {
+  "From": "Von",
+  "Reminder": "Erinnerung",
+  "For": "Für",
+  "Type": "Typ",
+  "Status": "Status",
+  "When": "Wann",
+  "Edit": "Bearbeiten",
+  "Delete": "Löschen",
+  "Delete failed.": "Löschen fehlgeschlagen."
+ },
+ "routes/profile/reminders/[id]/edit/+page.server.ts": {
+  "Too many attempts. Try again later.": "Zu viele Versuche. Bitte später erneut versuchen."
+ },
+ "routes/profile/reminders/new/+page.server.ts": {
+  "Too many attempts. Try again later.": "Zu viele Versuche. Bitte später erneut versuchen."
+ },
+ "routes/profile/security/+page.server.ts": {
+  "Enter the 6-digit code from your authenticator app.": "Gib den 6-stelligen Code aus deiner Authenticator-App ein.",
+  "Incorrect password.": "Falsches Passwort.",
+  "Invalid TOTP code or backup code.": "Ungültiger TOTP-Code oder Backup-Code.",
+  "Enter your current 6-digit code to regenerate backup codes.": "Gib deinen aktuellen 6-stelligen Code ein, um Backup-Codes neu zu erzeugen.",
+  "Invalid passkey": "Ungültiger Passkey",
+  "Name is required": "Name ist erforderlich",
+  "Name is too long": "Name ist zu lang",
+  "Passkey not found": "Passkey nicht gefunden",
+  "Cannot delete your last credential without a password on the account.": "Du kannst deinen letzten Anmeldefaktor nicht löschen, solange kein Passwort für das Konto hinterlegt ist.",
+  "Client name is required": "Client-Name ist erforderlich",
+  "At least one redirect URI is required": "Mindestens eine Redirect-URI ist erforderlich",
+  "Token ID is required": "Token-ID ist erforderlich",
+  "Token not found or not owned by you": "Token nicht gefunden oder gehört dir nicht"
+ },
+ "routes/profile/sessions/+page.server.ts": {
+  "Invalid session": "Ungültige Sitzung"
+ },
+ "routes/profile/visited/VisitedPlacePage.svelte": {
+  "From": "Von",
+  "First visited": "Erstmals besucht",
+  "Last visited": "Zuletzt besucht",
+  "Source": "Quelle",
+  "Edit": "Bearbeiten",
+  "Remove": "Entfernen"
+ },
+ "routes/register/+page.server.ts": {
+  "Too many attempts. Try again later.": "Zu viele Versuche. Bitte versuche es später erneut.",
+  "All fields required; password ≥ 8 chars.": "Alle Felder sind erforderlich; Passwort ≥ 8 Zeichen.",
+  "Email already registered.": "E-Mail-Adresse bereits registriert."
+ },
+ "routes/reset-password/[token]/+page.server.ts": {
+  "Too many attempts. Try again later.": "Zu viele Versuche. Bitte versuche es später erneut.",
+  "Password must be at least 8 characters.": "Das Passwort muss mindestens 8 Zeichen lang sein.",
+  "Passwords do not match.": "Die Passwörter stimmen nicht überein.",
+  "Invalid or expired reset link.": "Ungültiger oder abgelaufener Zurücksetzungslink."
+ },
+ "routes/setup/+page.server.ts": {
+  "Too many attempts. Try again later.": "Zu viele Versuche. Bitte versuche es später erneut.",
+  "All fields required; password ≥ 8 chars.": "Alle Felder sind erforderlich; Passwort ≥ 8 Zeichen.",
+  "Passwords do not match.": "Die Passwörter stimmen nicht überein.",
+  "Setup is already complete.": "Die Einrichtung ist bereits abgeschlossen."
+ },
+ "routes/trips/+page.server.ts": {
+  "No trips selected": "Keine Reisen ausgewählt"
+ },
+ "routes/trips/[id]/+page.svelte": {
+  "Details": "Details",
+  "Travelers": "Mitreisende",
+  "Notes": "Notizen",
+  "Files": "Dateien",
+  "Reminders": "Erinnerungen",
+  "Note": "Notiz",
+  "Info": "Info",
+  "Warning": "Warnung",
+  "Highlight": "Hervorhebung",
+  "Reminder": "Erinnerung",
+  "Itinerary": "Reiseplan",
+  "Prep": "Vorbereitung",
+  "Budget": "Budget",
+  "People": "Personen",
+  "Documents": "Dokumente",
+  "Location": "Ort",
+  "Duration": "Dauer",
+  "Booking ref": "Buchungsnummer",
+  "Meeting point": "Treffpunkt",
+  "Payment": "Zahlung",
+  "Payment card": "Zahlungskarte"
+ },
+ "routes/trips/[id]/fare-watch/+page.server.ts": {
+  "Too many attempts. Try again later.": "Zu viele Versuche. Bitte später erneut versuchen."
+ },
+ "routes/trips/[id]/segments/+page.server.ts": {
+  "Select at least one segment to delete": "Wähle mindestens einen Abschnitt zum Löschen aus"
+ },
+ "routes/trips/[id]/share/+page.server.ts": {
+  "Invalid permission": "Ungültige Berechtigung",
+  "Enter a valid email address": "Gib eine gültige E-Mail-Adresse ein",
+  "Invalid invitation": "Ungültige Einladung",
+  "Invalid share": "Ungültige Freigabe"
+ },
+ "routes/trips/import/+page.server.ts": {
+  "Too many attempts. Try again later.": "Zu viele Versuche. Bitte später erneut versuchen.",
+  "Please select a file.": "Bitte wähle eine Datei aus.",
+  "Import file must be 5 MB or smaller.": "Die Importdatei darf höchstens 5 MB groß sein.",
+  "Format must be json or csv.": "Das Format muss json oder csv sein.",
+  "Import completed with errors.": "Import mit Fehlern abgeschlossen."
+ },
+ "routes/trips/merge/+page.server.ts": {
+  "Choose both trips": "Wähle beide Reisen aus"
+ },
+ "routes/users/+page.svelte": {
+  "From": "Von",
+  "User": "Benutzer",
+  "Role": "Rolle",
+  "Status": "Status",
+  "Joined": "Beigetreten",
+  "Edit": "Bearbeiten",
+  "Delete": "Löschen",
+  "Delete failed.": "Löschen fehlgeschlagen."
+ },
+ "routes/users/[id]/edit/+page.server.ts": {
+  "Invalid role.": "Ungültige Rolle.",
+  "Too many attempts. Try again later.": "Zu viele Versuche. Bitte versuche es später erneut."
+ },
+ "routes/users/new/+page.server.ts": {
+  "Too many attempts. Try again later.": "Zu viele Versuche. Bitte versuche es später erneut.",
+  "Invalid role.": "Ungültige Rolle."
+ }
+}

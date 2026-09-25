@@ -18,6 +18,12 @@ Some text can't be translated by the table because it lives in script code or is
 - `0001-nav-labels.patch`: the sidebar and profile tabs. Navigation labels are also the data keys (expand state, `{#each}` keys, `section.label === 'Plan'`), so the data stays English and only the five render sites look up a German display name in `src/lib/navDe.ts`. `scripts/check-nav.mjs` fails the build if upstream adds a label without a German name.
 - `0002-scope-descriptions.patch`: German descriptions for the 69 OAuth/API-key scopes in `src/lib/oauthScopes.ts` (API keys page, security page, OAuth consent). Scope names like `segments:read` stay English; only the descriptions are display text.
 
+- `0003-derived-labels.patch`: expense categories and payment statuses on the trip page, whose labels upstream computes by capitalizing the stored key (`lodging` → "Lodging"). The keys stay; a German map is consulted first.
+
+## Script strings (`de.script.json`)
+
+String literals in script code (`label: 'Notes'`, `fail(400, { error: '…' })`, default place categories) are translated by `scripts/apply-script.mjs`. Every entry was reviewed per file as **display-only**: shown to a human, and never compared, used as a key, persisted as identity or returned to a programmatic client. Kept English on purpose: MCP tool descriptions and errors (for AI clients), JSON API errors, brand names (map providers, themed theme names), and seed data inside database migrations. The applier only touches literals that are property values, re-parses each file and refuses to write anything if the structure changed or if any entry didn't match.
+
 ## Usage
 
 ```bash

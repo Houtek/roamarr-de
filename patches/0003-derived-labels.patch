@@ -1,0 +1,30 @@
+diff --git a/src/routes/trips/[id]/+page.svelte b/src/routes/trips/[id]/+page.svelte
+index 77256be..46e62ec 100644
+--- a/src/routes/trips/[id]/+page.svelte
++++ b/src/routes/trips/[id]/+page.svelte
+@@ -601,12 +601,15 @@
+ 		] satisfies TripTabLink[]).filter((tab) => tab.visible)
+ 	);
+ 	const EXPENSE_CATEGORIES = ['lodging', 'transport', 'food', 'activities', 'other'] as const;
++	// roamarr-de: German display names; the keys stay the stored values
++	const EXPENSE_CATEGORY_DE: Record<string, string> = { lodging: 'Unterkunft', transport: 'Transport', food: 'Essen', activities: 'Aktivitäten', other: 'Sonstiges' };
++	const PAYMENT_STATUS_DE: Record<string, string> = { quoted: 'Angebot erhalten', deposit_paid: 'Anzahlung geleistet', fully_paid: 'Vollständig bezahlt', refunded: 'Erstattet' };
+ 	const categorySpending = $derived(
+ 		EXPENSE_CATEGORIES.map((cat) => {
+ 			const amount = (data.expenses ?? [])
+ 				.filter((e) => e.category === cat)
+ 				.reduce((sum, e) => sum + e.baseAmount, 0);
+-			return { category: cat, amount, label: cat.replace('_', ' ').replace(/\b\w/g, (l) => l.toUpperCase()) };
++			return { category: cat, amount, label: EXPENSE_CATEGORY_DE[cat] ?? cat.replace('_', ' ').replace(/\b\w/g, (l) => l.toUpperCase()) };
+ 		})
+ 			.filter((c) => c.amount > 0)
+ 			.sort((a, b) => b.amount - a.amount)
+@@ -653,7 +656,7 @@
+ 
+ 	function paymentStatusLabel(statusValue: string | null | undefined) {
+ 		if (!statusValue) return null;
+-		return statusValue.replaceAll('_', ' ').replace(/\b\w/g, (m) => m.toUpperCase());
++		return PAYMENT_STATUS_DE[statusValue] ?? statusValue.replaceAll('_', ' ').replace(/\b\w/g, (m) => m.toUpperCase());
+ 	}
+ 
+ 	function paymentStatusClass(statusValue: string | null | undefined) {

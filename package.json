@@ -9,6 +9,8 @@
 		"apply": "node scripts/apply.mjs"
 	},
 	"dependencies": {
+		"@sveltejs/acorn-typescript": "1.0.13",
+		"acorn": "8.18.0",
 		"svelte": "5.56.4"
 	}
 }

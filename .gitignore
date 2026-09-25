@@ -1,0 +1,4 @@
+node_modules/
+upstream/
+*.log
+untranslated.json

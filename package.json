@@ -1,0 +1,14 @@
+{
+	"name": "roamarr-de",
+	"private": true,
+	"type": "module",
+	"description": "Build-time German translation kit for Roamarr",
+	"license": "GPL-3.0-only",
+	"scripts": {
+		"extract": "node scripts/extract.mjs",
+		"apply": "node scripts/apply.mjs"
+	},
+	"dependencies": {
+		"svelte": "5.56.4"
+	}
+}

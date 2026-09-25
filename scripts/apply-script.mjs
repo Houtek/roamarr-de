@@ -66,7 +66,17 @@ function shape(node) {
 	return o;
 }
 
-const quote = (q, s) => q + s.replace(/\\/g, '\\\\').replace(new RegExp(q, 'g'), '\\' + q) + q;
+const quote = (q, s) =>
+	q +
+	s
+		.replace(/\\/g, '\\\\')
+		.replace(new RegExp(q, 'g'), '\\' + q)
+		.replace(/\n/g, '\\n')
+		.replace(/\r/g, '\\r')
+		.replace(/\t/g, '\\t')
+		.replace(/\u2028/g, '\\u2028')
+		.replace(/\u2029/g, '\\u2029') +
+	q;
 
 let files = 0, replaced = 0;
 const unmatched = [];
@@ -91,7 +101,13 @@ for (const [file, map] of Object.entries(table)) {
 	edits.sort((a, b) => b[0] - a[0]);
 	let out = src;
 	for (const [s, e, rep] of edits) out = out.slice(0, s) + rep + out.slice(e);
-	const after = programs(file, out);
+	let after;
+	try {
+		after = programs(file, out);
+	} catch (e) {
+		console.error(`STRUCTURE CHANGED: ${file} no longer parses (${e.message}) — aborting, nothing written`);
+		process.exit(1);
+	}
 	const same =
 		JSON.stringify(before.progs.map(shape)) === JSON.stringify(after.progs.map(shape)) &&
 		JSON.stringify(shape(before.markup)) === JSON.stringify(shape(after.markup));
@@ -105,7 +121,7 @@ for (const [file, map] of Object.entries(table)) {
 }
 console.error(`script(${mode}): patched files=${files} replacements=${replaced} unmatched-entries=${unmatched.length}`);
 if (unmatched.length) {
-	for (const u of unmatched) console.error(`  unmatched (not a property-value literal in source): ${u}`);
+	for (const u of unmatched) console.error(`  unmatched (no such literal in a matching position): ${u}`);
 	console.error('nothing written');
 	process.exit(1);
 }

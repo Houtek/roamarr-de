@@ -19,6 +19,7 @@ Some text can't be translated by the table because it lives in script code or is
 - `0002-scope-descriptions.patch`: German descriptions for the 69 OAuth/API-key scopes in `src/lib/oauthScopes.ts` (API keys page, security page, OAuth consent). Scope names like `segments:read` stay English; only the descriptions are display text.
 
 - `0004-grid-pagination.patch`: table footer ("Zeilen", "Zeige 1-10 von 23", page-button tooltips). `GridTable` parses grid.js's own English summary with a regex, so grid.js's language config deliberately stays English and only the rebuilt output is German.
+- `0006-currency-defaults.patch`: **behaviour fix, not translation.** Upstream prefills currency inputs (add expense, new insurance, card benefit, trip base-currency fallback) with a hardcoded `USD`, ignoring the user's default currency. The patch prefills the profile's default currency instead (fallback USD).
 - `0003-derived-labels.patch`: expense categories and payment statuses on the trip page, whose labels upstream computes by capitalizing the stored key (`lodging` → "Lodging"). The keys stay; a German map is consulted first.
 
 ## Script strings (`de.script.json`)

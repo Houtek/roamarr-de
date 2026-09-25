@@ -30,6 +30,8 @@ Patches form a **series**: each one is generated on top of the previous ones, so
 
 - `0011-trip-base-currency.patch`: **behaviour fix, not translation.** Upstream stores every new trip with base currency USD (`createTrip`: `?? 'USD'`, and the new-trip form has no currency field). The fallback is now the owner's default currency, then USD, for every creation path (form, import, e-mail, templates, copy, MCP). Existing trips are unchanged; their base currency is editable on the trip edit page.
 
+- `0012-enum-labels.patch`: stored enum keys that upstream prints raw and styles with CSS `capitalize` (`lodging`, `adult`, `private`, `not_going` …): budget/expense categories, traveller categories, visibility badges, document types, attendee and reminder status. A `deEnum(kind, key)` lookup renders German; keys stay unchanged.
+
 ## Value-position strings (`de.expr.json`)
 
 Literals that aren't object properties but still end up on screen: conditional branches (`mcpPage ? 'MCP Clients' : 'Security'`), fallbacks (`name ?? 'Unnamed passkey'`), `return 'X'` and `{'X'}` in markup. Reviewed per file the same way (display only). Stays English on purpose: "Imported trip" / "Imported itinerary" (stored as trip/segment names and fuzzy-matched on later imports), "Trip owner" (stored), "You" (a data name in expense settlements). Applied by `apply-script.mjs … expr`.

@@ -1,0 +1,132 @@
+diff --git a/src/lib/components/TripCard.svelte b/src/lib/components/TripCard.svelte
+index 8f02b71..21019c9 100644
+--- a/src/lib/components/TripCard.svelte
++++ b/src/lib/components/TripCard.svelte
+@@ -1,4 +1,5 @@
+ <script lang="ts">
++	import { deEnum } from '$lib/enumDe';
+ 	import Icon from './Icon.svelte';
+ 	import { parseTags } from '$lib/tags';
+ 	import { formatDestination } from '$lib/tripDestination';
+@@ -64,7 +65,7 @@
+ 				{#if trip.isShared}
+ 					<span class="badge badge-brand">Shared</span>
+ 				{:else}
+-					<span class="badge {visClass} capitalize">{trip.defaultVisibility || 'private'}</span>
++					<span class="badge {visClass} capitalize">{deEnum('visibility', trip.defaultVisibility || 'private')}</span>
+ 				{/if}
+ 			</div>
+ 		</div>
+diff --git a/src/lib/enumDe.ts b/src/lib/enumDe.ts
+new file mode 100644
+index 0000000..b759c82
+--- /dev/null
++++ b/src/lib/enumDe.ts
+@@ -0,0 +1,14 @@
++// roamarr-de: German display names for stored enum keys (keys themselves stay unchanged).
++const MAPS = {
++	visibility: { private: 'Privat', groups: 'Gruppen', public: 'Öffentlich' },
++	documentType: { passport: 'Reisepass', drivers_license: 'Führerschein', global_entry: 'Global Entry', visa: 'Visum' },
++	companion: { adult: 'Erwachsener', child: 'Kind', other: 'Sonstige', guide: 'Reiseführer', driver: 'Fahrer' },
++	expense: { lodging: 'Unterkunft', transport: 'Transport', food: 'Essen', activities: 'Aktivitäten', other: 'Sonstiges' },
++	attendee: { going: 'Dabei', maybe: 'Vielleicht', not_going: 'Nicht dabei' },
++	reminder: { pending: 'Ausstehend', sending: 'Wird gesendet', sent: 'Gesendet' }
++} as const satisfies Record<string, Record<string, string>>;
++
++export function deEnum(kind: keyof typeof MAPS, value: unknown): string {
++	const key = String(value ?? '');
++	return (MAPS[kind] as Record<string, string>)[key] ?? key.replaceAll('_', ' ');
++}
+diff --git a/src/routes/+page.svelte b/src/routes/+page.svelte
+index bd89c1a..3015814 100644
+--- a/src/routes/+page.svelte
++++ b/src/routes/+page.svelte
+@@ -1,4 +1,5 @@
+ <script lang="ts">
++	import { deEnum } from '$lib/enumDe';
+ 	import { pl } from '$lib/pluralDe';
+ 	import Icon from '$lib/components/Icon.svelte';
+ 	import TripCard from '$lib/components/TripCard.svelte';
+@@ -113,7 +114,7 @@
+ 			<div class="mt-4 grid gap-4 sm:grid-cols-2 xl:grid-cols-1 2xl:grid-cols-2">
+ 				{#each data.expiring as d (d.id)}
+ 					<div class="card flex items-center justify-between gap-4 p-5">
+-						<span class="text-sm font-medium capitalize">{d.type.replace('_', ' ')}</span>
++						<span class="text-sm font-medium capitalize">{deEnum('documentType', d.type)}</span>
+ 						<span class="badge badge-amber font-mono">{formatDate(d.expiresOn)}</span>
+ 					</div>
+ 				{/each}
+diff --git a/src/routes/trips/[id]/+page.svelte b/src/routes/trips/[id]/+page.svelte
+index dfecad4..22ef430 100644
+--- a/src/routes/trips/[id]/+page.svelte
++++ b/src/routes/trips/[id]/+page.svelte
+@@ -1,4 +1,5 @@
+ <script lang="ts">
++	import { deEnum } from '$lib/enumDe';
+ 	import { page as __page } from '$app/state';
+ 	import { defaultCurrency } from '$lib/defaultCurrency';
+ 	import { pl } from '$lib/pluralDe';
+@@ -849,7 +850,7 @@
+ 					<div class="flex flex-wrap items-center gap-2">
+ 						{#if !isEditor}<span class="badge badge-brand badge-compact">Shared view</span>{/if}
+ 						<span class="badge badge-compact {tripStatusBadge(status).class}">{tripStatusBadge(status).label}</span>
+-						{#if ownerTrip}<span class="badge badge-compact {visibilityBadgeClass(ownerTrip.defaultVisibility)} capitalize">{ownerTrip.defaultVisibility}</span>{/if}
++						{#if ownerTrip}<span class="badge badge-compact {visibilityBadgeClass(ownerTrip.defaultVisibility)} capitalize">{deEnum('visibility', ownerTrip.defaultVisibility)}</span>{/if}
+ 					</div>
+ 					<h1 class="trip-hero-title mt-2 text-3xl font-extrabold sm:text-4xl">{trip.name}</h1>
+ 					<div class="mt-3 flex flex-wrap gap-2">
+@@ -999,7 +1000,7 @@
+ 						<div class="trip-modern-selected-summary {segmentTypeClass(selectedSegment.type)}"><span class="trip-modern-selected-node" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{@html SEG[selectedSegment.type as keyof typeof SEG]?.icon ?? ''}</svg></span><div class="min-w-0 flex-1"><h3 class="trip-modern-selected-name">{selectedSegment.title}</h3><div class="mt-2 flex flex-wrap gap-1.5">{#if selectedSegment.status}<span class="badge badge-compact {segmentStatusClass(selectedSegment.status)}">{segmentStatusLabel(selectedSegment.status)}</span>{/if}{#if selectedSegment.paymentStatus}<span class="badge badge-compact badge-green">{paymentStatusLabel(selectedSegment.paymentStatus)}</span>{/if}</div>{#if selectedPlaceLines.place}<p class="trip-modern-selected-place">{selectedPlaceLines.place}</p>{/if}{#if selectedPlaceLines.address}<p class="trip-modern-selected-address">{selectedPlaceLines.address}</p>{/if}</div></div>
+ 						<nav class="trip-modern-detail-tabs" aria-label="Selected segment sections">{#each SEGMENT_PANEL_TABS as tab (tab.id)}<button type="button" class="trip-modern-detail-tab {segmentPanelTab === tab.id ? 'trip-modern-detail-tab-active' : ''}" onclick={() => (segmentPanelTab = tab.id)}>{tab.label}{#if tab.id === 'travelers' && (selectedAttendees.length || selectedFreeTextTravelers.length)} ({selectedAttendees.length || selectedFreeTextTravelers.length}){/if}{#if tab.id === 'files' && selectedSegmentDocuments.length} ({selectedSegmentDocuments.length}){/if}{#if tab.id === 'reminders' && selectedSegmentReminders.length} ({selectedSegmentReminders.length}){/if}</button>{/each}</nav>
+ 
+-						{#if segmentPanelTab === 'details'}<div class="trip-modern-detail-list">{#each selectedDetailRows as row (row.label)}<div class="trip-modern-detail-row"><Icon name={row.icon} class="trip-modern-detail-icon h-4 w-4" /><span class="trip-modern-detail-label">{row.label}</span><span class="trip-modern-detail-value">{row.value}</span></div>{/each}</div>{:else if segmentPanelTab === 'travelers'}<div class="trip-modern-detail-list">{#if selectedAttendees.length}{#each selectedAttendees as a (a.id)}<div class="trip-modern-list-row"><span>{a.name}</span><span class="badge badge-compact {a.status === 'going' ? 'badge-green' : a.status === 'maybe' ? 'badge-amber' : 'badge-slate'} capitalize">{a.status.replace('_', ' ')}</span></div>{/each}{:else if selectedFreeTextTravelers.length}{#each selectedFreeTextTravelers as name (name)}<div class="trip-modern-list-row"><span>{name}</span><span class="badge badge-compact badge-slate">listed</span></div>{/each}<p class="trip-modern-panel-muted text-sm mt-2">From booking details (not linked as trip people).</p>{:else}<p class="trip-modern-empty">No travelers assigned to this segment.</p>{/if}</div>{:else if segmentPanelTab === 'notes'}<div class="trip-modern-detail-list">{#if selectedNotesRows.length}{#each selectedNotesRows as row (row.label)}{@const stacked = notesRowStacked(row)}<div class="trip-modern-list-row trip-modern-kv-row {stacked ? 'trip-modern-kv-row-stacked' : ''}"><span class="trip-modern-kv-label">{row.label}</span>{#if row.label === 'Notes'}<span class="trip-modern-kv-value"><MarkdownText text={row.value} /></span>{:else}<span class="trip-modern-kv-value">{row.value}</span>{/if}</div>{/each}{:else}<p class="trip-modern-empty">No extra notes for this segment.</p>{/if}</div>{:else if segmentPanelTab === 'files'}<div class="trip-modern-detail-list"><TripDocumentsTable tripId={trip.id} documents={selectedSegmentDocuments} canEdit={isEditor} pageSize={5} showScope={false} compact={true} emptyMessage="No files attached to this segment." />{#if isEditor && selectedSegment.id}<form method="POST" action="?/uploadTripDocument" enctype="multipart/form-data" class="trip-modern-reminder-card mt-3"><input type="hidden" name="segmentId" value={selectedSegment.id} /><label class="label" for="segment-doc-file">Upload PDF or image</label><input id="segment-doc-file" type="file" name="file" accept="image/jpeg,image/png,image/webp,application/pdf" class="input text-sm" required /><input name="label" class="input text-sm" placeholder="Label (optional)" /><button class="btn btn-primary btn-sm"><Icon name="upload" class="h-4 w-4" />Upload file</button></form>{/if}</div>{:else}<div class="trip-modern-detail-list">{#if reminderFeedback}<p class="notice notice-success">{reminderFeedback}</p>{/if}{#if selectedSegmentReminders.length}<div class="trip-modern-list">{#each selectedSegmentReminders as r (r.id)}<div class="trip-modern-list-row"><div><strong>{reminderKindLabel(r.kind)}</strong><p class="trip-modern-panel-muted text-sm">{formatDateTime(r.fireAt)}</p></div><span class="badge badge-compact {r.status === 'pending' ? 'badge-green' : r.status === 'sending' ? 'badge-amber' : 'badge-slate'} capitalize">{r.status}</span></div>{/each}</div>{:else}<p class="trip-modern-empty">No reminders for this segment yet.</p>{/if}{#if isEditor && selectedSegment.id}<form method="POST" action="?/segmentReminder" class="trip-modern-reminder-card" use:enhance={keepReminderTabAfterSubmit}><input type="hidden" name="segmentId" value={selectedSegment.id} /><label class="label" for="selected-reminder-offset">Remind me before this segment</label><select id="selected-reminder-offset" name="offsetMinutes" class="input text-sm">{#each REMINDER_OFFSETS.filter((o) => o.minutes <= 1440) as offset}<option value={offset.minutes}>{offset.label}</option>{/each}</select><button class="btn btn-primary btn-sm"><Icon name="notification" class="h-4 w-4" />Save reminder</button></form>{/if}</div>{/if}
++						{#if segmentPanelTab === 'details'}<div class="trip-modern-detail-list">{#each selectedDetailRows as row (row.label)}<div class="trip-modern-detail-row"><Icon name={row.icon} class="trip-modern-detail-icon h-4 w-4" /><span class="trip-modern-detail-label">{row.label}</span><span class="trip-modern-detail-value">{row.value}</span></div>{/each}</div>{:else if segmentPanelTab === 'travelers'}<div class="trip-modern-detail-list">{#if selectedAttendees.length}{#each selectedAttendees as a (a.id)}<div class="trip-modern-list-row"><span>{a.name}</span><span class="badge badge-compact {a.status === 'going' ? 'badge-green' : a.status === 'maybe' ? 'badge-amber' : 'badge-slate'} capitalize">{deEnum('attendee', a.status)}</span></div>{/each}{:else if selectedFreeTextTravelers.length}{#each selectedFreeTextTravelers as name (name)}<div class="trip-modern-list-row"><span>{name}</span><span class="badge badge-compact badge-slate">listed</span></div>{/each}<p class="trip-modern-panel-muted text-sm mt-2">From booking details (not linked as trip people).</p>{:else}<p class="trip-modern-empty">No travelers assigned to this segment.</p>{/if}</div>{:else if segmentPanelTab === 'notes'}<div class="trip-modern-detail-list">{#if selectedNotesRows.length}{#each selectedNotesRows as row (row.label)}{@const stacked = notesRowStacked(row)}<div class="trip-modern-list-row trip-modern-kv-row {stacked ? 'trip-modern-kv-row-stacked' : ''}"><span class="trip-modern-kv-label">{row.label}</span>{#if row.label === 'Notes'}<span class="trip-modern-kv-value"><MarkdownText text={row.value} /></span>{:else}<span class="trip-modern-kv-value">{row.value}</span>{/if}</div>{/each}{:else}<p class="trip-modern-empty">No extra notes for this segment.</p>{/if}</div>{:else if segmentPanelTab === 'files'}<div class="trip-modern-detail-list"><TripDocumentsTable tripId={trip.id} documents={selectedSegmentDocuments} canEdit={isEditor} pageSize={5} showScope={false} compact={true} emptyMessage="No files attached to this segment." />{#if isEditor && selectedSegment.id}<form method="POST" action="?/uploadTripDocument" enctype="multipart/form-data" class="trip-modern-reminder-card mt-3"><input type="hidden" name="segmentId" value={selectedSegment.id} /><label class="label" for="segment-doc-file">Upload PDF or image</label><input id="segment-doc-file" type="file" name="file" accept="image/jpeg,image/png,image/webp,application/pdf" class="input text-sm" required /><input name="label" class="input text-sm" placeholder="Label (optional)" /><button class="btn btn-primary btn-sm"><Icon name="upload" class="h-4 w-4" />Upload file</button></form>{/if}</div>{:else}<div class="trip-modern-detail-list">{#if reminderFeedback}<p class="notice notice-success">{reminderFeedback}</p>{/if}{#if selectedSegmentReminders.length}<div class="trip-modern-list">{#each selectedSegmentReminders as r (r.id)}<div class="trip-modern-list-row"><div><strong>{reminderKindLabel(r.kind)}</strong><p class="trip-modern-panel-muted text-sm">{formatDateTime(r.fireAt)}</p></div><span class="badge badge-compact {r.status === 'pending' ? 'badge-green' : r.status === 'sending' ? 'badge-amber' : 'badge-slate'} capitalize">{deEnum('reminder', r.status)}</span></div>{/each}</div>{:else}<p class="trip-modern-empty">No reminders for this segment yet.</p>{/if}{#if isEditor && selectedSegment.id}<form method="POST" action="?/segmentReminder" class="trip-modern-reminder-card" use:enhance={keepReminderTabAfterSubmit}><input type="hidden" name="segmentId" value={selectedSegment.id} /><label class="label" for="selected-reminder-offset">Remind me before this segment</label><select id="selected-reminder-offset" name="offsetMinutes" class="input text-sm">{#each REMINDER_OFFSETS.filter((o) => o.minutes <= 1440) as offset}<option value={offset.minutes}>{offset.label}</option>{/each}</select><button class="btn btn-primary btn-sm"><Icon name="notification" class="h-4 w-4" />Save reminder</button></form>{/if}</div>{/if}
+ 
+ 						{#if isEditor && selectedSegment.id}<div class="trip-modern-selected-actions"><button type="button" class="btn btn-primary" onclick={() => { editingId = selectedSegment.id ?? null; focusedSegmentId = null; }}><Icon name="edit" class="h-4 w-4" />Edit</button><form method="POST" action="?/duplicateSegment" use:enhance={refreshTripAction}><input type="hidden" name="segmentId" value={selectedSegment.id} /><button class="btn btn-secondary"><Icon name="duplicate" class="h-4 w-4" />Duplicate</button></form>{#if selectedSegment.type === 'poi'}<form method="POST" action="?/saveSegmentToPlace" use:enhance={refreshTripAction}><input type="hidden" name="segmentId" value={selectedSegment.id} /><button class="btn btn-secondary"><Icon name="location" class="h-4 w-4" />Save to places</button></form>{/if}<button type="button" class="btn btn-danger" onclick={() => requestDeleteSegment(selectedSegment)}><Icon name="close" class="h-4 w-4" />Delete</button><button type="button" class="btn btn-secondary" onclick={() => (segmentPanelTab = 'reminders')}><Icon name="notification" class="h-4 w-4" />Add reminder</button></div>{/if}
+ 						{#if selectedSegment.createdAt || selectedSegment.updatedAt}<p class="trip-modern-selected-footer">{#if selectedSegment.createdAt}<span>Created by {selectedCreatorName()} on {formatCreatedDate(selectedSegment.createdAt)}</span>{/if}{#if selectedSegment.createdAt && selectedSegment.updatedAt}<span> · </span>{/if}{#if selectedSegment.updatedAt}<span>Updated {formatUpdatedDate(selectedSegment.updatedAt)}</span>{/if}</p>{/if}
+@@ -1017,7 +1018,7 @@
+ 					<div class="mt-5 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+ 						{#each data.budgets as budget (budget.category)}
+ 							<div class="trip-modern-list-row min-h-24 flex-col items-stretch">
+-								<strong class="capitalize">{budget.category}</strong>
++								<strong class="capitalize">{deEnum('expense', budget.category)}</strong>
+ 								{#if budget.amount != null}
+ 									<p class="trip-modern-panel-muted text-sm">{formatCents(budget.remaining ?? 0, budget.currency)} remaining</p>
+ 								{:else if isEditor}
+@@ -1036,7 +1037,7 @@
+ 					<ul class="mt-5 trip-modern-list" data-testid="expense-list">
+ 						{#each data.expenses as e (e.id)}
+ 							<li class="trip-modern-list-row">
+-								<div><strong>{e.description}</strong><p class="trip-modern-panel-muted text-sm capitalize">{e.category} · paid by {settlementName(e.paidBy)}</p>{#if e.attachments?.length}<div class="mt-1 flex flex-wrap gap-2">{#each e.attachments as a (a.id)}<a href="/trips/{trip.id}/expenses/{e.id}/attachments/{a.id}" target="_blank" class="link text-xs">{a.filename}</a>{/each}</div>{/if}</div>
++								<div><strong>{e.description}</strong><p class="trip-modern-panel-muted text-sm capitalize">{deEnum('expense', e.category)} · paid by {settlementName(e.paidBy)}</p>{#if e.attachments?.length}<div class="mt-1 flex flex-wrap gap-2">{#each e.attachments as a (a.id)}<a href="/trips/{trip.id}/expenses/{e.id}/attachments/{a.id}" target="_blank" class="link text-xs">{a.filename}</a>{/each}</div>{/if}</div>
+ 								<div class="flex items-center gap-2"><span class="font-mono">{e.currency} {(e.amount / 100).toFixed(2)}</span>{#if isEditor}<form method="POST" action="?/deleteExpense"><input type="hidden" name="expenseId" value={e.id} /><button class="icon-button icon-button-sm" aria-label="Delete expense"><Icon name="close" class="h-3.5 w-3.5" /></button></form>{/if}</div>
+ 							</li>
+ 						{/each}
+@@ -1064,7 +1065,7 @@
+ 						{#each data.companions as c (c.id)}
+ 							<div class="trip-modern-list-row min-h-20">
+ 								<div class="min-w-0"><strong class="block truncate">{c.name}</strong>{#if c.notes}<p class="trip-modern-panel-muted truncate text-sm">{c.notes}</p>{/if}</div>
+-								<span class="badge badge-slate badge-compact shrink-0 capitalize">{c.category}</span>
++								<span class="badge badge-slate badge-compact shrink-0 capitalize">{deEnum('companion', c.category)}</span>
+ 							</div>
+ 						{/each}
+ 					</div>
+diff --git a/src/routes/trips/[id]/print/+page.svelte b/src/routes/trips/[id]/print/+page.svelte
+index 0dfe013..46ac43d 100644
+--- a/src/routes/trips/[id]/print/+page.svelte
++++ b/src/routes/trips/[id]/print/+page.svelte
+@@ -1,4 +1,5 @@
+ <script lang="ts">
++	import { deEnum } from '$lib/enumDe';
+ 	import { pl } from '$lib/pluralDe';
+ 	import { DateTime } from 'luxon';
+ 	import { SEG } from '$lib/segmentLabels';
+@@ -118,7 +119,7 @@
+ 				{#each companions as c (c.id)}
+ 					<li class="print-companion text-slate-300" style="color: var(--theme-ink)">
+ 						<span class="font-medium">{c.name}</span>
+-						<span class="text-slate-500 capitalize">({c.category})</span>
++						<span class="text-slate-500 capitalize">({deEnum('companion', c.category)})</span>
+ 						{#if c.notes}<span class="text-slate-500">— {c.notes}</span>{/if}
+ 					</li>
+ 				{/each}

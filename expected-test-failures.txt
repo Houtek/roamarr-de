@@ -70,3 +70,15 @@ src/routes/trips/import/import.test.ts > rate limits imports before parsing the 
 src/routes/trips/import/import.test.ts > rejects invalid format parameter
 src/routes/trips/import/import.test.ts > rejects missing file
 src/routes/users/new/users-new.test.ts > create rejects invalid role
+
+# Template literals (de.templates.json), 2026-09-25: each checked against its CI assertion message; all compare
+# German text with English. Note: weather overview text is shared by the trip page and the MCP tool, so MCP
+# now returns German there too (accepted: AI clients read German; the page is the main consumer).
+src/lib/components/Gallery.test.ts > renders a thumbnail per image with accessible labels
+src/lib/server/emailProcessing.test.ts > ingestion replies explain each result and link to the trip
+src/lib/server/emergencyContacts.test.ts > shareItineraryWithContact sends link and audits
+src/lib/server/geoImport.test.ts > Takeout CSV tolerates missing optional columns and nameless rows
+src/lib/server/geoImport.test.ts > preview flags duplicates by exact name and by 50 m proximity
+src/lib/server/weather.test.ts > weather tripWeatherOverview flags freezing when tempMin <= 0
+src/routes/backup/backup.test.ts > restore rejects oversized archives before extracting when a cap is set
+src/routes/profile/visited/visited.test.ts > mark country action persists first and last visited dates

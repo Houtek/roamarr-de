@@ -40,6 +40,16 @@
   ]
  },
  {
+  "en": "Delete",
+  "kind": "attr:confirmLabel",
+  "count": 11,
+  "files": [
+   "lib/components/Gallery.svelte",
+   "routes/cards/[id]/edit/+page.svelte",
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
   "en": "Email",
   "kind": "attr:label",
   "count": 11,
@@ -90,6 +100,16 @@
   ]
  },
  {
+  "en": "Address",
+  "kind": "attr:locationLabel",
+  "count": 6,
+  "files": [
+   "lib/components/segments/forms/FoodForm.svelte",
+   "lib/components/segments/forms/HotelForm.svelte",
+   "lib/components/segments/forms/PoiForm.svelte"
+  ]
+ },
+ {
   "en": "API key",
   "kind": "attr:label",
   "count": 6,
@@ -100,13 +120,13 @@
   ]
  },
  {
-  "en": "Delete",
-  "kind": "text",
+  "en": "Markdown supported",
+  "kind": "attr:hint",
   "count": 6,
   "files": [
-   "routes/cards/[id]/edit/+page.svelte",
-   "routes/profile/security/+page.svelte",
-   "routes/trips/+page.svelte"
+   "lib/components/segments/forms/NoteForm.svelte",
+   "lib/components/segments/forms/StandardPlanForm.svelte",
+   "routes/places/+page.svelte"
   ]
  },
  {
@@ -250,6 +270,16 @@
   ]
  },
  {
+  "en": "Add reminder",
+  "kind": "attr:addLabel",
+  "count": 4,
+  "files": [
+   "routes/profile/reminders/+page.svelte",
+   "routes/profile/reminders/new/+page.svelte",
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
   "en": "API/Subscription Key",
   "kind": "text",
   "count": 4,
@@ -295,6 +325,16 @@
   "files": [
    "routes/profile/documents/[id]/edit/+page.svelte",
    "routes/profile/documents/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Enter address",
+  "kind": "attr:locationPlaceholder",
+  "count": 4,
+  "files": [
+   "lib/components/segments/forms/HotelForm.svelte",
+   "lib/components/segments/forms/PoiForm.svelte",
+   "lib/components/segments/forms/RentalCarForm.svelte"
   ]
  },
  {
@@ -396,6 +436,16 @@
   ]
  },
  {
+  "en": "Remove",
+  "kind": "text",
+  "count": 4,
+  "files": [
+   "routes/groups/[id]/edit/+page.svelte",
+   "routes/places/+page.svelte",
+   "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
   "en": "Revoke",
   "kind": "text",
   "count": 4,
@@ -453,12 +503,21 @@
   ]
  },
  {
-  "en": "Add reminder",
-  "kind": "text",
+  "en": "Add card",
+  "kind": "attr:addLabel",
   "count": 3,
   "files": [
-   "routes/profile/reminders/new/+page.svelte",
-   "routes/trips/[id]/+page.svelte"
+   "routes/cards/+page.svelte",
+   "routes/cards/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Add policy",
+  "kind": "attr:addLabel",
+  "count": 3,
+  "files": [
+   "routes/insurance/+page.svelte",
+   "routes/insurance/new/+page.svelte"
   ]
  },
  {
@@ -468,15 +527,6 @@
   "files": [
    "routes/trips/[id]/+page.svelte",
    "routes/trips/[id]/segments/new/+page.svelte"
-  ]
- },
- {
-  "en": "Address",
-  "kind": "attr:label",
-  "count": 3,
-  "files": [
-   "lib/components/segments/forms/RentalCarForm.svelte",
-   "routes/places/+page.svelte"
   ]
  },
  {
@@ -505,6 +555,15 @@
    "routes/invite/[token]/+page.svelte",
    "routes/reset-password/[token]/+page.svelte",
    "routes/setup/+page.svelte"
+  ]
+ },
+ {
+  "en": "Create group",
+  "kind": "attr:addLabel",
+  "count": 3,
+  "files": [
+   "routes/groups/+page.svelte",
+   "routes/groups/new/+page.svelte"
   ]
  },
  {
@@ -653,14 +712,6 @@
   ]
  },
  {
-  "en": "Markdown supported",
-  "kind": "text",
-  "count": 3,
-  "files": [
-   "routes/trips/[id]/+page.svelte"
-  ]
- },
- {
   "en": "More details",
   "kind": "attr:title",
   "count": 3,
@@ -709,12 +760,13 @@
   ]
  },
  {
-  "en": "Remove",
+  "en": "Pickup",
   "kind": "text",
   "count": 3,
   "files": [
-   "routes/groups/[id]/edit/+page.svelte",
-   "routes/trips/[id]/share/+page.svelte"
+   "lib/components/segments/forms/RentalCarForm.svelte",
+   "lib/components/segments/forms/RideshareForm.svelte",
+   "lib/components/segments/forms/ShuttleForm.svelte"
   ]
  },
  {
@@ -883,19 +935,30 @@
   ]
  },
  {
-  "en": "Add card",
-  "kind": "text",
+  "en": "Add account",
+  "kind": "attr:addLabel",
   "count": 2,
   "files": [
-   "routes/cards/new/+page.svelte"
+   "routes/fare-providers/+page.svelte",
+   "routes/fare-providers/new/+page.svelte"
   ]
  },
  {
-  "en": "Add policy",
-  "kind": "text",
+  "en": "Add document",
+  "kind": "attr:addLabel",
   "count": 2,
   "files": [
-   "routes/insurance/new/+page.svelte"
+   "routes/profile/documents/+page.svelte",
+   "routes/profile/documents/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Add program",
+  "kind": "attr:addLabel",
+  "count": 2,
+  "files": [
+   "routes/profile/loyalty/+page.svelte",
+   "routes/profile/loyalty/new/+page.svelte"
   ]
  },
  {
@@ -1222,11 +1285,12 @@
   ]
  },
  {
-  "en": "Create group",
-  "kind": "text",
+  "en": "Create user",
+  "kind": "attr:addLabel",
   "count": 2,
   "files": [
-   "routes/groups/new/+page.svelte"
+   "routes/users/+page.svelte",
+   "routes/users/new/+page.svelte"
   ]
  },
  {
@@ -1379,20 +1443,21 @@
   ]
  },
  {
+  "en": "Eiffel Tower",
+  "kind": "attr:titlePlaceholder",
+  "count": 2,
+  "files": [
+   "lib/components/segments/forms/PoiForm.svelte",
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
   "en": "Email address",
   "kind": "text",
   "count": 2,
   "files": [
    "routes/trips/[id]/+page.svelte",
    "routes/trips/[id]/share/+page.svelte"
-  ]
- },
- {
-  "en": "Enter address",
-  "kind": "attr:placeholder",
-  "count": 2,
-  "files": [
-   "lib/components/segments/forms/RentalCarForm.svelte"
   ]
  },
  {
@@ -1842,6 +1907,15 @@
   "files": [
    "routes/places/+page.svelte",
    "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Pickup location",
+  "kind": "attr:label",
+  "count": 2,
+  "files": [
+   "lib/components/segments/forms/RentalCarForm.svelte",
+   "lib/components/segments/forms/ShuttleForm.svelte"
   ]
  },
  {
@@ -2655,14 +2729,6 @@
   ]
  },
  {
-  "en": "Add account",
-  "kind": "text",
-  "count": 1,
-  "files": [
-   "routes/fare-providers/new/+page.svelte"
-  ]
- },
- {
   "en": "Add benefit",
   "kind": "text",
   "count": 1,
@@ -2708,14 +2774,6 @@
   "count": 1,
   "files": [
    "routes/trips/[id]/+page.svelte"
-  ]
- },
- {
-  "en": "Add document",
-  "kind": "text",
-  "count": 1,
-  "files": [
-   "routes/profile/documents/new/+page.svelte"
   ]
  },
  {
@@ -2807,14 +2865,6 @@
   ]
  },
  {
-  "en": "Add program",
-  "kind": "text",
-  "count": 1,
-  "files": [
-   "routes/profile/loyalty/new/+page.svelte"
-  ]
- },
- {
   "en": "Add the connector, select",
   "kind": "text",
   "count": 1,
@@ -2828,6 +2878,14 @@
   "count": 1,
   "files": [
    "routes/profile/documents/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Add Visit",
+  "kind": "attr:addLabel",
+  "count": 1,
+  "files": [
+   "routes/profile/visited/VisitedPlacePage.svelte"
   ]
  },
  {
@@ -2900,6 +2958,14 @@
   "count": 1,
   "files": [
    "lib/components/segments/forms/FlightForm.svelte"
+  ]
+ },
+ {
+  "en": "Airport shuttle",
+  "kind": "attr:titlePlaceholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/ShuttleForm.svelte"
   ]
  },
  {
@@ -2988,6 +3054,14 @@
   "count": 1,
   "files": [
    "routes/register/+page.svelte"
+  ]
+ },
+ {
+  "en": "Amtrak 123",
+  "kind": "attr:titlePlaceholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/TrainForm.svelte"
   ]
  },
  {
@@ -3367,6 +3441,14 @@
   ]
  },
  {
+  "en": "Boston → New York",
+  "kind": "attr:locationPlaceholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/TrainForm.svelte"
+  ]
+ },
+ {
   "en": "Budget & expenses",
   "kind": "text",
   "count": 1,
@@ -3428,6 +3510,14 @@
   "count": 1,
   "files": [
    "lib/components/segments/forms/FlightForm.svelte"
+  ]
+ },
+ {
+  "en": "Cafe address or landmark",
+  "kind": "attr:locationPlaceholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/MeetupForm.svelte"
   ]
  },
  {
@@ -3759,6 +3849,14 @@
   ]
  },
  {
+  "en": "Coffee with Alex",
+  "kind": "attr:titlePlaceholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/MeetupForm.svelte"
+  ]
+ },
+ {
   "en": "Color",
   "kind": "text",
   "count": 1,
@@ -3879,6 +3977,14 @@
   ]
  },
  {
+  "en": "Copied",
+  "kind": "attr:copiedLabel",
+  "count": 1,
+  "files": [
+   "routes/about/licenses/+page.svelte"
+  ]
+ },
+ {
   "en": "Copy feed URL",
   "kind": "attr:label",
   "count": 1,
@@ -3948,6 +4054,14 @@
   "count": 1,
   "files": [
    "routes/profile/api-keys/+page.svelte"
+  ]
+ },
+ {
+  "en": "Create a trip",
+  "kind": "attr:actionLabel",
+  "count": 1,
+  "files": [
+   "routes/trips/+page.svelte"
   ]
  },
  {
@@ -4039,14 +4153,6 @@
   ]
  },
  {
-  "en": "Create user",
-  "kind": "text",
-  "count": 1,
-  "files": [
-   "routes/users/new/+page.svelte"
-  ]
- },
- {
   "en": "Create your admin account to get started.",
   "kind": "text",
   "count": 1,
@@ -4060,6 +4166,14 @@
   "count": 1,
   "files": [
    "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Cruise / ferry name",
+  "kind": "attr:titleLabel",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/BoatForm.svelte"
   ]
  },
  {
@@ -4335,11 +4449,43 @@
   ]
  },
  {
+  "en": "Delete this benefit?",
+  "kind": "attr:message",
+  "count": 1,
+  "files": [
+   "routes/cards/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Delete this client and revoke all its tokens?",
+  "kind": "attr:message",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
   "en": "Delete this day note?",
   "kind": "text",
   "count": 1,
   "files": [
    "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Delete this passkey?",
+  "kind": "attr:message",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Delete this trip and all its segments? This cannot be undone.",
+  "kind": "attr:message",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/edit/+page.svelte"
   ]
  },
  {
@@ -4447,6 +4593,14 @@
   ]
  },
  {
+  "en": "Dinner reservation",
+  "kind": "attr:titlePlaceholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/FoodForm.svelte"
+  ]
+ },
+ {
   "en": "Directions title",
   "kind": "attr:label",
   "count": 1,
@@ -4460,6 +4614,14 @@
   "count": 1,
   "files": [
    "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Disable two-factor authentication?",
+  "kind": "attr:message",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
   ]
  },
  {
@@ -4804,14 +4966,6 @@
   "count": 1,
   "files": [
    "routes/users/[id]/edit/+page.svelte"
-  ]
- },
- {
-  "en": "Eiffel Tower",
-  "kind": "attr:placeholder",
-  "count": 1,
-  "files": [
-   "routes/places/+page.svelte"
   ]
  },
  {
@@ -5511,6 +5665,14 @@
   ]
  },
  {
+  "en": "Grand Hotel",
+  "kind": "attr:titlePlaceholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/HotelForm.svelte"
+  ]
+ },
+ {
   "en": "Group",
   "kind": "attr:label",
   "count": 1,
@@ -5524,6 +5686,14 @@
   "count": 1,
   "files": [
    "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Harbor ferry",
+  "kind": "attr:titlePlaceholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/BoatForm.svelte"
   ]
  },
  {
@@ -5548,6 +5718,14 @@
   "count": 1,
   "files": [
    "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Hotel name",
+  "kind": "attr:titleLabel",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/HotelForm.svelte"
   ]
  },
  {
@@ -6383,6 +6561,22 @@
   ]
  },
  {
+  "en": "Meet up title",
+  "kind": "attr:titleLabel",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/MeetupForm.svelte"
+  ]
+ },
+ {
+  "en": "Meeting place",
+  "kind": "attr:locationLabel",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/MeetupForm.svelte"
+  ]
+ },
+ {
   "en": "member@example.com",
   "kind": "attr:placeholder",
   "count": 1,
@@ -6404,6 +6598,14 @@
   "count": 1,
   "files": [
    "routes/trips/+page.svelte"
+  ]
+ },
+ {
+  "en": "Merge these trips? The donor trip will be deleted.",
+  "kind": "attr:message",
+  "count": 1,
+  "files": [
+   "routes/trips/merge/+page.svelte"
   ]
  },
  {
@@ -6599,6 +6801,14 @@
   ]
  },
  {
+  "en": "No audit events match.",
+  "kind": "attr:emptyMessage",
+  "count": 1,
+  "files": [
+   "routes/audit-logs/+page.svelte"
+  ]
+ },
+ {
   "en": "No benefits added yet.",
   "kind": "text",
   "count": 1,
@@ -6612,6 +6822,14 @@
   "count": 1,
   "files": [
    "lib/components/CardSelect.svelte"
+  ]
+ },
+ {
+  "en": "No cards saved yet.",
+  "kind": "attr:emptyMessage",
+  "count": 1,
+  "files": [
+   "routes/cards/+page.svelte"
   ]
  },
  {
@@ -6647,11 +6865,51 @@
   ]
  },
  {
+  "en": "No files attached to this segment.",
+  "kind": "attr:emptyMessage",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "No files uploaded yet. Attach PDFs or images (QR codes, vouchers, booking confirmations).",
+  "kind": "attr:emptyMessage",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "No files yet.",
+  "kind": "attr:emptyMessage",
+  "count": 1,
+  "files": [
+   "lib/components/segments/SegmentEditForm.svelte"
+  ]
+ },
+ {
+  "en": "No groups found.",
+  "kind": "attr:emptyMessage",
+  "count": 1,
+  "files": [
+   "routes/groups/+page.svelte"
+  ]
+ },
+ {
   "en": "No icon",
   "kind": "text",
   "count": 1,
   "files": [
    "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "No insurance policies saved yet.",
+  "kind": "attr:emptyMessage",
+  "count": 1,
+  "files": [
+   "routes/insurance/+page.svelte"
   ]
  },
  {
@@ -6679,6 +6937,14 @@
   ]
  },
  {
+  "en": "No loyalty programs saved yet.",
+  "kind": "attr:emptyMessage",
+  "count": 1,
+  "files": [
+   "routes/profile/loyalty/+page.svelte"
+  ]
+ },
+ {
   "en": "No MCP clients connected yet.",
   "kind": "text",
   "count": 1,
@@ -6700,6 +6966,14 @@
   "count": 1,
   "files": [
    "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "No notifications yet.",
+  "kind": "attr:message",
+  "count": 1,
+  "files": [
+   "routes/notifications/+page.svelte"
   ]
  },
  {
@@ -6727,11 +7001,35 @@
   ]
  },
  {
+  "en": "No photos yet. Add the first one below.",
+  "kind": "attr:emptyMessage",
+  "count": 1,
+  "files": [
+   "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "No photos yet. Upload trip photos below.",
+  "kind": "attr:emptyMessage",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
   "en": "No prep items yet.",
   "kind": "text",
   "count": 1,
   "files": [
    "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "No provider accounts saved yet.",
+  "kind": "attr:emptyMessage",
+  "count": 1,
+  "files": [
+   "routes/fare-providers/+page.svelte"
   ]
  },
  {
@@ -6751,11 +7049,27 @@
   ]
  },
  {
+  "en": "No reminders scheduled.",
+  "kind": "attr:emptyMessage",
+  "count": 1,
+  "files": [
+   "routes/profile/reminders/+page.svelte"
+  ]
+ },
+ {
   "en": "No saved places yet.",
   "kind": "text",
   "count": 1,
   "files": [
    "routes/places/+page.svelte"
+  ]
+ },
+ {
+  "en": "No scheduler runs recorded yet.",
+  "kind": "attr:emptyMessage",
+  "count": 1,
+  "files": [
+   "routes/job-history/+page.svelte"
   ]
  },
  {
@@ -6767,11 +7081,27 @@
   ]
  },
  {
+  "en": "No travel documents saved yet.",
+  "kind": "attr:emptyMessage",
+  "count": 1,
+  "files": [
+   "routes/profile/documents/+page.svelte"
+  ]
+ },
+ {
   "en": "No travelers assigned to this segment.",
   "kind": "text",
   "count": 1,
   "files": [
    "routes/trips/[id]/+page.svelte"
+  ]
+ },
+ {
+  "en": "No trips yet — plan your first one.",
+  "kind": "attr:message",
+  "count": 1,
+  "files": [
+   "routes/trips/+page.svelte"
   ]
  },
  {
@@ -6788,6 +7118,14 @@
   "count": 1,
   "files": [
    "routes/about/credits/+page.svelte"
+  ]
+ },
+ {
+  "en": "No users found.",
+  "kind": "attr:emptyMessage",
+  "count": 1,
+  "files": [
+   "routes/users/+page.svelte"
   ]
  },
  {
@@ -7287,19 +7625,27 @@
   ]
  },
  {
-  "en": "Pickup",
-  "kind": "text",
+  "en": "Pickup address",
+  "kind": "attr:locationPlaceholder",
   "count": 1,
   "files": [
-   "lib/components/segments/forms/RentalCarForm.svelte"
+   "lib/components/segments/forms/RideshareForm.svelte"
   ]
  },
  {
-  "en": "Pickup location",
-  "kind": "attr:label",
+  "en": "Pier 33",
+  "kind": "attr:locationPlaceholder",
   "count": 1,
   "files": [
-   "lib/components/segments/forms/RentalCarForm.svelte"
+   "lib/components/segments/forms/BoatForm.svelte"
+  ]
+ },
+ {
+  "en": "Place name",
+  "kind": "attr:titleLabel",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/PoiForm.svelte"
   ]
  },
  {
@@ -7372,6 +7718,14 @@
   "count": 1,
   "files": [
    "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Port / pier",
+  "kind": "attr:locationLabel",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/BoatForm.svelte"
   ]
  },
  {
@@ -7647,6 +8001,14 @@
   ]
  },
  {
+  "en": "Regenerate backup codes? Old codes will stop working.",
+  "kind": "attr:message",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
   "en": "Register a new passkey",
   "kind": "text",
   "count": 1,
@@ -7767,6 +8129,30 @@
   ]
  },
  {
+  "en": "Remove this group share?",
+  "kind": "attr:message",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
+  "en": "Remove this member from the group?",
+  "kind": "attr:message",
+  "count": 1,
+  "files": [
+   "routes/groups/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "Remove this share?",
+  "kind": "attr:message",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
   "en": "Rental agency",
   "kind": "attr:label",
   "count": 1,
@@ -7855,6 +8241,22 @@
   ]
  },
  {
+  "en": "Restaurant",
+  "kind": "attr:titleLabel",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/FoodForm.svelte"
+  ]
+ },
+ {
+  "en": "Restaurant address",
+  "kind": "attr:locationPlaceholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/FoodForm.svelte"
+  ]
+ },
+ {
   "en": "Restore backup",
   "kind": "text",
   "count": 1,
@@ -7900,6 +8302,46 @@
   "count": 1,
   "files": [
    "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
+  "en": "Revoke the calendar feed URL? Calendar apps using it will stop receiving updates.",
+  "kind": "attr:message",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
+  "en": "Revoke the public link? Anyone with the link will lose access.",
+  "kind": "attr:message",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
+  "en": "Revoke this API key? Scripts using it will stop working immediately.",
+  "kind": "attr:message",
+  "count": 1,
+  "files": [
+   "routes/profile/api-keys/+page.svelte"
+  ]
+ },
+ {
+  "en": "Revoke this invitation?",
+  "kind": "attr:message",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
+  "en": "Revoke this token?",
+  "kind": "attr:message",
+  "count": 1,
+  "files": [
+   "routes/profile/security/+page.svelte"
   ]
  },
  {
@@ -7964,6 +8406,14 @@
   "count": 1,
   "files": [
    "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Route",
+  "kind": "attr:locationLabel",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/TrainForm.svelte"
   ]
  },
  {
@@ -8487,6 +8937,14 @@
   ]
  },
  {
+  "en": "Service",
+  "kind": "attr:titleLabel",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/RideshareForm.svelte"
+  ]
+ },
+ {
   "en": "Session cookie SameSite",
   "kind": "text",
   "count": 1,
@@ -8620,6 +9078,14 @@
   "count": 1,
   "files": [
    "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Shuttle service",
+  "kind": "attr:titleLabel",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/ShuttleForm.svelte"
   ]
  },
  {
@@ -8844,6 +9310,14 @@
   "count": 1,
   "files": [
    "lib/components/segments/forms/ParkingForm.svelte"
+  ]
+ },
+ {
+  "en": "Start typing to search your trips.",
+  "kind": "attr:message",
+  "count": 1,
+  "files": [
+   "routes/search/+page.svelte"
   ]
  },
  {
@@ -9319,6 +9793,14 @@
   ]
  },
  {
+  "en": "Train",
+  "kind": "attr:titleLabel",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/TrainForm.svelte"
+  ]
+ },
+ {
   "en": "Transport",
   "kind": "text",
   "count": 1,
@@ -9484,6 +9966,14 @@
   "count": 1,
   "files": [
    "routes/profile/visited/VisitedPlacePage.svelte"
+  ]
+ },
+ {
+  "en": "Uber / Lyft",
+  "kind": "attr:titlePlaceholder",
+  "count": 1,
+  "files": [
+   "lib/components/segments/forms/RideshareForm.svelte"
   ]
  },
  {

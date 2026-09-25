@@ -4,7 +4,10 @@ import { parse } from 'svelte/compiler';
 import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join, relative } from 'node:path';
 
-const ATTRS = new Set(['placeholder', 'title', 'aria-label', 'alt', 'label', 'aria-description']);
+const ATTRS = new Set(['placeholder', 'title', 'aria-label', 'alt', 'label', 'aria-description',
+	// display-only component props (verified: never compared, keyed or transformed in the receiving components)
+	'message', 'emptyMessage', 'addLabel', 'confirmLabel', 'hint', 'copiedLabel', 'actionLabel']);
+const isTextAttr = (name) => ATTRS.has(name) || /^[a-z]+(Label|Placeholder)$/.test(name);
 const root = process.argv[2];
 
 function* walkFiles(dir) {
@@ -33,7 +36,7 @@ function visit(node, file) {
 	if (Array.isArray(node)) return node.forEach((n) => visit(n, file));
 	if (node.type === 'Attribute') {
 		const v = node.value;
-		if (ATTRS.has(node.name) && Array.isArray(v) && v.length === 1 && v[0].type === 'Text') {
+		if (isTextAttr(node.name) && Array.isArray(v) && v.length === 1 && v[0].type === 'Text') {
 			add(norm(v[0].raw ?? v[0].data), `attr:${node.name}`, file);
 		}
 		return; // never collect other attribute values

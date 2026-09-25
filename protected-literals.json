@@ -1,0 +1,25 @@
+{
+ "lib/components/GridTable.svelte": {
+  "Showing": "grid.js language input; GridTable parses the rendered summary with /^Showing…of/ and rebuilds it in German (patch 0004)"
+ },
+ "lib/server/emailProcessing.ts": {
+  "Imported trip": "stored as the trip name and fuzzy-matched by matchTrip() on later imports",
+  "Imported itinerary": "stored as the segment title"
+ },
+ "lib/server/tripCompanions.ts": {
+  "Trip owner": "stored into trip_companions.name"
+ },
+ "lib/server/tripExpenses/summaries.ts": {
+  "You": "settlement balance name (data), compared in code and tests"
+ },
+ "lib/countryContinents.ts": {
+  "Africa": "object/sort key; headings are translated in patch 0008",
+  "Antarctica": "object/sort key",
+  "Asia": "object/sort key",
+  "Europe": "object/sort key",
+  "North America": "object/sort key",
+  "Oceania": "object/sort key",
+  "South America": "object/sort key",
+  "Other": "object/sort key"
+ }
+}

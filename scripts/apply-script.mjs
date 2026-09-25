@@ -11,12 +11,22 @@
 import { parse } from 'svelte/compiler';
 import { Parser } from 'acorn';
 import { tsPlugin } from '@sveltejs/acorn-typescript';
-import { readFileSync, writeFileSync } from 'node:fs';
-import { join } from 'node:path';
+import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { join, dirname } from 'node:path';
 
 const [root, tablePath, mode = 'property'] = process.argv.slice(2);
 if (!['property', 'expr'].includes(mode)) throw new Error(`unknown mode ${mode}`);
 const table = JSON.parse(readFileSync(tablePath, 'utf8'));
+// literals that must never be translated (identity use), with the reason; see protected-literals.json
+const protectedPath = join(dirname(tablePath), 'protected-literals.json');
+if (existsSync(protectedPath)) {
+	const prot = JSON.parse(readFileSync(protectedPath, 'utf8'));
+	const hits = Object.entries(table).flatMap(([file, map]) => Object.keys(map).filter((en) => prot[file]?.[en]).map((en) => `${file}: ${en} (${prot[file][en]})`));
+	if (hits.length) {
+		console.error(`PROTECTED literals in ${tablePath}, refusing:\n  ${hits.join('\n  ')}`);
+		process.exit(1);
+	}
+}
 const TS = Parser.extend(tsPlugin());
 
 function programs(file, src) {

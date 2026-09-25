@@ -26,3 +26,4 @@ Every script asserts that each exact upstream snippet it rewrites is still prese
 | 0008 visited places | `0008-visited-places.py` |
 | 0009 German dates | `0009-german-dates.py` |
 | 0010 grid status labels | `0010-grid-status-labels.py` |
+| 0011 trip base currency | `0011-trip-base-currency.py` |

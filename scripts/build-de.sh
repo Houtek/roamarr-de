@@ -20,6 +20,10 @@ node "$kit/scripts/apply.mjs" "$up/src" "$kit/de.json"
 if [ -f "$kit/de.script.json" ]; then
 	node "$kit/scripts/apply-script.mjs" "$up/src" "$kit/de.script.json"
 fi
+# 4b. reviewed literals in value positions: a ? 'X' : 'Y', x ?? 'X', return 'X', markup {'X'}
+if [ -f "$kit/de.expr.json" ]; then
+	node "$kit/scripts/apply-script.mjs" "$up/src" "$kit/de.expr.json" expr
+fi
 # 5. reviewed template literals with placeholders (atomic; placeholders may be reordered)
 if [ -f "$kit/de.templates.json" ]; then
 	node "$kit/scripts/templates.mjs" apply "$up/src" "$kit/de.templates.json"

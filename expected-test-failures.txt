@@ -85,3 +85,6 @@ src/routes/profile/visited/visited.test.ts > mark country action persists first 
 
 # Patch 0004 (grid footer): asserts "Rows". Its output "Zeige 1-4 von 4" also proves the English-summary parser still works.
 src/lib/components/GridTable.test.ts > GridTable passes the selected page size to Grid.js and updates it from the selector
+
+# Patch 0005 (plurals): asserts the English flash "Optimized 3 stops"; the order-persistence assertions before it pass.
+src/routes/trips/[id]/trip-detail.test.ts > optimizeTripDay action persists the optimized order and redirects

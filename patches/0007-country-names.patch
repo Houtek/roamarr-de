@@ -1,0 +1,21 @@
+diff --git a/src/lib/countries.ts b/src/lib/countries.ts
+index e084b9f..9fd2f81 100644
+--- a/src/lib/countries.ts
++++ b/src/lib/countries.ts
+@@ -1,4 +1,4 @@
+-export const COUNTRIES = [
++const COUNTRIES_EN = [
+ 	{ code: "AF", name: "Afghanistan" },
+ 	{ code: "AX", name: "Åland Islands" },
+ 	{ code: "AL", name: "Albania" },
+@@ -250,4 +250,9 @@ export const COUNTRIES = [
+ 	{ code: "ZW", name: "Zimbabwe" }
+ ] as const;
+ 
+-
++// roamarr-de: German country names derived from the ISO code (Intl.DisplayNames, available in Node and
++// all browsers), sorted German-alphabetically. Lookups everywhere go by `code`; `name` is display + search.
++const DE_REGION_NAMES = new Intl.DisplayNames(['de'], { type: 'region' });
++export const COUNTRIES = COUNTRIES_EN.map((c) => ({ code: c.code, name: DE_REGION_NAMES.of(c.code) ?? c.name })).sort(
++	(a, b) => a.name.localeCompare(b.name, 'de')
++);

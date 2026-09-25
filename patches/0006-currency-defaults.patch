@@ -51,17 +51,17 @@ index a82e056..74d864c 100644
  				disabled={submitting}
  				errors={form?.errors ?? {}}
 diff --git a/src/routes/trips/[id]/+page.svelte b/src/routes/trips/[id]/+page.svelte
-index 77256be..211c391 100644
+index f340fbb..ce4505e 100644
 --- a/src/routes/trips/[id]/+page.svelte
 +++ b/src/routes/trips/[id]/+page.svelte
 @@ -1,4 +1,6 @@
  <script lang="ts">
 +	import { page as __page } from '$app/state';
 +	import { defaultCurrency } from '$lib/defaultCurrency';
+ 	import { pl } from '$lib/pluralDe';
  	import './trip-detail-modern.css';
  	import './trip-detail-modern-fixes.css';
- 	import { applyAction, enhance } from '$app/forms';
-@@ -1040,7 +1042,7 @@
+@@ -1044,7 +1046,7 @@
  					<form method="POST" action="?/addExpense" class="trip-modern-form-grid mt-5 sm:grid-cols-2">
  						<input name="description" class="input text-sm" placeholder="Description" required />
  						<input name="amount" type="number" min="0.01" step="0.01" inputmode="decimal" class="input text-sm" placeholder="Amount" required />

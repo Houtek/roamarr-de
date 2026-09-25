@@ -82,3 +82,6 @@ src/lib/server/geoImport.test.ts > preview flags duplicates by exact name and by
 src/lib/server/weather.test.ts > weather tripWeatherOverview flags freezing when tempMin <= 0
 src/routes/backup/backup.test.ts > restore rejects oversized archives before extracting when a cap is set
 src/routes/profile/visited/visited.test.ts > mark country action persists first and last visited dates
+
+# Patch 0004 (grid footer): asserts "Rows". Its output "Zeige 1-4 von 4" also proves the English-summary parser still works.
+src/lib/components/GridTable.test.ts > GridTable passes the selected page size to Grid.js and updates it from the selector

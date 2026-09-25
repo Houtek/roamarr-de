@@ -23,6 +23,11 @@ reps = [
      '<option value="" disabled selected>{noun} auswählen …</option>'),
     ('<p class="meta">Toggle {plural} you have visited.</p>',
      '<p class="meta">Markiere die {plural}, die du besucht hast.</p>'),
+    # continent names are object/sort keys (countryContinents.ts): translate only the heading
+    ('<h2 class="mb-2 text-sm font-semibold uppercase tracking-wide text-muted">{continent}</h2>',
+     '<h2 class="mb-2 text-sm font-semibold uppercase tracking-wide text-muted">{CONTINENT_DE[continent] ?? continent}</h2>'),
+    ("const listLabel = $derived(isCountry ? 'Länderliste'",
+     "const CONTINENT_DE: Record<string, string> = { Africa: 'Afrika', Antarctica: 'Antarktis', Asia: 'Asien', Europe: 'Europa', 'North America': 'Nordamerika', Oceania: 'Ozeanien', 'South America': 'Südamerika', Other: 'Sonstige' };\n\tconst listLabel = $derived(isCountry ? 'Länderliste'"),
 ]
 for a, b in reps:
     assert t.count(a) == 1, (a[:70], t.count(a))

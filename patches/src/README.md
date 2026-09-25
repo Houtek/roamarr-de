@@ -10,6 +10,8 @@ git -C up add -A && git -C up commit -qm base
 git -C up add -A && git -C up diff --cached --output=patches/0005-plurals.patch
 ```
 
+`scripts/regen-patch.sh <NNNN> <local-upstream-clone> <new-scratch-dir>` does all of that in one step.
+
 Every script asserts that each exact upstream snippet it rewrites is still present, so an upstream change fails loudly rather than being skipped.
 
 | Patch | Generator |

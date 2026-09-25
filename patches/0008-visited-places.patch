@@ -1,8 +1,8 @@
 diff --git a/src/routes/profile/visited/VisitedPlacePage.svelte b/src/routes/profile/visited/VisitedPlacePage.svelte
-index b6820e4..bec6deb 100644
+index b6820e4..079a249 100644
 --- a/src/routes/profile/visited/VisitedPlacePage.svelte
 +++ b/src/routes/profile/visited/VisitedPlacePage.svelte
-@@ -16,10 +16,10 @@
+@@ -16,10 +16,11 @@
  
  	const isCountry = $derived(kind === 'country');
  	const pageHref = $derived(isCountry ? '/profile/visited/countries' : '/profile/visited/states');
@@ -13,11 +13,12 @@ index b6820e4..bec6deb 100644
 +	const title = $derived(isCountry ? 'Besuchte Länder' : 'Besuchte US-Bundesstaaten');
 +	const noun = $derived(isCountry ? 'Land' : 'US-Bundesstaat');
 +	const plural = $derived(isCountry ? 'Länder' : 'US-Bundesstaaten');
++	const CONTINENT_DE: Record<string, string> = { Africa: 'Afrika', Antarctica: 'Antarktis', Asia: 'Asien', Europe: 'Europa', 'North America': 'Nordamerika', Oceania: 'Ozeanien', 'South America': 'Südamerika', Other: 'Sonstige' };
 +	const listLabel = $derived(isCountry ? 'Länderliste' : 'Liste der Bundesstaaten');
  	const visitedCodes = $derived(new Set<string>(data.visitedCodes));
  	const tableRows = $derived((data.tableRows ?? data.rows) as Record<string, unknown>[]);
  	const editingRow = $derived(tableRows.find((row) => row.code === editingCode));
-@@ -176,14 +176,14 @@
+@@ -176,14 +177,14 @@
  	<div>
  		<h1 class="page-title">{title}</h1>
  		<p class="page-subtitle">
@@ -34,7 +35,7 @@ index b6820e4..bec6deb 100644
  			</button>
  		</form>
  		<form method="POST" action="?/autoMark">
-@@ -210,7 +210,7 @@
+@@ -210,7 +211,7 @@
  				<label class="field sm:col-span-2">
  					<span class="label">{isCountry ? 'Country' : 'U.S. state'}</span>
  					<select name="code" class="input" required>
@@ -43,7 +44,7 @@ index b6820e4..bec6deb 100644
  						{#each data.options.filter((option: any) => !visitedCodes.has(option.code)) as option (option.code)}
  							<option value={option.code}>{option.name} ({option.displayCode})</option>
  						{/each}
-@@ -269,7 +269,7 @@
+@@ -269,7 +270,7 @@
  {:else}
  	<section class="card visited-tab-panel p-5 sm:p-6">
  		<div class="mb-4 flex flex-wrap items-center gap-3">
@@ -52,3 +53,12 @@ index b6820e4..bec6deb 100644
  			{#if data.visitedCodes.length > 0}
  				<form method="POST" action="?/clear" class="ml-auto">
  					<input type="hidden" name="returnTo" value={data.currentPath} />
+@@ -281,7 +282,7 @@
+ 		{#if isCountry}
+ 			{#each sortedContinents as continent (continent)}
+ 				<div class="mb-4">
+-					<h2 class="mb-2 text-sm font-semibold uppercase tracking-wide text-muted">{continent}</h2>
++					<h2 class="mb-2 text-sm font-semibold uppercase tracking-wide text-muted">{CONTINENT_DE[continent] ?? continent}</h2>
+ 					<div class="grid grid-cols-2 gap-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+ 						{#each countriesByContinent[continent] as c (c.code)}
+ 							<form method="POST" action={visitedCodes.has(c.code) ? '?/unmark' : '?/mark'}>

@@ -14,7 +14,8 @@
   "Outbound Emails": "Ausgehende E-Mails"
  },
  "lib/components/GridTable.svelte": {
-  "Actions": "Aktionen"
+  "Actions": "Aktionen",
+  "Showing": "Zeige"
  },
  "lib/components/ProfileTabs.svelte": {
   "Profile": "Profil",
@@ -33,13 +34,47 @@
   "Type": "Typ",
   "Size": "Größe",
   "Open": "Öffnen",
-  "Delete": "Löschen"
+  "Delete": "Löschen",
+  "Delete file": "Datei löschen"
  },
  "lib/dateFormat.ts": {
   "Jul 29, 2026": "29. Jul. 2026",
   "Tuesday, July 29, 2026": "Dienstag, 29. Juli 2026",
   "Jul 29, 2026 12:34 PM": "29. Jul. 2026 12:34 PM",
   "Jul 29, 2026 12:34": "29. Jul. 2026 12:34"
+ },
+ "lib/segmentDetailsDisplay.ts": {
+  "Booking site": "Buchungsseite",
+  "Booking reference": "Buchungsreferenz",
+  "Booking website": "Buchungswebsite",
+  "Booking phone": "Buchungstelefon",
+  "Booking date": "Buchungsdatum",
+  "Booking rate": "Buchungstarif",
+  "Restrictions": "Einschränkungen",
+  "Attendees": "Teilnehmer",
+  "Booked": "Gebucht",
+  "Booking info": "Buchungsinfo",
+  "Provider": "Anbieter",
+  "Phone": "Telefon",
+  "Email": "E-Mail",
+  "Notes": "Notizen",
+  "Website": "Website",
+  "Party size": "Personenzahl",
+  "Total cost": "Gesamtkosten",
+  "Same as pickup": "Wie Abholort",
+  "Pickup location": "Abholort",
+  "Drop-off location": "Abgabeort",
+  "Drop-off address": "Abgabeadresse",
+  "Drop-off phone": "Telefon (Abgabe)",
+  "Car type": "Fahrzeugtyp",
+  "Mileage charges": "Kilometergebühren",
+  "Car details": "Fahrzeugdetails",
+  "Drivers": "Fahrer",
+  "Departure airport": "Abflughafen",
+  "Arrival airport": "Ankunftsflughafen",
+  "Frequent flyer #": "Vielfliegernummer",
+  "Dress code": "Kleiderordnung",
+  "Meeting point": "Treffpunkt"
  },
  "lib/segmentLabels.ts": {
   "Flight": "Flug",
@@ -65,18 +100,39 @@
   "Arrived": "Angekommen",
   "Completed": "Abgeschlossen"
  },
+ "lib/server/cities.ts": {
+  "Please ask your Roamarr administrator to use “Re-import city database” under Configuration → Maps.": "Bitte den Roamarr-Administrator bitten, unter Konfiguration → Karten „Städtedatenbank neu importieren“ zu verwenden."
+ },
  "lib/server/emailProcessing.ts": {
   "Roamarr could not add your travel email": "Roamarr konnte deine Reise-E-Mail nicht hinzufügen",
   "Roamarr added your travel email": "Roamarr hat deine Reise-E-Mail hinzugefügt"
  },
  "lib/server/fareproviders/index.ts": {
-  "Fare watch update": "Update zur Preisüberwachung"
+  "Fare watch update": "Update zur Preisüberwachung",
+  "A fare watch result changed.": "Ein Fare-Watch-Ergebnis hat sich geändert."
  },
  "lib/server/fareproviders/stub.ts": {
-  "Stub (demo)": "Stub (Demo)"
+  "Stub (demo)": "Stub (Demo)",
+  "Fare watch active (stub provider — no live data).": "Fare-Watch aktiv (Demo-Anbieter — keine Live-Daten)."
  },
  "lib/server/geoImport.ts": {
   "Source link": "Quelllink"
+ },
+ "lib/server/ical.ts": {
+  "Flight": "Flug",
+  "Event": "Termin",
+  "Hotel": "Hotel",
+  "Rental car": "Mietwagen",
+  "Note": "Notiz",
+  "Todo": "Aufgabe",
+  "Parking": "Parken",
+  "Boat": "Boot",
+  "Train": "Zug",
+  "Directions": "Wegbeschreibung",
+  "Food": "Essen",
+  "Meetup": "Treffen",
+  "Rideshare": "Mitfahrgelegenheit",
+  "Shuttle": "Shuttle"
  },
  "lib/server/licenseAttribution.ts": {
   "Third-party licenses": "Lizenzen von Drittanbietern",
@@ -115,7 +171,10 @@
  "lib/server/reminders.ts": {
   "Check-in reminder": "Check-in-Erinnerung",
   "Document expiring": "Dokument läuft ab",
-  "Reminder": "Erinnerung"
+  "Reminder": "Erinnerung",
+  "A flight you track is departing soon.": "Ein von dir verfolgter Flug hebt bald ab.",
+  "A travel document is expiring soon.": "Ein Reisedokument läuft bald ab.",
+  "A scheduled reminder is due.": "Eine geplante Erinnerung ist fällig."
  },
  "lib/server/seed.ts": {
   "Demo Trip to Tokyo": "Demo-Reise nach Tokio",
@@ -161,7 +220,13 @@
   "Two-factor is not enabled.": "Zwei-Faktor-Authentifizierung ist nicht aktiviert."
  },
  "lib/server/users.ts": {
-  "Reset your Roamarr password": "Setze dein Roamarr-Passwort zurück"
+  "Reset your Roamarr password": "Setze dein Roamarr-Passwort zurück",
+  "An administrator requested a password reset. Click the link below to choose a new password. This link expires in 1 hour.": "Ein Administrator hat einen Passwort-Reset angefordert. Klicke auf den untenstehenden Link, um ein neues Passwort zu wählen. Dieser Link läuft in 1 Stunde ab."
+ },
+ "lib/server/weather.ts": {
+  "Typical": "Typisch",
+  "No forecastable dates in range.": "Keine prognostizierbaren Termine im Zeitraum.",
+  "Forecast unavailable for this destination.": "Prognose für dieses Reiseziel nicht verfügbar."
  },
  "lib/themes.ts": {
   "Roamarr classic": "Der Roamarr-Klassiker",
@@ -189,6 +254,36 @@
   "Booked": "Gebucht",
   "Active": "Aktiv",
   "Completed": "Abgeschlossen"
+ },
+ "lib/weatherCodes.ts": {
+  "Clear sky": "Klarer Himmel",
+  "Mainly clear": "Überwiegend klar",
+  "Partly cloudy": "Teilweise bewölkt",
+  "Overcast": "Bedeckt",
+  "Fog": "Nebel",
+  "Depositing rime fog": "Reifnebel",
+  "Light drizzle": "Leichter Nieselregen",
+  "Moderate drizzle": "Mäßiger Nieselregen",
+  "Dense drizzle": "Starker Nieselregen",
+  "Light freezing drizzle": "Leichter gefrierender Nieselregen",
+  "Dense freezing drizzle": "Starker gefrierender Nieselregen",
+  "Slight rain": "Leichter Regen",
+  "Moderate rain": "Mäßiger Regen",
+  "Heavy rain": "Starker Regen",
+  "Light freezing rain": "Leichter gefrierender Regen",
+  "Heavy freezing rain": "Starker gefrierender Regen",
+  "Slight snow": "Leichter Schneefall",
+  "Moderate snow": "Mäßiger Schneefall",
+  "Heavy snow": "Starker Schneefall",
+  "Snow grains": "Schneegriesel",
+  "Slight rain showers": "Leichte Regenschauer",
+  "Moderate rain showers": "Mäßige Regenschauer",
+  "Violent rain showers": "Heftige Regenschauer",
+  "Slight snow showers": "Leichte Schneeschauer",
+  "Heavy snow showers": "Starke Schneeschauer",
+  "Thunderstorm": "Gewitter",
+  "Thunderstorm with slight hail": "Gewitter mit leichtem Hagel",
+  "Thunderstorm with heavy hail": "Gewitter mit starkem Hagel"
  },
  "routes/+page.svelte": {
   "Upcoming trips": "Bevorstehende Reisen",
@@ -227,7 +322,9 @@
   "Benefits": "Leistungen",
   "Edit": "Bearbeiten",
   "Delete": "Löschen",
-  "Delete failed.": "Löschen fehlgeschlagen."
+  "Delete failed.": "Löschen fehlgeschlagen.",
+  "Other": "Sonstige",
+  "Delete card": "Karte löschen"
  },
  "routes/cards/[id]/edit/+page.server.ts": {
   "Too many attempts. Try again later.": "Zu viele Versuche. Bitte später erneut versuchen.",
@@ -264,7 +361,19 @@
   "Garbage collect": "Garbage Collection",
   "Flush memtables": "Memtables leeren",
   "Doctor": "Doctor",
-  "Drop or quarantine corrupt runs. Only run this after confirming a recent backup.": "Löscht oder isoliert beschädigte Runs. Führe dies nur nach einem bestätigten aktuellen Backup aus."
+  "Drop or quarantine corrupt runs. Only run this after confirming a recent backup.": "Löscht oder isoliert beschädigte Runs. Führe dies nur nach einem bestätigten aktuellen Backup aus.",
+  "Read-only scan of run footer checksums. Result includes total table count plus any tables with integrity issues (healthy DBs report zero issue tables).": "Schreibgeschützter Scan der Run-Footer-Prüfsummen. Das Ergebnis enthält die Gesamtzahl der Tabellen sowie alle Tabellen mit Integritätsproblemen (bei gesunden DBs sind es null).",
+  "Safe": "Sicher",
+  "Run check": "Prüfung ausführen",
+  "Compact sorted runs, then checkpoint. Checkpoint flushes memtables and drops rotated WAL segments so crash recovery stays small and backups shrink.": "Komprimiert sortierte Runs und erstellt anschließend einen Checkpoint. Der Checkpoint schreibt Memtables durch und verwirft rotierte WAL-Segmente, damit die Crash Recovery klein bleibt und Backups schrumpfen.",
+  "Operational": "Betrieb",
+  "Run garbage collection": "Garbage Collection ausführen",
+  "Yes, run garbage collection on the live database": "Ja, Garbage Collection auf der Live-Datenbank ausführen",
+  "Force in-memory writes toward durable storage. Run this before garbage collection if you want old WAL segments to become reclaimable.": "Erzwingt das Schreiben von Daten aus dem Speicher in den dauerhaften Speicher. Vor der Garbage Collection ausführen, wenn alte WAL-Segmente wieder freigegeben werden sollen.",
+  "Yes, flush memtables now": "Ja, Memtables jetzt flushen",
+  "Destructive": "Destruktiv",
+  "Run doctor": "Doctor ausführen",
+  "Yes, doctor may drop or quarantine corrupt runs": "Ja, Doctor darf beschädigte Runs verwerfen oder unter Quarantäne stellen"
  },
  "routes/fare-providers/+page.svelte": {
   "Label": "Bezeichnung",
@@ -274,7 +383,8 @@
   "Edit": "Bearbeiten",
   "Delete": "Löschen",
   "Test request failed": "Testanfrage fehlgeschlagen",
-  "Delete failed": "Löschen fehlgeschlagen"
+  "Delete failed": "Löschen fehlgeschlagen",
+  "Delete provider": "Anbieter löschen"
  },
  "routes/fare-providers/[id]/edit/+page.server.ts": {
   "Too many attempts. Try again later.": "Zu viele Versuche. Bitte versuche es später erneut."
@@ -285,7 +395,8 @@
  "routes/forgot-password/+page.server.ts": {
   "Reset your Roamarr password": "Setze dein Roamarr-Passwort zurück",
   "Too many attempts. Try again later.": "Zu viele Versuche. Bitte versuche es später erneut.",
-  "Email is required.": "E-Mail-Adresse ist erforderlich."
+  "Email is required.": "E-Mail-Adresse ist erforderlich.",
+  "Click the link below to reset your password. This link expires in 1 hour.": "Klicke auf den untenstehenden Link, um dein Passwort zurückzusetzen. Dieser Link läuft in 1 Stunde ab."
  },
  "routes/general/+page.server.ts": {
   "Too many attempts. Try again later.": "Zu viele Versuche. Bitte versuche es später erneut.",
@@ -300,10 +411,22 @@
   "Discovery URL must be an http(s) URL.": "Discovery-URL muss eine http(s)-URL sein.",
   "Discovery URL and client ID are required to enable SSO.": "Discovery-URL und Client-ID sind erforderlich, um SSO zu aktivieren.",
   "Test notification": "Testbenachrichtigung",
-  "Roamarr SMTP test": "Roamarr-SMTP-Test"
+  "Roamarr SMTP test": "Roamarr-SMTP-Test",
+  "This is a test notification from Roamarr.": "Dies ist eine Testbenachrichtigung von Roamarr.",
+  "This is a test email from Roamarr to verify SMTP delivery.": "Dies ist eine Test-E-Mail von Roamarr zur Überprüfung des SMTP-Versands."
  },
  "routes/general/+page.svelte": {
-  "Custom": "Benutzerdefiniert"
+  "Custom": "Benutzerdefiniert",
+  "Configuration": "Konfiguration",
+  "Maps": "Karten",
+  "Email": "E-Mail",
+  "Webhooks": "Webhooks",
+  "MCP Clients": "MCP-Clients",
+  "Configure instance-wide defaults and access policies.": "Konfiguriere instanzweite Standardwerte und Zugriffsrichtlinien.",
+  "Choose map tiles, location data, and display settings.": "Wähle Kartenkacheln, Standortdaten und Anzeigeeinstellungen.",
+  "Configure outgoing email, inbox processing, and AI parsing.": "Konfiguriere ausgehende E-Mails, Posteingangsverarbeitung und KI-Auswertung.",
+  "Send signed notifications to an external webhook.": "Sende signierte Benachrichtigungen an einen externen Webhook.",
+  "Manage MCP client access and OAuth registration.": "Verwalte den MCP-Client-Zugriff und die OAuth-Registrierung."
  },
  "routes/groups/+page.svelte": {
   "Name": "Name",
@@ -311,7 +434,8 @@
   "Created": "Erstellt",
   "Edit": "Bearbeiten",
   "Delete": "Löschen",
-  "Delete failed.": "Löschen fehlgeschlagen."
+  "Delete failed.": "Löschen fehlgeschlagen.",
+  "Delete group": "Gruppe löschen"
  },
  "routes/groups/[id]/edit/+page.server.ts": {
   "Too many attempts. Try again later.": "Zu viele Versuche. Bitte später erneut versuchen.",
@@ -332,7 +456,8 @@
   "End": "Ende",
   "Edit": "Bearbeiten",
   "Delete": "Löschen",
-  "Delete failed.": "Löschen fehlgeschlagen."
+  "Delete failed.": "Löschen fehlgeschlagen.",
+  "Delete policy": "Police löschen"
  },
  "routes/insurance/[id]/edit/+page.server.ts": {
   "Too many attempts. Try again later.": "Zu viele Versuche. Bitte später erneut versuchen."
@@ -378,7 +503,8 @@
  "routes/places/import/+page.server.ts": {
   "Too many attempts. Try again later.": "Zu viele Versuche. Bitte später erneut versuchen.",
   "Import file must be 20 MB or smaller.": "Die Importdatei darf höchstens 20 MB groß sein.",
-  "Choose a file or paste Google Maps links.": "Wähle eine Datei oder füge Google-Maps-Links ein."
+  "Choose a file or paste Google Maps links.": "Wähle eine Datei oder füge Google-Maps-Links ein.",
+  "Pasted links": "Eingefügte Links"
  },
  "routes/profile/api-keys/+page.server.ts": {
   "Key name is required.": "Schlüsselname ist erforderlich.",
@@ -401,7 +527,12 @@
   "Expires": "Läuft ab",
   "Edit": "Bearbeiten",
   "Delete": "Löschen",
-  "Delete failed.": "Löschen fehlgeschlagen."
+  "Delete failed.": "Löschen fehlgeschlagen.",
+  "Passport": "Reisepass",
+  "Driver’s license": "Führerschein",
+  "Global Entry": "Global Entry",
+  "Visa": "Visum",
+  "Delete document": "Dokument löschen"
  },
  "routes/profile/documents/[id]/edit/+page.server.ts": {
   "Too many attempts. Try again later.": "Zu viele Versuche. Bitte später erneut versuchen."
@@ -409,7 +540,8 @@
  "routes/profile/documents/[id]/edit/+page.svelte": {
   "Passport": "Reisepass",
   "Global Entry": "Global Entry",
-  "Visa": "Visum"
+  "Visa": "Visum",
+  "Driver's license": "Führerschein"
  },
  "routes/profile/documents/new/+page.server.ts": {
   "Too many attempts. Try again later.": "Zu viele Versuche. Bitte später erneut versuchen."
@@ -417,12 +549,14 @@
  "routes/profile/documents/new/+page.svelte": {
   "Passport": "Reisepass",
   "Global Entry": "Global Entry",
-  "Visa": "Visum"
+  "Visa": "Visum",
+  "Driver's license": "Führerschein"
  },
  "routes/profile/email_processing/+page.server.ts": {
   "Per-user IMAP is disabled by the administrator.": "Persönliches IMAP ist vom Administrator deaktiviert.",
   "Too many attempts. Try again later.": "Zu viele Versuche. Bitte später erneut versuchen.",
-  "Roamarr email test": "Roamarr E-Mail-Test"
+  "Roamarr email test": "Roamarr E-Mail-Test",
+  "Your notification email settings work.": "Deine E-Mail-Benachrichtigungseinstellungen funktionieren."
  },
  "routes/profile/loyalty/+page.svelte": {
   "Program": "Programm",
@@ -431,7 +565,8 @@
   "Notes": "Notizen",
   "Edit": "Bearbeiten",
   "Delete": "Löschen",
-  "Delete failed.": "Löschen fehlgeschlagen."
+  "Delete failed.": "Löschen fehlgeschlagen.",
+  "Delete program": "Programm löschen"
  },
  "routes/profile/loyalty/[id]/edit/+page.server.ts": {
   "Too many attempts. Try again later.": "Zu viele Versuche. Bitte später erneut versuchen."
@@ -448,7 +583,14 @@
   "When": "Wann",
   "Edit": "Bearbeiten",
   "Delete": "Löschen",
-  "Delete failed.": "Löschen fehlgeschlagen."
+  "Delete failed.": "Löschen fehlgeschlagen.",
+  "Flight check-in": "Flug-Check-in",
+  "Document expiry": "Dokumentablauf",
+  "Custom": "Benutzerdefiniert",
+  "Trip": "Reise",
+  "Segment": "Abschnitt",
+  "Document": "Dokument",
+  "Delete reminder": "Erinnerung löschen"
  },
  "routes/profile/reminders/[id]/edit/+page.server.ts": {
   "Too many attempts. Try again later.": "Zu viele Versuche. Bitte später erneut versuchen."
@@ -497,10 +639,17 @@
   "Too many attempts. Try again later.": "Zu viele Versuche. Bitte versuche es später erneut.",
   "All fields required; password ≥ 8 chars.": "Alle Felder sind erforderlich; Passwort ≥ 8 Zeichen.",
   "Passwords do not match.": "Die Passwörter stimmen nicht überein.",
-  "Setup is already complete.": "Die Einrichtung ist bereits abgeschlossen."
+  "Setup is already complete.": "Die Einrichtung ist bereits abgeschlossen.",
+  "ROAMARR_SECRET or the database is not ready. Fix the issue shown on the setup page before creating the admin account.": "ROAMARR_SECRET oder die Datenbank ist noch nicht bereit. Behebe das auf der Setup-Seite angezeigte Problem, bevor du das Administratorkonto erstellst."
  },
  "routes/trips/+page.server.ts": {
   "No trips selected": "Keine Reisen ausgewählt"
+ },
+ "routes/trips/+page.svelte": {
+  "Planning": "Planung",
+  "Booked": "Gebucht",
+  "Active": "Aktiv",
+  "Completed": "Abgeschlossen"
  },
  "routes/trips/[id]/+page.svelte": {
   "Details": "Details",
@@ -523,7 +672,15 @@
   "Booking ref": "Buchungsnummer",
   "Meeting point": "Treffpunkt",
   "Payment": "Zahlung",
-  "Payment card": "Zahlungskarte"
+  "Payment card": "Zahlungskarte",
+  "Location not set": "Kein Standort festgelegt",
+  "Unscheduled": "Nicht geplant"
+ },
+ "routes/trips/[id]/edit/+page.svelte": {
+  "Planning": "Planung",
+  "Booked": "Gebucht",
+  "Active": "Aktiv",
+  "Completed": "Abgeschlossen"
  },
  "routes/trips/[id]/fare-watch/+page.server.ts": {
   "Too many attempts. Try again later.": "Zu viele Versuche. Bitte später erneut versuchen."
@@ -555,7 +712,8 @@
   "Joined": "Beigetreten",
   "Edit": "Bearbeiten",
   "Delete": "Löschen",
-  "Delete failed.": "Löschen fehlgeschlagen."
+  "Delete failed.": "Löschen fehlgeschlagen.",
+  "Delete user": "Benutzer löschen"
  },
  "routes/users/[id]/edit/+page.server.ts": {
   "Invalid role.": "Ungültige Rolle.",

@@ -75,11 +75,48 @@ jobs:
             patched.json
             untranslated.json
 
+  # every string replaced with a «marker»: shows which upstream tests assert English wording.
+  # Informational only; it never blocks.
+  full-coverage:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check out upstream at the pinned ref
+        run: |
+          git clone --filter=blob:none https://github.com/visorcraft/Roamarr.git upstream
+          git -C upstream checkout --detach "$(cat UPSTREAM_REF)"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: upstream/package-lock.json
+      - name: Install kit deps
+        run: npm ci --no-audit --no-fund
+      - name: Apply a marker table covering every extracted string
+        run: |
+          node -e 'const s=require("./strings.en.json");const t={};for(const x of s)t[x.en]="«"+x.en+"»";require("fs").writeFileSync("/tmp/marker.json",JSON.stringify(t))'
+          node scripts/apply.mjs upstream/src /tmp/marker.json
+      - name: Install upstream deps
+        working-directory: upstream
+        run: npm ci --no-audit --no-fund
+      - name: Build
+        working-directory: upstream
+        run: npm run build
+      - name: Test (marker)
+        working-directory: upstream
+        run: npx vitest run --reporter=json --outputFile=../marker.json || true
+      - uses: actions/upload-artifact@v4
+        with:
+          name: marker
+          path: marker.json
+
   compare:
-    needs: [baseline, patched]
+    needs: [baseline, patched, full-coverage]
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: actions/download-artifact@v4
+      - name: Tests that assert English wording (informational)
+        run: node scripts/compare-tests.mjs baseline/baseline.json marker/marker.json || true
       - name: Fail on tests that fail only after patching
         run: node scripts/compare-tests.mjs baseline/baseline.json patched/patched.json

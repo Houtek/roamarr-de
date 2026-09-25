@@ -1,0 +1,122 @@
+diff --git a/src/lib/components/ProfileTabs.svelte b/src/lib/components/ProfileTabs.svelte
+index 8c99326..aac7383 100644
+--- a/src/lib/components/ProfileTabs.svelte
++++ b/src/lib/components/ProfileTabs.svelte
+@@ -1,5 +1,6 @@
+ <script lang="ts">
+ 	import { page } from '$app/state';
++	import { navLabel } from '$lib/navDe';
+ 
+ 	const tabs = [
+ 		{ href: '/profile', label: 'Profile' },
+@@ -18,6 +19,6 @@
+ 
+ <div class="tab-list visited-tab-list mt-6">
+ 	{#each tabs as t (t.href)}
+-		<a href={t.href} class="tab-link {isActive(t.href) ? 'tab-link-active' : ''}">{t.label}</a>
++		<a href={t.href} class="tab-link {isActive(t.href) ? 'tab-link-active' : ''}">{navLabel(t.label)}</a>
+ 	{/each}
+ </div>
+diff --git a/src/lib/navDe.ts b/src/lib/navDe.ts
+new file mode 100644
+index 0000000..412f378
+--- /dev/null
++++ b/src/lib/navDe.ts
+@@ -0,0 +1,50 @@
++// roamarr-de: German DISPLAY names for navigation labels.
++// The English labels stay the data keys (expand state, {#each} keys, `section.label === 'Plan'`),
++// so only the rendering looks names up here. Unknown labels fall back to English.
++const NAV_DE: Record<string, string> = {
++	// sections
++	Plan: 'Planen',
++	Me: 'Persönlich',
++	Organizer: 'Organisieren',
++	Admin: 'Administration',
++	// items
++	Dashboard: 'Übersicht',
++	Trips: 'Reisen',
++	Places: 'Orte',
++	Notifications: 'Benachrichtigungen',
++	Profile: 'Profil',
++	Account: 'Konto',
++	'Emergency Contacts': 'Notfallkontakte',
++	'Email Settings': 'E-Mail-Einstellungen',
++	'MCP Clients': 'MCP-Clients',
++	'API Keys': 'API-Schlüssel',
++	Security: 'Sicherheit',
++	Documents: 'Dokumente',
++	Reminders: 'Erinnerungen',
++	Loyalty: 'Bonusprogramme',
++	Visited: 'Besucht',
++	Countries: 'Länder',
++	'U.S. States': 'US-Bundesstaaten',
++	Cards: 'Zahlungskarten',
++	Insurance: 'Versicherungen',
++	Groups: 'Gruppen',
++	Configuration: 'Konfiguration',
++	General: 'Allgemein',
++	Maps: 'Karten',
++	Email: 'E-Mail',
++	Webhooks: 'Webhooks',
++	Users: 'Benutzer',
++	'Fare providers': 'Preisanbieter',
++	Maintenance: 'Wartung',
++	'Database Maintenance': 'Datenbankwartung',
++	'Job History': 'Jobverlauf',
++	'Audit Logs': 'Audit-Logs',
++	'Backup & Restore': 'Backup & Wiederherstellen',
++	'Seed Demo Data': 'Demodaten einspielen',
++	// profile tabs
++	Sessions: 'Sitzungen',
++	Calendar: 'Kalender',
++	Theme: 'Design'
++};
++
++export const navLabel = (label: string): string => NAV_DE[label] ?? label;
+diff --git a/src/routes/+layout.svelte b/src/routes/+layout.svelte
+index c6b39bf..a28b601 100644
+--- a/src/routes/+layout.svelte
++++ b/src/routes/+layout.svelte
+@@ -1,5 +1,6 @@
+ <script lang="ts">
+ 	import '../app.css';
++	import { navLabel } from '$lib/navDe';
+ 	import { onMount, onDestroy, untrack } from 'svelte';
+ 	import { browser } from '$app/environment';
+ 	import { page } from '$app/state';
+@@ -512,7 +513,7 @@
+ 							class="app-nav-section-header flex w-full cursor-pointer items-center gap-2 rounded-lg px-3 py-2 text-left text-xs font-semibold uppercase tracking-wide"
+ 							onclick={() => toggleSection(section.label)}
+ 						>
+-							<span class="flex-1">{section.label}</span>
++							<span class="flex-1">{navLabel(section.label)}</span>
+ 							{#if section.label === 'Plan' && data.unreadCount > 0 && !sectionExpanded}
+ 								<span class="app-unread-count grid h-5 min-w-[1.25rem] place-items-center rounded-full px-1.5 text-xs font-bold">{data.unreadCount}</span>
+ 							{/if}
+@@ -540,7 +541,7 @@
+ 											name={item.icon}
+ 											class="h-5 w-5 {active ? 'app-nav-icon-active' : ''}"
+ 										/>
+-										<span class="flex-1">{item.label}</span>
++										<span class="flex-1">{navLabel(item.label)}</span>
+ 										<Icon
+ 											name="chevron-down"
+ 											class="app-nav-chevron h-4 w-4 transition-transform {itemExpanded ? 'rotate-180' : ''}"
+@@ -559,7 +560,7 @@
+ 														? 'app-nav-item-active'
+ 														: 'app-nav-item'}"
+ 													>
+-														{child.label}
++														{navLabel(child.label)}
+ 													</a>
+ 
+ 											{/each}
+@@ -578,7 +579,7 @@
+ 											name={item.icon}
+ 											class="h-5 w-5 {active ? 'app-nav-icon-active' : ''}"
+ 										/>
+-										<span class="flex-1">{item.label}</span>
++										<span class="flex-1">{navLabel(item.label)}</span>
+ 										{#if item.href === '/notifications' && data.unreadCount > 0}
+ 											<span class="app-unread-count grid h-5 min-w-[1.25rem] place-items-center rounded-full px-1.5 text-xs font-bold">{data.unreadCount}</span>
+ 										{/if}

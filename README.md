@@ -11,12 +11,18 @@ A German UI for [Roamarr](https://github.com/visorcraft/Roamarr), applied at bui
 - `scripts/apply.mjs` replaces those strings in place, using the compiler's exact source offsets, so code, CSS classes and expressions cannot be touched. It then re-parses every patched file and exits 1 if the syntax tree differs from the original in anything but text. A translation containing `{`, `<` or similar markup therefore fails the build instead of changing behaviour.
 - Strings missing from `de.json` stay English. After an upstream bump, changed strings fall back to English and are listed in `untranslated.json`, and keys no longer found in the source are reported as stale.
 
+## Code patches
+
+Some text can't be translated by the table because it lives in script code or is also used as data. These get small, explicit patches in `patches/`, applied with `git apply` to the **pristine** upstream tree before the table runs. If upstream moves the patched lines, `git apply` fails and the build stops, instead of patching the wrong place.
+
+- `0001-nav-labels.patch`: the sidebar and profile tabs. Navigation labels are also the data keys (expand state, `{#each}` keys, `section.label === 'Plan'`), so the data stays English and only the five render sites look up a German display name in `src/lib/navDe.ts`. `scripts/check-nav.mjs` fails the build if upstream adds a label without a German name.
+
 ## Usage
 
 ```bash
 npm ci
-node scripts/extract.mjs <roamarr>/src > strings.en.json
-I18N_REPORT=untranslated.json node scripts/apply.mjs <roamarr>/src de.json
+node scripts/extract.mjs <roamarr>/src > strings.en.json   # on a pristine tree
+I18N_REPORT=untranslated.json scripts/build-de.sh <roamarr>  # patches, nav check, table
 ```
 
 `UPSTREAM_REF` holds the upstream commit the table is maintained against.

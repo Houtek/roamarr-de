@@ -14,6 +14,15 @@ edits = {
     'routes/trips/[id]/+page.svelte': [('<input name="currency" class="input text-sm" value="USD" placeholder="USD" required />', '<input name="currency" class="input text-sm" value={defaultCurrency(__page.data)} placeholder="USD" required />')],
     'routes/trips/[id]/edit/+page.svelte': [("value={data.trip.baseCurrency ?? 'USD'}", "value={data.trip.baseCurrency ?? defaultCurrency(__page.data)}")],
 }
+# The root layout passes only { id, email, displayName, role } to pages; add the currency code so
+# defaultCurrency(page.data) can see it (without this it always fell back to USD).
+lp = 'routes/+layout.server.ts'
+lt = open(lp, encoding='utf-8').read()
+la = "? { id: locals.user.id, email: locals.user.email, displayName: locals.user.displayName, role: locals.user.role }"
+lb = "? { id: locals.user.id, email: locals.user.email, displayName: locals.user.displayName, role: locals.user.role, defaultCurrency: locals.user.defaultCurrency }"
+assert lt.count(la) == 1, 'layout user mapping not found'
+open(lp, 'w', encoding='utf-8').write(lt.replace(la, lb))
+
 for p, reps in edits.items():
     t = open(p, encoding='utf-8').read()
     assert t.startswith('<script lang="ts">\n'), p

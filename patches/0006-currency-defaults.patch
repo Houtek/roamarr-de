@@ -10,6 +10,19 @@ index 0000000..f902409
 +	const user = pageData?.user as { defaultCurrency?: string | null } | null | undefined;
 +	return user?.defaultCurrency || 'USD';
 +}
+diff --git a/src/routes/+layout.server.ts b/src/routes/+layout.server.ts
+index 4b0548d..4fd9c30 100644
+--- a/src/routes/+layout.server.ts
++++ b/src/routes/+layout.server.ts
+@@ -29,7 +29,7 @@ export const load: LayoutServerLoad = ({ locals }) => {
+ 	const theme = themeForId(locals.user?.themeId);
+ 	return {
+ 		user: locals.user
+-			? { id: locals.user.id, email: locals.user.email, displayName: locals.user.displayName, role: locals.user.role }
++			? { id: locals.user.id, email: locals.user.email, displayName: locals.user.displayName, role: locals.user.role, defaultCurrency: locals.user.defaultCurrency }
+ 			: null,
+ 		appName: appInfo.name,
+ 		appVersion: appInfo.version,
 diff --git a/src/routes/cards/[id]/edit/+page.svelte b/src/routes/cards/[id]/edit/+page.svelte
 index 61efeab..405b523 100644
 --- a/src/routes/cards/[id]/edit/+page.svelte

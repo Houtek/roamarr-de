@@ -1,0 +1,92 @@
+diff --git a/src/lib/defaultCurrency.ts b/src/lib/defaultCurrency.ts
+new file mode 100644
+index 0000000..f902409
+--- /dev/null
++++ b/src/lib/defaultCurrency.ts
+@@ -0,0 +1,6 @@
++// roamarr-de: prefill currency inputs with the signed-in user's default currency instead of a
++// hardcoded 'USD'. The root layout puts the user (incl. defaultCurrency) into every page's data.
++export function defaultCurrency(pageData: Record<string, unknown> | undefined | null): string {
++	const user = pageData?.user as { defaultCurrency?: string | null } | null | undefined;
++	return user?.defaultCurrency || 'USD';
++}
+diff --git a/src/routes/cards/[id]/edit/+page.svelte b/src/routes/cards/[id]/edit/+page.svelte
+index 61efeab..405b523 100644
+--- a/src/routes/cards/[id]/edit/+page.svelte
++++ b/src/routes/cards/[id]/edit/+page.svelte
+@@ -1,4 +1,6 @@
+ <script lang="ts">
++	import { page as __page } from '$app/state';
++	import { defaultCurrency } from '$lib/defaultCurrency';
+ 	import { goto } from '$app/navigation';
+ 	import { enhance } from '$app/forms';
+ 	import TextField from '$lib/components/TextField.svelte';
+@@ -261,7 +263,7 @@
+ 		<TextField
+ 			name="currency"
+ 			label="Currency"
+-			value={(addBenefitValues?.currency as string | undefined) ?? 'USD'}
++			value={(addBenefitValues?.currency as string | undefined) ?? defaultCurrency(__page.data)}
+ 			placeholder="USD"
+ 			disabled={benefitSubmitting || !!selectedTemplate}
+ 			errors={form?.errors ?? {}}
+diff --git a/src/routes/insurance/new/+page.svelte b/src/routes/insurance/new/+page.svelte
+index a82e056..74d864c 100644
+--- a/src/routes/insurance/new/+page.svelte
++++ b/src/routes/insurance/new/+page.svelte
+@@ -1,4 +1,6 @@
+ <script lang="ts">
++	import { page as __page } from '$app/state';
++	import { defaultCurrency } from '$lib/defaultCurrency';
+ 	import { goto } from '$app/navigation';
+ 	import { enhance } from '$app/forms';
+ 	import TextField from '$lib/components/TextField.svelte';
+@@ -79,7 +81,7 @@
+ 			<TextField
+ 				name="currency"
+ 				label="Currency"
+-				value={form?.values?.currency ?? 'USD'}
++				value={form?.values?.currency ?? defaultCurrency(__page.data)}
+ 				placeholder="USD"
+ 				disabled={submitting}
+ 				errors={form?.errors ?? {}}
+diff --git a/src/routes/trips/[id]/+page.svelte b/src/routes/trips/[id]/+page.svelte
+index 77256be..211c391 100644
+--- a/src/routes/trips/[id]/+page.svelte
++++ b/src/routes/trips/[id]/+page.svelte
+@@ -1,4 +1,6 @@
+ <script lang="ts">
++	import { page as __page } from '$app/state';
++	import { defaultCurrency } from '$lib/defaultCurrency';
+ 	import './trip-detail-modern.css';
+ 	import './trip-detail-modern-fixes.css';
+ 	import { applyAction, enhance } from '$app/forms';
+@@ -1040,7 +1042,7 @@
+ 					<form method="POST" action="?/addExpense" class="trip-modern-form-grid mt-5 sm:grid-cols-2">
+ 						<input name="description" class="input text-sm" placeholder="Description" required />
+ 						<input name="amount" type="number" min="0.01" step="0.01" inputmode="decimal" class="input text-sm" placeholder="Amount" required />
+-						<input name="currency" class="input text-sm" value="USD" placeholder="USD" required />
++						<input name="currency" class="input text-sm" value={defaultCurrency(__page.data)} placeholder="USD" required />
+ 						<select name="category" class="input text-sm"><option value="lodging">Lodging</option><option value="transport">Transport</option><option value="food">Food</option><option value="activities">Activities</option><option value="other" selected>Other</option></select>
+ 						<button class="btn btn-primary btn-sm sm:col-span-2">Add expense</button>
+ 					</form>
+diff --git a/src/routes/trips/[id]/edit/+page.svelte b/src/routes/trips/[id]/edit/+page.svelte
+index b7beb09..593b638 100644
+--- a/src/routes/trips/[id]/edit/+page.svelte
++++ b/src/routes/trips/[id]/edit/+page.svelte
+@@ -1,4 +1,6 @@
+ <script lang="ts">
++	import { page as __page } from '$app/state';
++	import { defaultCurrency } from '$lib/defaultCurrency';
+ 	import { goto } from '$app/navigation';
+ 	import { enhance } from '$app/forms';
+ 	import CancelButton from '$lib/components/CancelButton.svelte';
+@@ -110,7 +112,7 @@
+ 		</div>
+ 		<TextAreaField name="notes" label="Notes" rows={4} placeholder="Anything worth remembering…" value={data.trip.notes ?? ''} disabled={submitting} class="sm:col-span-2" errors={form?.errors ?? {}} />
+ 		<TextField name="tags" label="Tags" value={tagString(data.trip.tags)} placeholder="work, summer, family" disabled={submitting} class="sm:col-span-2" errors={form?.errors ?? {}} />
+-		<TextField name="baseCurrency" label="Base currency" value={data.trip.baseCurrency ?? 'USD'} placeholder="USD" maxlength="3" disabled={submitting} errors={form?.errors ?? {}} />
++		<TextField name="baseCurrency" label="Base currency" value={data.trip.baseCurrency ?? defaultCurrency(__page.data)} placeholder="USD" maxlength="3" disabled={submitting} errors={form?.errors ?? {}} />
+ 		<div class="flex flex-wrap justify-end gap-2 sm:col-span-2">
+ 			<CancelButton dirty={isDirty} onConfirm={() => goto(`/trips/${data.trip.id}`)}>Cancel</CancelButton>
+ 			<button class="btn btn-primary" disabled={submitting} class:btn-loading={submitting}>Save changes</button>

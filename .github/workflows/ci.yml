@@ -54,8 +54,8 @@ jobs:
         run: |
           node scripts/extract.mjs upstream/src > /tmp/strings.en.json
           diff -q strings.en.json /tmp/strings.en.json || { echo "::error::strings.en.json is stale; regenerate with npm run extract"; exit 1; }
-      - name: Apply de.json (aborts on any structural change)
-        run: I18N_REPORT=untranslated.json node scripts/apply.mjs upstream/src de.json
+      - name: Code patches + nav check + de.json (aborts on any structural change)
+        run: I18N_REPORT=untranslated.json scripts/build-de.sh upstream
       - name: Install upstream deps
         working-directory: upstream
         run: npm ci --no-audit --no-fund
@@ -95,6 +95,7 @@ jobs:
         run: npm ci --no-audit --no-fund
       - name: Apply a marker table covering every extracted string
         run: |
+          for p in patches/*.patch; do git -C upstream apply "$p"; done
           node -e 'const s=require("./strings.en.json");const t={};const scr=w=>w.replace(/(&[a-z]+;)|[A-Za-z]/g,(m,e)=>e?e:"q");for(const x of s)t[x.en]="«"+scr(x.en)+"»";require("fs").writeFileSync("/tmp/marker.json",JSON.stringify(t))'
           node scripts/apply.mjs upstream/src /tmp/marker.json
       - name: Install upstream deps

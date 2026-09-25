@@ -75,7 +75,8 @@ jobs:
             patched.json
             untranslated.json
 
-  # every string replaced with a «marker»: shows which upstream tests assert English wording.
+  # every string replaced with a letter-scrambled «marker» (entities kept), so no English substring
+  # survives: shows which upstream tests assert English wording.
   # Informational only; it never blocks.
   full-coverage:
     runs-on: ubuntu-24.04
@@ -94,7 +95,7 @@ jobs:
         run: npm ci --no-audit --no-fund
       - name: Apply a marker table covering every extracted string
         run: |
-          node -e 'const s=require("./strings.en.json");const t={};for(const x of s)t[x.en]="«"+x.en+"»";require("fs").writeFileSync("/tmp/marker.json",JSON.stringify(t))'
+          node -e 'const s=require("./strings.en.json");const t={};const scr=w=>w.replace(/(&[a-z]+;)|[A-Za-z]/g,(m,e)=>e?e:"q");for(const x of s)t[x.en]="«"+scr(x.en)+"»";require("fs").writeFileSync("/tmp/marker.json",JSON.stringify(t))'
           node scripts/apply.mjs upstream/src /tmp/marker.json
       - name: Install upstream deps
         working-directory: upstream

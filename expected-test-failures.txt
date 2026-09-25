@@ -119,3 +119,9 @@ src/routes/groups/new/groups-new.test.ts > create action rejects empty or whites
 src/routes/groups/new/groups-new.test.ts > create action rejects names over 200 characters and preserves values
 src/routes/profile/visited/visited.test.ts > toggleAutoMark action flips the user setting
 src/routes/trips/[id]/calendar/calendar.test.ts > owner receives a text/calendar download
+
+# Patch 0009 (German dates): same date/time values rendered in German locale ("Juli 8, 2024", "08.07.24, 12:34:00") vs English expectations.
+src/lib/dateFormat.test.ts > formatDate falls back to Intl dateStyle when requested
+src/lib/dateFormat.test.ts > formatDate respects explicit format override
+src/lib/dateFormat.test.ts > formatDateTime falls back to Intl styles when requested
+src/lib/dateFormat.test.ts > formatDateTime respects explicit format override

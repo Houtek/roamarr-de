@@ -36,12 +36,6 @@
   "Delete": "Löschen",
   "Delete file": "Datei löschen"
  },
- "lib/dateFormat.ts": {
-  "Jul 29, 2026": "29. Jul. 2026",
-  "Tuesday, July 29, 2026": "Dienstag, 29. Juli 2026",
-  "Jul 29, 2026 12:34 PM": "29. Jul. 2026 12:34 PM",
-  "Jul 29, 2026 12:34": "29. Jul. 2026 12:34"
- },
  "lib/segmentDetailsDisplay.ts": {
   "Booking site": "Buchungsseite",
   "Booking reference": "Buchungsreferenz",

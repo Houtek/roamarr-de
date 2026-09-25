@@ -88,3 +88,34 @@ src/lib/components/GridTable.test.ts > GridTable passes the selected page size t
 
 # Patch 0005 (plurals): asserts the English flash "Optimized 3 stops"; the order-persistence assertions before it pass.
 src/routes/trips/[id]/trip-detail.test.ts > optimizeTripDay action persists the optimized order and redirects
+
+# Round 2 + value-position strings (8b5a4d8, 12aa96e): each failure read from its CI message; all German-vs-English
+# text (weather, iCal SUMMARY labels (escaping unchanged: the label goes through escapeText), form errors, flash).
+# Not listed: GridTable gridjs config, a REAL bug (Showing translated), fixed + now in protected-literals.json.
+src/lib/components/segments/SegmentEditForm.test.ts > SegmentEditForm uses flight departure and arrival labels
+src/lib/components/segments/SegmentEditForm.test.ts > SegmentEditForm uses transportation pick-up and drop-off labels
+src/lib/segmentDetailsDisplay.test.ts > formatDetailValue presents booleans and primitives cleanly
+src/lib/segmentDetailsDisplay.test.ts > segmentNotesRows flattens bookingInfo into labeled fields
+src/lib/segmentDetailsDisplay.test.ts > segmentNotesRows skips empty nested booking fields
+src/lib/server/cities.test.ts > city selection validation follows map availability
+src/lib/server/fareproviders/fareproviders.test.ts > testProvider returns the stub result for an owned account
+src/lib/server/ical.test.ts > buildAggregateCalendar combines multiple trips and their segments
+src/lib/server/ical.test.ts > escapes special iCal characters in text values
+src/lib/server/ical.test.ts > renders all segment types
+src/lib/server/ical.test.ts > renders segment events with UTC datetimes
+src/lib/server/reminders.test.ts > delivered notification copy is generic and links to documents for expiry
+src/lib/server/tripJournal.test.ts > addJournalEntry action returns fail for invalid input
+src/lib/server/validation.test.ts > formFail returns fail payload
+src/lib/server/weather.test.ts > weather getCachedClimate fetches once and serves from cache after
+src/lib/server/weather.test.ts > weather getCachedForecast falls back to stale cache when fetch fails
+src/lib/server/weather.test.ts > weather getCachedForecast fetches on first call, uses cache after
+src/lib/server/weather.test.ts > weather tripWeatherOverview labels days beyond the forecast horizon as typical
+src/lib/server/weather.test.ts > weather tripWeatherOverview returns empty forecast for past trips
+src/lib/server/weather.test.ts > weather weatherCodeSummary maps known codes
+src/routes/api/fare-providers/[id]/test/server.test.ts > test returns the stub result for an owned provider
+src/routes/groups/[id]/edit/groups-edit.test.ts > update action rejects empty name and preserves values
+src/routes/groups/[id]/edit/groups-edit.test.ts > update action rejects names over 200 characters and preserves values
+src/routes/groups/new/groups-new.test.ts > create action rejects empty or whitespace-only names and preserves values
+src/routes/groups/new/groups-new.test.ts > create action rejects names over 200 characters and preserves values
+src/routes/profile/visited/visited.test.ts > toggleAutoMark action flips the user setting
+src/routes/trips/[id]/calendar/calendar.test.ts > owner receives a text/calendar download

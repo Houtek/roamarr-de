@@ -14,8 +14,7 @@
   "Outbound Emails": "Ausgehende E-Mails"
  },
  "lib/components/GridTable.svelte": {
-  "Actions": "Aktionen",
-  "Showing": "Zeige"
+  "Actions": "Aktionen"
  },
  "lib/components/ProfileTabs.svelte": {
   "Profile": "Profil",

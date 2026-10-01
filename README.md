@@ -54,6 +54,8 @@ I18N_REPORT=untranslated.json scripts/build-de.sh <roamarr>  # patches, nav chec
 
 Every push runs the upstream test suite twice, unpatched (baseline) and patched, plus build and `svelte-check` on the patched tree. `scripts/compare-tests.mjs` fails the run only for tests that fail *after* patching but not before, so pre-existing or environment-dependent failures don't mask real regressions.
 
+A third run applies a marker table (every extracted string replaced by a scrambled `«…»` placeholder) and reports, informationally, which upstream tests assert English wording. The workflow is `.github/workflows/ci.yml`.
+
 ## Translation style
 
 - Informal "du", modern German software style. Buttons use the infinitive ("Speichern").

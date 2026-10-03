@@ -15,6 +15,8 @@ const failing = (path) => {
 };
 
 const [bPath, pPath, expectedPath] = process.argv.slice(2);
+// what the second run changed, for the messages (dep-bumps.yml sets it)
+const what = process.env.COMPARE_LABEL || 'the translation';
 const b = failing(bPath), p = failing(pPath);
 // tests that assert English wording and are EXPECTED to fail once translated; one per line, # comments
 const expected = new Set(
@@ -32,7 +34,7 @@ console.log(`baseline: ${b.out.size} failing of ${b.total}`);
 console.log(`patched:  ${p.out.size} failing of ${p.total}`);
 if (fixed.length) console.log(`\nfailing only in baseline (flaky/env): \n  ${fixed.join('\n  ')}`);
 if (introduced.length) {
-	console.log(`\nINTRODUCED by the translation (${introduced.length}):\n  ${introduced.join('\n  ')}`);
+	console.log(`\nINTRODUCED by ${what} (${introduced.length}):\n  ${introduced.join('\n  ')}`);
 	process.exit(1);
 }
-console.log('\nno test failures introduced by the translation');
+console.log(`\nno test failures introduced by ${what}`);

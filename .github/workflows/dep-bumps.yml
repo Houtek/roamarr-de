@@ -1,0 +1,117 @@
+name: dep-bumps
+
+# Does a set of dependency bumps on top of upstream's lockfile break upstream's own tests?
+# Runs the UNPATCHED upstream suite twice in parallel, as-is and with the bumps applied,
+# and fails on any test that fails only with the bumps. The German kit is not applied,
+# so the result isolates the effect of the bumps themselves.
+#
+# Run: Actions -> dep-bumps -> Run workflow, or
+#   gh workflow run dep-bumps.yml -R Houtek/roamarr-de \
+#     -f bumps="dependencies.maplibre-gl=6.4.1 overrides.fast-uri=3.1.8"
+# Each bump is an `npm pkg set` argument: dependencies.<pkg>=<ver> for a direct
+# dependency, overrides.<pkg>=<ver> for a transitive one.
+
+on:
+  workflow_dispatch:
+    inputs:
+      bumps:
+        description: 'Space-separated npm pkg set args, e.g. "dependencies.maplibre-gl=6.4.1 overrides.fast-uri=3.1.8"'
+        required: true
+        type: string
+      upstream_ref:
+        description: 'Upstream commit to test (default: UPSTREAM_REF)'
+        required: false
+        type: string
+
+permissions:
+  contents: read
+
+env:
+  BUMPS: ${{ inputs.bumps }}
+  REF_INPUT: ${{ inputs.upstream_ref }}
+
+jobs:
+  baseline:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - name: Check out upstream
+        run: |
+          ref="${REF_INPUT:-$(cat UPSTREAM_REF)}"
+          [[ "$ref" =~ ^[0-9a-f]{7,40}$ ]] || { echo "::error::upstream_ref must be a commit SHA"; exit 1; }
+          git clone --filter=blob:none https://github.com/visorcraft/Roamarr.git upstream
+          git -C upstream checkout --detach "$ref"
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: upstream/package-lock.json
+      - name: Install upstream deps
+        working-directory: upstream
+        run: npm ci --no-audit --no-fund
+      - name: Test (baseline)
+        working-directory: upstream
+        # --retry on both sides so a one-off timeout doesn't read as a regression
+        run: npx vitest run --retry=2 --reporter=json --outputFile=../baseline.json || true
+      - uses: actions/upload-artifact@v7
+        with:
+          name: baseline
+          path: baseline.json
+
+  bumped:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - name: Check out upstream
+        run: |
+          ref="${REF_INPUT:-$(cat UPSTREAM_REF)}"
+          [[ "$ref" =~ ^[0-9a-f]{7,40}$ ]] || { echo "::error::upstream_ref must be a commit SHA"; exit 1; }
+          git clone --filter=blob:none https://github.com/visorcraft/Roamarr.git upstream
+          git -C upstream checkout --detach "$ref"
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: upstream/package-lock.json
+      - name: Apply the bumps
+        working-directory: upstream
+        run: |
+          # inputs reach the shell only via env and are validated token by token
+          read -ra args <<< "$BUMPS"
+          [ "${#args[@]}" -gt 0 ] || { echo "::error::no bumps given"; exit 1; }
+          for a in "${args[@]}"; do
+            [[ "$a" =~ ^(dependencies|overrides)\.(@[a-z0-9._-]+/)?[a-z0-9._-]+=[0-9A-Za-z.^~+-]+$ ]] \
+              || { echo "::error::invalid bump: $a"; exit 1; }
+          done
+          npm pkg set "${args[@]}"
+          npm install --no-audit --no-fund
+      - name: Resolved versions
+        working-directory: upstream
+        run: |
+          read -ra args <<< "$BUMPS"
+          pkgs=(); for a in "${args[@]}"; do p="${a#*.}"; pkgs+=("${p%%=*}"); done
+          npm ls --all "${pkgs[@]}" | tee -a "$GITHUB_STEP_SUMMARY" || true
+      - name: Build
+        working-directory: upstream
+        run: npm run build
+      - name: svelte-check
+        working-directory: upstream
+        run: npm run check
+      - name: Test (bumped)
+        working-directory: upstream
+        run: npx vitest run --retry=2 --reporter=json --outputFile=../bumped.json || true
+      - uses: actions/upload-artifact@v7
+        with:
+          name: bumped
+          path: bumped.json
+
+  compare:
+    needs: [baseline, bumped]
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/download-artifact@v8
+      - name: Fail on tests that fail only with the bumps
+        env:
+          COMPARE_LABEL: the bumps
+        run: node scripts/compare-tests.mjs baseline/baseline.json bumped/bumped.json | tee -a "$GITHUB_STEP_SUMMARY"; exit "${PIPESTATUS[0]}"

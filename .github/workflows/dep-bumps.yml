@@ -114,4 +114,5 @@ jobs:
       - name: Fail on tests that fail only with the bumps
         env:
           COMPARE_LABEL: the bumps
+          COMPARE_RUN: bumped
         run: node scripts/compare-tests.mjs baseline/baseline.json bumped/bumped.json | tee -a "$GITHUB_STEP_SUMMARY"; exit "${PIPESTATUS[0]}"

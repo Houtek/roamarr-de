@@ -56,6 +56,8 @@ Every push runs the upstream test suite twice, unpatched (baseline) and patched,
 
 A third run applies a marker table (every extracted string replaced by a scrambled `«…»` placeholder) and reports, informationally, which upstream tests assert English wording. The workflow is `.github/workflows/ci.yml`.
 
+`.github/workflows/dep-bumps.yml` is run by hand to check dependency bumps (security fixes on top of upstream's lockfile) against upstream's own tests. Give it `npm pkg set` arguments, e.g. `gh workflow run dep-bumps.yml -f bumps="dependencies.maplibre-gl=6.4.1 overrides.fast-uri=3.1.8"`. It runs the unpatched suite as-is and with the bumps in parallel and fails on any test that fails only with the bumps. The kit is not applied, so the result isolates the bumps.
+
 ## Translation style
 
 - Informal "du", modern German software style. Buttons use the infinitive ("Speichern").

@@ -40,6 +40,10 @@ Literals that aren't object properties but still end up on screen: conditional b
 
 String literals in script code (`label: 'Notes'`, `fail(400, { error: '…' })`, default place categories) are translated by `scripts/apply-script.mjs`. Every entry was reviewed per file as **display-only**: shown to a human, and never compared, used as a key, persisted as identity or returned to a programmatic client. Kept English on purpose: MCP tool descriptions and errors (for AI clients), JSON API errors, brand names (map providers, themed theme names), and seed data inside database migrations. The applier only touches literals that are property values, re-parses each file and refuses to write anything if the structure changed or if any entry didn't match.
 
+## Template literals (`de.templates.json`)
+
+Template literals with interpolations (`` `Delete category ${c.name}?` ``) are translated by `scripts/templates.mjs` (72 reviewed entries). Keys replace each `${expr}` with `${0}`, `${1}`, … in source order; the German text must use every placeholder exactly once and may reorder them. Covers Svelte `<script>` blocks, markup expressions and `.ts` modules. Applied last by `build-de.sh`; like the other appliers it is atomic and re-parses each file. `node scripts/templates.mjs extract <src>` lists candidates.
+
 ## Usage
 
 ```bash
@@ -66,10 +70,8 @@ A third run applies a marker table (every extracted string replaced by a scrambl
 
 ## Known limits
 
-- **Plurals built in code**, e.g. `{n} segment{n === 1 ? '' : 's'}` (22 occurrences in 11 files). The English suffix sits in an expression, so a table entry alone yields wrong German ("Abschnitts"). These need small targeted source patches; their fragments (`segment`, `day`, `trip`, `item`, `row`, `place`, `duplicate`, `possible duplicate`, `unread alert`) stay English until then.
 - **Sentences split around values or tags** are translated per fragment. Where German word order needs the parts in a different order, the fragment translation is a compromise.
-- **Strings in script code** (navigation labels, server-side error messages, roughly 270) are not covered yet.
-- Dates and numbers follow the browser locale where upstream uses `toLocaleString`/`Intl`. The date format is an admin setting.
+- Dates are German via `0009-german-dates.patch`; which date *format* is used remains an admin setting.
 
 ## License
 

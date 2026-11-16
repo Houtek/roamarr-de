@@ -1,18 +1,15 @@
 diff --git a/src/routes/+layout.svelte b/src/routes/+layout.svelte
-index 82b5437..0506eed 100644
+index 82b5437..d63ae18 100644
 --- a/src/routes/+layout.svelte
 +++ b/src/routes/+layout.svelte
-@@ -388,6 +388,13 @@
- 	const isActive = (href: string) => routeIsActive(path, href);
- </script>
+@@ -457,6 +457,10 @@
  
-+<!-- roamarr-de: default tab title; pages that set their own <title> are excluded -->
-+<svelte:head>
+ <svelte:head>
+ 	<meta name="theme-color" content={data.themeColor} />
++	<!-- roamarr-de: default tab title; pages that set their own <title> are excluded -->
 +	{#if !['/login/verify', '/trips/[id]/print'].includes(page.route.id ?? '')}
 +		<title>{data.instanceName ?? 'Roamarr'}</title>
 +	{/if}
-+</svelte:head>
-+
- {#snippet brand(size: 'sm' | 'lg')}
- 	<a href="/" class="flex items-center gap-2.5">
- 		<span
+ </svelte:head>
+ 
+ <svelte:window onkeydown={handleGlobalKeydown} />

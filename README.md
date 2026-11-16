@@ -63,7 +63,7 @@ A third run applies a marker table (every extracted string replaced by a scrambl
 ## Translation style
 
 - Informal "du", modern German software style. Buttons use the infinitive ("Speichern").
-- Gender-neutral person nouns where a natural form exists: participle forms such as "Teilnehmende" (not "Teilnehmer").
+- Gender-inclusive person nouns (user decision 2026-11-16): gender star, with articles and adjectives to match ("Benutzer*in", "Benutzer*innen", "der*die Administrator*in", "eine*n aktive*n Roamarr-Benutzer*in", "Erwachsene*r"); "Teilnehmende" for attendees. Compounds stay unchanged ("Benutzername", "Administratorkonto", "Absenderadresse"; "Benutzerdefiniert" means "custom", not a person).
 - Glossary: Trip = Reise, Segment = Reiseabschnitt (short: Abschnitt), Stay = Unterkunft, Share = Freigabe/teilen, Notes = Notizen, Scopes (OAuth) = Berechtigungen.
 - HTML entities (`&nbsp;`, `&middot;` ...) and product names stay as they are.
 

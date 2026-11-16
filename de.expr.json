@@ -279,6 +279,6 @@
   "Could not disable 2FA.": "2FA konnte nicht deaktiviert werden."
  },
  "routes/users/new/+page.server.ts": {
-  "Could not create user.": "Benutzer konnte nicht erstellt werden."
+  "Could not create user.": "Benutzer*in konnte nicht erstellt werden."
  }
 }

@@ -7,7 +7,7 @@ value before it, e.g. `status === 'sent'`). Run inside src/ with 0001-0009 appli
 edits = {
     'routes/users/+page.svelte': [
         ('var(--theme-readable)">Admin</span>', 'var(--theme-readable)">Admin</span>'),  # unchanged on purpose: "Admin" is German UI usage too
-        ('var(--theme-readable-muted)">User</span>', 'var(--theme-readable-muted)">Benutzer</span>'),
+        ('var(--theme-readable-muted)">User</span>', 'var(--theme-readable-muted)">Benutzer*in</span>'),
         ('#b91c1c)">Disabled</span>', '#b91c1c)">Deaktiviert</span>'),
         ('var(--theme-readable)">Active</span>', 'var(--theme-readable)">Aktiv</span>'),
         ('#b45309)">Password reset required</span>', '#b45309)">Passwortänderung erforderlich</span>'),

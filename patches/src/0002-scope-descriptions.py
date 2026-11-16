@@ -67,8 +67,8 @@ DE = {
     'gallery:write': 'Galeriefotos sortieren, beschriften und löschen',
     'search:read': 'Dein gesamtes Konto durchsuchen',
     'private-details:read': 'Private Reisenotizen, Buchungsnummern und Reisedetails ansehen',
-    'admin:read': 'Benutzer, Audit-Ereignisse und Systemstatistiken ansehen (nur Admins)',
-    'admin:write': 'Benutzer anlegen, bearbeiten, löschen und zurücksetzen (nur Admins)',
+    'admin:read': 'Benutzer*innen, Audit-Ereignisse und Systemstatistiken ansehen (nur Admins)',
+    'admin:write': 'Benutzer*innen anlegen, bearbeiten, löschen und zurücksetzen (nur Admins)',
     'security:read': 'Deine Sicherheitseinstellungen, Sitzungen, Passkeys und OAuth-Clients ansehen',
     'security:write': 'Sicherheitseinstellungen ändern und Sitzungen oder Zugangsdaten widerrufen',
 }

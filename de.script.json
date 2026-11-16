@@ -62,7 +62,7 @@
   "Car type": "Fahrzeugtyp",
   "Mileage charges": "Kilometergebühren",
   "Car details": "Fahrzeugdetails",
-  "Drivers": "Fahrer",
+  "Drivers": "Fahrer*innen",
   "Departure airport": "Abflughafen",
   "Arrival airport": "Ankunftsflughafen",
   "Frequent flyer #": "Vielfliegernummer",
@@ -94,7 +94,7 @@
   "Completed": "Abgeschlossen"
  },
  "lib/server/cities.ts": {
-  "Please ask your Roamarr administrator to use “Re-import city database” under Configuration → Maps.": "Bitte deinen Roamarr-Administrator, unter Konfiguration → Karten „Städtedatenbank neu importieren“ zu verwenden."
+  "Please ask your Roamarr administrator to use “Re-import city database” under Configuration → Maps.": "Bitte deine*n Roamarr-Administrator*in, unter Konfiguration → Karten „Städtedatenbank neu importieren“ zu verwenden."
  },
  "lib/server/emailProcessing.ts": {
   "Roamarr could not add your travel email": "Roamarr konnte deine Reise-E-Mail nicht hinzufügen",
@@ -202,12 +202,12 @@
  },
  "lib/server/tripCompanions.ts": {
   "Please fix the highlighted fields.": "Bitte korrigiere die markierten Felder.",
-  "Choose an active Roamarr user.": "Wähle einen aktiven Roamarr-Benutzer aus.",
-  "Guides and drivers cannot be invited to a trip.": "Guides und Fahrer können nicht zu einer Reise eingeladen werden.",
+  "Choose an active Roamarr user.": "Wähle eine*n aktive*n Roamarr-Benutzer*in aus.",
+  "Guides and drivers cannot be invited to a trip.": "Guides und Fahrer*innen können nicht zu einer Reise eingeladen werden.",
   "Invalid permission": "Ungültige Berechtigung",
   "Enter a valid email address.": "Gib eine gültige E-Mail-Adresse ein.",
-  "That Roamarr user is disabled.": "Dieser Roamarr-Benutzer ist deaktiviert.",
-  "The email does not match the selected Roamarr user.": "Die E-Mail-Adresse stimmt nicht mit dem ausgewählten Roamarr-Benutzer überein.",
+  "That Roamarr user is disabled.": "Diese*r Roamarr-Benutzer*in ist deaktiviert.",
+  "The email does not match the selected Roamarr user.": "Die E-Mail-Adresse stimmt nicht mit dem*der ausgewählten Roamarr-Benutzer*in überein.",
   "Person added and access created, but SMTP is not configured or delivery failed.": "Person hinzugefügt und Zugriff angelegt, aber SMTP ist nicht konfiguriert oder der Versand ist fehlgeschlagen."
  },
  "lib/server/twoFactor.ts": {
@@ -216,7 +216,7 @@
  },
  "lib/server/users.ts": {
   "Reset your Roamarr password": "Setze dein Roamarr-Passwort zurück",
-  "An administrator requested a password reset. Click the link below to choose a new password. This link expires in 1 hour.": "Ein Administrator hat einen Passwort-Reset angefordert. Klicke auf den untenstehenden Link, um ein neues Passwort zu wählen. Dieser Link läuft in 1 Stunde ab."
+  "An administrator requested a password reset. Click the link below to choose a new password. This link expires in 1 hour.": "Ein*e Administrator*in hat einen Passwort-Reset angefordert. Klicke auf den untenstehenden Link, um ein neues Passwort zu wählen. Dieser Link läuft in 1 Stunde ab."
  },
  "lib/server/weather.ts": {
   "Typical": "Typisch",
@@ -299,7 +299,7 @@
   "Entity type": "Objekttyp",
   "From": "Von",
   "Time": "Zeit",
-  "User": "Benutzer",
+  "User": "Benutzer*in",
   "View": "Anzeigen",
   "To": "Bis"
  },
@@ -521,7 +521,7 @@
   "Type": "Typ",
   "Number": "Nummer",
   "Issuing authority": "Ausstellende Behörde",
-  "Owner": "Besitzer",
+  "Owner": "Besitzer*in",
   "Expires": "Läuft ab",
   "Edit": "Bearbeiten",
   "Delete": "Löschen",
@@ -555,7 +555,7 @@
   "National ID card": "Personalausweis"
  },
  "routes/profile/email_processing/+page.server.ts": {
-  "Per-user IMAP is disabled by the administrator.": "Persönliches IMAP ist vom Administrator deaktiviert.",
+  "Per-user IMAP is disabled by the administrator.": "Persönliches IMAP ist von dem*der Administrator*in deaktiviert.",
   "Too many attempts. Try again later.": "Zu viele Versuche. Bitte später erneut versuchen.",
   "Roamarr email test": "Roamarr E-Mail-Test",
   "Your notification email settings work.": "Deine E-Mail-Benachrichtigungseinstellungen funktionieren."
@@ -712,14 +712,14 @@
  },
  "routes/users/+page.svelte": {
   "From": "Von",
-  "User": "Benutzer",
+  "User": "Benutzer*in",
   "Role": "Rolle",
   "Status": "Status",
   "Joined": "Beigetreten",
   "Edit": "Bearbeiten",
   "Delete": "Löschen",
   "Delete failed.": "Löschen fehlgeschlagen.",
-  "Delete user": "Benutzer löschen",
+  "Delete user": "Benutzer*in löschen",
   "To": "Bis"
  },
  "routes/users/[id]/edit/+page.server.ts": {

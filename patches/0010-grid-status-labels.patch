@@ -30,10 +30,10 @@ index 6037b22..e0f8acb 100644
  		},
  		{
 diff --git a/src/routes/profile/documents/+page.svelte b/src/routes/profile/documents/+page.svelte
-index d964189..3f3f98d 100644
+index 4925685..b558674 100644
 --- a/src/routes/profile/documents/+page.svelte
 +++ b/src/routes/profile/documents/+page.svelte
-@@ -87,7 +87,7 @@
+@@ -88,7 +88,7 @@
  			formatter: (_cell: unknown, row: Record<string, unknown>) =>
  				row.companionName
  					? html(`<span style="color: var(--theme-readable-muted)">${escapeHtml(row.companionName)}</span>`)
@@ -73,7 +73,7 @@ index 58fbf9f..1b0d6bb 100644
  
  	const columns = [
 diff --git a/src/routes/users/+page.svelte b/src/routes/users/+page.svelte
-index 94cc54c..fe5a1e9 100644
+index 94cc54c..fc74f87 100644
 --- a/src/routes/users/+page.svelte
 +++ b/src/routes/users/+page.svelte
 @@ -34,7 +34,7 @@
@@ -81,7 +81,7 @@ index 94cc54c..fe5a1e9 100644
  				row.role === 'admin'
  					? html('<span style="color: var(--theme-readable)">Admin</span>')
 -					: html('<span style="color: var(--theme-readable-muted)">User</span>')
-+					: html('<span style="color: var(--theme-readable-muted)">Benutzer</span>')
++					: html('<span style="color: var(--theme-readable-muted)">Benutzer*in</span>')
  		},
  		{
  			id: 'status',

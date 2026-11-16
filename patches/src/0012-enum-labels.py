@@ -8,7 +8,7 @@ open('lib/enumDe.ts', 'w', encoding='utf-8').write("""// roamarr-de: German disp
 const MAPS = {
 \tvisibility: { private: 'Privat', groups: 'Gruppen', public: 'Öffentlich' },
 \tdocumentType: { passport: 'Reisepass', drivers_license: 'Führerschein', global_entry: 'Global Entry', visa: 'Visum', national_id: 'Personalausweis' },
-\tcompanion: { adult: 'Erwachsener', child: 'Kind', other: 'Sonstige', guide: 'Reiseführer', driver: 'Fahrer' },
+\tcompanion: { adult: 'Erwachsene*r', child: 'Kind', other: 'Sonstige', guide: 'Reiseführer*in', driver: 'Fahrer*in' },
 \texpense: { lodging: 'Unterkunft', transport: 'Transport', food: 'Essen', activities: 'Aktivitäten', other: 'Sonstiges' },
 \tattendee: { going: 'Dabei', maybe: 'Vielleicht', not_going: 'Nicht dabei' },
 \treminder: { pending: 'Ausstehend', sending: 'Wird gesendet', sent: 'Gesendet' },

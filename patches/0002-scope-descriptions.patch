@@ -1,5 +1,5 @@
 diff --git a/src/lib/oauthScopes.ts b/src/lib/oauthScopes.ts
-index 7934c74..5a1a82d 100644
+index 7934c74..91a8045 100644
 --- a/src/lib/oauthScopes.ts
 +++ b/src/lib/oauthScopes.ts
 @@ -3,75 +3,75 @@
@@ -144,8 +144,8 @@ index 7934c74..5a1a82d 100644
 +	'gallery:write': 'Galeriefotos sortieren, beschriften und löschen',
 +	'search:read': 'Dein gesamtes Konto durchsuchen',
 +	'private-details:read': 'Private Reisenotizen, Buchungsnummern und Reisedetails ansehen',
-+	'admin:read': 'Benutzer, Audit-Ereignisse und Systemstatistiken ansehen (nur Admins)',
-+	'admin:write': 'Benutzer anlegen, bearbeiten, löschen und zurücksetzen (nur Admins)',
++	'admin:read': 'Benutzer*innen, Audit-Ereignisse und Systemstatistiken ansehen (nur Admins)',
++	'admin:write': 'Benutzer*innen anlegen, bearbeiten, löschen und zurücksetzen (nur Admins)',
 +	'security:read': 'Deine Sicherheitseinstellungen, Sitzungen, Passkeys und OAuth-Clients ansehen',
 +	'security:write': 'Sicherheitseinstellungen ändern und Sitzungen oder Zugangsdaten widerrufen'
  };

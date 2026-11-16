@@ -63,6 +63,7 @@ A third run applies a marker table (every extracted string replaced by a scrambl
 ## Translation style
 
 - Informal "du", modern German software style. Buttons use the infinitive ("Speichern").
+- Gender-neutral person nouns where a natural form exists: participle forms such as "Teilnehmende" (not "Teilnehmer").
 - Glossary: Trip = Reise, Segment = Reiseabschnitt (short: Abschnitt), Stay = Unterkunft, Share = Freigabe/teilen, Notes = Notizen, Scopes (OAuth) = Berechtigungen.
 - HTML entities (`&nbsp;`, `&middot;` ...) and product names stay as they are.
 

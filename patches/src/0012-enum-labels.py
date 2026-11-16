@@ -21,6 +21,8 @@ export function deEnum(kind: keyof typeof MAPS, value: unknown): string {
 }
 """)
 
+import re
+
 IMPORT = "\timport { deEnum } from '$lib/enumDe';\n"
 edits = {
     'lib/components/TripCard.svelte': [
@@ -49,6 +51,7 @@ edits = {
     ],
 }
 n = 0
+n_cap = [0]
 for path, reps in edits.items():
     t = open(path, encoding='utf-8').read()
     for a, b, *cnt in reps:
@@ -56,7 +59,14 @@ for path, reps in edits.items():
         assert t.count(a) == want, (path, a, t.count(a))
         t = t.replace(a, b)
         n += want
+    # The German names are already cased. CSS `capitalize` would upper-case every word
+    # ("Vollständig Bezahlt") and the letter after a gender star ("Erwachsene*R"), since
+    # browsers treat `*` as a word boundary. Drop it from every element that renders deEnum().
+    t, k = re.subn(r'(class="[^"]*?)\s*\bcapitalize\b([^"]*"[^>]*>\(?\{deEnum\()', r'\1\2', t)
+    t = t.replace(' class="">', '>').replace('class=" ', 'class="')
+    assert not re.search(r'\bcapitalize\b[^"]*"[^>]*>\(?\{deEnum\(', t), path
+    n_cap[0] += k
     assert t.startswith('<script lang="ts">\n'), path
     t = t.replace('<script lang="ts">\n', '<script lang="ts">\n' + IMPORT, 1)
     open(path, 'w', encoding='utf-8').write(t)
-print(f'enum labels: {n} render sites')
+print(f'enum labels: {n} render sites, capitalize dropped at {n_cap[0]}')

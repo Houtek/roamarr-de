@@ -1,0 +1,35 @@
+diff --git a/src/app.css b/src/app.css
+index 6a48df3..341f46e 100644
+--- a/src/app.css
++++ b/src/app.css
+@@ -1592,6 +1592,13 @@ button.card:hover,
+ 		--trip-readable-strong: #fff;
+ 		text-shadow: 0 1px 2px rgba(3, 7, 18, 0.55);
+ 	}
++	/* The actions menu opens inside the map hero but on a solid theme panel, not over the map:
++	   undo the hero's white text and shadow there, back to the theme's trip text colour. */
++	.trip-hero--map .app-user-menu-panel {
++		--trip-readable: var(--theme-trip-readable, #ffffff);
++		--trip-readable-strong: var(--theme-trip-readable, #ffffff);
++		text-shadow: none;
++	}
+ 	.trip-hero--map .trip-hero-content :where(.back-link, .app-user-menu, .trip-poster-form) {
+ 		pointer-events: auto;
+ 	}
+diff --git a/src/lib/themeScheme.test.ts b/src/lib/themeScheme.test.ts
+index 14a4aeb..ad2928a 100644
+--- a/src/lib/themeScheme.test.ts
++++ b/src/lib/themeScheme.test.ts
+@@ -52,3 +52,12 @@ test.each([
+ 	expect(themed.length).toBeGreaterThan(0);
+ 	for (const d of themed) expect(d).toMatch(new RegExp(`^var\\(--theme-${override}, `));
+ });
++
++test('the actions menu inside the map hero resets the hero\'s white text and shadow', () => {
++	// .trip-hero--map pins --trip-readable to white (with a shadow) for text over the map image;
++	// the menu panel is a solid theme colour, so it must go back to the theme's trip colour.
++	const rule = code.match(/\.trip-hero--map \.app-user-menu-panel \{([^}]*)\}/)?.[1] ?? '';
++	expect(rule).toMatch(/--trip-readable: var\(--theme-trip-readable, /);
++	expect(rule).toMatch(/--trip-readable-strong: var\(--theme-trip-readable, /);
++	expect(rule).toMatch(/text-shadow: none;/);
++});

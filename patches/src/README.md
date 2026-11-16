@@ -26,3 +26,4 @@ Every script asserts that each exact upstream snippet it rewrites is still prese
 | 0009 German dates | `0009-german-dates.py` |
 | 0010 grid status labels | `0010-grid-status-labels.py` |
 | 0012 enum labels | `0012-enum-labels.py` |
+| 0013 default title | `0013-default-title.py` |

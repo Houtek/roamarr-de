@@ -1,0 +1,18 @@
+diff --git a/src/routes/+layout.svelte b/src/routes/+layout.svelte
+index 82b5437..0506eed 100644
+--- a/src/routes/+layout.svelte
++++ b/src/routes/+layout.svelte
+@@ -388,6 +388,13 @@
+ 	const isActive = (href: string) => routeIsActive(path, href);
+ </script>
+ 
++<!-- roamarr-de: default tab title; pages that set their own <title> are excluded -->
++<svelte:head>
++	{#if !['/login/verify', '/trips/[id]/print'].includes(page.route.id ?? '')}
++		<title>{data.instanceName ?? 'Roamarr'}</title>
++	{/if}
++</svelte:head>
++
+ {#snippet brand(size: 'sm' | 'lg')}
+ 	<a href="/" class="flex items-center gap-2.5">
+ 		<span

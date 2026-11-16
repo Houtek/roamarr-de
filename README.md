@@ -28,6 +28,7 @@ Patches form a **series**: each one is generated on top of the previous ones, so
 - `0010-grid-status-labels.patch`: status labels inside HTML string literals of grid cell formatters (`html('<span …>Active</span>')`), e.g. users, job history, reminders.
 
 - `0012-enum-labels.patch`: stored enum keys that upstream prints raw and styles with CSS `capitalize` (`lodging`, `adult`, `private`, `not_going` …): budget/expense categories, traveller categories, visibility badges, document types, attendee and reminder status. A `deEnum(kind, key)` lookup renders German; keys stay unchanged.
+- `0013-default-title.patch`: **behaviour fix, not translation.** Upstream sets no default `<title>`, so the browser tab shows the URL on almost every page. The root layout now renders the instance name (admin setting, fallback "Roamarr") as title on every route except the two that set their own (`/login/verify`, `/trips/[id]/print`), so exactly one title exists per route. The generator fails if that list of pages changes.
 
 ## Value-position strings (`de.expr.json`)
 

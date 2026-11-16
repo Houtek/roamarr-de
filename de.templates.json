@@ -36,11 +36,11 @@
   "Feature ${0}: skipped — no name/title property": "Feature ${0}: übersprungen — keine Name-/Titel-Eigenschaft",
   "Line ${0}: skipped — not an http(s) URL": "Zeile ${0}: übersprungen — keine http(s)-URL",
   "Line ${0}: skipped — could not derive a name from the URL": "Zeile ${0}: übersprungen — Name konnte nicht aus der URL abgeleitet werden",
-  "Dropped pin (${0}, ${1})": "Abgesetzter Pin (${0}, ${1})",
+  "Dropped pin (${0}, ${1})": "Gesetzter Pin (${0}, ${1})",
   "Imports are limited to ${0} rows per file": "Importe sind auf ${0} Zeilen pro Datei begrenzt",
   "Matches existing place \"${0}\"": "Entspricht vorhandenem Ort „${0}“",
-  "Within ${0} m of existing place \"${1}\"": "Innerhalb von ${0} m von vorhandenem Ort „${1}“",
-  "Duplicates row ${0} (\"${1}\") in this import": "Dupliziert Zeile ${0} („${1}“) in diesem Import"
+  "Within ${0} m of existing place \"${1}\"": "Im Umkreis von ${0} m um den vorhandenen Ort „${1}“",
+  "Duplicates row ${0} (\"${1}\") in this import": "Duplikat von Zeile ${0} („${1}“) in diesem Import"
  },
  "lib/server/mapTiles.ts": {
   "${0} | City data © <a href=\"https://www.geonames.org/\">GeoNames.org</a>, CC-BY 4.0": "${0} | Städtedaten © <a href=\"https://www.geonames.org/\">GeoNames.org</a>, CC-BY 4.0"
@@ -49,7 +49,7 @@
   "Looking forward to ${0}!": "Freue mich auf ${0}!"
  },
  "lib/server/segmentAdd.ts": {
-  "Segment saved, but a document failed to upload: ${0}": "Segment gespeichert, aber ein Dokument konnte nicht hochgeladen werden: ${0}"
+  "Segment saved, but a document failed to upload: ${0}": "Abschnitt gespeichert, aber ein Dokument konnte nicht hochgeladen werden: ${0}"
  },
  "lib/server/tripExpenses/actions.ts": {
   "${0} is required": "${0} ist erforderlich",
@@ -94,7 +94,7 @@
   "Delete ${0}? This cannot be undone.": "${0} löschen? Das kann nicht rückgängig gemacht werden."
  },
  "routes/job-history/+page.svelte": {
-  "Fare checks ${0}": "Fare-Checks ${0}"
+  "Fare checks ${0}": "Tarifprüfungen ${0}"
  },
  "routes/places/+page.svelte": {
   "Remove the GPX track from ${0}?": "GPX-Track von ${0} entfernen?",

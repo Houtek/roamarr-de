@@ -94,7 +94,7 @@
   "Completed": "Abgeschlossen"
  },
  "lib/server/cities.ts": {
-  "Please ask your Roamarr administrator to use “Re-import city database” under Configuration → Maps.": "Bitte den Roamarr-Administrator bitten, unter Konfiguration → Karten „Städtedatenbank neu importieren“ zu verwenden."
+  "Please ask your Roamarr administrator to use “Re-import city database” under Configuration → Maps.": "Bitte deinen Roamarr-Administrator, unter Konfiguration → Karten „Städtedatenbank neu importieren“ zu verwenden."
  },
  "lib/server/emailProcessing.ts": {
   "Roamarr could not add your travel email": "Roamarr konnte deine Reise-E-Mail nicht hinzufügen",
@@ -173,7 +173,7 @@
  },
  "lib/server/seed.ts": {
   "Demo Trip to Tokyo": "Demo-Reise nach Tokio",
-  "JL outbound": "JL Hinflug",
+  "JL outbound": "JL-Hinflug",
   "Shinjuku Hotel": "Hotel Shinjuku",
   "Tsukiji lunch": "Mittagessen in Tsukiji",
   "Shared demo trip": "Geteilte Demo-Reise"
@@ -181,7 +181,7 @@
  "lib/server/seedDatabase.ts": {
   "Sam Carter": "Sam Carter",
   "The Globetrotters": "Die Weltenbummler",
-  "Past trip earlier this year": "Vergangene Reise Anfang dieses Jahres",
+  "Past trip earlier this year": "Frühere Reise in diesem Jahr",
   "Past trip last year": "Vergangene Reise letztes Jahr",
   "Payment due soon": "Zahlung bald fällig",
   "Alex": "Alex",
@@ -212,7 +212,7 @@
  },
  "lib/server/twoFactor.ts": {
   "Invalid verification code.": "Ungültiger Bestätigungscode.",
-  "Two-factor is not enabled.": "Zwei-Faktor-Authentifizierung ist nicht aktiviert."
+  "Two-factor is not enabled.": "Die Zwei-Faktor-Authentifizierung ist nicht aktiviert."
  },
  "lib/server/users.ts": {
   "Reset your Roamarr password": "Setze dein Roamarr-Passwort zurück",
@@ -220,13 +220,13 @@
  },
  "lib/server/weather.ts": {
   "Typical": "Typisch",
-  "No forecastable dates in range.": "Keine prognostizierbaren Termine im Zeitraum.",
+  "No forecastable dates in range.": "Für keinen Tag im Zeitraum ist eine Wettervorhersage möglich.",
   "Forecast unavailable for this destination.": "Prognose für dieses Reiseziel nicht verfügbar."
  },
  "lib/themes.ts": {
   "Roamarr classic": "Der Roamarr-Klassiker",
   "Follow system": "Systemeinstellung folgen",
-  "Browser light/dark preference": "Bevorzugt Hell/Dunkel des Browsers",
+  "Browser light/dark preference": "Hell-/Dunkel-Einstellung des Browsers",
   "Light": "Hell",
   "Bright neutral": "Helles Neutral",
   "High Contrast": "Hoher Kontrast",
@@ -314,13 +314,13 @@
  "routes/cards/+page.svelte": {
   "Nickname": "Spitzname",
   "Network": "Netzwerk",
-  "Last 4": "Letzte 4",
+  "Last 4": "Letzte 4 Ziffern",
   "Benefits": "Leistungen",
   "Edit": "Bearbeiten",
   "Delete": "Löschen",
   "Delete failed.": "Löschen fehlgeschlagen.",
   "Other": "Sonstige",
-  "Delete card": "Karte löschen"
+  "Delete card": "Zahlungskarte löschen"
  },
  "routes/cards/[id]/edit/+page.server.ts": {
   "Too many attempts. Try again later.": "Zu viele Versuche. Bitte später erneut versuchen.",
@@ -361,7 +361,7 @@
   "Read-only scan of run footer checksums. Result includes total table count plus any tables with integrity issues (healthy DBs report zero issue tables).": "Schreibgeschützter Scan der Run-Footer-Prüfsummen. Das Ergebnis enthält die Gesamtzahl der Tabellen sowie alle Tabellen mit Integritätsproblemen (bei gesunden DBs sind es null).",
   "Safe": "Sicher",
   "Run check": "Prüfung ausführen",
-  "Compact sorted runs, then checkpoint. Checkpoint flushes memtables and drops rotated WAL segments so crash recovery stays small and backups shrink.": "Komprimiert sortierte Runs und erstellt anschließend einen Checkpoint. Der Checkpoint schreibt Memtables durch und verwirft rotierte WAL-Segmente, damit die Crash Recovery klein bleibt und Backups schrumpfen.",
+  "Compact sorted runs, then checkpoint. Checkpoint flushes memtables and drops rotated WAL segments so crash recovery stays small and backups shrink.": "Kompaktiert sortierte Runs und erstellt anschließend einen Checkpoint. Der Checkpoint schreibt Memtables auf den Datenträger und verwirft rotierte WAL-Segmente, damit die Wiederherstellung nach einem Absturz schnell bleibt und Backups kleiner werden.",
   "Operational": "Betrieb",
   "Run garbage collection": "Garbage Collection ausführen",
   "Yes, run garbage collection on the live database": "Ja, Garbage Collection auf der Live-Datenbank ausführen",
@@ -400,8 +400,8 @@
   "Invalid tile provider": "Ungültiger Kachelanbieter",
   "Invalid place search provider": "Ungültiger Ortssuche-Anbieter",
   "Invalid email settings section.": "Ungültiger E-Mail-Einstellungsabschnitt.",
-  "Invalid global parsing authentication method.": "Ungültige globale Authentifizierungsmethode für die Verarbeitung.",
-  "Global parsing requires API base URL and model.": "Globale Verarbeitung erfordert API-Basis-URL und Modell.",
+  "Invalid global parsing authentication method.": "Ungültige globale Authentifizierungsmethode für die Analyse.",
+  "Global parsing requires API base URL and model.": "Globale Analyse erfordert API-Basis-URL und Modell.",
   "API/subscription key is required.": "API-/Abonnementschlüssel ist erforderlich.",
   "OAuth requires token URL, client ID, and client secret.": "OAuth erfordert Token-URL, Client-ID und Client-Secret.",
   "Discovery URL must be an http(s) URL.": "Discovery-URL muss eine http(s)-URL sein.",
@@ -679,7 +679,7 @@
   "Meeting point": "Treffpunkt",
   "Payment": "Zahlung",
   "Payment card": "Zahlungskarte",
-  "Location not set": "Kein Standort festgelegt",
+  "Location not set": "Kein Ort angegeben",
   "Unscheduled": "Nicht geplant"
  },
  "routes/trips/[id]/edit/+page.svelte": {

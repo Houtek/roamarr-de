@@ -27,3 +27,4 @@ Every script asserts that each exact upstream snippet it rewrites is still prese
 | 0010 grid status labels | `0010-grid-status-labels.py` |
 | 0012 enum labels | `0012-enum-labels.py` |
 | 0013 default title | `0013-default-title.py` |
+| 0014 notice contrast | none: CSS-only (`src/app.css`, 4 places) plus a new test file; edit by hand, or drop once upstream ships it |

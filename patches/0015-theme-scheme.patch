@@ -1,0 +1,114 @@
+diff --git a/src/app.css b/src/app.css
+index 430f36e..6a48df3 100644
+--- a/src/app.css
++++ b/src/app.css
+@@ -108,6 +108,8 @@
+ 		--theme-danger-text: #ffffff;
+ 		--theme-warning-text: var(--color-amber-800);
+ 		--theme-success-text: var(--color-emerald-800);
++		--theme-danger-readable: var(--theme-danger-bottom);
++		--theme-trip-readable: #111111;
+ 		--theme-wash: transparent;
+ 	}
+ 	@media (prefers-color-scheme: light) {
+@@ -134,6 +136,8 @@
+ 		--theme-danger-text: #ffffff;
+ 		--theme-warning-text: var(--color-amber-800);
+ 		--theme-success-text: var(--color-emerald-800);
++		--theme-danger-readable: var(--theme-danger-bottom);
++		--theme-trip-readable: #111111;
+ 			--theme-wash: transparent;
+ 		}
+ 	}
+@@ -423,9 +427,11 @@
+ 		--theme-menu-hover: var(--theme-active-strong);
+ 		--theme-option-hover: var(--theme-active-strong);
+ 		--theme-option-selected: var(--theme-active-strong);
+-		--theme-readable-danger: light-dark(var(--theme-danger-bottom), var(--theme-danger-border));
+-		/* Notice text: the 300 shades suit the dark themes; a light theme sets --theme-warning-text /
+-		   --theme-success-text (300 is ~1.2:1 on light). noticeContrast.test.ts checks every theme. */
++		--theme-readable-danger: var(--theme-danger-readable, var(--theme-danger-border));
++		/* Readable text colours default to the dark-theme value; a light theme block overrides them
++		   (--theme-danger-readable, --theme-warning-text, --theme-success-text, --theme-trip-readable).
++		   Not light-dark(): Lightning CSS polyfills it from the OS preference, not the selected theme.
++		   themeScheme.test.ts and noticeContrast.test.ts check every theme. */
+ 		--theme-readable-warning: var(--theme-warning-text, var(--color-amber-300));
+ 		--theme-readable-success: var(--theme-success-text, var(--color-emerald-300));
+ 		--theme-readable-muted: color-mix(in oklab, var(--theme-muted) 70%, var(--theme-ink));
+@@ -2109,11 +2115,11 @@ button.card:hover,
+ 	}
+ 
+ 	.trip-detail {
+-		--trip-readable: light-dark(#111111, #ffffff);
+-		--trip-readable-strong: light-dark(#111111, #ffffff);
+-		--trip-readable-danger: light-dark(#111111, #ffffff);
+-		--trip-readable-warning: light-dark(#111111, #ffffff);
+-		--trip-readable-success: light-dark(#111111, #ffffff);
++		--trip-readable: var(--theme-trip-readable, #ffffff);
++		--trip-readable-strong: var(--theme-trip-readable, #ffffff);
++		--trip-readable-danger: var(--theme-trip-readable, #ffffff);
++		--trip-readable-warning: var(--theme-trip-readable, #ffffff);
++		--trip-readable-success: var(--theme-trip-readable, #ffffff);
+ 	}
+ 
+ 	.trip-detail :where(.text-white, .text-slate-100, .text-slate-200, .text-slate-300) {
+diff --git a/src/lib/themeScheme.test.ts b/src/lib/themeScheme.test.ts
+new file mode 100644
+index 0000000..14a4aeb
+--- /dev/null
++++ b/src/lib/themeScheme.test.ts
+@@ -0,0 +1,54 @@
++import { readFileSync } from 'node:fs';
++import { test, expect } from 'vitest';
++import { THEMES } from './themes';
++
++// Light/dark colour variants must follow the SELECTED theme, not the OS preference. `light-dark()`
++// looks right but is not: Lightning CSS downlevels it to a polyfill (`--lightningcss-light/-dark`
++// set on `html` from `prefers-color-scheme`), so a dark theme on a light OS got the light value
++// (dark text on dark chips on the trip page). Instead, app.css gives each readable colour its
++// dark-theme value as the default and lets the light theme blocks override it.
++
++const css = readFileSync(new URL('../app.css', import.meta.url), 'utf8');
++const code = css.replace(/\/\*[\s\S]*?\*\//g, '');
++
++const LIGHT_OVERRIDES = ['danger-readable', 'warning-text', 'success-text', 'trip-readable'];
++
++const themeBlocks = [...code.matchAll(/([^{}]*)\{([^{}]*--theme-color-scheme:[^{}]*)\}/g)].map(([, selector, body]) => ({
++	ids: [...selector.matchAll(/data-theme='([\w-]+)'/g)].map((m) => m[1]),
++	scheme: body.match(/--theme-color-scheme:\s*([\w ]+);/)?.[1].trim(),
++	defines: new Set([...body.matchAll(/--theme-([\w-]+):/g)].map((m) => m[1]))
++}));
++
++test('app.css uses no light-dark() (it follows the OS, not the selected theme)', () => {
++	expect(code).not.toContain('light-dark(');
++});
++
++test('the theme blocks cover every theme, in both schemes', () => {
++	const covered = new Set(themeBlocks.flatMap((b) => b.ids));
++	expect(THEMES.map((t) => t.id).filter((id) => !covered.has(id))).toEqual([]);
++	expect(themeBlocks.some((b) => b.scheme === 'light')).toBe(true);
++	expect(themeBlocks.some((b) => b.scheme === 'dark')).toBe(true);
++});
++
++test.each(LIGHT_OVERRIDES)('every light theme block sets --theme-%s, and no dark one does', (name) => {
++	const wrong = themeBlocks
++		.filter((b) => b.defines.has(name) !== (b.scheme === 'light'))
++		.map((b) => `${b.ids.join('/')} (${b.scheme})`);
++	expect(wrong).toEqual([]);
++});
++
++test.each([
++	['--theme-readable-danger', 'danger-readable'],
++	['--trip-readable', 'trip-readable'],
++	['--trip-readable-strong', 'trip-readable'],
++	['--trip-readable-danger', 'trip-readable'],
++	['--trip-readable-warning', 'trip-readable'],
++	['--trip-readable-success', 'trip-readable']
++])('%s defaults to its dark value behind var(--theme-%s, …)', (variable, override) => {
++	const defs = [...code.matchAll(new RegExp(`${variable}:\\s*([^;]+);`, 'g'))].map((m) => m[1].trim());
++	// .trip-hero--map pins its own text to white over the map image; every other definition must
++	// go through the theme override.
++	const themed = defs.filter((d) => d !== '#fff');
++	expect(themed.length).toBeGreaterThan(0);
++	for (const d of themed) expect(d).toMatch(new RegExp(`^var\\(--theme-${override}, `));
++});

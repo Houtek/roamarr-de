@@ -13,7 +13,12 @@ jobs:
   # upstream test suite on the UNPATCHED source, so patched failures can be diffed against it
   baseline:
     runs-on: ubuntu-24.04
+    container: ubuntu:26.04
     steps:
+      # MongrelDB >= 0.66 (upstream >= 0.44.1) ships an addon that needs glibc 2.43; the
+      # ubuntu-24.04 runner has 2.39, so build and tests run in an Ubuntu 26.04 container.
+      - name: Base packages (container)
+        run: apt-get update && apt-get install -y --no-install-recommends git ca-certificates
       - uses: actions/checkout@v7
       - name: Check out upstream at the pinned ref
         run: |
@@ -37,7 +42,12 @@ jobs:
 
   patched:
     runs-on: ubuntu-24.04
+    container: ubuntu:26.04
     steps:
+      # MongrelDB >= 0.66 (upstream >= 0.44.1) ships an addon that needs glibc 2.43; the
+      # ubuntu-24.04 runner has 2.39, so build and tests run in an Ubuntu 26.04 container.
+      - name: Base packages (container)
+        run: apt-get update && apt-get install -y --no-install-recommends git ca-certificates
       - uses: actions/checkout@v7
       - name: Check out upstream at the pinned ref
         run: |
@@ -80,7 +90,12 @@ jobs:
   # Informational only; it never blocks.
   full-coverage:
     runs-on: ubuntu-24.04
+    container: ubuntu:26.04
     steps:
+      # MongrelDB >= 0.66 (upstream >= 0.44.1) ships an addon that needs glibc 2.43; the
+      # ubuntu-24.04 runner has 2.39, so build and tests run in an Ubuntu 26.04 container.
+      - name: Base packages (container)
+        run: apt-get update && apt-get install -y --no-install-recommends git ca-certificates
       - uses: actions/checkout@v7
       - name: Check out upstream at the pinned ref
         run: |

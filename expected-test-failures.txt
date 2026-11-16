@@ -125,3 +125,8 @@ src/lib/dateFormat.test.ts > formatDate falls back to Intl dateStyle when reques
 src/lib/dateFormat.test.ts > formatDate respects explicit format override
 src/lib/dateFormat.test.ts > formatDateTime falls back to Intl styles when requested
 src/lib/dateFormat.test.ts > formatDateTime respects explicit format override
+
+# asserts the generic error text 'Something went wrong. Please try again.' (hooks.server.ts, de.script.json; upstream >= 0.42)
+src/hooks.server.test.ts > error hook preserves safe app errors and hides unexpected error details
+# asserts the reminder title 'Mail hold ending' (reminders.ts, de.script.json; upstream >= 0.43)
+src/lib/server/tripMailHolds.test.ts > cancelling, rescheduling, and deleting the hold updates the reminder

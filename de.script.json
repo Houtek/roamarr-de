@@ -167,7 +167,9 @@
   "Reminder": "Erinnerung",
   "A flight you track is departing soon.": "Ein von dir verfolgter Flug hebt bald ab.",
   "A travel document is expiring soon.": "Ein Reisedokument läuft bald ab.",
-  "A scheduled reminder is due.": "Eine geplante Erinnerung ist fällig."
+  "A scheduled reminder is due.": "Eine geplante Erinnerung ist fällig.",
+  "Mail hold ending": "Postlagerung endet",
+  "A mail hold ends soon. Renew it if you will still be away.": "Eine Postlagerung endet bald. Verlängere sie, wenn du dann noch unterwegs bist."
  },
  "lib/server/seed.ts": {
   "Demo Trip to Tokyo": "Demo-Reise nach Tokio",
@@ -529,7 +531,8 @@
   "Global Entry": "Global Entry",
   "Visa": "Visum",
   "Delete document": "Dokument löschen",
-  "To": "Bis"
+  "To": "Bis",
+  "National ID card": "Personalausweis"
  },
  "routes/profile/documents/[id]/edit/+page.server.ts": {
   "Too many attempts. Try again later.": "Zu viele Versuche. Bitte später erneut versuchen."
@@ -538,7 +541,8 @@
   "Passport": "Reisepass",
   "Global Entry": "Global Entry",
   "Visa": "Visum",
-  "Driver's license": "Führerschein"
+  "Driver's license": "Führerschein",
+  "National ID card": "Personalausweis"
  },
  "routes/profile/documents/new/+page.server.ts": {
   "Too many attempts. Try again later.": "Zu viele Versuche. Bitte später erneut versuchen."
@@ -547,7 +551,8 @@
   "Passport": "Reisepass",
   "Global Entry": "Global Entry",
   "Visa": "Visum",
-  "Driver's license": "Führerschein"
+  "Driver's license": "Führerschein",
+  "National ID card": "Personalausweis"
  },
  "routes/profile/email_processing/+page.server.ts": {
   "Per-user IMAP is disabled by the administrator.": "Persönliches IMAP ist vom Administrator deaktiviert.",
@@ -648,7 +653,9 @@
   "Planning": "Planung",
   "Booked": "Gebucht",
   "Active": "Aktiv",
-  "Completed": "Abgeschlossen"
+  "Completed": "Abgeschlossen",
+  "Create a trip": "Reise erstellen",
+  "View completed": "Abgeschlossene anzeigen"
  },
  "routes/trips/[id]/+page.svelte": {
   "Details": "Details",

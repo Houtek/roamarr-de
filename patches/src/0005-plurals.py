@@ -31,7 +31,9 @@ edits = {
         ("return `${count} member${count === 1 ? '' : 's'}`;", "return pl(count, 'Mitglied', 'Mitglieder');"),
     ],
     'routes/trips/+page.svelte': [
-        (eng('data.trips.length', 'trip') + ' planned', "{pl(data.trips.length, 'Reise', 'Reisen')} geplant"),
+        # upstream >= 0.42: " planned" only on the default list (no filter, status or search)
+        (eng('data.trips.length', 'trip') + "{isDefaultList ? ' planned' : ''}",
+         "{pl(data.trips.length, 'Reise', 'Reisen')}{isDefaultList ? ' geplant' : ''}"),
     ],
     'routes/trips/import/+page.svelte': [
         (re.compile(r"\{form\.dryRun \? 'Would import' : 'Imported'\} \{form\.result\.imported\} trip\{form\.result\.imported === 1 \? '' : 's'\} with\s+\{form\.result\.segmentCount\} segment\{form\.result\.segmentCount === 1 \? '' : 's'\}\."),

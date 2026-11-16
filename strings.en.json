@@ -11,12 +11,12 @@
  },
  {
   "en": "Notes",
-  "kind": "attr:label",
-  "count": 22,
+  "kind": "text",
+  "count": 24,
   "files": [
+   "lib/components/MailHoldsPanel.svelte",
    "lib/components/segments/forms/DirectionsForm.svelte",
-   "lib/components/segments/forms/EventForm.svelte",
-   "lib/components/segments/forms/FlightForm.svelte"
+   "lib/components/segments/forms/EventForm.svelte"
   ]
  },
  {
@@ -30,6 +30,16 @@
   ]
  },
  {
+  "en": "Delete",
+  "kind": "attr:confirmLabel",
+  "count": 12,
+  "files": [
+   "lib/components/Gallery.svelte",
+   "lib/components/MailHoldsPanel.svelte",
+   "routes/cards/[id]/edit/+page.svelte"
+  ]
+ },
+ {
   "en": "Optional notes",
   "kind": "attr:placeholder",
   "count": 12,
@@ -37,16 +47,6 @@
    "lib/components/segments/forms/ParkingForm.svelte",
    "lib/components/segments/forms/StandardPlanForm.svelte",
    "routes/cards/[id]/edit/+page.svelte"
-  ]
- },
- {
-  "en": "Delete",
-  "kind": "attr:confirmLabel",
-  "count": 11,
-  "files": [
-   "lib/components/Gallery.svelte",
-   "routes/cards/[id]/edit/+page.svelte",
-   "routes/places/+page.svelte"
   ]
  },
  {
@@ -90,6 +90,16 @@
   ]
  },
  {
+  "en": "Confirmation",
+  "kind": "text",
+  "count": 8,
+  "files": [
+   "lib/components/MailHoldsPanel.svelte",
+   "lib/components/segments/BookedRow.svelte",
+   "lib/components/segments/forms/FlightForm.svelte"
+  ]
+ },
+ {
   "en": "Back",
   "kind": "text",
   "count": 7,
@@ -117,6 +127,16 @@
    "routes/fare-providers/[id]/edit/+page.svelte",
    "routes/fare-providers/new/+page.svelte",
    "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Edit",
+  "kind": "text",
+  "count": 6,
+  "files": [
+   "lib/components/MailHoldsPanel.svelte",
+   "routes/cards/[id]/edit/+page.svelte",
+   "routes/places/+page.svelte"
   ]
  },
  {
@@ -160,6 +180,16 @@
   ]
  },
  {
+  "en": "Status",
+  "kind": "text",
+  "count": 6,
+  "files": [
+   "lib/components/MailHoldsPanel.svelte",
+   "routes/places/+page.svelte",
+   "routes/profile/reminders/[id]/edit/+page.svelte"
+  ]
+ },
+ {
   "en": "USD",
   "kind": "attr:placeholder",
   "count": 6,
@@ -167,26 +197,6 @@
    "routes/cards/[id]/edit/+page.svelte",
    "routes/insurance/[id]/edit/+page.svelte",
    "routes/insurance/new/+page.svelte"
-  ]
- },
- {
-  "en": "Confirmation",
-  "kind": "text",
-  "count": 5,
-  "files": [
-   "lib/components/segments/BookedRow.svelte",
-   "lib/components/segments/forms/FlightForm.svelte",
-   "lib/components/segments/forms/ParkingForm.svelte"
-  ]
- },
- {
-  "en": "Edit",
-  "kind": "text",
-  "count": 5,
-  "files": [
-   "routes/cards/[id]/edit/+page.svelte",
-   "routes/places/+page.svelte",
-   "routes/trips/[id]/+page.svelte"
   ]
  },
  {
@@ -461,16 +471,6 @@
   "count": 4,
   "files": [
    "routes/general/+page.svelte"
-  ]
- },
- {
-  "en": "Status",
-  "kind": "text",
-  "count": 4,
-  "files": [
-   "routes/places/+page.svelte",
-   "routes/profile/reminders/[id]/edit/+page.svelte",
-   "routes/trips/[id]/edit/+page.svelte"
   ]
  },
  {
@@ -962,6 +962,14 @@
   ]
  },
  {
+  "en": "Address label",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "lib/components/MailHoldsPanel.svelte"
+  ]
+ },
+ {
   "en": "Admin",
   "kind": "text",
   "count": 2,
@@ -1161,6 +1169,14 @@
   "files": [
    "routes/profile/calendar/+page.svelte",
    "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
+  "en": "Carrier",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "lib/components/MailHoldsPanel.svelte"
   ]
  },
  {
@@ -1458,6 +1474,14 @@
   "files": [
    "routes/trips/[id]/+page.svelte",
    "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
+  "en": "End",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "lib/components/MailHoldsPanel.svelte"
   ]
  },
  {
@@ -2154,6 +2178,14 @@
   ]
  },
  {
+  "en": "Start",
+  "kind": "text",
+  "count": 2,
+  "files": [
+   "lib/components/MailHoldsPanel.svelte"
+  ]
+ },
+ {
   "en": "Subscribe to all your trips with one calendar URL.",
   "kind": "text",
   "count": 2,
@@ -2406,6 +2438,14 @@
   "count": 1,
   "files": [
    "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": ". The saved status stays",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/edit/+page.svelte"
   ]
  },
  {
@@ -2830,6 +2870,14 @@
   "count": 1,
   "files": [
    "routes/profile/loyalty/new/+page.svelte"
+  ]
+ },
+ {
+  "en": "Add mail hold",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "lib/components/MailHoldsPanel.svelte"
   ]
  },
  {
@@ -3334,6 +3382,14 @@
   "count": 1,
   "files": [
    "routes/profile/security/+page.svelte"
+  ]
+ },
+ {
+  "en": "Away dates are not fully covered.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "lib/components/MailHoldsPanel.svelte"
   ]
  },
  {
@@ -4057,14 +4113,6 @@
   ]
  },
  {
-  "en": "Create a trip",
-  "kind": "attr:actionLabel",
-  "count": 1,
-  "files": [
-   "routes/trips/+page.svelte"
-  ]
- },
- {
   "en": "Create account",
   "kind": "text",
   "count": 1,
@@ -4297,6 +4345,14 @@
   ]
  },
  {
+  "en": "Dates in your timezone show this trip as",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/edit/+page.svelte"
+  ]
+ },
+ {
   "en": "Day note icon",
   "kind": "attr:aria-label",
   "count": 1,
@@ -4354,6 +4410,22 @@
  },
  {
   "en": "Default is MiniLM-L6-v2. Runtime uses the ONNX/ORT conversion from Hugging Face Hub.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Default mail hold lead (days)",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/general/+page.svelte"
+  ]
+ },
+ {
+  "en": "Default notice before a mail hold ends. New users start with this value.",
   "kind": "text",
   "count": 1,
   "files": [
@@ -6185,7 +6257,7 @@
   ]
  },
  {
-  "en": "JPEG, PNG, or WebP. Up to 10 MB each, 50 photos per gallery.",
+  "en": "JPEG, PNG, or WebP. Up to 50 photos per gallery.",
   "kind": "text",
   "count": 1,
   "files": [
@@ -6406,6 +6478,22 @@
   "count": 1,
   "files": [
    "routes/profile/loyalty/+page.svelte"
+  ]
+ },
+ {
+  "en": "Mail hold lead (days)",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/profile/+page.svelte"
+  ]
+ },
+ {
+  "en": "Mail holds",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "lib/components/MailHoldsPanel.svelte"
   ]
  },
  {
@@ -6769,6 +6857,14 @@
   ]
  },
  {
+  "en": "Next 30 days",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "lib/components/MailHoldsPanel.svelte"
+  ]
+ },
+ {
   "en": "Next photo",
   "kind": "attr:aria-label",
   "count": 1,
@@ -6945,6 +7041,14 @@
   ]
  },
  {
+  "en": "No mail holds yet.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "lib/components/MailHoldsPanel.svelte"
+  ]
+ },
+ {
   "en": "No MCP clients connected yet.",
   "kind": "text",
   "count": 1,
@@ -7094,14 +7198,6 @@
   "count": 1,
   "files": [
    "routes/trips/[id]/+page.svelte"
-  ]
- },
- {
-  "en": "No trips yet — plan your first one.",
-  "kind": "attr:message",
-  "count": 1,
-  "files": [
-   "routes/trips/+page.svelte"
   ]
  },
  {
@@ -7681,14 +7777,6 @@
   ]
  },
  {
-  "en": "planned",
-  "kind": "text",
-  "count": 1,
-  "files": [
-   "routes/trips/+page.svelte"
-  ]
- },
- {
   "en": "Please sign in to continue.",
   "kind": "text",
   "count": 1,
@@ -7961,7 +8049,7 @@
   ]
  },
  {
-  "en": "Record a passport, license, visa, or trusted-traveler card. Document numbers are encrypted at rest.",
+  "en": "Record a passport, national ID card, license, visa, or trusted-traveler card. Document numbers are encrypted at rest.",
   "kind": "text",
   "count": 1,
   "files": [
@@ -8150,6 +8238,14 @@
   "count": 1,
   "files": [
    "routes/trips/[id]/share/+page.svelte"
+  ]
+ },
+ {
+  "en": "Renewal date",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "lib/components/MailHoldsPanel.svelte"
   ]
  },
  {
@@ -8577,6 +8673,14 @@
   ]
  },
  {
+  "en": "Save hold",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "lib/components/MailHoldsPanel.svelte"
+  ]
+ },
+ {
   "en": "Save map settings",
   "kind": "text",
   "count": 1,
@@ -8974,6 +9078,14 @@
   "count": 1,
   "files": [
    "routes/reset-password/[token]/+page.svelte"
+  ]
+ },
+ {
+  "en": "Set the trip start and end to check which days a hold covers.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "lib/components/MailHoldsPanel.svelte"
   ]
  },
  {
@@ -9697,6 +9809,14 @@
   ]
  },
  {
+  "en": "to",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "lib/components/MailHoldsPanel.svelte"
+  ]
+ },
+ {
   "en": "To",
   "kind": "attr:label",
   "count": 1,
@@ -10017,6 +10137,14 @@
   ]
  },
  {
+  "en": "unless you change it here.",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "routes/trips/[id]/edit/+page.svelte"
+  ]
+ },
+ {
   "en": "Until",
   "kind": "text",
   "count": 1,
@@ -10166,6 +10294,14 @@
   "count": 1,
   "files": [
    "routes/cards/[id]/edit/+page.svelte"
+  ]
+ },
+ {
+  "en": "USPS Hold Mail",
+  "kind": "text",
+  "count": 1,
+  "files": [
+   "lib/components/MailHoldsPanel.svelte"
   ]
  },
  {

@@ -10,6 +10,9 @@
  "lib/components/GridTable.svelte": {
   "<select class=\"select select-compact grid-table-action-select\" aria-label=\"Actions\" data-grid-action-select=\"true\" data-row-id=\"${0}\"><option value=\"\" selected>Actions</option>${1}</select>": "<select class=\"select select-compact grid-table-action-select\" aria-label=\"Aktionen\" data-grid-action-select=\"true\" data-row-id=\"${0}\"><option value=\"\" selected>Aktionen</option>${1}</select>"
  },
+ "lib/components/MailHoldsPanel.svelte": {
+  "${0} to ${1}": "${0} bis ${1}"
+ },
  "lib/components/TripDocumentsTable.svelte": {
   "Delete “${0}”? This cannot be undone.": "„${0}“ löschen? Das kann nicht rückgängig gemacht werden."
  },

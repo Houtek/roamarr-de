@@ -253,7 +253,7 @@ index 1873ac3..2e8c3de 100644
  					<span class="badge badge-brand ml-2">Semantic</span>
  				{/if}
 diff --git a/src/routes/trips/+page.svelte b/src/routes/trips/+page.svelte
-index 3c3afa6..6e808ea 100644
+index bc33aa1..e560a17 100644
 --- a/src/routes/trips/+page.svelte
 +++ b/src/routes/trips/+page.svelte
 @@ -1,4 +1,5 @@
@@ -262,17 +262,17 @@ index 3c3afa6..6e808ea 100644
  	import EmptyState from '$lib/components/EmptyState.svelte';
  	import Icon from '$lib/components/Icon.svelte';
  	import TripCard from '$lib/components/TripCard.svelte';
-@@ -45,7 +46,7 @@
+@@ -67,7 +68,7 @@
  	<div>
  		<h1 class="page-title">Trips</h1>
  		<p class="page-subtitle">
--			{data.trips.length} trip{data.trips.length === 1 ? '' : 's'} planned
-+			{pl(data.trips.length, 'Reise', 'Reisen')} geplant
+-			{data.trips.length} trip{data.trips.length === 1 ? '' : 's'}{isDefaultList ? ' planned' : ''}
++			{pl(data.trips.length, 'Reise', 'Reisen')}{isDefaultList ? ' geplant' : ''}
  		</p>
  	</div>
  	<div class="flex flex-wrap gap-2">
 diff --git a/src/routes/trips/[id]/+page.svelte b/src/routes/trips/[id]/+page.svelte
-index 46e62ec..f340fbb 100644
+index e9e4423..1f61e3e 100644
 --- a/src/routes/trips/[id]/+page.svelte
 +++ b/src/routes/trips/[id]/+page.svelte
 @@ -1,4 +1,5 @@
@@ -309,9 +309,9 @@ index 46e62ec..f340fbb 100644
  		{:else if activeTab === 'prep'}
 -			<section class="trip-modern-panel"><div class="trip-modern-panel-head"><h2 class="trip-modern-panel-title">Prep</h2><span class="badge badge-slate badge-compact">{prepItemCount} item{prepItemCount === 1 ? '' : 's'}</span></div>{#if data.checklist?.items?.length}<div class="trip-modern-list">{#each data.checklist.items as item (item.id)}<div class="trip-modern-list-row"><form method="POST" action="?/toggleChecklistItem" class="flex min-w-0 items-center gap-3"><input type="hidden" name="itemId" value={item.id} /><button class="check-toggle" type="submit"><span class="check-marker {item.packed ? 'check-marker-active' : ''}"><Icon name="check" class="h-3.5 w-3.5" /></span><span class="check-label {item.packed ? 'check-label-done' : ''}">{item.text}</span></button></form>{#if item.assignedToName}<span class="badge badge-slate badge-compact">{item.assignedToName}</span>{/if}</div>{/each}</div>{:else}<p class="trip-modern-empty">No prep items yet.</p>{/if}{#if isEditor}<form method="POST" action="?/addChecklistItem" class="trip-modern-form-inline"><input name="text" class="input flex-1 text-sm" placeholder="Add checklist item" required /><select name="assignedToCompanionId" class="input w-auto text-sm"><option value="">Unassigned</option>{#each data.companions ?? [] as c (c.id)}<option value={c.id}>{c.name}</option>{/each}</select><button class="btn btn-primary btn-sm">Add item</button></form>{/if}</section>
 +			<section class="trip-modern-panel"><div class="trip-modern-panel-head"><h2 class="trip-modern-panel-title">Prep</h2><span class="badge badge-slate badge-compact">{pl(prepItemCount, 'Eintrag', 'Einträge')}</span></div>{#if data.checklist?.items?.length}<div class="trip-modern-list">{#each data.checklist.items as item (item.id)}<div class="trip-modern-list-row"><form method="POST" action="?/toggleChecklistItem" class="flex min-w-0 items-center gap-3"><input type="hidden" name="itemId" value={item.id} /><button class="check-toggle" type="submit"><span class="check-marker {item.packed ? 'check-marker-active' : ''}"><Icon name="check" class="h-3.5 w-3.5" /></span><span class="check-label {item.packed ? 'check-label-done' : ''}">{item.text}</span></button></form>{#if item.assignedToName}<span class="badge badge-slate badge-compact">{item.assignedToName}</span>{/if}</div>{/each}</div>{:else}<p class="trip-modern-empty">No prep items yet.</p>{/if}{#if isEditor}<form method="POST" action="?/addChecklistItem" class="trip-modern-form-inline"><input name="text" class="input flex-1 text-sm" placeholder="Add checklist item" required /><select name="assignedToCompanionId" class="input w-auto text-sm"><option value="">Unassigned</option>{#each data.companions ?? [] as c (c.id)}<option value={c.id}>{c.name}</option>{/each}</select><button class="btn btn-primary btn-sm">Add item</button></form>{/if}</section>
- 		{:else if activeTab === 'money'}
- 			<section class="trip-modern-panel">
- 				<div class="trip-modern-panel-head"><h2 class="trip-modern-panel-title">Budget & expenses</h2>{#if data.expenses?.length}<button type="button" class="btn btn-secondary btn-sm" onclick={exportExpensesCsv}>Export CSV</button>{/if}</div>
+ 			{#if isEditor && data.mailHoldCoverage}
+ 				<MailHoldsPanel holds={data.mailHolds ?? []} coverage={data.mailHoldCoverage} />
+ 			{/if}
 diff --git a/src/routes/trips/[id]/print/+page.svelte b/src/routes/trips/[id]/print/+page.svelte
 index 1e80c03..0dfe013 100644
 --- a/src/routes/trips/[id]/print/+page.svelte

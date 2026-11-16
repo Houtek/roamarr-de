@@ -74,7 +74,7 @@ index 0000000..412f378
 +
 +export const navLabel = (label: string): string => NAV_DE[label] ?? label;
 diff --git a/src/routes/+layout.svelte b/src/routes/+layout.svelte
-index c6b39bf..a28b601 100644
+index 654dd88..a014dd9 100644
 --- a/src/routes/+layout.svelte
 +++ b/src/routes/+layout.svelte
 @@ -1,5 +1,6 @@
@@ -82,7 +82,7 @@ index c6b39bf..a28b601 100644
  	import '../app.css';
 +	import { navLabel } from '$lib/navDe';
  	import { onMount, onDestroy, untrack } from 'svelte';
- 	import { browser } from '$app/environment';
+ 	import { browser } from '$app/env';
  	import { page } from '$app/state';
 @@ -512,7 +513,7 @@
  							class="app-nav-section-header flex w-full cursor-pointer items-center gap-2 rounded-lg px-3 py-2 text-left text-xs font-semibold uppercase tracking-wide"

@@ -215,6 +215,14 @@
   "Auto-mark enabled.": "Automatisches Markieren aktiviert.",
   "Auto-mark disabled.": "Automatisches Markieren deaktiviert."
  },
+ "routes/trips/+page.svelte": {
+  "No archived trips.": "Keine archivierten Reisen.",
+  "No favorite trips.": "Keine favorisierten Reisen.",
+  "No trips with that status.": "Keine Reisen mit diesem Status.",
+  "No current trips. Completed trips are under the Completed status.": "Keine aktuellen Reisen. Abgeschlossene Reisen findest du unter dem Status „Abgeschlossen“.",
+  "No trips match that search.": "Keine Reisen passen zu dieser Suche.",
+  "No trips yet — plan your first one.": "Noch keine Reisen — plane deine erste."
+ },
  "routes/trips/[id]/+page.svelte": {
   "You": "Du",
   "Unknown": "Unbekannt",
@@ -238,7 +246,8 @@
   "Favorited": "Favorisiert",
   "Favorite": "Favorisieren",
   "Unarchive": "Archivierung aufheben",
-  "Archive": "Archivieren"
+  "Archive": "Archivieren",
+  "Mail hold": "Postlagerung"
  },
  "routes/trips/[id]/fare-watch/+page.server.ts": {
   "Check failed": "Prüfung fehlgeschlagen"

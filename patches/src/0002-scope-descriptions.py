@@ -43,6 +43,8 @@ DE = {
     'requirements:write': 'Einreisebestimmungen anlegen, bearbeiten und löschen',
     'home-tasks:read': 'To-dos vor der Abreise ansehen',
     'home-tasks:write': 'To-dos für zu Hause anlegen, abhaken und löschen',
+    'mail-holds:read': 'Postlagerungen für die Reise ansehen',
+    'mail-holds:write': 'Postlagerungen für die Reise anlegen, bearbeiten und löschen',
     'medications:read': 'Medikamente für die Reise ansehen',
     'medications:write': 'Medikamente für die Reise anlegen, bearbeiten und löschen',
     'cards:read': 'Zahlungskarten und Vorteile ansehen (keine vollständige Kartennummer)',

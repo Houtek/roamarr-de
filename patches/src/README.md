@@ -21,10 +21,8 @@ Every script asserts that each exact upstream snippet it rewrites is still prese
 | 0003 derived labels | none yet: 3 one-line edits in `src/routes/trips/[id]/+page.svelte` |
 | 0004 grid pagination | `0004-grid-pagination.py` |
 | 0005 plurals | `0005-plurals.py` |
-| 0006 currency defaults | `0006-currency-defaults.py` |
 | 0007 country names | `0007-country-names.py` |
 | 0008 visited places | `0008-visited-places.py` |
 | 0009 German dates | `0009-german-dates.py` |
 | 0010 grid status labels | `0010-grid-status-labels.py` |
-| 0011 trip base currency | `0011-trip-base-currency.py` |
 | 0012 enum labels | `0012-enum-labels.py` |

@@ -1,3 +1,49 @@
+diff --git a/src/lib/components/MailHoldsPanel.svelte b/src/lib/components/MailHoldsPanel.svelte
+index e0f66bb..7874e0d 100644
+--- a/src/lib/components/MailHoldsPanel.svelte
++++ b/src/lib/components/MailHoldsPanel.svelte
+@@ -1,4 +1,5 @@
+ <script lang="ts">
++	import { deEnum } from '$lib/enumDe';
+ 	type Hold = {
+ 		id: number;
+ 		carrier: string;
+@@ -62,7 +63,7 @@
+ 					<div class="min-w-0">
+ 						<div class="flex flex-wrap items-center gap-2">
+ 							<strong>{hold.carrier}</strong>
+-							<span class="badge badge-compact {statusClass(hold.status)}">{hold.status}</span>
++							<span class="badge badge-compact {statusClass(hold.status)}">{deEnum('mailHold', hold.status)}</span>
+ 							<span>{hold.startDate} to {hold.endDate}</span>
+ 						</div>
+ 						{#if hold.addressLabel}<p class="field-help">{hold.addressLabel}</p>{/if}
+@@ -79,7 +80,7 @@
+ 								<button class="btn" type="submit">Next 30 days</button>
+ 							</form>
+ 						{/if}
+-						<form method="POST" action="?/deleteMailHold" onsubmit={(event) => { if (!confirm('Delete this mail hold?')) event.preventDefault(); }}>
++						<form method="POST" action="?/deleteMailHold" onsubmit={(event) => { if (!confirm('Diese Postlagerung löschen?')) event.preventDefault(); }}>
+ 							<input type="hidden" name="holdId" value={hold.id} />
+ 							<button class="btn" type="submit">Delete</button>
+ 						</form>
+@@ -97,7 +98,7 @@
+ 						<label class="label" for={`mail-status-${hold.id}`}>Status</label>
+ 						<select id={`mail-status-${hold.id}`} class="input" name="status" value={hold.status}>
+ 							{#each statuses as status (status)}
+-								<option value={status}>{status}</option>
++								<option value={status}>{deEnum('mailHold', status)}</option>
+ 							{/each}
+ 						</select>
+ 						<label class="label" for={`mail-confirm-${hold.id}`}>Confirmation</label>
+@@ -122,7 +123,7 @@
+ 		<label class="label" for="mail-status-new">Status</label>
+ 		<select id="mail-status-new" class="input" name="status">
+ 			{#each statuses as status (status)}
+-				<option value={status}>{status}</option>
++				<option value={status}>{deEnum('mailHold', status)}</option>
+ 			{/each}
+ 		</select>
+ 		<label class="label" for="mail-confirm-new">Confirmation</label>
 diff --git a/src/lib/components/TripCard.svelte b/src/lib/components/TripCard.svelte
 index 8f02b71..21019c9 100644
 --- a/src/lib/components/TripCard.svelte
@@ -19,18 +65,19 @@ index 8f02b71..21019c9 100644
  		</div>
 diff --git a/src/lib/enumDe.ts b/src/lib/enumDe.ts
 new file mode 100644
-index 0000000..b759c82
+index 0000000..12a83be
 --- /dev/null
 +++ b/src/lib/enumDe.ts
-@@ -0,0 +1,14 @@
+@@ -0,0 +1,15 @@
 +// roamarr-de: German display names for stored enum keys (keys themselves stay unchanged).
 +const MAPS = {
 +	visibility: { private: 'Privat', groups: 'Gruppen', public: 'Öffentlich' },
-+	documentType: { passport: 'Reisepass', drivers_license: 'Führerschein', global_entry: 'Global Entry', visa: 'Visum' },
++	documentType: { passport: 'Reisepass', drivers_license: 'Führerschein', global_entry: 'Global Entry', visa: 'Visum', national_id: 'Personalausweis' },
 +	companion: { adult: 'Erwachsener', child: 'Kind', other: 'Sonstige', guide: 'Reiseführer', driver: 'Fahrer' },
 +	expense: { lodging: 'Unterkunft', transport: 'Transport', food: 'Essen', activities: 'Aktivitäten', other: 'Sonstiges' },
 +	attendee: { going: 'Dabei', maybe: 'Vielleicht', not_going: 'Nicht dabei' },
-+	reminder: { pending: 'Ausstehend', sending: 'Wird gesendet', sent: 'Gesendet' }
++	reminder: { pending: 'Ausstehend', sending: 'Wird gesendet', sent: 'Gesendet' },
++	mailHold: { requested: 'Beantragt', active: 'Aktiv', ended: 'Beendet', cancelled: 'Storniert' }
 +} as const satisfies Record<string, Record<string, string>>;
 +
 +export function deEnum(kind: keyof typeof MAPS, value: unknown): string {
@@ -57,16 +104,16 @@ index bd89c1a..3015814 100644
  					</div>
  				{/each}
 diff --git a/src/routes/trips/[id]/+page.svelte b/src/routes/trips/[id]/+page.svelte
-index dfecad4..22ef430 100644
+index ec41a46..4d11280 100644
 --- a/src/routes/trips/[id]/+page.svelte
 +++ b/src/routes/trips/[id]/+page.svelte
 @@ -1,4 +1,5 @@
  <script lang="ts">
 +	import { deEnum } from '$lib/enumDe';
- 	import { page as __page } from '$app/state';
- 	import { defaultCurrency } from '$lib/defaultCurrency';
  	import { pl } from '$lib/pluralDe';
-@@ -849,7 +850,7 @@
+ 	import './trip-detail-modern.css';
+ 	import './trip-detail-modern-fixes.css';
+@@ -847,7 +848,7 @@
  					<div class="flex flex-wrap items-center gap-2">
  						{#if !isEditor}<span class="badge badge-brand badge-compact">Shared view</span>{/if}
  						<span class="badge badge-compact {tripStatusBadge(status).class}">{tripStatusBadge(status).label}</span>
@@ -75,7 +122,7 @@ index dfecad4..22ef430 100644
  					</div>
  					<h1 class="trip-hero-title mt-2 text-3xl font-extrabold sm:text-4xl">{trip.name}</h1>
  					<div class="mt-3 flex flex-wrap gap-2">
-@@ -999,7 +1000,7 @@
+@@ -997,7 +998,7 @@
  						<div class="trip-modern-selected-summary {segmentTypeClass(selectedSegment.type)}"><span class="trip-modern-selected-node" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{@html SEG[selectedSegment.type as keyof typeof SEG]?.icon ?? ''}</svg></span><div class="min-w-0 flex-1"><h3 class="trip-modern-selected-name">{selectedSegment.title}</h3><div class="mt-2 flex flex-wrap gap-1.5">{#if selectedSegment.status}<span class="badge badge-compact {segmentStatusClass(selectedSegment.status)}">{segmentStatusLabel(selectedSegment.status)}</span>{/if}{#if selectedSegment.paymentStatus}<span class="badge badge-compact badge-green">{paymentStatusLabel(selectedSegment.paymentStatus)}</span>{/if}</div>{#if selectedPlaceLines.place}<p class="trip-modern-selected-place">{selectedPlaceLines.place}</p>{/if}{#if selectedPlaceLines.address}<p class="trip-modern-selected-address">{selectedPlaceLines.address}</p>{/if}</div></div>
  						<nav class="trip-modern-detail-tabs" aria-label="Selected segment sections">{#each SEGMENT_PANEL_TABS as tab (tab.id)}<button type="button" class="trip-modern-detail-tab {segmentPanelTab === tab.id ? 'trip-modern-detail-tab-active' : ''}" onclick={() => (segmentPanelTab = tab.id)}>{tab.label}{#if tab.id === 'travelers' && (selectedAttendees.length || selectedFreeTextTravelers.length)} ({selectedAttendees.length || selectedFreeTextTravelers.length}){/if}{#if tab.id === 'files' && selectedSegmentDocuments.length} ({selectedSegmentDocuments.length}){/if}{#if tab.id === 'reminders' && selectedSegmentReminders.length} ({selectedSegmentReminders.length}){/if}</button>{/each}</nav>
  
@@ -84,7 +131,7 @@ index dfecad4..22ef430 100644
  
  						{#if isEditor && selectedSegment.id}<div class="trip-modern-selected-actions"><button type="button" class="btn btn-primary" onclick={() => { editingId = selectedSegment.id ?? null; focusedSegmentId = null; }}><Icon name="edit" class="h-4 w-4" />Edit</button><form method="POST" action="?/duplicateSegment" use:enhance={refreshTripAction}><input type="hidden" name="segmentId" value={selectedSegment.id} /><button class="btn btn-secondary"><Icon name="duplicate" class="h-4 w-4" />Duplicate</button></form>{#if selectedSegment.type === 'poi'}<form method="POST" action="?/saveSegmentToPlace" use:enhance={refreshTripAction}><input type="hidden" name="segmentId" value={selectedSegment.id} /><button class="btn btn-secondary"><Icon name="location" class="h-4 w-4" />Save to places</button></form>{/if}<button type="button" class="btn btn-danger" onclick={() => requestDeleteSegment(selectedSegment)}><Icon name="close" class="h-4 w-4" />Delete</button><button type="button" class="btn btn-secondary" onclick={() => (segmentPanelTab = 'reminders')}><Icon name="notification" class="h-4 w-4" />Add reminder</button></div>{/if}
  						{#if selectedSegment.createdAt || selectedSegment.updatedAt}<p class="trip-modern-selected-footer">{#if selectedSegment.createdAt}<span>Created by {selectedCreatorName()} on {formatCreatedDate(selectedSegment.createdAt)}</span>{/if}{#if selectedSegment.createdAt && selectedSegment.updatedAt}<span> · </span>{/if}{#if selectedSegment.updatedAt}<span>Updated {formatUpdatedDate(selectedSegment.updatedAt)}</span>{/if}</p>{/if}
-@@ -1017,7 +1018,7 @@
+@@ -1018,7 +1019,7 @@
  					<div class="mt-5 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
  						{#each data.budgets as budget (budget.category)}
  							<div class="trip-modern-list-row min-h-24 flex-col items-stretch">
@@ -93,7 +140,7 @@ index dfecad4..22ef430 100644
  								{#if budget.amount != null}
  									<p class="trip-modern-panel-muted text-sm">{formatCents(budget.remaining ?? 0, budget.currency)} remaining</p>
  								{:else if isEditor}
-@@ -1036,7 +1037,7 @@
+@@ -1037,7 +1038,7 @@
  					<ul class="mt-5 trip-modern-list" data-testid="expense-list">
  						{#each data.expenses as e (e.id)}
  							<li class="trip-modern-list-row">
@@ -102,7 +149,7 @@ index dfecad4..22ef430 100644
  								<div class="flex items-center gap-2"><span class="font-mono">{e.currency} {(e.amount / 100).toFixed(2)}</span>{#if isEditor}<form method="POST" action="?/deleteExpense"><input type="hidden" name="expenseId" value={e.id} /><button class="icon-button icon-button-sm" aria-label="Delete expense"><Icon name="close" class="h-3.5 w-3.5" /></button></form>{/if}</div>
  							</li>
  						{/each}
-@@ -1064,7 +1065,7 @@
+@@ -1065,7 +1066,7 @@
  						{#each data.companions as c (c.id)}
  							<div class="trip-modern-list-row min-h-20">
  								<div class="min-w-0"><strong class="block truncate">{c.name}</strong>{#if c.notes}<p class="trip-modern-panel-muted truncate text-sm">{c.notes}</p>{/if}</div>
